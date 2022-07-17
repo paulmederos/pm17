@@ -1,0 +1,55 @@
+.Post {
+  padding-bottom: 9.6rem;
+}
+
+.Post__hero {
+  width: 100%;
+  height: 128px;
+  background-color: $color_refresh_blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+
+  @include media-md-up {
+    height: 256px;
+  }
+}
+
+.Post__title {
+  font-size: 3.2rem;
+  font-weight: 400;
+  margin: 6.4rem auto 5.4rem;
+
+  @include media-md-up {
+    font-size: 3.6rem;
+    margin: 8.8rem auto 6.4rem;
+  }
+}
+
+.Post__content {
+  font-size: 1.5rem;
+  padding-bottom: 9.6rem;
+
+  p {
+    margin-bottom: 1.7em;
+    font-size: 1.7rem;
+  }
+}
+
+.Post__button {
+  display: block;
+  background-color: $color_wet_sand;
+  padding: 1.25em;
+  border-radius: 3.2rem;
+  font-size: 1.5rem;
+  color: $color_light_sand;
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+    color: #fff;
+    background-color: darken($color_wet_sand, 10%);
+    box-shadow: 0 2px 5px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.05);
+  }
+}

@@ -1,0 +1,59 @@
+.Home__Intro {
+  padding: 12rem 0;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 6.4rem;
+  }
+}
+
+.Home__Essays {
+  padding: 12rem 0;
+  background-color: #E5E3DB;
+
+  .essay {
+    a {
+      display: block;
+      text-decoration: none;
+      color: #4D4943;
+      padding: 1rem;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: darken(#E5E3DB, 4%);
+
+        span { text-decoration: underline; }
+      }
+    }
+  }
+
+  h4 {
+    margin-bottom: 4.8rem;
+  }
+
+}
+
+.Home__Work {
+  padding: 12rem 0;
+
+  h4 {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.CaseStudy {
+  a {
+    display: block;
+    text-decoration: none;
+    padding: 1rem;
+    border-radius: 8px;
+    position: relative;
+    left: -1rem;
+  }
+  a:hover {
+    color: initial;
+    background-color: lighten(#E5E3DB, 3%);
+  }
+
+  img { max-width: 100%; }
+}

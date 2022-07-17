@@ -1,0 +1,30 @@
+$font_copy: "Sohne", "Inter", "SF Pro Text", "Helvetica";
+$font_meta: "Sohne Mono", "Sohne", "Inter", "SF Pro Text", "Helvetica";
+
+$font_size_xxs: 12px;
+$font_size_xs:  13px;
+$font_size_sm:  15px;
+$font_size_md:  18px;
+$font_size_lg:  21px;
+$font_size_xl:  25px;
+$font_size_xxl: 28px;
+
+.font-copy { font-family: $font_copy; }
+.font-meta { font-family: $font_meta; }
+
+.font-xxs { font-size: $font_size_xxs; }
+.font-xs  { font-size: $font_size_xs; }
+.font-sm  { font-size: $font_size_sm; }
+.font-md  { font-size: $font_size_md; }
+.font-lg  { font-size: $font_size_lg; }
+.font-xl  { font-size: $font_size_xl; }
+.font-xxl { font-size: $font_size_xxl; }
+
+.text-dec-wavy { text-decoration: underline; text-decoration-style: wavy; }
+.text-dec-none { text-decoration: none; }
+.text-uppercase { text-transform: uppercase; }
+.text-capcase   { text-transform: uppercase; letter-spacing: 2px; }
+
+.font-300 { font-weight: 300; }
+.font-500 { font-weight: 500; }
+.font-700 { font-weight: 700; }

@@ -1,0 +1,108 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
+layout: default
+---
+
+{% include topnav.html %}
+
+<section class="Home__Intro">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <img src="/images/home-hero-01@2x.jpg" class="HomeHero" />
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-2">
+        <p>
+          I’m currently building the
+          future of hormetic stress at <a href="https://www.weareflorens.com">Florens</a>.
+        </p>
+
+        <p>
+          Previously, I helped bring personalized nutrition to life
+          at <a href="https://www.territoryfoods.com" target="_blank">Territory Foods</a>, and I helped kick-off the global
+          parkour & freerunning movement at <a href="http://www.americanparkour.com" target="_blank">American Parkour</a>
+        </p>
+
+        <p>
+          You can find me on <a href="https://twitter.com/pvm" target="_blank">Twitter</a>
+          and <a href="https://linkedin.com/in/pmederos" target="_blank">LinkedIn</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="Home__Essays">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-2">
+        <h4>Essays</h4>
+      </div>
+    </div>
+
+    <ul class="omg-so-many-posts">
+      {% for post in site.categories.essay %}
+        <div class="row">
+          <div class="col-xs-12 col-md-7 col-md-offset-2">
+            <li class="essay">
+              <a href="{{ post.url | prepend: site.baseurl }}">
+                <div class="row">
+                  <div class="col-xs-12 col-md-3 col-lg-2">
+                    <time class="font-meta mr-4 font-sm color-dk-sand">{{ post.date || date: '%b %Y' }}</time>
+                  </div>
+                  <div class="col-xs-12 col-md-9 col-lg-10">
+                    <span class="font-md ">{{ post.title }}</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </div>
+        </div>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="Home__Work">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-md-offset-2">
+        <h4>Case Studies</h4>
+      </div>
+    </div>
+
+    <ul class="omg-so-many-posts">
+      {% for post in site.categories.case_study %}
+        {% if post.teaser != blank %}
+          <div class="row">
+            <div class="col-xs-12 col-md-10 col-md-offset-2">
+              <li class="CaseStudy">
+                <a href="{{ post.url | prepend: site.baseurl }}">
+                  <div class="row">
+                    <div class="col-xs-12 col-md-4 pr-2">
+                      <img class="CaseStudy__thumbnail" src="{{post.thumbnail}}" />
+                    </div>
+                    <div class="col-xs-12 col-md-6 pt-1">
+                      <p class="font-xs font-meta color-dk-sand">{{ post.study_meta }}</p>
+                      <p class="font-lg color-obsidian">{{ post.title }}</p>
+                      <p class="font-sm color-wt-sand">{{ post.teaser }}</p>
+                    </div>
+                  </div>
+
+                </a>
+              </li>
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+
+</section>
