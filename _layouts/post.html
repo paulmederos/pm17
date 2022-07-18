@@ -6,7 +6,11 @@ layout: default
 
 <article class="Post">
   {% if page.hero_image %}
-    <div class="Post__hero" style="background-image: url('{{ page.hero_image }}');"></div>
+    {% if page.categories contains "case_study" %}
+      <div class="Post__hero --case-study" style="background-image: url('{{ page.hero_image }}');"></div>
+    {% else %}
+      <div class="Post__hero" style="background-image: url('{{ page.hero_image }}');"></div>
+    {% endif %}
   {% endif %}
 
   <div class="container-fluid">

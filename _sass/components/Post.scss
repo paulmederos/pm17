@@ -1,5 +1,20 @@
 .Post {
   padding-bottom: 9.6rem;
+  
+  img {
+    position: relative;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+
+    @include media-md-up {
+      left: -10%;
+      max-width: 120%;
+    }
+  }
+
+  figure { margin: 6.4rem auto;}
+  figcaption { font-size: 1.3rem; color: $color_dark_sand; text-align: center; margin: 1rem; }
 }
 
 .Post__hero {
@@ -12,6 +27,11 @@
 
   @include media-md-up {
     height: 256px;
+  }
+
+  &.--case-study {
+    height: 192px;
+    @include media-md-up { height: 320px; }
   }
 }
 
@@ -52,4 +72,8 @@
     background-color: darken($color_wet_sand, 10%);
     box-shadow: 0 2px 5px rgba(0,0,0,.08), 0 1px 3px rgba(0,0,0,.05);
   }
+}
+
+.CaseStudy__content {
+
 }
