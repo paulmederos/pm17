@@ -27,7 +27,7 @@ h5 { font-size: 1.5rem; }
 h1, h2 { font-weight: 600; }
 h3, h4 { font-weight: 400; }
 
-p, ul, ol, dl {
+p, ul, ol, dl, li {
   line-height: 1.72;
 }
 
@@ -45,8 +45,9 @@ a:hover {
 }
 
 strong, b {
-  font-weight: 700;
+  font-weight: 500;
 }
+
 
 .full-width {
   width: 100%;

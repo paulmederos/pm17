@@ -1,6 +1,6 @@
 .Post {
   padding-bottom: 9.6rem;
-  
+
   img {
     position: relative;
     left: 0;
@@ -50,9 +50,21 @@
   font-size: 1.5rem;
   padding-bottom: 9.6rem;
 
-  p {
+  p, li {
     margin-bottom: 1.7em;
     font-size: 1.7rem;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 3em;
+    margin-bottom: 3.6rem;
+  }
+
+  ol {
+    list-style: decimal;
+    padding-left: 3em;
+    margin-bottom: 3.6rem;
   }
 }
 
