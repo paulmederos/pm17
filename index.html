@@ -50,7 +50,7 @@ layout: default
     <ul class="omg-so-many-posts">
       {% for post in site.categories.essay %}
         <div class="row">
-          <div class="col-xs-12 col-md-7 col-md-offset-2">
+          <div class="col-xs-12 col-md-9 col-md-offset-2">
             <li class="essay">
               <a href="{{ post.url | prepend: site.baseurl }}">
                 <div class="row">
@@ -86,16 +86,15 @@ layout: default
               <li class="CaseStudy">
                 <a href="{{ post.url | prepend: site.baseurl }}">
                   <div class="row">
-                    <div class="col-xs-12 col-md-4 pr-2">
+                    <div class="col-xs-12 col-sm-6 col-md-4 pr-2">
                       <img class="CaseStudy__thumbnail" src="{{post.thumbnail}}" />
                     </div>
-                    <div class="col-xs-12 col-md-6 pt-1">
+                    <div class="col-xs-12 col-sm-6 col-md-6 pt-1">
                       <p class="font-xs font-meta color-dk-sand">{{ post.study_meta }}</p>
                       <p class="font-lg color-obsidian">{{ post.title }}</p>
                       <p class="font-sm color-wt-sand">{{ post.teaser }}</p>
                     </div>
                   </div>
-
                 </a>
               </li>
             </div>

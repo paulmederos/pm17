@@ -50,6 +50,10 @@
   font-size: 1.5rem;
   padding-bottom: 9.6rem;
 
+  a {
+    font-size: 1.7rem;
+  }
+
   p, li {
     margin-bottom: 1.7em;
     font-size: 1.7rem;
@@ -65,6 +69,14 @@
     list-style: decimal;
     padding-left: 3em;
     margin-bottom: 3.6rem;
+  }
+
+  hr {
+    margin: 6.4rem auto;
+    background-color: $color_sand;
+    height: 1px;
+    border-radius: 1px;
+    border: none;
   }
 }
 
