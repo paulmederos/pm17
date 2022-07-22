@@ -10,9 +10,9 @@ study_meta: "2018 · Founder · Koso"
 teaser: "Could we find a product at the intersection of nutrition x coaching? Was the market ready to take telemedicine to the next level? Could we design + build a business we were excited to work on for the next decade?"
 ---
 
-I started working on the idea for Koso at the start of 2018. I connected with my cofounder Bonnie over coffee & a mini-hike to share ideas.
+The idea for Koso began early 2018, when I connected with my cofounder Bonnie over coffee & a mini-hike to share ideas.
 
-We’re both health/wellness entrepreneurs, and had worked briefly together at our last company ([foodtech co doing prepared meal delivery](/territory-brand-launch)), so we hit it off pretty quickly, and found lots of concepts that excited us.
+We’re both health/wellness entrepreneurs, and had worked briefly together at our last company ([Territory Foods](/territory-brand-launch)), so we hit it off quickly, and found lots of concepts that excited us.
 
 We both saw opportunities in nutrition × coaching, and we were both aligned on the type of biz we wanted to build (SaaS, small team, bootstrapped.)
 
