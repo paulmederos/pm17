@@ -2,42 +2,22 @@
 layout: default
 ---
 
-{% include topnav.html %}
-
 <article class="Post">
   {% if page.hero_image %}
-    {% if page.categories contains "case_study" %}
-      <div class="Post__hero --case-study" style="background-image: url('{{ page.hero_image }}');"></div>
-    {% else %}
-      <div class="Post__hero" style="background-image: url('{{ page.hero_image }}');"></div>
-    {% endif %}
+    <div class="Post__hero" style="background-image: url('{{ page.hero_image }}');"></div>
   {% endif %}
 
-  <div class="container-fluid">
-    <div class="row center-xs">
-      <div class="col-xs-12 col-sm-9 col-md-7 col-lg-6">
-        <h1 class="Post__title">{{ page.title }}</h1>
+  <div class="container-fluid pt-4 mt-6">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        {% include navigation.html %}
       </div>
-    </div>
-  </div>
-
-  <div class="container-fluid">
-    <div class="row center-xs text-left">
       <div class="col-xs-12 col-sm-9 col-md-6">
         <div class="Post__content">
+          <h1 class="font-600 mb-6">{{ page.title }}</h1>
           {{ content }}
         </div>
       </div>
     </div>
   </div>
-
-  <div class="container-fluid">
-    <div class="row center-xs text-left">
-      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 center-xs">
-        <a href="/" class="Post__button">Go back home</a>
-      </div>
-    </div>
-  </div>
-
-
 </article>

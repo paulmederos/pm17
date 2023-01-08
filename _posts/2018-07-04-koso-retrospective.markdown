@@ -3,12 +3,13 @@ layout: post
 title:  "The 6-month Koso Retrospective"
 permalink: "/koso-retro"
 thumbnail: "/images/thumbnail-koso@2x.png"
-hero_image: "/images/hero-koso@2x.png"
 date:   2018-07-04
 categories: case_study
 study_meta: "2018 · Founder · Koso"
 teaser: "Could we find a product at the intersection of nutrition x coaching? Was the market ready to take telemedicine to the next level? Could we design + build a business we were excited to work on for the next decade?"
 ---
+
+<img src="/images/hero-koso@2x.png" />
 
 The idea for Koso began early 2018, when I connected with my cofounder Bonnie over coffee & a mini-hike to share ideas.
 
@@ -24,8 +25,6 @@ I had a "shelved" product that gave us a place to start. About 5 years ago, I ma
 
 Kale aligned well with the vision Bonnie and I wanted to explore, so we decided to start with that and pick up where I left off years ago.
 
----
-
 Since then, we've iterated through 4 different approaches:
 
 - Food journal coaching system
@@ -35,7 +34,6 @@ Since then, we've iterated through 4 different approaches:
 
 And at each step, [I've kept detailed notes and reflections](/journaling-for-product-development/) that have helped us work our way closer and closer to a great product. That's what I want to share here in our 6-month review.
 
----
 
 **Hold on... why are you sharing this publicly?**
 This is the kind of stuff that most companies keep locked away, their "proprietary information" and secret knowledge that gives them the edge.
@@ -46,7 +44,6 @@ First off, writing brings clarity, so I was already writing this for myself and 
 
 Lastly, this is for folks who will work with me in the future. This kind of intentional, thoughtful, and deliberate work is what you can expect.
 
----
 
 ## The First Approach
 ![](/images/case_studies/koso-01.png)
@@ -80,7 +77,7 @@ We also heard that bringing new clients (a la our non-existent client acq plan, 
 
 All-in-all, it felt like we were too generic, so we looked to focus on a more niche audience and value-prop.
 
----
+
 
 ## The Second Approach
 ![](/images/case_studies/koso-02.png)
@@ -106,7 +103,7 @@ But from the signals we were getting from interviews, we weren't excited about h
 
 🤔 Looking back now, I think we got impatient, and moved to the next shiny thing too soon.
 
----
+
 
 ## The Third Approach
 ![](/images/case_studies/koso-03.png)
@@ -126,7 +123,7 @@ But from the signals we were getting from interviews, we weren't excited about h
 * We promoted for 3 weeks, couldn’t convince anyone from our network to sign up at the price we had ($50, oof, not even that high), and no organic traffic from app (only like 10 people anyhow)
 * ... but now we had this Clean Eating program we made, just sitting there
 
----
+
 
 
 ## The Fourth Approach
@@ -148,7 +145,6 @@ But from the signals we were getting from interviews, we weren't excited about h
 * Feedback centered around "this looks great! "... but no sale.
 * We're still collecting feedback here to pinpoint "why", especially since most informal feedback has been pretty positive
 
----
 
 ## Today - Summer 2018
 * Reviewing feedback from the [DFY nutrition program concept](https://www.wearekoso.com/coach-programs). We're considering offering the 1st version of the guide for free as a PDF so we can build an interest list of coaches, then down the road offering a paid version that takes it to the next level (based on feedback we collect from the free version.)

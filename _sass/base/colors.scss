@@ -1,32 +1,32 @@
 /*
   ********************
-  "Refresh" system
-  brand system - v5 (4Q21)
+  "Forest" system
+  pm17 brand (1Q23)
   ********************
 */
 
-$color_light_sand: #FFFCF3;
-$color_sand: #E5E3DB;
-$color_bark: #8E7E5E;
-$color_dark_sand: #837E73;
+$color_cream: #FFFCF3;
+$color_sand: #837E73;
+$color_bark: #666159;
 $color_wet_sand: #4D4943;
+$color_dark_oak: #292725;
 $color_obsidian: #151515;
-$color_refresh_blue: #044056;
+$color_sunlight: #FFCE6B;
 
-.color-white    { color: #ffffff; }
-.color-lt-sand  { color: $color_light_sand; }
-.color-sand     { color: $color_sand; }
-.color-bark     { color: $color_bark; }
-.color-dk-sand  { color: $color_dark_sand; }
-.color-wt-sand  { color: $color_wet_sand; }
-.color-obsidian { color: $color_obsidian; }
-.color-ref-blue { color: $color_refresh_blue; }
+.color-white     { color: #ffffff; }
+.color-cream     { color: $color_cream; }
+.color-sand      { color: $color_sand; }
+.color-bark      { color: $color_bark; }
+.color-wet-sand  { color: $color_wet_sand; }
+.color-dark-oak  { color: $color_dark_oak; }
+.color-obsidian  { color: $color_obsidian; }
+.color-sunlight  { color: $color_sunlight; }
 
-.bg-color-white    { background-color: #ffffff; }
-.bg-color-lt-sand  { background-color: $color_light_sand; }
-.bg-color-sand     { background-color: $color_sand; }
-.bg-color-bark     { background-color: $color_bark; }
-.bg-color-dk-sand  { background-color: $color_dark_sand; }
-.bg-color-wt-sand  { background-color: $color_wet_sand; }
-.bg-color-obsidian { background-color: $color_obsidian; }
-.bg-color-ref-blue { background-color: $color_refresh_blue; }
+.bg-color-white     { background-color: #ffffff; }
+.bg-color-cream     { background-color: $color_cream; }
+.bg-color-sand      { background-color: $color_sand; }
+.bg-color-bark      { background-color: $color_bark; }
+.bg-color-wet-sand  { background-color: $color_wet_sand; }
+.bg-color-dark-oak  { background-color: $color_dark_oak; }
+.bg-color-obsidian  { background-color: $color_obsidian; }
+.bg-color-sunlight  { background-color: $color_sunlight; }

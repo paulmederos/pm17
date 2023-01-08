@@ -5,20 +5,22 @@
 layout: default
 ---
 
-{% include topnav.html %}
-
 <section class="Home__Intro">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-8">
-        <img src="/images/home-hero-01@2x.jpg" class="HomeHero" />
+      <div class="col-xs-12 col-md-2">
+        {% include navigation.html %}
+      </div>
+      <div class="col-xs-12 col-md-9">
+        <img src="https://cdn.midjourney.com/fe8fd0d0-13ae-4090-9a03-d566f84b67c2/grid_0.png" class="HomeHero" />
       </div>
     </div>
   </div>
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-2">
+      <div class="col-xs-12 col-md-7 col-md-offset-2">
+        <h2 class="underlined">Paul Mederos</h2>
         <p>
           I’m currently building the
           future of hormetic stress at <a href="https://www.weareflorens.com">Florens</a>.
@@ -42,66 +44,25 @@ layout: default
 <section class="Home__Essays">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-2">
-        <h4>Essays</h4>
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <h2 class="underlined mb-6">Writing</h2>
       </div>
     </div>
 
     <ul class="omg-so-many-posts">
-      {% for post in site.categories.essay %}
-        <div class="row">
-          <div class="col-xs-12 col-md-9 col-md-offset-2">
-            <li class="essay">
-              <a href="{{ post.url | prepend: site.baseurl }}">
-                <div class="row">
-                  <div class="col-xs-12 col-md-3 col-lg-2">
-                    <time class="font-meta mr-4 font-sm color-dk-sand">{{ post.date || date: '%b %Y' }}</time>
-                  </div>
-                  <div class="col-xs-12 col-md-9 col-lg-10">
-                    <span class="font-md ">{{ post.title }}</span>
-                  </div>
-                </div>
-              </a>
-            </li>
-          </div>
-        </div>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
-<section class="Home__Work">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-md-6 col-md-offset-2">
-        <h4>Case Studies</h4>
-      </div>
-    </div>
-
-    <ul class="omg-so-many-posts">
-      {% for post in site.categories.case_study %}
-        {% if post.teaser != blank %}
+      {% for post in site.posts %}
+        <li class="essay mb-6">
           <div class="row">
-            <div class="col-xs-12 col-md-10 col-md-offset-2">
-              <li class="CaseStudy">
-                <a href="{{ post.url | prepend: site.baseurl }}">
-                  <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-4 pr-2">
-                      <img class="CaseStudy__thumbnail" src="{{post.thumbnail}}" />
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6 pt-1">
-                      <p class="font-xs font-meta color-dk-sand">{{ post.study_meta }}</p>
-                      <p class="font-lg color-obsidian">{{ post.title }}</p>
-                      <p class="font-sm color-wt-sand">{{ post.teaser }}</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
+            <div class="col-xs-12 col-md-offset-2 col-md-2">
+              <time class="font-meta mr-4 font-sm color-sand">{{ post.date || date: '%b %Y' }}</time>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <p><a href="{{ post.url | prepend: site.baseurl }}" class="font-md font-500">{{ post.title }}</a></p>
+              <p class="font-md">{{ post.teaser }}</p>
             </div>
           </div>
-        {% endif %}
+        </li>
       {% endfor %}
     </ul>
   </div>
-
 </section>

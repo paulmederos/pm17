@@ -5,43 +5,44 @@ html, body {
 }
 
 body {
-  color: #333;
+  color: #666159;
   line-height: 1.42;
   background-color: #FFFCF3;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
 
 h1, h2, h3, h4, h5, h6,
 p, button, input, li {
-  font-size: 1.8rem;
-  margin-bottom: 1em;
-  font-weight: 300;
+  font-size: 1.7rem;
+  margin-bottom: 1.2em;
+  font-weight: 350;
 }
 
-h1 { font-size: 3.4rem; }
-h2 { font-size: 2.8rem; }
+h1 { font-size: 3.2rem; }
+h2 { font-size: 2.4rem; }
 h3 { font-size: 2.1rem; }
 h4 { font-size: 1.8rem; }
 h5 { font-size: 1.5rem; }
 
-h1, h2 { font-weight: 600; }
+h1, h2 { font-weight: 500; }
 h3, h4 { font-weight: 400; }
 
 p, ul, ol, dl, li {
-  line-height: 1.72;
+  line-height: 1.58;
 }
 
 a {
-  color: #8E7E5E;
-  font-size: 1.8rem;
+  color: $color_obsidian;
   margin-bottom: 1em;
-  @include transition;
 }
 
 a:hover {
-  color: #151515;
+  color: $color_obsidian;
   text-decoration: underline;
-  @include transition;
+}
+
+a:visited {
+  color: $color_dark_oak;
 }
 
 strong, b {
@@ -87,6 +88,18 @@ strong, b {
 .mb-4 { margin-bottom: 3.6rem; }
 .ml-4 { margin-left:   3.6rem; }
 
+.m-5  { margin:        4.4rem; }
+.mt-5 { margin-top:    4.4rem; }
+.mr-5 { margin-right:  4.4rem; }
+.mb-5 { margin-bottom: 4.4rem; }
+.ml-5 { margin-left:   4.4rem; }
+
+.m-6  { margin:        6.4rem; }
+.mt-6 { margin-top:    6.4rem; }
+.mr-6 { margin-right:  6.4rem; }
+.mb-6 { margin-bottom: 6.4rem; }
+.ml-6 { margin-left:   6.4rem; }
+
 .p-0  { padding:        0; }
 .pt-0 { padding-top:    0; }
 .pr-0 { padding-right:  0; }
@@ -125,4 +138,9 @@ strong, b {
   text-indent: 100%;
   white-space: nowrap;
   overflow: hidden;
+}
+
+.underlined {
+  padding-bottom: 8px;
+  border-bottom: 1px solid #D9D4C8;
 }
