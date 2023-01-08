@@ -9,6 +9,9 @@ body {
   line-height: 1.42;
   background-color: #FFFCF3;
   font-size: 1.7rem;
+
+  @include transition($type: color, $duration: .36s);
+  @include transition($type: background-color, $duration: .36s);
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -16,6 +19,8 @@ p, button, input, li {
   font-size: 1.7rem;
   margin-bottom: 1.2em;
   font-weight: 350;
+
+  @include transition($type: color, $duration: .36s);
 }
 
 h1 { font-size: 3.2rem; }
