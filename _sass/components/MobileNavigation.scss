@@ -1,0 +1,69 @@
+.MobileNavigation {
+  padding: 2.8rem 0;
+  @include media-md-up { display: none; }
+
+  .ModeToggle {
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    margin: auto 0 auto auto;
+  }
+}
+
+.Menu {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  height: 100%;
+  padding: 4.4rem;
+  z-index: 3;
+  background-color: $color_cream;
+  box-shadow: 0 0 8px rgba(0,0,0,.05), 0 0 54px rgba(0,0,0,.1);
+
+  transform: translateX(-110%);
+  @include transition;
+
+  a {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 2em;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.Overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: rgba(0,0,0,0);
+}
+
+body.menu-opened {
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+
+  .Menu {
+    display: block;
+    transform: translateX(0);
+    @include transition;
+  }
+
+  .Overlay {
+    display: block;
+    z-index: 2;
+    background-color: rgba(0,0,0,.7);
+    @include transition;
+  }
+}

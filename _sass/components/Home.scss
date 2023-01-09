@@ -1,5 +1,9 @@
 .Home__Intro {
-  padding: 12rem 0;
+  padding: 0 0 14.4rem;
+
+  @include media-md-up {
+    padding: 12rem 0;
+  }
 
   img {
     max-width: 100%;

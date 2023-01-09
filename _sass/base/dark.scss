@@ -22,4 +22,8 @@ body.dark {
     color: #D9D4C8;
     @include transition($type: color, $duration: .36s);
   }
+
+  .Menu {
+    background-color: $color_obsidian;
+  }
 }

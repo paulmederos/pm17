@@ -1,0 +1,20 @@
+.MenuButton {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 2em;
+  background-image: url('/images/icon-menu-dark.png');
+  background-position: center center;
+  background-size: 32px;
+  background-repeat: no-repeat;
+  margin: auto auto auto 0;
+  border-radius: 12px;
+}
+
+.dark .MenuButton {
+  background-image: url('/images/icon-menu-light.png');
+}
