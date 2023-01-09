@@ -1,5 +1,5 @@
 $font_copy: "Inter var", "SF Pro Text", "Helvetica";
-$font_meta: "Inter var", "SF Pro Text", "Helvetica";
+$font_meta: "Recursive Mono", monospace;
 
 $font_size_xxs: 12px;
 $font_size_xs:  13px;
@@ -25,6 +25,7 @@ $font_size_xxl: 28px;
 .text-uppercase { text-transform: uppercase; }
 .text-capcase   { text-transform: uppercase; letter-spacing: 2px; }
 
+.font-200 { font-weight: 200; }
 .font-300 { font-weight: 300; }
 .font-400 { font-weight: 400; }
 .font-500 { font-weight: 500; }

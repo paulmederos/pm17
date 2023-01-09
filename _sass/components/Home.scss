@@ -10,3 +10,12 @@
     margin-bottom: 6.4rem;
   }
 }
+
+.essay time {
+  position: relative;
+  top: 1px;
+}
+
+.case-study-tag {
+  color: darken($color_sunlight, 10%);
+}

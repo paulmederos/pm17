@@ -49,7 +49,10 @@ layout: default
         <li class="essay mb-6">
           <div class="row">
             <div class="col-xs-12 col-md-offset-2 col-md-2">
-              <time class="font-meta mr-4 font-sm color-sand">{{ post.date || date: '%b %Y' }}</time>
+              <time class="font-meta font-sm font-300 color-sand">{{ post.date || date: '%b %Y' }}</time>
+              {% if post.categories contains 'case_study' %}
+                <span class="font-meta font-sm font-300 color-sand d-block case-study-tag">Case Study</span>
+              {% endif %}
             </div>
             <div class="col-xs-12 col-md-6">
               <p><a href="{{ post.url | prepend: site.baseurl }}" class="font-md font-500">{{ post.title }}</a></p>

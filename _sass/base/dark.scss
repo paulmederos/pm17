@@ -10,7 +10,7 @@ body.dark {
     @include transition($type: color, $duration: .36s);
   }
 
-  a { color: darken($color_cream, 10%); }
+  a { color: $color_cream; }
   a:hover { color: #fff; }
 
   .color-sand {
@@ -20,5 +20,9 @@ body.dark {
 
   .Menu {
     background-color: $color_obsidian;
+  }
+
+  .case-study-tag {
+    color: $color_sunlight;
   }
 }

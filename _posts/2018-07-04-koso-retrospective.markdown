@@ -5,7 +5,6 @@ permalink: "/koso-retro"
 thumbnail: "/images/thumbnail-koso@2x.png"
 date:   2018-07-04
 categories: case_study
-study_meta: "2018 · Founder · Koso"
 teaser: "Could we find a product at the intersection of nutrition x coaching? Was the market ready to take telemedicine to the next level? Could we design + build a business we were excited to work on for the next decade?"
 ---
 
