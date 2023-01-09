@@ -13,7 +13,7 @@ body.dark {
   a { color: darken($color_cream, 10%); }
   a:hover { color: #fff; }
 
-  .ModeToggle {
+  .ThemeToggle {
     background-color: $color_sunlight;
     @include transition($type: color, $duration: .36s);
   }
