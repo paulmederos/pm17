@@ -1,0 +1,29 @@
+.IconButton {
+  display: block;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 2em;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: auto auto auto 0;
+  border-radius: 50%;
+
+  &:hover { background-color: #EAE1CF; }
+
+  &.--menu  { background-image: url('/images/icon-menu-light.svg'); }
+  &.--close { background-image: url('/images/icon-close-light.svg'); }
+  &.--theme { background-image: url('/images/icon-theme-light.svg'); }
+}
+
+
+.dark {
+  .IconButton:hover   { background-color: #222; }
+
+  .IconButton.--menu  { background-image: url('/images/icon-menu-dark.svg'); }
+  .IconButton.--close { background-image: url('/images/icon-close-dark.svg'); }
+  .IconButton.--theme { background-image: url('/images/icon-theme-dark.svg'); }
+}

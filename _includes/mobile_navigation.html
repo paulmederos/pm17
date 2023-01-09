@@ -2,17 +2,20 @@
   <div class="container-fluid">
     <div class="row middle-xs">
       <div class="col-xs-6 start-xs">
-        <button class="MenuButton" onclick="toggleMenu();"></button>
+        <button class="IconButton --menu" onclick="toggleMenu();"></button>
       </div>
       <div class="col-xs-6 end-xs">
-        <button class="ThemeToggle" onclick="toggleDarkMode();"></button>
+        <button class="IconButton --theme" onclick="toggleDarkMode();"></button>
       </div>
     </div>
   </div>
 </div>
 
 <nav class="Menu">
-  {% include menu.html %}
+  <div class="container-fluid">
+    <button class="IconButton --close" onclick="toggleMenu();"></button>
+    {% include menu.html %}
+  </div>
 </nav>
 
 <div class="Overlay" onclick="toggleMenu();"></div>

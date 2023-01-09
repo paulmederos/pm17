@@ -2,12 +2,7 @@
   padding: 2.8rem 0;
   @include media-md-up { display: none; }
 
-  .ThemeToggle {
-    width: 32px;
-    height: 32px;
-    border-radius: 32px;
-    margin: auto 0 auto auto;
-  }
+  .IconButton.--theme { margin: auto 0 auto auto; }
 }
 
 .Menu {
@@ -17,10 +12,10 @@
   left: 0;
   width: 50vw;
   height: 100%;
-  padding: 4.4rem;
+  padding: 2.8rem 0;
   z-index: 3;
   background-color: $color_cream;
-  box-shadow: 0 0 8px rgba(0,0,0,.05), 0 0 54px rgba(0,0,0,.1);
+  box-shadow: 0 0 8px rgba(0,0,0,.1), 0 0 54px rgba(0,0,0,.2);
 
   transform: translateX(-110%);
   @include transition;
@@ -35,6 +30,12 @@
     &:hover {
       text-decoration: underline;
     }
+  }
+
+  .IconButton.--close {
+    margin-bottom: 2em;
+    position: relative;
+    left: -10px;
   }
 }
 
@@ -63,7 +64,7 @@ body.menu-opened {
   .Overlay {
     display: block;
     z-index: 2;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0,0,0,.6);
     @include transition;
   }
 }

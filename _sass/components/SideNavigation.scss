@@ -1,6 +1,8 @@
 .SideNavigation {
   display: none;
 
+  @include media-md-up { display: block; }
+
   a {
     color: $color_obsidian;
     display: block;
@@ -14,7 +16,9 @@
     }
   }
 
-  @include media-md-up {
-    display: block;
+  .IconButton {
+    position: relative;
+    left: -11px;
+    margin-bottom: 1.5em;
   }
 }
