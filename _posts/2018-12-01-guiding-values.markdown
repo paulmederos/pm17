@@ -2,9 +2,9 @@
 layout: post
 title:  "Guiding values"
 permalink: "guiding-values"
-date: 2018-12-01 12:00:00 -0700
-categories: essay
-teaser: "Why I love building in public, and how I make decisions about what to share. Opening the tent for others, accountability, and co-creation / community orientation lead the way."
+date: 2018-12-01
+categories: journal
+teaser: "Things I value: what they are, how I define them, and what they look like in action. They currently are: Love, Purpose, Health, Gratitude, Creativity, Craft."
 ---
 
 

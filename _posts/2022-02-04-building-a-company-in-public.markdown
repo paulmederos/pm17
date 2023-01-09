@@ -2,8 +2,8 @@
 layout: post
 title:  "Building a company in public"
 permalink: "building-a-company-in-public"
-date: 2021-02-04 12:00:00 -0700
-categories: essay
+date: 2021-02-04
+categories: journal
 teaser: "Why I love building in public, and how I make decisions about what to share. Opening the tent for others, accountability, and co-creation / community orientation lead the way."
 ---
 

@@ -149,3 +149,11 @@ strong, b {
   padding-bottom: 8px;
   border-bottom: 1px solid #D9D4C8;
 }
+
+.rounded,
+.rounded-1 { border-radius: 4px; }
+.rounded-2 { border-radius: 6px; }
+.rounded-3 { border-radius: 8px; }
+.rounded-4 { border-radius: 12px; }
+.rounded-5 { border-radius: 18px; }
+.rounded-6 { border-radius: 28px; }
