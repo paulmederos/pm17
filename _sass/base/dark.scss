@@ -22,7 +22,11 @@ body.dark {
     background-color: $color_obsidian;
   }
 
-  .case-study-tag {
-    color: $color_sunlight;
+  .case-study-tag { color: $color_love; }
+  .wip-tag        { color: $color_sunlight; }
+
+  .wip {
+    background-color: transparentize($color_sunlight, .7);
+    border-color: transparentize($color_sunlight, .2);
   }
 }

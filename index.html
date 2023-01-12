@@ -53,6 +53,9 @@ layout: default
               {% if post.categories contains 'case_study' %}
                 <span class="font-meta font-sm font-300 color-sand d-block case-study-tag">Case Study</span>
               {% endif %}
+              {% if post.categories contains 'wip' %}
+                <span class="font-meta font-sm font-300 color-sand d-block wip-tag">WIP</span>
+              {% endif %}
             </div>
             <div class="col-xs-12 col-md-6">
               <p><a href="{{ post.url | prepend: site.baseurl }}" class="font-md font-500">{{ post.title }}</a></p>

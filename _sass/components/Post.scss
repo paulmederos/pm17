@@ -75,4 +75,18 @@
 
   figure { margin: 6.4rem auto;}
   figcaption { font-size: 1.3rem; color: $color_sand; text-align: center; margin: 1rem; }
+
+  > p:last-of-type:last-child::after {
+    content: "∎";
+  }
+}
+
+.wip {
+  padding: 1.2rem;
+  background-color: transparentize($color_sunlight, .5);
+  border: 1px solid $color_sunlight;
+  border-radius: 4px;
+  margin-bottom: 4.4rem;
+
+  p { font-size: $font_size_xs; margin: 0; }
 }
