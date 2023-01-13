@@ -4,7 +4,7 @@ title:  "Compensating flexible work"
 permalink: "compensating-flexible-work"
 date: 2021-10-29
 categories: journal, wip
-teaser: "Flexible work is a big part of the future. But how do you practically compensate people with flexible work arrangements? Signaling, expectations for work & outcomes, multiple comp paths, and seasonality all play a role."
+teaser: "More folks are looking for flexible work, but compensation can be messy if you don't have a starting point. Signaling, expectations for work & outcomes, multiple comp paths, and seasonality all play a role in setting up clear & successful flex work arrangements."
 ---
 
 
