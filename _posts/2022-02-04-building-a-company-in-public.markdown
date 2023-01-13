@@ -66,7 +66,9 @@ Just like sharing your life highlights on Instagram can warp perception, buildin
 > I'm writing this post because I'm done. I can't do this anymore. After three failed attempts at building a successful startup and spending time institutionalized, I'm giving up on my entrepreneurship dreams.
 
 
-^^ This post stung. Yes, entrepreneurship is hard, but the BIP movement has definitely elevated the perception of success. It's easy. Anyone can start a newsletter. Why don't you just start a youtube channel? Have you even tried putting yourself out there?! 
+^^ This post stung. Yes, entrepreneurship is hard, but the BIP movement has definitely elevated the perception of success. 
+
+_"It's easy. Anyone can start a newsletter. Why don't you just start a youtube channel? Have you even tried putting yourself out there?!"_
 
 You see a lot of "successful" entrepreneurs writing threads on how they made millions. They may have super positive intentions, but by leaning into the 3 + 4 moves, they end up "Instaglamming" the startup life. Other entrepreneurs think "damn, everyone else is winning, but not me. I keep failing"... and it gets to you.
 
