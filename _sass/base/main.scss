@@ -65,6 +65,10 @@ blockquote, q {
   border-left: 4px solid $color_sunlight;
 }
 
+figcaption {
+  line-height: 1.54;
+}
+
 
 .full-width {
   width: 100%;
@@ -168,3 +172,10 @@ blockquote, q {
 .rounded-4 { border-radius: 12px; }
 .rounded-5 { border-radius: 18px; }
 .rounded-6 { border-radius: 28px; }
+
+.line-xxs { line-height: 1.0;  }
+.line-xs  { line-height: 1.2;  }
+.line-sm  { line-height: 1.42; }
+.line-md  { line-height: 1.58; }
+.line-lg  { line-height: 1.72; }
+.line-xl  { line-height: 2.0;  }
