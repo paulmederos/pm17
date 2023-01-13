@@ -61,9 +61,10 @@ We want to be aware that not everyone feels comfortable sharing this stuff, that
 
 ## Dark side of BIP
 
-https://news.ycombinator.com/item?id=34103896
+Just like sharing your life highlights on Instagram can warp perception, building in public can do the same. And with [devastating effects on others](https://news.ycombinator.com/item?id=34103896).
 
-> 	I'm writing this post because I'm done. I can't do this anymore. After three failed attempts at building a successful startup and spending time institutionalized, I'm giving up on my entrepreneurship dreams.
+> I'm writing this post because I'm done. I can't do this anymore. After three failed attempts at building a successful startup and spending time institutionalized, I'm giving up on my entrepreneurship dreams.
+
 
 ^^ This post stung. Yes, entrepreneurship is hard, but the BIP movement has definitely elevated the perception of success. It's easy. Anyone can start a newsletter. Why don't you just start a youtube channel? Have you even tried putting yourself out there?! 
 
