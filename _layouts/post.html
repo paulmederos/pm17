@@ -3,7 +3,7 @@ layout: default
 ---
 
 <meta property="og:type" content="article" />
-<meta property="og:url" content="{{ page.permalink }}" />
+<meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
 <meta property="og:title" content="{{ page.title }}" />
 <meta property="og:description" content="{{ page.teaser }}" />
 
