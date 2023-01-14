@@ -2,6 +2,17 @@
 layout: default
 ---
 
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ page.permalink }}" />
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:description" content="{{ page.teaser }}" />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@{{ site.twitter_username }}" />
+<meta name="twitter:creator" content="@{{ site.twitter_username }}" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+<meta name="twitter:description" content="{% if page.teaser %}{{ page.teaser | strip_html | strip_newlines | truncate: 140 }}{% else %}{{ site.description }}{% endif %}" />
+
 <article class="Post">
   {% if page.hero_image %}
     <div class="Post__hero" style="background-image: url('{{ page.hero_image }}');"></div>
