@@ -4,7 +4,7 @@ title:  "And, not or"
 permalink: "and-not-or"
 date: 2018-04-23
 categories: journal
-teaser: "Build trust on your distributed team, and save everyone from that shitty feeling of uncertainty by writing more clearly."
+teaser: "False dichotomies, and leaving space o open by changing a single word."
 ---
 
 A designer I follow ([Katie Zhu](https://www.instagram.com/ktzhu/)) has been producing my favorite art lately.  It’s a series called “AND ! OR”, a collection of female portraits exploring false dichotomies in daily life.
@@ -25,7 +25,7 @@ And it’s all ok.
 
 When I reflect on my best work, there’s always this sort of tension. Questions like “is this the right path?” or “is this good enough yet?” — oftentimes there's no great answer. But being able to live with the tension can be magical and freeing.
 
-I worked with a [leadership coach](http://fivewaysforward.com) once. One of the most powerful tools—to me—that he shared was to replace "but" with "and" in conversations.
+I worked with [leadership coach](http://fivewaysforward.com) last year on working in ambiguity, and bringing my purpose through. He shared a powerful tool: replace "but" with "and" in conversations.
 
 > I think this piece is great,
 > ~~but~~ **and** it could use some help here
