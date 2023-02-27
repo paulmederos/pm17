@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "New book: Crafting Your UX Portfolio"
+title:  "Crafting Your UX Portfolio"
 permalink: "new-book-crafting-your-ux-portfolio"
 date: 2015-08-11
 categories: journal
