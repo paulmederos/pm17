@@ -17,8 +17,8 @@ Hydration
 Diet
 - Mostly Paleo. Avoid gluten, avoid cow dairy.
     - Breakfast: oatmeal, eggs, bacon, chia pudding, berries
-    - lunch: animal protein + veggies, raw or cooked.
-    - dinner: animal protein + starchy veggies / rice / grain-free carb alts (eg. almond flour/casava pasta)
+    - lunch: animal or plant protein + veggies, raw or cooked.
+    - dinner: plant protein + starchy veggies / rice / grain-free carb alts (eg. almond flour/casava pasta)
 
 Mini-protocols twice a year, ~15-30 days
 - for SIBO control + digestive health
@@ -35,9 +35,10 @@ Fasting
 - Currently no extended fasts or water fasts
 
 Supplementation
-- 1g/day, DHA Omega-3 (fish oil, omegagenics)
-        - why? anti-inflammatory impact because of low 3:6 ratio assumption; anecdotally, joints and digestion (post-SIBO) feel much better/smoother when taking O3.
-- Adaptogens (Reishi, Chaga, Cordyceps, Lions Mane)
+- 2g/day, DHA Omega-3 (fish oil, omegagenics)
+    - why? anti-inflammatory impact because of low 3:6 ratio assumption; anecdotally, joints and digestion (post-SIBO) feel much better/smoother when taking O3.
+- Adaptogenic herbs (Ashwaghanda, Reishi, Chaga, Cordyceps, Lions Mane)
+    - toss these in as-needed. AShwaghanda is my go-to... ~2week consistent does seems to help
 - Caffeine (1 espresso worth per day; one or two more espresso drinks with decaf for the ritual)
 - Resveratrol - paused.
 - Homocysteine Supreme (aka B-complex) - paused.
@@ -57,7 +58,7 @@ Glucose feedback
 - CGM twice a year, check which meals spike again, check how quickly i get back to baseline
 
 Alcohol
-- Rarely, usually to socialize (~1 drink or less per month)
+- Rarely, usually to socialize (~1 drink or less per month), and always wine or sake. No beer, no hard liquor. 
 
 Poop monitoring
 - ~daily or so practice
@@ -112,8 +113,8 @@ Sun bathing
 
 Personal Training
 - I have both virtual and in-person coaches. The combo works exceptionally well, with my virtual coach taking cues from the in-person trainer, and the in-person coach knowing I’m making serious progress + acting on guidance between visits.
-- In-person at a PT clinic, my coach is a certified physical therapist (DPT, OCS, FAAOMPT) and helps me understand root cause of injuries, and guides me through movements to recover + strengthen. I see them monthly.
-- Future Fit for virtual - paused. They used to handle my programming. My performance coach is a certified PT (DPT, OCS, CSCS) Current focus is bodyweight, lower-weight resistance and mobility injury rehab to prep me for heavier barbell work. We text via app almost daily.
+    - **In-person** at a PT clinic, my coach is a certified physical therapist (DPT, OCS, FAAOMPT) and helps me understand root cause of injuries, and guides me through movements to recover + strengthen. I see them monthly.
+    - Future Fit for **virtual** - paused. They used to handle my programming. My performance coach is a certified PT (DPT, OCS, CSCS) Current focus is bodyweight, lower-weight resistance and mobility injury rehab to prep me for heavier barbell work. We text via app almost daily.
 
 Stretching and Mobility
 - first thing when waking, light movement + stretching
