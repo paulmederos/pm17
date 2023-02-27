@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Personal Wellbeing & Longevity Practices"
+title:  "Personal wellbeing & longevity practices"
 permalink: "longevity"
 date: 2021-07-21
 categories: journal
