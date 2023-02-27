@@ -9,6 +9,8 @@ teaser: "My guide to the basics of woodworking, covering tools, safety, material
 
 I'm writing this guide for myself, and making it public so it might help others. I'm going to version it as I make changes. I'll cover holistically a wide range of topics.
 
+---
+
 ### Nutrition
 
 **💧 Hydration**
@@ -59,6 +61,7 @@ I'm writing this guide for myself, and making it public so it might help others.
 - Weekly Meal prep: sunday after farmers market I try to chop/prep fruits and veggies. Put them in a clear jar (re-using from my meal delivery services) so it's easy to see in fridge and take out for cooking/snacking. 
 - Prepared meal delivery: I use Methodology and Territory for meals weekly. Usually only a handful (2 proteins, 2 veggies, 2 carb sides, 2 "desserts") 
 
+---
 
 ### Sleep
 
@@ -79,9 +82,10 @@ I'm writing this guide for myself, and making it public so it might help others.
 - Warm shower to cool core body temp
 - Breathwork... relaxing 5-5-5.
 
-**😴 Catching up on sleep **
+😴 **Catching up on sleep**
 - if too many consecutive (2-3)) crap sleep days (< 8hrs), I prioritize 8+ days to get back to baseline.
 
+---
 
 ### Physical Fitness
 
@@ -130,6 +134,7 @@ I'm writing this guide for myself, and making it public so it might help others.
 💋 **Sex**
 - as often as possible, prioritized monthly (kids timing is toughhhh), try for weekly
 
+---
 
 ### Emotional Fitness (Mindfulness)
 
@@ -142,6 +147,7 @@ I'm writing this guide for myself, and making it public so it might help others.
 - Walking and thinking
 - Gardening
 
+---
 
 ### Stress Relief
 
@@ -151,6 +157,8 @@ I'm writing this guide for myself, and making it public so it might help others.
 - being in nature
 - chores around the house (dishes, laundry, picking up + organizing, groceries, meal prep)
 
+---
+
 ### Relationships
 
 - regular meetings to connect
@@ -158,6 +166,8 @@ I'm writing this guide for myself, and making it public so it might help others.
 - (chosen) family focus
     - daily phone calls with mom + pops
 - presence — putting away all distractions and being singularly focused on another person when we’re together
+
+---
 
 ### Longevity
 
@@ -167,7 +177,9 @@ I'm writing this guide for myself, and making it public so it might help others.
 - Resting HRV monitoring as sign of stress (lower HRV = higher stress because of sympathetic nervous system association, see Peter Attia pod.)
 - Healthcare team (Parsley, functional med doc, performance coaches, leadership coach, therapy)
 
-## People I’m Following
+---
+
+### People I’m Following
 
 - [Dr. Rhonda Patrick](https://www.foundmyfitness.com/) - Found My Fitness - Cellular biologist and science popularizer
 - [Dr. Peter Attia](https://peterattiamd.com/) - Drive Podcast
