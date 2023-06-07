@@ -4,7 +4,7 @@ title:  "Personal wellbeing & longevity practices"
 permalink: "longevity"
 date: 2021-07-21
 categories: journal
-teaser: "My guide to the basics of woodworking, covering tools, safety, materials, and tips picked up from artisan woodworkers in the shop."
+teaser: "A collection of practices in my routine. This guide is written for me, and I'm also making it public so it might help others."
 ---
 
 I'm writing this guide for myself, and making it public so it might help others. I'm going to version it as I make changes. I'll cover holistically a wide range of topics.
