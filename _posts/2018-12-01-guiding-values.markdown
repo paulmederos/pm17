@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Guiding values (Feb '23)"
+title:  "Guiding values (Jun '23)"
 permalink: "guiding-values"
 date: 2018-12-01
 categories: journal
@@ -15,11 +15,11 @@ This post shares ways of being ("traits") that I value—what they are, how I de
 They are: Love, Purpose, Health, Gratitude, Creativity, and Craft.
 
 ## Love 💕
-**What** — leaning into our universal onesness with all. Understanding our connection and acting on it for the well-being of us all. Deeply caring for others, and wanting to be a part of their lives.
+**What** — leaning into our universal onesness with all. Understanding our connection and acting on it for the well-being of us all. Deeply caring for others, and wanting to be a part of their lives. A deep sense of appreciation and thanks for what you are now and have been.
 
-**How** — choose to deepen connections. Constantly look to elevate others. Be kind. Practice empathy, compassion, and patience daily at work with yourself and others.Be proactive when you sense tension. Give more than you take.
+**How** — choose to deepen connections. Constantly look to elevate others. Be kind. Practice empathy, compassion, and patience daily at work with yourself and others.Be proactive when you sense tension. Give more than you take. Show appreciation more often than you think. Be thankful for where you are today. Make time to notice things you are thankful for. Respect other's expertise and time.
 
-**In Action** — when needing something from someone, be considerate of their time. Prioritize family time over work time. If sustainable packaging is an option, use it because it helps the Earth / other living beings. Champion social impact action (e.g. URM inclusivity, women's pay gap, animal cruelty, climate change.) 
+**In Action** — when needing something from someone, be considerate of their time. Prioritize family time over work time. If sustainable packaging is an option, use it because it helps the Earth / other living beings. Champion social impact action (e.g. URM inclusivity, women's pay gap, animal cruelty, climate change.) Recognize someone when they've done a great job. Tell someone you appreciate them today. Be vulnerable in conversations. Don't be so hard on yourself. Establish a practice of gratitude every morning.
 
 ## Purpose 🌊
 **What** — imagining a better future, then working towards it. Being grounded in vision. Intent manifest. The bigger picture. Being brave and authentically courageous. Spiritual pursuit.
@@ -35,12 +35,12 @@ They are: Love, Purpose, Health, Gratitude, Creativity, and Craft.
 
 **In Action** — prioritize time for movement. Get sleep. Eat nutritious things. Play. Rest. Spent quality time with friends and family. Work with a coach. Establish spiritual practices. Meditate. Turn off notifications. Take breaks often.
 
-## Gratitude 🙏
-**What** — a deep sense of appreciation and thanks for what you are now and have been. Thanks for people around you, for experiences you've been through, for the future you're shaping. Don't take things for granted. Don't expect things. Washing dishes to wash dishes (not to get clean cups for tea time)
+## Play 🤸
+**What** — TBD (Jun '23)
 
-**How** — Show appreciation more often than you think. Be thankful for where you are today. Make time to notice things you are thankful for. Respect other's expertise and time.
+**How** — TBD (Jun '23)
 
-**In Action** — Recognize someone when they've done a great job. Tell someone you appreciate them today. Be vulnerable in conversations. Don't be so hard on yourself. Establish a practice of gratitude every morning.
+**In Action** — TBD (Jun '23)
 
 ## Creativity ✨
 **What** — Making things with what you have by seeing as much of what's really there. MacGuyver. Surprising results. Exploring spaces. Deserve victory. Innovative. Seeing reality as is. First principle thinking.
