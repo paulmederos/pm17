@@ -44,13 +44,18 @@ I'm writing this guide for myself, and making it public so it might help others.
 
 **🌿 Supplementation**
 - Daily: 
-    - 2g/day, DHA Omega-3 (fish oil, viva naturals or omegagenics)
-    - Caffeine (1 espresso worth per day; one or two more espresso drinks with decaf for the ritual)
-- As-needed: 
-    - Adaptogenic herbs (Ashwaghanda > Reishi > Chaga = Cordyceps = Lions Mane)
-    - Resveratrol - paused.
-    - Homocysteine Supreme (aka B-complex) - paused.
-    - SIBO-related supps (eg. DGL powder for mucous membrane support) - paused.
+    - 4g/day, DHA Omega-3 (fish oil, [viva naturals](https://vivanaturals.com/products/fish-oil?variant=15385470140473) or omegagenics)
+    - 500mg - 1g curcumin phytosome (aka tumeric extract, currently getting from [Thorne](https://www.thorne.com/products/dp/meriva-500-sf-nsf))
+    - Homocysteine Supreme (aka B-complex, currently from [designs for health](https://www.designsforhealth.com/products/homocysteine-supreme)) - 2cap/day.
+    - 2k-4k IU daily, Vit D3/k2 (currently from [orthomolecular](https://www.orthomolecularproducts.com/product/liquid-vitamin-d3-with-k2))
+    - ~40-80mg, caffeine (1 espresso worth per day; one or two more espresso drinks with decaf for the ritual)
+    - 310mg magnesium + 100 mg L-theanine, ~1hr before bed (via [moon juice's Blue Lemon magnesi-om](https://moonjuice.com/products/magnesi-om-magnesium-supplement))
+- As-needed:
+    - Creatine, ~5g, on workout days (~3-4x/week, currently using from [thorne](https://www.thorne.com/products/dp/creatine))
+    - Adaptogenic herbs (Ashwaghanda > Reishi > Chaga = Cordyceps = Lions Mane) in times of higher work/parent stress (so, every other month I do a ~1-2wk cycle)
+    - 200mg Resveratrol + ~10mg quercetin (from [life extension](https://www.lifeextension.com/vitamins-supplements/item02230/optimized-resveratrol)) - paused.
+    - SIBO-related supps (eg. [RepairVite](https://www.apexenergetics.com/repairvite), DGL powder for mucous membrane support) - paused.
+    - pre/pro-biotics (I use [seed ds-01](https://seed.com/daily-synbiotic)) - paused, I pull it out 
 
 **🍲 Cooking**
 - Keep basic ingredients on hand weekly
@@ -59,7 +64,7 @@ I'm writing this guide for myself, and making it public so it might help others.
     - Starches (rices, gluten-free pastas, sometimes GF breads -- no buckweaht, no millet, no sourghum)
     - Meats (salmon/cod fillet or smoked; canned small fishes like anchovies/mackarel/sardines... Patagonia Provisions is tasty; pre-cooked chicken via [Kevin's](https://www.kevinsnaturalfoods.com/); ground beef 80/20 grassfed pasture; heritage pork bacon)
 - Weekly Meal prep: sunday after farmers market I try to chop/prep fruits and veggies. Put them in a clear jar (re-using from my meal delivery services) so it's easy to see in fridge and take out for cooking/snacking. 
-- Prepared meal delivery: I use Methodology and Territory for meals weekly. Usually only a handful (2 proteins, 2 veggies, 2 carb sides, 2 "desserts") 
+- Prepared meal delivery: I use [Methodology](https://www.gomethodology.com/) and [Territory](https://www.territoryfoods.com/) for meals weekly. Usually only a handful (2 proteins, 2 veggies, 2 carb sides, 2 "desserts") 
 
 ---
 
@@ -67,7 +72,7 @@ I'm writing this guide for myself, and making it public so it might help others.
 
 **🌒 Preparing environment** (cool, dark, circadian rhythm, clean sheets)
 - No A/C, but I aim for a cooler room (under ~70 seems to work well.)
-- EightSleep set to ~85-88F.
+- [EightSleep](https://www.eightsleep.com/) set to ~85-88F.
 - Blackout curtains
 
 **🌅 Consistent schedule**
@@ -83,7 +88,7 @@ I'm writing this guide for myself, and making it public so it might help others.
 - Breathwork... relaxing 5-5-5.
 
 😴 **Catching up on sleep**
-- if too many consecutive (2-3)) crap sleep days (< 8hrs), I prioritize 8+ days to get back to baseline.
+- if too many consecutive (2-3) crap sleep days (< 8hrs), I prioritize 8+ days to get back to baseline.
 
 ---
 
@@ -91,7 +96,7 @@ I'm writing this guide for myself, and making it public so it might help others.
 
 🌳 **Walking**
 - Try for 2-3 walks a day, one slower pace, one faster pace
-- Aim for 15m+, but even squeezing in a 2m walk outside is healthful
+- Aim for 15m+, but even squeezing in a 2m walk outside is healthful; often I'll get a 1-2hr walk with a phone call or podcast
 - Silence, meditation, problem solving, music, podcast, etc depending on energy + goal.
 
 😤 **Breathing**
@@ -172,10 +177,11 @@ I'm writing this guide for myself, and making it public so it might help others.
 ### Longevity
 
 - Supplements (see above in Nutrition.)
-- Biomarker discipline (tracking biomarkers regularly and adjusting practices as-needed)
+- Biomarker discipline (tracking biomarkers regularly and adjusting practices as-needed) - see my [labs spreadsheet here](https://docs.google.com/spreadsheets/d/1lcnHQQ1b1k9SkdA_Nn7GQg0ldBfu-ow5D1wqAquVtYw/edit#gid=0)
 - Wearables (Levels yearly check; Apple Watch for movement, paired with Future for workouts; Oura for sleep quality, especially when I start slipping.)
 - Resting HRV monitoring as sign of stress (lower HRV = higher stress because of sympathetic nervous system association, see Peter Attia pod.)
-- Healthcare team (Parsley, functional med doc, performance coaches, leadership coach, therapy)
+- Healthcare team ([Parsley](https://www.parsleyhealth.com/), functional med doc, performance coaches, leadership coach, therapy)
+
 
 ---
 
