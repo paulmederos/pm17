@@ -3,7 +3,7 @@ layout: post
 title:  "Woodworking: my beginner's notes"
 permalink: "woodworking"
 date: 2023-01-12
-categories: journal, wip
+categories: journal
 teaser: "My guide to the basics of woodworking, covering tools, safety, materials, and tips picked up from artisan woodworkers in the shop."
 ---
 
