@@ -20,7 +20,7 @@ My own interest started ~15+yrs ago with 37Signals. They often shared intimate d
 ### 1. Paying it forward, and opening the tent to more makers in the world.
 
 Running a business is hard, and traditionally the info has been locked in experience, inaccessible to most mentorship, or books (that take lots of time to parse.)
-I'm personally super grateful to the people who have taught me over the years, and the people who have made me feel like I can do it. Big names that stand out our 37Signals, Buffer, Baremetrics, and Intercom.
+I'm personally super grateful to the people who have taught me over the years, and the people who have made me feel like I can do it. Big names that stand out are 37Signals, Buffer, Baremetrics, and Intercom.
 
 Yes, stories like "How I Built This" gave similar motivation, but there's a lot of revisionist history painting unrealistic pictures. That's different with BIP — there's more real-time sharing of your biz that more accurately captures the roller coaster parts, the difficulties, the path to success or failure (and how it looks much more different than most expect.)
 
