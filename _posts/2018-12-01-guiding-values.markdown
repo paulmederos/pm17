@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Guiding values (Jun '23)"
+title:  "Guiding values (May '24)"
 permalink: "guiding-values"
 date: 2018-12-01
 categories: journal
-teaser: "Things I value: what they are, how I define them, and what they look like in action. They currently are: Love, Purpose, Health, Gratitude, Creativity, Craft."
+teaser: "Things I value: what they are, how I define them, and what they look like in action. They currently are: Love, Purpose, Health, Play, Creativity, Craft."
 ---
 
 
@@ -12,7 +12,7 @@ I believe everyone deserves great health. My life mission is to make great healt
 
 This post shares ways of being ("traits") that I value—what they are, how I define them, and what they look like in action.
 
-They are: Love, Purpose, Health, Gratitude, Creativity, and Craft.
+They are: Love, Purpose, Health, Play, Creativity, and Craft.
 
 ## Love 💕
 **What** — leaning into our universal onesness with all. Understanding our connection and acting on it for the well-being of us all. Deeply caring for others, and wanting to be a part of their lives. A deep sense of appreciation and thanks for what you are now and have been.
