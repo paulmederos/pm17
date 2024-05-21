@@ -36,11 +36,11 @@ They are: Love, Purpose, Health, Gratitude, Creativity, and Craft.
 **In Action** — prioritize time for movement. Get sleep. Eat nutritious things. Play. Rest. Spent quality time with friends and family. Work with a coach. Establish spiritual practices. Meditate. Turn off notifications. Take breaks often.
 
 ## Play 🤸
-**What** — TBD (Jun '23)
+**What** — embracing a lighthearted approach to life and work, viewing challenges as opportunities for fun and creativity. Cultivating joy and spontaneity in everyday moments, recognizing that playfulness fuels innovation and excellence.
 
-**How** — TBD (Jun '23)
+**How** — encourage curiosity and open-mindedness. Create spaces where experimentation/exploration is valued and mistakes are seen as learning opportunities. Integrate activities that promote joy and engagement without specific goals or outcomes. Facilitate moments of humor and playfulness in meetings and daily routines. Share more of what makes you weird/goofy/nerdy/yourself.
 
-**In Action** — TBD (Jun '23)
+**In Action** — Allow time for brainstorming sessions without rigid agendas to let ideas flow freely. Use creative exercises and games to break the ice and stimulate innovative thinking. Celebrate small successes with fun activities or rewards. Incorporate breaks into your routine where you can step back and engage in something enjoyable (eg. a lunch-time video game session, or a step outside for cartwheels), sparking fresh perspectives and insights. Engage authentically when others share their fun thing.
 
 ## Creativity ✨
 **What** — Making things with what you have by seeing as much of what's really there. MacGuyver. Surprising results. Exploring spaces. Deserve victory. Innovative. Seeing reality as is. First principle thinking.
