@@ -17,30 +17,30 @@ They are: Love, Purpose, Health, Play, Creativity, and Craft.
 ## Love 💕
 **What** — leaning into our universal onesness with all. Understanding our connection and acting on it for the well-being of us all. Deeply caring for others, and wanting to be a part of their lives. A deep sense of appreciation and thanks for what you are now and have been.
 
-**How** — choose to deepen connections. Constantly look to elevate others. Be kind. Practice empathy, compassion, and patience daily at work with yourself and others.Be proactive when you sense tension. Give more than you take. Show appreciation more often than you think. Be thankful for where you are today. Make time to notice things you are thankful for. Respect other's expertise and time.
+**How** — choose to deepen connections. Constantly look to elevate others. Be kind. Practice empathy, compassion, and patience daily at work with yourself and others. Be proactive when you sense tension. Give more than you take. Show appreciation more often than you think. Be thankful for where you are today. Make time to notice things you are thankful for. Respect other's expertise and time. 
 
-**In Action** — when needing something from someone, be considerate of their time. Prioritize family time over work time. If sustainable packaging is an option, use it because it helps the Earth / other living beings. Champion social impact action (e.g. URM inclusivity, women's pay gap, animal cruelty, climate change.) Recognize someone when they've done a great job. Tell someone you appreciate them today. Be vulnerable in conversations. Don't be so hard on yourself. Establish a practice of gratitude every morning.
+**In Action** — when needing something from someone, be considerate of their time. Prioritize family time over work time. If sustainable packaging is an option, use it because it helps the Earth / other living beings. Champion social impact action (e.g. URM inclusivity, women's pay gap, animal cruelty, climate change.) Recognize someone when they've done a great job. Tell someone you appreciate them today. Be vulnerable in conversations. Protect and cultivate vulerability. Don't be so hard on yourself. Establish a practice of gratitude every morning. Extend grace often, aka. forgive and forget.
 
 ## Purpose 🌊
 **What** — imagining a better future, then working towards it. Being grounded in vision. Intent manifest. The bigger picture. Being brave and authentically courageous. Spiritual pursuit.
 
 **How** — make time to reflect on your actions so they align with your vision and goals. Take time to think things through so you act with intention. Be authentic and practice radical candor.
 
-**In Action** — Revisit your values once a year. Plan with the end-goal in mind, and how you'll work towards it. Call out when you're spitballing or being raw. Learn about other's purposes and find paths of alignment.
+**In Action** — Revisit your values once a year. Plan with the end-goal in mind, and how you'll work towards it. Call out when you're spitballing / being raw, or when you've deepply considered a plan. Make space to learn about other people's purposes, then invest time in finding ways to align where it's a win-win. Seek out hard decisions that may cause conflict, and lean into purpose to pick a path forward. Share your reasoning so others can understand your intention and how you apply it, so they can do the same.
 
 ## Health 🧘‍♀️
 **What** — the pursuit of physical, mental, and spiritual wellbeing for yourself. Sustainable. Cyclical. Finding balance. Healing as a lifestyle. Preventative care.
 
-**How** — do good things for your body, mind, and soul.
+**How** — do good things for your body, mind, and soul. Prioritize time for movement. Play. Rest. Spent quality time with friends and family.  Establish spiritual practices. 
 
-**In Action** — prioritize time for movement. Get sleep. Eat nutritious things. Play. Rest. Spent quality time with friends and family. Work with a coach. Establish spiritual practices. Meditate. Turn off notifications. Take breaks often.
+**In Action** — exercise daily. Prioritize a consistent bedtime routine for great sleep. Cook often, and seek to eat nutritious things (and, indulge when it brings joy.) Turn off notifications. Take breaks often-- throughout the day, week, month, and years. Meditate. Work with coaches. Find key triggers (eg. looking at your garden) that remind you to stay present.
 
 ## Play 🤸
-**What** — embracing a lighthearted approach to life and work, viewing challenges as opportunities for fun and creativity. Cultivating joy and spontaneity in everyday moments, recognizing that playfulness fuels innovation and excellence.
+**What** — embracing a lighthearted approach to life and work, viewing challenges as opportunities for fun and creativity. Cultivating joy and spontaneity in everyday moments, recognizing that playfulness is a source of both innovation and recovery. 
 
-**How** — encourage curiosity and open-mindedness. Create spaces where experimentation/exploration is valued and mistakes are seen as learning opportunities. Integrate activities that promote joy and engagement without specific goals or outcomes. Facilitate moments of humor and playfulness in meetings and daily routines. Share more of what makes you weird/goofy/nerdy/yourself.
+**How** — encourage curiosity and open-mindedness by living with inquiry. Create spaces where experimentation/exploration is valued and mistakes are seen as learning opportunities. Integrate activities that promote joy and engagement without specific goals or outcomes. Facilitate moments of humor and playfulness in meetings and daily routines. Share more of what makes you weird/goofy/nerdy/yourself.
 
-**In Action** — Allow time for brainstorming sessions without rigid agendas to let ideas flow freely. Use creative exercises and games to break the ice and stimulate innovative thinking. Celebrate small successes with fun activities or rewards. Incorporate breaks into your routine where you can step back and engage in something enjoyable (eg. a lunch-time video game session, or a step outside for cartwheels), sparking fresh perspectives and insights. Engage authentically when others share their fun thing.
+**In Action** — run work sessions without loose agendas to let ideas flow freely. Use games to break the ice and get innovative thinking going. Celebrate small successes with fun and silliness. Take breaks where you can step back and do something enjoyable (eg. a lunch-time video game session, or a step outside for cartwheels.) Take genuine interest when others share their fun thing.
 
 ## Creativity ✨
 **What** — Making things with what you have by seeing as much of what's really there. MacGuyver. Surprising results. Exploring spaces. Deserve victory. Innovative. Seeing reality as is. First principle thinking.
