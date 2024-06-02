@@ -48,24 +48,6 @@ layout: default
   </div>
 </section>
 
-<section class="Home__Essays Home__Writing">
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-xs-12 col-md-8 col-md-offset-2">
-        <h2 class="underlined mb-6">Writing</h2>
-      </div>
-    </div>
-
-    <ul class="omg-so-many-posts">
-      {% for post in site.posts %}
-        {% unless post.categories contains 'case_study' %}
-          {% include post_item.html post=post %}
-        {% endunless %}
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-
 <section class="Home__Essays Home__Work">
   <div class="container-fluid">
     <div class="row">
@@ -79,6 +61,24 @@ layout: default
         {% if post.categories contains 'case_study' %}
           {% include post_item.html post=post %}
         {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="Home__Essays Home__Writing">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2">
+        <h2 class="underlined mb-6">Writing</h2>
+      </div>
+    </div>
+
+    <ul class="omg-so-many-posts">
+      {% for post in site.posts %}
+        {% unless post.categories contains 'case_study' %}
+          {% include post_item.html post=post %}
+        {% endunless %}
       {% endfor %}
     </ul>
   </div>
