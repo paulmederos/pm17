@@ -78,7 +78,7 @@ layout: default
       {% for post in site.posts %}
         {% if post.categories contains 'journal' or post.categories contains 'essay' %}
           {% include post_item.html post=post %}
-        {% endunless %}
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
