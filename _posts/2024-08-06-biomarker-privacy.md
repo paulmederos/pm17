@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Biomarkers Privacy Policy"
+title:  "Privacy Policy for Biomarkers app"
 permalink: "biomarkers-privacy-policy"
 date: 2024-08-06
 categories: misc
@@ -8,8 +8,6 @@ teaser: ""
 ---
 
 _This Privacy Policy was last updated on **August 6th, 2024**._
-
-# Privacy Policy for Biomarkers
 
 ## Introduction
 
