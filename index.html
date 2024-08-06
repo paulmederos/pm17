@@ -76,7 +76,7 @@ layout: default
 
     <ul class="omg-so-many-posts">
       {% for post in site.posts %}
-        {% unless post.categories contains 'case_study' %}
+        {% if post.categories contains 'journal' or post.categories contains 'essay' %}
           {% include post_item.html post=post %}
         {% endunless %}
       {% endfor %}
