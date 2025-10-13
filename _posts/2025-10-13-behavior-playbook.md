@@ -23,17 +23,17 @@ Below is the mental model I use when I’m building health software (what matter
 
 I lean heavily on a handful of behavior change frameworks that I've spend time with over my career:
 
-- **B=MAP ((BJ Fogg))[https://www.behaviormodel.org]:** Behavior = Motivation × Ability × Prompt. It’s “prompt,” not “trigger,” because prompts have flavors:  
+- **B=MAP ((BJ Fogg)[https://www.behaviormodel.org]):** Behavior = Motivation × Ability × Prompt. It’s “prompt,” not “trigger,” because prompts have flavors:  
   - **Spark** when motivation is present: ride the momentum.
   - **Facilitator** when motivation is low: make it easier.  
   - **Signal** when the action is already easy: find the right time.  
   👆 most nudging mistakes come from picking the wrong flavor.
 
-- **Identity-based habits ((James Clear))[https://jamesclear.com/atomic-habits]:** Tiny actions are **evidence**. The goal is not to "do more"... the goal is to accumulate proof that "I'm the kind of person who... (keeps promises to future-me.)"
+- **Identity-based habits ((James Clear)[https://jamesclear.com/atomic-habits]):** Tiny actions are **evidence**. The goal is not to "do more"... the goal is to accumulate proof that "I'm the kind of person who... (keeps promises to future-me.)"
 
-- **Self-determination theory ((Deci & Ryan))[https://selfdeterminationtheory.org/theory/]:** Preserve **autonomy** (my choice), **competence** (gotta be doable), and **relatedness** (i’m not alone.) If a prompt erodes any of these, motivation decays.
+- **Self-determination theory ((Deci & Ryan)[https://selfdeterminationtheory.org/theory/]):** Preserve **autonomy** (my choice), **competence** (gotta be doable), and **relatedness** (i’m not alone.) If a prompt erodes any of these, motivation decays.
 
-- **COM-B ((Decision Lab))[https://thedecisionlab.com/reference-guide/organizational-behavior/the-com-b-model-for-behavior-change]:** When something that's expected to work isn’t happening, it’s usually because the  **Opportunity** (time, tools, environment, social context) isn't available. Everyone has a different environment and set of circumstances. 
+- **COM-B ((Decision Lab)[https://thedecisionlab.com/reference-guide/organizational-behavior/the-com-b-model-for-behavior-change]):** When something that's expected to work isn’t happening, it’s usually because the  **Opportunity** (time, tools, environment, social context) isn't available. Everyone has a different environment and set of circumstances. 
 
 These four line up cleanly with how I build: prompts pick the moment and shape; identity sets direction; SDT guards tone; COM-B checks reality.
 
