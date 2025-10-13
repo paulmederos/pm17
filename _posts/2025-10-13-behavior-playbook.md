@@ -6,11 +6,10 @@ subtitle: "A product playbook for health & wellness software that actually chang
 date: 2025-10-13
 categories: journal
 teaser: "How I turn awareness into compounding health: prompts that respect autonomy, tiny steps that fit today, and a bias toward fundamentals (movement, nutrition, and sleep.)"
+
 ---
 
-## A product playbook for health & wellness software that actually changes behavior
-
-A single data point can change behavior: a lab result, a new diagnosis, a watch alert, a race registration. Most apps don’t capitalize on that window. They either hand you a dashboard and hope for the best, or they prescribe a plan that ignores your actual week.
+These are my notes-to-self re. a product playbook for health & wellness software that actually changes behavior.
 
 My approach is straightforward: design for **motivation momentum**. Pair *just-enough* visibility with *one believable action*, aimed at the most important lever you can pull **today**. Then compound over a long time horizon; work *with* time.
 
