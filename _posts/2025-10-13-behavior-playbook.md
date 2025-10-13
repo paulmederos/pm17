@@ -21,54 +21,52 @@ Below is the mental model I use when I’m building health software... what matt
 
 I lean on a handful of behavior-change frameworks that I’ve spent time with over my career. I bias toward **risk-adjusted, high-leverage levers** (movement, sleep, nutrition) and I measure by **functional capacity over a long horizon**, not short-term vanity metrics.
 
-- **B=MAP ([BJ Fogg](https://www.behaviormodel.org))**  
-  Behavior = Motivation × Ability × Prompt. It’s **prompt**, not “trigger,” because prompts have flavors:  
+- **B=MAP ([BJ Fogg](https://www.behaviormodel.org))** — Behavior = Motivation × Ability × Prompt; most nudging mistakes come from picking the wrong flavor of Prompt 👇
   - **Spark** when motivation is present: ride the momentum.  
   - **Facilitator** when motivation is low: make it easier.  
   - **Signal** when the action is already easy: find the right time.  
-  👆 Most nudging mistakes come from picking the wrong flavor.
+  
 
-- **Identity-based habits ([James Clear](https://jamesclear.com/atomic-habits))**  
-  Tiny actions are **evidence**. The goal isn’t to “do more”… it’s to accumulate proof that *“I’m the kind of person who keeps promises to future-me.”*
+- **Identity-based habits ([James Clear](https://jamesclear.com/atomic-habits))** — tiny actions are **evidence**. The goal isn't to "do more"… it's to accumulate proof that *"I'm the kind of person who... (eg. keeps promises to future-me; works out in the morning; pays attention to my diet; loves good sleep and prioritizes it.)"*
 
-- **Self-Determination Theory (SDT; [Deci & Ryan](https://selfdeterminationtheory.org/theory/))**  
-  Preserve **autonomy** (my choice), **competence** (doable), and **relatedness** (I’m not alone). If a prompt erodes any of these, motivation decays.
+- **Self-Determination Theory (SDT; [Deci & Ryan](https://selfdeterminationtheory.org/theory/))** — preserve **autonomy** (my choice), **competence** (doable), and **relatedness** (I'm not alone.) If a prompt erodes any of these, motivation decays.
 
-- **COM-B ([Decision Lab overview](https://thedecisionlab.com/reference-guide/organizational-behavior/the-com-b-model-for-behavior-change))**  
-  When something that “should” work isn’t happening, it’s usually **Opportunity** (time, tools, environment, social context). Everyone’s environment and constraints differ.
+- **COM-B ([Decision Lab overview](https://thedecisionlab.com/reference-guide/organizational-behavior/the-com-b-model-for-behavior-change))** — when something that "should" work isn’t happening, it’s usually a case of mismatched **Opportunity** (lacking time, tools, environment, social context.) Everyone has different context, environments, and constraints.
 
 ---
 
 ## The flexible loop
 
-**See → Reflect → Act → See again.**
+👀 See → 🧘‍♀️ Reflect → 💪 Act → 🔄 See again.
 
 - 👀 **See:** passive sensing and one clean summary. Not twenty charts — one that changes a decision.  
 - 🧘‍♀️ **Reflect:** given who I’m becoming, which **lever** matters next?  
 - 💪 **Act:** the smallest believable step, matched to ability (e.g., **Zone 2 (Z2)** as low-intensity aerobic work).  
 - 🔄 **Looooop:** show compounding impact, offer one next move.
 
-Prompts (see [Foundations](#foundations)) are the on-ramps into this loop:
+Prompts (see [Foundations](#foundations)) act as on-ramps into the loop:
 
-- **Spark** when a motivation spike hits (abnormal lab, watch feature, a friend challenge).  
-- **Facilitator** when the day is cramped (reduce scope, swap context).  
-- **Signal** at routine windows (you usually walk now; want to start?).
+- **Spark** prompt when a motivation spike hits (abnormal lab, streak success, a friend challenge) 
+- **Facilitator** prompt when the day is cramped (reduce scope, swap context)  
+- **Signal** prompt at routine windows ("you usually walk now; want to start?")
 
 Our job as designers (of programs + apps) is to pick the right prompt type, at the right time, with the right-sized step. Fewer, smarter prompts is the goal.
 
 ---
 
-## Aiming: Top-100 → Top-5
+## Aiming: winnowing a ~top-100 down to a Top-5 highest leverage behaviors
 
 Health is a long tail of tiny habits that people stack over _many_ years.
 
-An athlete is primed to do a workout (give them the program and they’re off) because they’ve stacked hundreds of tiny bits over time. Someone without that background may not have those pieces yet... *how many reps, why, push-up vs. pull-up, what does a good push-up feel like*, etc.
+An athlete is easily primed to do a workout (give them the program and they’re off) because they’ve stacked hundreds of tiny bits over time. Someone without that background may not have those pieces yet... *how many reps, why, push-up vs. pull-up, what does a good push-up feel like*, etc.
 
-If you listed every tiny habit that someone could take, that can contribute to great health (sleep regularity, protein, Z2 minutes, resistance training, no alcohol, better sunlight, stress practice, community, environmental), you’d hit **100+** quickly. Useful, but paralyzing without a lens.
+If you listed every tiny habit that someone could take that would contribute to improving their health (eg. sleep regularity, protein, Z2 minutes, resistance training, no alcohol, better sunlight, stress practice, community, environmental), you’d hit **100+** quickly. Useful, but paralyzing without a lens.
 
 My POV:
 
-1. **Light intake** to build a rough Top-100 holistic map (lifestyle, family history, med history, a few labs, movement/sleep wearables, constraints.)  
+1. **Light intake** to build a rough Top-100 holistic map (lifestyle, family history, med history, a few labs, movement/sleep wearables, constraints.) 
+  - Minimum amount of data here... you don't need a 100+ panel biomarker testing w/ full scans to build a successful behavior change program.
+  - But... labs do act as a Prompt to spark motivation at some point. More visibility _can_ be good, but without support it _can_ be bad, eg. health anxiety ot over-optimizing on low leverage behaviors.)
 2. Identify the **Top-5** levers that would move the most weight in the near term (**this week**, this month).
 3. If starting "cold", allow **easy wins** (e.g., “okay, do #72 — take a B-complex vitamin; it’s easy, helpful, and starts building that updated health-oriented identity”) to build momentum; then re-aim toward the Top-5 as confidence and capacity grow.
 
