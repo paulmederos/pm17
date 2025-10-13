@@ -5,7 +5,7 @@ title: "Designing momentum: a product approach to accessible health"
 subtitle: "A product playbook for health & wellness software that actually changes behavior"
 date: 2025-10-13
 categories: journal
-teaser: "Awareness + compounding 1% stacks = better healthspan; Pair just-enough visibility with one believable action, aimed at the most important lever you can pull today. Then compound."
+teaser: "How I turn awareness into compounding health: prompts that respect autonomy, tiny steps that fit today, and a bias toward fundamentals (movement, nutrition, and sleep.)"
 ---
 
 ## A product playbook for health & wellness software that actually changes behavior
