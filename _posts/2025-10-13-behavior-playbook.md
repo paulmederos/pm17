@@ -48,37 +48,41 @@ These four line up cleanly with how I build: prompts pick the moment and shape; 
 - **Act:** the smallest believable step, matched to ability.  
 - **See again:** show compounding and offer one next move.
 
-Prompts are the on-ramps into this loop:
+Prompts (see (Foundations)[#foundations]) are the on-ramps into this loop:
 
 - **Spark** when a motivation spike hits (abnormal lab, watch feature, a friend challenge).  
 - **Facilitator** when the day is cramped (reduce scope, swap context).  
 - **Signal** at routine windows (you usually walk now; want to start?).
 
-The product job is to pick the right prompt type at the right time with the right-sized step. Fewer prompts, smarter prompts.
+Our job as designers (of programs + apps) is to pick the right prompt type, at the right time,  with the right-sized step. Fewer, smarter prompts is the goal.
 
 ---
 
 ## Aiming: Top-100 → Top-5
 
-Health is a long tail. If you listed every lever (sleep regularity, protein, Z2 minutes, strength, alcohol, sunlight, stress practice, community, environment), you’d hit **100+** quickly. That list is useful, but it can paralyze.
+Health is a long tail of tiny habits that folks stack over their lives. 
+
+An athlete is primed to do a workout (eg. give them the program and they're off) because they've stacked up a ton of tiny foundational bits over time. But, someone without athletic experience earlier in their lives may not have the foundational tiny bits, eg. how many reps? why? a pushup vs a pull up? whats a good push-up feel like? etc.
+
+Imagine you listed every tiny habit that could contribute to great health (eg. sleep regularity, protein, Z2 minutes, strength, alcohol, sunlight, stress practice, community, environment)... you’d hit **100+** quickly. That list is useful, but it can paralyze.
 
 I work it like this:
 
 1. **Light intake** to build a rough Top-100 map (a few labs, 1–2 wearables, lifestyle constraints).  
-2. Identify the **Top-5** levers that would move the most weight **this week**.  
-3. If the user is cold, allow **easy wins** to build momentum; then re-aim toward the Top-5 as confidence and capacity grow.
+2. Identify the **Top-5** levers that would move the most weight in the short-term (**this week**, this month.)  
+3. If the user is starting "cold", allow **easy wins** (eg. "ok, you can do #72 which is to take a B-complex vitamin, sure, it's easy and helpful and gets you going buolding that updated health-oriented identity") to build momentum; then re-aim toward the Top 5 as confidence and capacity grow.
 
-Every week: a short **zoom-out** to ask “what changed?” and swap a lever if needed. Momentum first, optimization later.
+Every week: a short **zoom-out** to ask "what changed?" and swap a lever if needed. Momentum first, optimization later.
 
 ---
 
 ## Product rules (the ones I actually use)
 
-- **Automate collection. Distill meaning. Offer one action.** If the user has to interpret five charts to figure out what to do, we failed the handoff.
-- **Personalize *ability*, not just content.** Everyone personalizes articles. The win is sizing the next step so it’s doable *today*.
-- **Soft streaks.** Protect identity momentum. Let people pause, down-shift, or switch levers without losing the throughline of “I’m someone who shows up.”
+- **Automate collection. Distill meaning. Offer one tiny action.** If the user has to interpret five charts to figure out what to do, we failed the handoff.
+- **Personalize *ability*.** The win is sizing the next step so it’s doable *today*. 
+- **Soft streaks.** Protect identity momentum. Let people pause, down-shift, or switch levers without losing the throughline of "I'm someone who shows up."
 - **Design for Opportunity shifts.** Travel mode, sick-day mode, caregiver mode. Prepack the swaps so action remains possible.
-- **Consent and tone.** Defaults do the heavy lifting; “not now” is visible; language sounds like a coach, not a cop.
+- **Consent and tone.** Defaults do the heavy lifting; “not now” is visible; language sounds like a compassionate coach, not a bootcamp drill seargeant.
 
 ---
 
@@ -97,13 +101,13 @@ Every week: a short **zoom-out** to ask “what changed?” and swap a lever if 
 ## Case studies (why these patterns matter)
 
 **Omada Health — digital DPP done like a system**  
-Omada pairs human coaching with graduated goals and well-timed prompts, then measures outcomes in the open (weight loss, HbA1c). The interesting thing isn’t the app shell—it’s the choreography: low-friction on-ramps, ability-matched targets, actual humans when it matters. Translation: if you want clinical impact, design adherence on purpose and prove it.
+Omada pairs human coaching with graduated goals and well-timed prompts, then measures outcomes in the open (weight loss, HbA1c). The interesting thing isn’t the app shell... it’s the choreography: low-friction on-ramps, ability-matched targets, and actual humans-in-the-loop when it matters. Translation: if you want clinical impact, design adherence on purpose and prove it.
 
 **Gentler Streak — humane cadence in the wild**  
-They meet you where you are, model readiness, and protect a compassionate streak. That’s SDT in product form: autonomy (you choose), competence (doable progressions), relatedness (tone that sounds like a coach). It’s a live example of **Facilitator** prompts instead of guilt.
+They meet you where you are, they model readiness, and they protect compassionate streaks. I love Gentler because it's practically SDT in product form: autonomy (you choose), competence (doable progressions), relatedness (tone that sounds like a compassionate coach.) It’s a live example of well-designed **Facilitator** prompts instead of guilt or shame.
 
 **Apple Rings + health notifications — clarity and timing**  
-Rings are visibility that turns into action. No energy-model lecture, just “close the ring.” On the clinical side, sleep-apnea and hypertension notifications are **Signals** attached to high-leverage actions: the watch notices, summarizes, and nudges you to escalate. That’s the loop at population scale: notice for you, reflect with you, suggest one step.
+Rings are visibility that turns into action. No energy-model lecture, just "close the ring." On the clinical side, sleep-apnea and hypertension notifications are **Signals** attached to high-leverage actions: the watch notices, summarizes, and nudges you to escalate. That’s the loop at a population scale: notice for you, reflect with you, suggest one step. Where health optimizers usually shit on Apple for their "slow pace" and "not deep enough" support, I believe Apple already is and will continue to be the most influential health company of the century because of their well-crafted population-scale behavior change patterns.
 
 These three cover the spectrum: human + digital choreography (Omada), compassionate ability-matching (Gentler Streak), and large-scale detect-and-prompt (Apple).
 
@@ -144,7 +148,7 @@ This is boring by design. Boring is sustainable.
 
 ---
 
-## When I get stuck (personal checklist)
+## When I get stuck (personal checklist to embed at product-level)
 
 - Shrink the step. Change time. Change place.  
 - Swap to a different Top-5 lever for a week.  
@@ -153,7 +157,7 @@ This is boring by design. Boring is sustainable.
 
 ---
 
-## Short truths I want to keep near the surface
+## Short truths / reminders to self
 
 - Small today, compounding tomorrow.  
 - Evidence beats intention.  
@@ -161,11 +165,4 @@ This is boring by design. Boring is sustainable.
 - Momentum first, optimization later.  
 - If it feels like control, motivation dies.
 
----
 
-### References & examples (for further reading)
-- BJ Fogg — Behavior Model (B=MAP); Prompt types: Spark, Facilitator, Signal.  
-- James Clear — Identity-based habits and “votes” for the type of person you are.  
-- Deci & Ryan — Self-Determination Theory (autonomy, competence, relatedness).  
-- Michie et al. — COM-B model (capability, opportunity, motivation).  
-- Case studies: Omada Health (digital DPP outcomes), Gentler Streak (Apple Design Award; humane streaks), Apple Watch rings + health notifications (sleep apnea, hypertension).
