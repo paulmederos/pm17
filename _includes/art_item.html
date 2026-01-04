@@ -1,0 +1,92 @@
+<article 
+  class="ArtItem ArtItem--{{ include.item.type }}" 
+  data-id="{{ include.item.id }}"
+  data-title="{{ include.item.title | downcase }}"
+  data-body="{{ include.item.body | downcase | default: '' }}"
+  data-tags="{{ include.item.tags | join: ' ' | downcase }}"
+  data-attribution="{{ include.item.attribution | downcase }}"
+>
+  {% if include.item.type == 'image' %}
+    <figure class="ArtItem__media">
+      <img 
+        src="{{ include.item.media.src }}" 
+        alt="{{ include.item.media.alt | default: include.item.title }}"
+        loading="lazy"
+      />
+    </figure>
+  {% elsif include.item.type == 'video' %}
+    <div class="ArtItem__media ArtItem__media--video">
+      {% if include.item.media.embed_type == 'youtube' %}
+        <iframe 
+          src="{{ include.item.media.src }}" 
+          title="{{ include.item.title }}"
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      {% elsif include.item.media.embed_type == 'vimeo' %}
+        <iframe 
+          src="{{ include.item.media.src }}" 
+          title="{{ include.item.title }}"
+          frameborder="0" 
+          allow="autoplay; fullscreen; picture-in-picture" 
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      {% else %}
+        <video controls preload="metadata">
+          <source src="{{ include.item.media.src }}" type="video/mp4">
+        </video>
+      {% endif %}
+    </div>
+  {% elsif include.item.type == 'audio' %}
+    <div class="ArtItem__media ArtItem__media--audio">
+      {% if include.item.media.embed_type == 'spotify' %}
+        <iframe 
+          src="{{ include.item.media.src }}" 
+          title="{{ include.item.title }}"
+          frameborder="0" 
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+          loading="lazy"
+          style="border-radius:12px"
+        ></iframe>
+      {% elsif include.item.media.embed_type == 'soundcloud' %}
+        <iframe 
+          src="{{ include.item.media.src }}" 
+          title="{{ include.item.title }}"
+          frameborder="0"
+          loading="lazy"
+        ></iframe>
+      {% else %}
+        <audio controls preload="metadata">
+          <source src="{{ include.item.media.src }}" type="audio/mpeg">
+        </audio>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  <div class="ArtItem__content">
+    <h3 class="ArtItem__title">{{ include.item.title }}</h3>
+    
+    {% if include.item.body %}
+      <p class="ArtItem__body">{{ include.item.body }}</p>
+    {% endif %}
+    
+    <footer class="ArtItem__meta">
+      <span class="ArtItem__attribution">{{ include.item.attribution }}</span>
+      {% if include.item.year %}
+        <span class="ArtItem__year">{{ include.item.year }}</span>
+      {% endif %}
+    </footer>
+
+    {% if include.item.tags.size > 0 %}
+      <div class="ArtItem__tags">
+        {% for tag in include.item.tags %}
+          <span class="ArtItem__tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>
+

@@ -1,0 +1,125 @@
+[
+  {
+    "id": "what-art-does",
+    "title": "What Art Does",
+    "body": "Art is something that happens, a process, not a quality. It is a verb, not a noun. What it does is create a new experience, a different way of seeing the world.",
+    "type": "text",
+    "tags": ["book"],
+    "attribution": "Brian Eno & Bette A.",
+    "year": "2024"
+  },
+  {
+    "id": "shape-of-design",
+    "title": "The Shape of Design",
+    "body": "Design is a field of connections—it creates links between things that were previously unconnected. The work is a response to an inquiry.",
+    "type": "text",
+    "tags": ["book", "design"],
+    "attribution": "Frank Chimero",
+    "year": "2012"
+  },
+  {
+    "id": "meteora",
+    "title": "Meteora",
+    "body": "The album that defined a generation. Raw emotion meets precision engineering—nu-metal at its most vulnerable and powerful.",
+    "type": "audio",
+    "tags": ["album", "music"],
+    "media": {
+      "src": "https://open.spotify.com/embed/album/4Gfnly5CzMJQqkUFfoHaP3",
+      "embed_type": "spotify"
+    },
+    "attribution": "Linkin Park",
+    "year": "2003"
+  },
+  {
+    "id": "oblique-strategies",
+    "title": "Oblique Strategies",
+    "body": "Over one hundred worthwhile dilemmas. A card-based method for promoting creativity, created by Brian Eno and Peter Schmidt.",
+    "type": "text",
+    "tags": ["cards", "creativity", "tool", "test"],
+    "attribution": "Brian Eno & Peter Schmidt",
+    "year": "1975"
+  },
+  {
+    "id": "the-storm-thorgerson",
+    "title": "The Dark Side of the Moon",
+    "body": "A prism dispersing light into a spectrum—simple, iconic, eternal. The cover that taught me album art could be fine art.",
+    "type": "image",
+    "tags": ["album-art", "design", "music", "test"],
+    "media": {
+      "src": "https://upload.wikimedia.org/wikipedia/en/3/3b/Dark_Side_of_the_Moon.png",
+      "alt": "The Dark Side of the Moon album cover showing a prism dispersing white light"
+    },
+    "attribution": "Storm Thorgerson / Hipgnosis",
+    "year": "1973"
+  },
+  {
+    "id": "music-for-airports",
+    "title": "Music for Airports 1/1",
+    "body": "The piece that invented ambient music. Designed to induce calm and space to think.",
+    "type": "audio",
+    "tags": ["ambient", "music", "song", "test"],
+    "media": {
+      "src": "https://open.spotify.com/embed/track/5uPfYWWTCE6TjXWZlS0QmS",
+      "embed_type": "spotify"
+    },
+    "attribution": "Brian Eno",
+    "year": "1978"
+  },
+  {
+    "id": "koyaanisqatsi",
+    "title": "Koyaanisqatsi",
+    "body": "Life out of balance. A wordless documentary that sees humanity through time-lapse eyes, scored by Philip Glass.",
+    "type": "video",
+    "tags": ["film", "documentary", "experimental", "test"],
+    "media": {
+      "src": "https://www.youtube.com/embed/v3bSS2oFuiM",
+      "embed_type": "youtube"
+    },
+    "attribution": "Godfrey Reggio",
+    "year": "1982"
+  },
+  {
+    "id": "four-quartets",
+    "title": "Four Quartets",
+    "body": "We shall not cease from exploration, and the end of all our exploring will be to arrive where we started and know the place for the first time.",
+    "type": "text",
+    "tags": ["poetry", "book", "test"],
+    "attribution": "T.S. Eliot",
+    "year": "1943"
+  },
+  {
+    "id": "rothko-chapel",
+    "title": "Rothko Chapel",
+    "body": "Fourteen black paintings in an octagonal room. A place for silence and contemplation. Art as sacred space.",
+    "type": "image",
+    "tags": ["painting", "installation", "architecture", "test"],
+    "media": {
+      "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Rothko_Chapel_2.jpg/1280px-Rothko_Chapel_2.jpg",
+      "alt": "Interior of the Rothko Chapel showing dark paintings on walls"
+    },
+    "attribution": "Mark Rothko",
+    "year": "1971"
+  },
+  {
+    "id": "ico",
+    "title": "Ico",
+    "body": "A boy and a girl, escaping a castle. No HUD, no tutorials—just hand-holding and trust. Games as poetry.",
+    "type": "text",
+    "tags": ["video-game", "game", "test"],
+    "attribution": "Fumito Ueda / Team Ico",
+    "year": "2001"
+  },
+  {
+    "id": "rain-room",
+    "title": "Rain Room",
+    "body": "Walk through falling water without getting wet. Technology that responds to presence, creating impossible experiences.",
+    "type": "video",
+    "tags": ["installation", "sculpture", "interactive", "test"],
+    "media": {
+      "src": "https://www.youtube.com/embed/EkvazIZx-F0",
+      "embed_type": "youtube"
+    },
+    "attribution": "Random International",
+    "year": "2012"
+  }
+]

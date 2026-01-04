@@ -1,0 +1,84 @@
+---
+layout: default
+title: Library
+permalink: /library
+---
+
+<section class="Library">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-2">
+        {% include side_navigation.html %}
+      </div>
+      <div class="col-xs-12 col-md-10">
+        <div class="Library__grid">
+          {% for book in site.data.library %}
+            <article class="BookCard" data-book-id="{{ book.id }}">
+              <div class="BookCard__cover">
+                {% assign isbn = book.isbn13 | default: book.isbn %}
+                {% if isbn %}
+                  <img 
+                    src="/images/covers/{{ isbn }}.jpg"
+                    alt="{{ book.title }}"
+                    loading="lazy"
+                    onerror="this.style.opacity='0'"
+                  />
+                {% endif %}
+                <div class="BookCard__gradient"></div>
+              </div>
+              <div class="BookCard__info">
+                <h3 class="BookCard__title">{{ book.title }}</h3>
+                <p class="BookCard__author">{{ book.author }}</p>
+              </div>
+            </article>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Generate deterministic gradient colors based on book title (fallback for missing covers)
+// Uses Forest palette: earthy, zen, woodland tones
+(function() {
+  const palettes = [
+    ['#A8B5A0', '#D4C5B0', '#E8DFD4'], // Forest morning mist
+    ['#8B7355', '#A69076', '#C4B5A0'], // Warm bark
+    ['#6B7B6B', '#9CA88F', '#C9D1C0'], // Moss & stone
+    ['#C4A77D', '#DBC9A8', '#EDE4D4'], // Desert sand
+    ['#4A5548', '#6B7B6B', '#98A890'], // Deep forest
+    ['#5C5A52', '#837E73', '#B5AFA5'], // Twilight woods
+    ['#B8A88A', '#D4C9B5', '#EBE5DA'], // Sunlit clearing
+    ['#7A7B73', '#A5A69E', '#CFCFC8'], // River stone
+    ['#8B6F4E', '#A68B6A', '#C9B898'], // Autumn earth
+    ['#9CA295', '#B5BDB0', '#D4D9D0'], // Morning fog
+    ['#6B5B4A', '#8B7B6A', '#B5A898'], // Oak heartwood
+    ['#8B9B7A', '#A8B598', '#C9D4BC'], // Sage garden
+    ['#A69080', '#C4B0A0', '#E0D4C8'], // Dusk sand
+    ['#4B5545', '#6B7565', '#909B88'], // Pine shadow
+    ['#9B7B65', '#B89B85', '#D8C4B5'], // Clay earth
+    ['#7B8B70', '#98A890', '#B8C8B0'], // Lichen
+  ];
+
+  function hashString(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+      hash = ((hash << 5) - hash) + str.charCodeAt(i);
+      hash = hash & hash;
+    }
+    return Math.abs(hash);
+  }
+
+  document.querySelectorAll('.BookCard').forEach(card => {
+    const title = card.querySelector('.BookCard__title').textContent;
+    const hash = hashString(title);
+    const palette = palettes[hash % palettes.length];
+    const angle = hash % 360;
+    
+    const gradient = card.querySelector('.BookCard__gradient');
+    gradient.style.background = `linear-gradient(${angle}deg, ${palette[0]} 0%, ${palette[1]} 50%, ${palette[2]} 100%)`;
+  });
+})();
+</script>
+
