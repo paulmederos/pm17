@@ -31,6 +31,19 @@
     "year": "2003"
   },
   {
+    "id": "random-access-memories",
+    "title": "Random Access Memories",
+    "body": "A love letter to disco, studio craft, and the future we thought we’d get—glossy, human, and endlessly replayable.",
+    "type": "audio",
+    "tags": ["album", "music"],
+    "media": {
+      "src": "https://open.spotify.com/embed/album/4m2880jivSbbyEGAKfITCa",
+      "embed_type": "spotify"
+    },
+    "attribution": "Daft Punk",
+    "year": "2013"
+  },
+  {
     "id": "oblique-strategies",
     "title": "Oblique Strategies",
     "body": "Over one hundred worthwhile dilemmas. A card-based method for promoting creativity, created by Brian Eno and Peter Schmidt.",
