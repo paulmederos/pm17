@@ -31,6 +31,53 @@
     "year": "2003"
   },
   {
+    "id": "random-access-memories",
+    "title": "Random Access Memories",
+    "body": "A love letter to disco, studio craft, and the future we thought we’d get—glossy, human, and endlessly replayable.",
+    "type": "audio",
+    "tags": ["album", "music"],
+    "media": {
+      "src": "https://open.spotify.com/embed/album/4m2880jivSbbyEGAKfITCa",
+      "embed_type": "spotify"
+    },
+    "attribution": "Daft Punk",
+    "year": "2013"
+  },
+  {
+    "id": "steve-jobs-interdependence-email",
+    "title": "Interdependence",
+    "body": "Steve Jobs emailing himself a thought on admiration for our “species, living and dead.” <a href=\"https://ted-merz.com/2022/09/11/steve-jobs-liked-to-email-himself/\" target=\"_blank\" rel=\"noopener noreferrer\">Source</a>.",
+    "type": "image",
+    "tags": ["email", "writing", "technology", "leadership"],
+    "media": {
+      "src": "https://ted-merz.com/wp-content/uploads/2022/09/steve-jobs-email.png",
+      "alt": "Screenshot of an email Steve Jobs sent to himself titled “Interdependence”, dated Sept. 2, 2010 and signed “Sent from my iPad.”"
+    },
+    "attribution": "Steve Jobs",
+    "year": "2010"
+  },
+  {
+    "id": "tulip-house-coffee-roasters",
+    "title": "Tulip House Coffee Roasters",
+    "body": "Down in LA. <a href=\"https://www.instagram.com/tuliphousecoffee/\" target=\"_blank\" rel=\"noopener noreferrer\">Instagram</a>.",
+    "type": "text",
+    "tags": ["coffee", "place", "link"],
+    "attribution": "Los Angeles"
+  },
+  {
+    "id": "feather",
+    "title": "Feather",
+    "body": "Light, warm, and endlessly replayable—one of those tracks that makes the world feel a little kinder.",
+    "type": "audio",
+    "tags": ["song", "music", "hip-hop"],
+    "media": {
+      "src": "https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/nujabes-sc/feather-feat-cise-starr-akin&auto_play=false",
+      "embed_type": "soundcloud"
+    },
+    "attribution": "Nujabes",
+    "year": "2005"
+  },
+  {
     "id": "oblique-strategies",
     "title": "Oblique Strategies",
     "body": "Over one hundred worthwhile dilemmas. A card-based method for promoting creativity, created by Brian Eno and Peter Schmidt.",
