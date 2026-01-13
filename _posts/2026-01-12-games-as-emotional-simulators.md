@@ -7,17 +7,13 @@ categories: journal
 teaser: "Brian Eno considers art a safe space to feel dangerous feelings; I agree, and believe that video games might be the most powerful version of this we've ever built. Perfect for trying different versions of yourself out."
 ---
 
-Over the holidays, my aunt Kim and uncle Geoff gifted me Brian Eno's new book, *What Art Does* (with artist Bette Adriaanse). They're both musicians, so of course they'd find this one.
+Over the holidays, my aunt Kim and uncle Geoff gifted me Brian Eno's new book, **What Art Does** (co-authored with artist Bette Adriaanse.) They're both musicians, so *of course* they'd share this.
 
-I read it in one sitting! One idea keeps echoing:
+welp, I read it in one sitting. one idea keeps echoing: ✨art is a simulator ✨ — **art creates safe spaces where we can feel on purpose.**
 
-**Art creates safe spaces where we can feel on purpose.**
+Eno's argument: art offers "a safe place to have quite extreme and rather dangerous feelings." The reason we can do that? We know we can switch it off. Like a flight simulator — you can crash and walk away laughing 🛟🫀
 
-Eno says art gives us "a safe place to have quite extreme and rather dangerous feelings." We can step into something intense, feel it fully, and come back. Like a flight simulator — you can crash and walk away laughing. No real 747s harmed.
-
-He's talking about paintings, plays, radio dramas. But that framing clicked even harder when I thought about video games.
-
-Games might be the most powerful version of this "emotional simulator" we've ever built. They're interactive. They respond to your choices. And they let you experience consequences — real emotional consequences — without real-world stakes.
+He's talking about paintings, plays, radio dramas, fashion, hair styles, and even video games... and IMO — digital games may be the most powerful version of this we've ever built 🤯
 
 ![Pages from What Art Does by Brian Eno and Bette A. — "All young animals want to play and humans more than most... We do this by practising it in play."](/images/posts/brian-eno-bette-play.jpeg)
 
@@ -25,39 +21,36 @@ Games might be the most powerful version of this "emotional simulator" we've eve
 
 ## Watching my daughter rehearse who she wants to be
 
-Over the break, my almost-8yo got into Hogwarts Legacy on the Switch. Watching her play was fascinating — especially the dialogue choices.
+Over the break, my almost 8yo got into the Hogwarts Legacy game. Watching her play was fascinating... not the spells or the quests, but her dialogue choices 👀
 
-Like most role-playing games, you're constantly prompted: how do you want to respond? Kind or sarcastic? Brave or cautious? Vengeful or forgiving?
+Like most role playing games, you're constantly prompted: how do you want to respond?? kind or sarcastic? brave or cautious? vengeful or forgiving?
 
-I watched her try on different stances. She'd pick the snarky option, see how it landed, then reload and try the compassionate one. Back and forth. Experimenting.
-
-She wasn't just playing a game. She was practicing how it feels to be a certain kind of person.
-
-There's something powerful about that. The game gave her a container to experiment with identity — to feel what it's like to be dismissive, then feel what it's like to be kind — and compare. No social fallout. No hurt feelings. Just... practice.
+I watched her try on different stances. She’d pick the snarky option, see how it landed, then reload and try the compassionate one. Back and forth. Experimenting. She was practicing (rehearsing??) how it feels to be a certain kind of person, who she wanted to be 🪄🧠
 
 ---
 
 ## The research backs this up
 
-This "games as safe space" idea isn't just a nice metaphor. There's legit evidence behind it.
+This "games as a safe space" idea has legit evidence behind it 🤓
+
 
 ### Empathy training that actually changes the brain
 
 A [2018 study from UW-Madison](https://www.nature.com/articles/s41539-018-0029-6), published in *npj Science of Learning* (a Nature journal), looked at middle schoolers who played an empathy-focused game called "Crystals of Kaydor" for just two weeks.
 
-The game has players interact with aliens on a distant planet. The aliens speak a different language, but their facial expressions are human-like — so players have to read emotions and build rapport to progress.
+The game has players interact with aliens on a distant planet. The aliens speak a different language, but their facial expressions are human-like, so players have to read emotions and build rapport to progress.
 
-The results? Kids who played the empathy game showed increased empathic accuracy AND measurable changes in brain connectivity — specifically in regions linked to emotion regulation.
+The results? Kids who played the empathy game showed increased empathic accuracy AND measurable changes in brain connectivity, specifically in regions linked to emotion regulation.
 
-Two weeks. Measurable brain changes.
+Only two weeks, but _measurable brain changes._
 
-The lead researcher, Tammi Kral, put it simply: "The realization that these skills are actually trainable with video games is important because they are predictors of emotional well-being and health throughout life."
+The lead researcher, Tammi Kral, put it simply: "The realization that these skills are actually trainable with video games is important because **they are predictors of emotional well-being and health** throughout life."
 
 ### Identity exploration through avatars
 
 Another line of research looks at how young people use games to explore identity.
 
-A [focus group study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11439583/) of trans and gender diverse youth (ages 11-22) found that participants used video game avatars to "explore, develop, and rehearse their gender identities and expressions" — and that this process supported their psychological well-being.
+A [focus group study](https://pmc.ncbi.nlm.nih.gov/articles/PMC11439583/) of trans and gender diverse youth (ages 11-22) found that participants used video game avatars to "explore, develop, and rehearse their gender identities and expressions", and that this process supported their psychological well-being.
 
 The researchers noted that games create a "low-stakes environment" where players can try on different versions of themselves before committing to them IRL. Choice-based games were especially powerful because they gave players autonomy and made their decisions feel meaningful.
 
