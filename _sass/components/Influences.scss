@@ -1,0 +1,162 @@
+// ===========================================
+// Influences Page
+// People, creators, and thought leaders
+// ===========================================
+
+.Influences {
+  padding: 0 0 8rem;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  @include media-md-up {
+    padding: 12rem 0 10rem;
+  }
+}
+
+// -----------------------------
+// Header
+// -----------------------------
+.Influences__header {
+  margin-bottom: 3rem;
+
+  @include media-md-up {
+    margin-bottom: 4rem;
+  }
+}
+
+.Influences__title {
+  font-size: $font_size_xxl;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: $color_dark_oak;
+}
+
+.Influences__intro {
+  font-size: $font_size_sm;
+  color: $color_sand;
+  margin: 0;
+  max-width: 480px;
+  line-height: 1.5;
+}
+
+// -----------------------------
+// Grid
+// Responsive list of influence cards
+// -----------------------------
+.Influences__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+
+  @include media-sm-up {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+  }
+
+  @include media-lg-up {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+// -----------------------------
+// Influence Card
+// -----------------------------
+.InfluenceCard {
+  display: flex;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  background: rgba($color_dark_oak, 0.02);
+  border: 1px solid rgba($color_dark_oak, 0.06);
+  @include transition($type: all, $duration: 0.25s);
+
+  &:hover {
+    background: rgba($color_dark_oak, 0.04);
+    border-color: rgba($color_dark_oak, 0.1);
+  }
+}
+
+.InfluenceCard__emoji {
+  font-size: 2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.InfluenceCard__body {
+  min-width: 0;
+}
+
+.InfluenceCard__name {
+  font-size: $font_size_sm;
+  font-weight: 500;
+  margin: 0 0 0.4rem;
+  color: $color_dark_oak;
+  line-height: 1.3;
+}
+
+.InfluenceCard__description {
+  font-size: $font_size_xs;
+  color: $color_bark;
+  margin: 0 0 0.75rem;
+  line-height: 1.5;
+}
+
+.InfluenceCard__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+
+  a {
+    font-family: $font_meta;
+    font-size: $font_size_xxs;
+    color: $color_sand;
+    text-decoration: none;
+    margin: 0;
+    @include transition($type: color, $duration: 0.2s);
+
+    &:hover {
+      color: $color_dark_oak;
+      text-decoration: underline;
+    }
+  }
+}
+
+// -----------------------------
+// Dark Mode
+// -----------------------------
+body.dark {
+  .Influences__title {
+    color: $color_cream;
+  }
+
+  .Influences__intro {
+    color: rgba($color_cream, 0.6);
+  }
+
+  .InfluenceCard {
+    background: rgba($color_cream, 0.03);
+    border-color: rgba($color_cream, 0.08);
+
+    &:hover {
+      background: rgba($color_cream, 0.06);
+      border-color: rgba($color_cream, 0.12);
+    }
+  }
+
+  .InfluenceCard__name {
+    color: $color_cream;
+  }
+
+  .InfluenceCard__description {
+    color: rgba($color_cream, 0.7);
+  }
+
+  .InfluenceCard__links a {
+    color: rgba($color_cream, 0.5);
+
+    &:hover {
+      color: $color_cream;
+    }
+  }
+}
