@@ -61,7 +61,7 @@ You help one person solve a real problem, actually solve it, in a *their-life-is
 
 You choose autonomy over prestige. Coherence over optimization. Learning over winning.
 
-None of these feel like "finding your purpose" in the moment. They feel like small bets. Tiny defections from the default playbook. But they **accumulate.** At some point… you genuinely cannot pinpoint when… you look up and realize you're standing on ground you built. Not from a blueprint. From practice.
+None of these feel like "finding your purpose" in the moment. They feel like small bets. Tiny defections from the default playbook. But they **accumulate.** At some point (you're not entirely sure when, and it's impossible to pinpoint), you look up and realize you're standing on ground you built through practice.
 
 That's how it actually works. A long accumulation of choices that pointed the same direction, even when you didn't have a name for that direction yet.
 
@@ -99,15 +99,15 @@ The paradox isn't a problem to solve. It's a practice environment. And the muscl
 
 ## The long game
 
-After enough accumulation, after enough time holding paradox… something settles. Not a grand epiphany. More like: you look up one day and realize the inside matches the outside. What you believe, how you spend your days, what you build, how you treat people… they're coherent. Not perfectly. But recognizably.
+After enough accumulation, after enough time holding paradox… something settles. Nothing as dramatic as an epiphany—you just look up one day and realize the inside matches the outside. What you believe, how you spend your days, what you build, how you treat people… they're coherent. Not perfectly. But recognizably.
 
 And what you have is something the default path almost never produces.
 
-**You designed your life.** Not theoretically, not "someday when I exit." Actually, right now. You direct your time and your attention where you want them. You're not held hostage by unrealistic expectations from investors, a board, or a growth curve that demands you extract from your customers or from yourself. The autonomy isn't a reward you earned at the end. It's a choice you kept making along the way.
+**You designed your life.** Not theoretically, not "someday when I exit"—right now. You direct your time and your attention where you want them. You're not held hostage by unrealistic expectations from investors, a board, or a growth curve that demands you extract from your customers or from yourself. The autonomy isn't a reward you earned at the end. It's a choice you kept making along the way.
 
-**Each person you help genuinely matters to you.** Not as a data point or a proof of product-market fit. You solve a real problem for a real person, and the feeling of that is gratitude. Actual gratitude. If you help more people, that's good too. It doesn't make you *happier*; the one was already complete. There's no savior complex operating here, no "I need to reach millions." Just: *I'm grateful for each person, and each one is a chance for me to learn and grow too.*
+**Each person you help genuinely matters to you.** They're not a data point or proof of product-market fit—you solved a real problem for a real person, and the feeling of that is gratitude. Actual gratitude. If you help more people, that's good too. It doesn't make you *happier*; the one was already complete. There's no savior complex operating here, no "I need to reach millions." Just: *I'm grateful for each person, and each one is a chance for me to learn and grow too.*
 
-**Every challenge is growth, in the *you* sense.** Not growth as a startup metric. Growth as a human being. Every hard conversation, every pivot, every moment of doubt is material. The business isn't separate from your development… it *is* your development. A practice container. You're always learning, always growing, not because you're behind but because you're *awake.*
+**Every challenge is growth, in the *you* sense.** Growth as a human being, not a startup metric. Every hard conversation, every pivot, every moment of doubt is material. The business isn't separate from your development… it *is* your development. A practice container. You're always learning, always growing, not because you're behind but because you're *awake.*
 
 This is the long game. The metrics that matter (coherence, autonomy, genuine helpfulness, continuous learning) don't fit on a dashboard. The entrepreneur who's been walking this path for two decades, who could have taken the big-money road a dozen times and chose not to, isn't a failure by other standards. They're playing a different game entirely. One that most people don't know exists because nobody writes the TechCrunch piece about it.
 
