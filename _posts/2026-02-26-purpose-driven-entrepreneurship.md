@@ -4,7 +4,7 @@ title: "Purpose-Driven Entrepreneurship Is Hard"
 permalink: "purpose-driven-entrepreneurship"
 date: 2026-02-26
 categories: essay
-teaser: "Trail notes from 20 years on the path less taken. Not a map or a playbook — just what the terrain looks like from where I'm standing, after a couple decades of walking it."
+teaser: "Trail notes from 20 years on the path less taken. What the terrain looks like from where I'm standing, after a couple decades of walking it."
 ---
 
 *Trail notes from 20 years on the path less taken.*
