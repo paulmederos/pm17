@@ -111,7 +111,7 @@ This is the long game. The metrics that matter (coherence, autonomy, genuine hel
 
 ---
 
-## Trail notes, not a map
+## Reminder: these are notes from my path, yours will differ
 
 A few honest caveats, because the honesty matters more than the narrative.
 
