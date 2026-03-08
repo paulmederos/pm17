@@ -15,7 +15,7 @@ You know the shape of the story. You've seen it a thousand times. Somebody has a
 
 But there's another story that almost nobody tells, because it doesn't have a climax. It doesn't have a number you can put on a slide. It's the story of someone who's been building for 15, 20 years, who could have taken the big-money path a dozen times and chose not to—not because they couldn't, but because they saw something else.
 
-These are trail notes from that path. They're not a map or a playbook. Just: here's what the terrain looks like from where I'm standing, after a couple decades of walking it. Take what's useful. Leave the rest.
+These are trail notes from that path. They're not a map or a playbook. Just: here's what the terrain looks like from where I'm standing, after a couple decades of walking it.
 
 ---
 
@@ -127,10 +127,6 @@ What I *can* say... maybe the only thing I can say with real honesty... is that 
 
 It's hard. It's very meaningful. And I wouldn't trade it, not because it's the best path, but because it's mine.
 
-If any of that resonates... if you feel a different signal underneath the hunger, even faintly... these are trail notes from someone a little further down the road. Here's what the terrain looks like. Here's what to expect. Here's what grows if you keep tending.
-
-Take what's useful. Leave the rest.
-
-> 🌱 Seeds left by the trail for whoever comes next. Not instructions, just seeds. They'll grow differently in different soil, and that's the whole point.
+If any of that resonates... if you feel a different signal underneath the hunger, even faintly... you're not imagining it. That feeling is real, and you're not the only one who has it.
 
 peace, paul ✌️
