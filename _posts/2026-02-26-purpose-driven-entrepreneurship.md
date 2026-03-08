@@ -7,39 +7,35 @@ categories: essay
 teaser: "Trail notes from 20 years on the path less taken. What the terrain looks like from where I'm standing, after a couple decades of walking it."
 ---
 
-*Trail notes from 20 years on the path less taken.*
+You know the shape of the story, you've seen it a thousand times: someone has an idea, raises money, scales fast, exits big. There's a TechCrunch piece, podcast episodes, maybe keynotes, congratulatory postso n social with up and to the right growth, the whole shebang. That's the typical story the tech industry tells about success... and, well, it _is_ a real story. It works for some people. It also chews out, burns up, and destroys way way way more people.
 
----
+But... there's another story that almost nobody tells, because it's not loud and sexy and exciting or dramatic. It doesn't have a number you can put on a slide. It's the story of people who've been building for a long time, who could have taken the big-money path a dozen times and chose not to—not because they couldn't, but because they saw something else.
 
-You know the shape of the story. You've seen it a thousand times. Somebody has an idea, raises money, scales fast, exits big. There's a TechCrunch piece, a podcast episode, maybe a keynote. The numbers go up and to the right. That's the story our industry tells about success, and it's a *real* story. It works for some people. It produces real things.
-
-But there's another story that almost nobody tells, because it doesn't have a climax. It doesn't have a number you can put on a slide. It's the story of someone who's been building for 15, 20 years, who could have taken the big-money path a dozen times and chose not to—not because they couldn't, but because they saw something else.
-
-These are trail notes from that path. They're not a map or a playbook. Just: here's what the terrain looks like from where I'm standing, after a couple decades of walking it.
+These are my trail notes from that path, a collection of thoughts and notes that I've tried to organize so it's useful to others who feel like there must be a better way. 
 
 ---
 
 ## The hunger
 
-When you're starting out, the hunger is everything. You want to build. You want to prove you can do it. You admire the people who've done it, the icons and founders who made something from nothing. You study their playbooks. You measure yourself against their metrics: revenue, users, valuation, title, reputation. You want the *right* resume.
+When you're starting out, you're so hungry!! the hunger is everything. You want to build, learn, grow, do all the things. You want to prove you can do it. You admire the people who've done it, the icons (yup, you'll get a pair of circular rimmed glasses) and founders (put on that hoody yo) who made something from nothing. You study their playbooks. You measure yourself against their metrics: revenue, users, valuation, title, reputation, resume, experience, etc etc.
 
-There's nothing wrong with any of that. The hunger is real, and it teaches you real things. How to ship. How to endure. How to show up when you don't want to. You learn to build... and building is a skill you'll carry forever.
+There's nothing wrong with any of that. The hunger is real, and it teaches you real things. How to ship. How to endure. How to show up when you don't want to. How to work with others. You learn to build... and building is a skill you'll carry forever.
 
-But underneath the hunger, there's a different signal. You might not hear it yet. That's okay... it'll wait. It's patient like that. The signal sounds something like: *Is this the game I actually want to win? Or just the one everyone told me to play?*
+But underneath the hunger, there's a different signal. You'll feel it before you know what it is... it sounds something like: *Do I actually want to play this game? Is this it? or is this just what everyone's doing because everyone's doing it?*
 
 > 🌱 Think of this as a seed in the soil. It might sit dormant for years. It doesn't need your attention yet. But it's there.
 
 ## First: your relationship with struggle
 
-Before any of the rest of this matters, there's something that nobody puts in the "how to be a founder" guides. Something that I think determines whether this particular path is even possible for you.
+Before any of the rest of this matters, there's something that nobody puts in the "how to be a founder" guides. Something that might change whether the purpose-driven path is even possible for the current version of you.
 
 **You have to learn to love the struggle itself.**
 
-Not just tolerate it, not just white-knuckle through it... actually find something *alive* in it, a signal that says *this is where growth happens, and growth is the point.*
+You've all seen [the clip of Alysa Liu talking about how she loves struggling](https://www.linkedin.com/posts/drbecky_i-love-struggling-when-i-heard-olympic-activity-7434617511125417984-REBM). You dont have to tolerate it, can't just white-knuckle through it: actually finding something you love in it, your mind craving the feeling that says *this is where growth happens, and growth is the point.*
 
-This might come from unexpected places. For me, it was games and athletics. Hours and hours of throwing yourself at something hard, dying on the same level, failing the same trick, and going back in. Not because you're stubborn, but because somewhere along the way you figured out that the frustration *was* the practice. The struggle means you're in it. It means you're alive. It means you're getting better.
+This might come from unexpected places. For me, it was games and athletics. Hours and hours of throwing yourself at something hard, dying on the same level, failing the same trick, and going back in. Because you love it so much, and you just wanna figure it out. you deal with that frustration, and frustration *is* the practice. The struggle means you're in it. It means you're getting better.
 
-This matters because everything that follows (the small daily choices, the paradoxes, the long invisible road) is hard. Not hard in the way a 16-hour day is hard. Hard in the way that **questioning your own assumptions while everyone around you seems certain** is hard. If struggle feels like failure, you'll bail at the first identity-level challenge and run back to the default playbook. If struggle feels like signal... *I'm in it, I'm learning, I'm alive*... then the whole path opens up.
+This matters because everything that follows (the small daily choices, the paradoxes, the long invisible road) is hard. Not hard in the way a "16-hour hack all day" or "better figure this out in the next few weeks or I'm broke" kind way. Hard in the way that **questioning your own assumptions while everyone around you seems certain** is hard. If struggle feels like failure, you'll bail at the first identity-level challenge and run back to the default playbook. If struggle feels like signal... *I'm in it, I'm learning, I'm making progress*... then the whole path opens up.
 
 > 🌱 This is the quality of the soil. Before anything can grow here, this relationship with difficulty has to be in place. Everything else is downstream of it.
 
