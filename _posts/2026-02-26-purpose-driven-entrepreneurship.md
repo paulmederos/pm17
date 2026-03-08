@@ -123,6 +123,4 @@ What I *can* say... maybe the only thing I can say with real honesty... is that 
 
 It's hard. It's very meaningful. And I wouldn't trade it, not because it's the best path, but because it's mine.
 
-If any of that resonates... if you feel a different signal underneath the hunger, even faintly... you're not imagining it. That feeling is real, and you're not the only one who has it.
-
-peace, paul ✌️
+If any of that resonates... if you feel a different signal underneath the hunger, even faintly... you're not imagining it. That feeling is real, and you're not the only one who has it. Send me a note, I always love connecting with outher purpose-driven founders taking the road less traveled. ✌️
