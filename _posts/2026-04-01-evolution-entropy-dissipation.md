@@ -3,7 +3,9 @@ layout: post
 title: "Evolution as Entropy's Best Trick"
 permalink: "evolution-entropy-dissipation"
 date: 2026-04-01
-categories: essay, wip
+categories:
+  - essay
+  - wip
 teaser: "What if life isn't fighting entropy—it's how the universe gets better at spending energy? Dissipative structures, consciousness, and what this means for AI."
 ---
 
