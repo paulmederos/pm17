@@ -63,7 +63,7 @@ I think about this constantly when building products. The best systems i've ship
 
 Friston's FEP reframes cognition as entropy reduction — we build predictive models to minimize surprise. Habits are literally this: compressed behavioral programs that reduce the cognitive entropy of daily decisions.
 
-This maps directly to the work i'm doing on Focus Plans at Hematica. Translating bloodwork and wearable data into actionable health plans is, thermodynamically speaking, helping people reduce the entropy of their health decision space. You go from "i have 47 biomarkers and no idea what to do" to "here are 3 things that matter for you right now." That's entropy reduction. That's what brains do.
+This maps directly to the work we're doing at [Kasane](https://kasanelife.com). The whole product is built around turning noisy health data (bloodwork, wearables, doctor's notes) into a personalized daily routine — specific actions you can actually take today. You go from "i have 47 biomarkers and no idea what to do" to "here's your morning routine, here's your post-meal walk, here's why." That's entropy reduction. That's what brains do. And the daily engagement loop is key — it's not enough to hand someone a plan and say "good luck." You have to help them *do the thing*, every day, and adapt as they go.
 
 ### Multiple valid paths (not one right answer)
 

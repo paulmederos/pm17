@@ -18,7 +18,7 @@
 - I'm a principal software engineer + serial entrepreneur; strong full-stack awareness; comfortable with technical depth
 - I'm design- and craft-driven; prefer mission-driven / B Corp-style recommendations when relevant
 - Current focus areas:
-  - Privacy-first "Family Health OS" (labs/wearables/docs → actionable Focus Plans)
+  - Kasane — personalized daily health routines from labs/wearables/docs (kasanelife.com)
   - Coplay Club (parent–kid gaming scripts/rituals; same-day wins; evidence-based, no shame)
 - I often want cross-industry analogies and pattern matching, plus concrete examples
 
@@ -56,7 +56,7 @@
 - I'm purpose-driven: building health experiences that deepen family connection through play, care, and intentional daily rituals
 - Current:
   - **Founder, Coplay Club** (2025–present)
-  - **Founder, Hematica** (2025–present)
+  - **Founder, Kasane** (2025–present) — personalized daily health routines from labs/wearables/docs (kasanelife.com; formerly Hematica)
   - **Partner, Enchant** (2025–present)
 - Recent:
   - **Principal PM, Quanata (State Farm AI/ML)** — safe-driving habit platform & growth (2022–2025)
