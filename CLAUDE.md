@@ -27,7 +27,7 @@ teaser: "Short description for previews and social."
 
 ## Author
 
-See `paul-profile.md` at the repo root for Paul's personal context, career background, and detailed writing voice guide. Review it before drafting content in his voice. (This file is gitignored — it lives locally only and is not committed to the public repo.)
+See `paul-profile.md` at the repo root for Paul's personal context, career background, and detailed writing voice guide. Review it before drafting content in his voice.
 
 ## Writing
 

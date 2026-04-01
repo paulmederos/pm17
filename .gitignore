@@ -3,6 +3,3 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-
-# Private author context (local-only, not for public repo)
-paul-profile.md
