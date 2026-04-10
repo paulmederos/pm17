@@ -67,26 +67,34 @@ That's how it actually works. A long accumulation of choices that pointed the sa
 
 My friend Patrick and I have a name for this: playing on hard mode. Not by choice, exactly—more by accumulation.
 
-Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You've been down enough paths to recognize the dead ends from the trailhead.
+Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You recognize the raise that doesn't match the product—too much capital chasing a growth curve before the thing works. You hear "tons of interest, customers love it" and ask how many have paid, and the room gets quiet. You see brilliant technology and no clear answer for who, specifically, will write the check. You take the meeting with the bigger company that's suddenly eager to acquire, and you can feel the competitive intelligence fishing underneath the flattery. You've been down enough paths to recognize the dead ends from the trailhead.
 
 Experience is pattern recognition, mostly.[^1] Researchers found that experts *see* more structure than novices—by recognizing patterns faster, not by considering more options.[^2] A chess master looks at a board and perceives clusters of meaning where a beginner sees individual pieces. The experienced founder looks at a business model and sees where the pressure lands in year three. Same information, completely different resolution.
 
-So the map fills in. That's one axis. Now layer on the principles.
+So the map fills in. That's one force at work. Now layer on the principles.
 
-Every "no" from the previous section—every time you chose coherence over optimization, autonomy over prestige—those are active constraints. Saras Sarasvathy studied expert entrepreneurs and found they don't start from goals and work backward.[^3] They start from who they are, what they know, who they know—and treat constraints as creative inputs. She calls it effectuation. The constraints *are* the game.
+Every "no" from the previous section—every time you chose coherence over optimization, autonomy over prestige—those are active constraints. Saras Sarasvathy studied expert entrepreneurs and found they don't start from goals and work backward.[^3] They start from who they are, what they know, who they know—and treat constraints as creative inputs. She calls it **effectuation.** The constraints *are* the game.
 
 And the math backs this up:[^4] each constraint you hold shrinks the space of moves you're willing to make. Every additional objective you refuse to sacrifice reduces the feasible region. Sustainable, purpose-aligned, family-compatible, non-extractive, long-horizon—each one is a filter, and the viable set gets smaller with every filter you add.
 
 <style>
+.Post__content sup{font-size:.6em;vertical-align:super;line-height:0}
+.Post__content sup a.footnote{font-size:inherit;text-decoration:none;color:#837E73}
+.Post__content .footnotes{margin-top:4rem;padding-top:2rem;border-top:1px solid rgba(131,126,115,.3)}
+.Post__content .footnotes ol{padding-left:1.5em}
+.Post__content .footnotes li{font-size:14px;margin-bottom:1em;color:#837E73}
+.Post__content .footnotes li p{font-size:14px;margin-bottom:.5em;color:#837E73}
+body.dark .Post__content sup a.footnote{color:#D9D4C8}
+body.dark .Post__content .footnotes li,body.dark .Post__content .footnotes li p{color:#D9D4C8}
 .Corridor{margin:4.8rem 0;font-family:"Recursive Mono",monospace}
 .Corridor__display{border:2px solid #292725;background:#FFFCF3;position:relative;overflow:hidden;touch-action:none}
 .Corridor__display canvas,.Corridor__display>div{display:block;width:100%}
 .Corridor__legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;font-size:12px;color:#837E73}
 .Corridor__legendItem{display:flex;align-items:center;gap:.6rem}
 .Corridor__legendDot{width:10px;height:10px;display:inline-block;flex-shrink:0}
-.Corridor__legendDot--viable{background:#7a8b5c}
+.Corridor__legendDot--viable{background:#5a8a3c}
 .Corridor__legendDot--hazard{background:#292725}
-.Corridor__legendDot--ruled-out{background:#c4b99a}
+.Corridor__legendDot--ruled-out{background:#c2c0b8}
 .Corridor__legendDot--unknown{background:#e8e5dd;border:1px solid #d4d4d4}
 .Corridor__stats{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid #292725;margin-top:1.6rem}
 .Corridor__stat{padding:1rem;border-right:2px solid #292725}
@@ -140,7 +148,7 @@ body.dark .Corridor__caption{color:#D9D4C8}
   </div>
   <div class="Corridor__stats">
     <div class="Corridor__stat">
-      <div class="Corridor__statLabel">Viable moves</div>
+      <div class="Corridor__statLabel">Viable paths</div>
       <div class="Corridor__statValue" id="stat-viable">--</div>
     </div>
     <div class="Corridor__stat">
@@ -170,7 +178,7 @@ body.dark .Corridor__caption{color:#D9D4C8}
   </div>
 </div>
 
-Two forces, pressing from different directions. Experience reveals the dead ends. Principles rule out the shortcuts. What's left is narrow—genuinely narrow—but it's *yours.* You can see every wall, and you chose every wall.
+Two forces, pressing from different directions. Experience reveals the dead ends. Principles rule out the paths you're not willing to take. What's left is narrow—genuinely narrow—but it's *yours.* You can see most of the walls, and the ones you built yourself define you, your product, your business, your way of life.
 
 The hard part is the communication gap. You're standing in a corridor you can see perfectly, making decisions that feel obvious from where you are—and the people around you think you're being stubborn. Or overthinking. Or leaving money on the table. Research on expert-novice gaps shows this is structural, not personal.[^5] The curse of knowledge is that you can't un-know what you've seen, and you can't easily show someone else what's visible from where you're standing.
 
@@ -250,4 +258,4 @@ If any of that resonates... if you feel a different signal underneath the hunger
 
 [^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
 
-<script src="/js/corridor.js?v=3"></script>
+<script src="/js/corridor.js?v=5"></script>
