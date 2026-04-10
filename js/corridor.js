@@ -194,7 +194,7 @@
   // =============================================
   function SpaceRenderer(container, initialTerrain) {
     var scene, camera, renderer, controls;
-    var colorAttr, lineColorAttr, ptPosAttr, linePosAttr;
+    var colorAttr, lineColorAttr, ptPosAttr, linePosAttr, ptSizeAttr;
     var localTerrain = initialTerrain;
     var tree;
     var aid = null;
@@ -250,16 +250,37 @@
         scene.add(new THREE.Line(g, axMat));
       });
 
-      // Points (pre-allocate)
+      // Points (pre-allocate) — custom shader for per-vertex size
       var count = localTerrain.length;
       var ptGeo = new THREE.BufferGeometry();
       ptPosAttr = new THREE.BufferAttribute(new Float32Array(count * 3), 3);
       colorAttr = new THREE.BufferAttribute(new Float32Array(count * 3), 3);
+      ptSizeAttr = new THREE.BufferAttribute(new Float32Array(count), 1);
       ptGeo.setAttribute('position', ptPosAttr);
       ptGeo.setAttribute('color', colorAttr);
-      scene.add(new THREE.Points(ptGeo, new THREE.PointsMaterial({
-        vertexColors: true, size: 0.06, sizeAttenuation: true,
-        transparent: true, opacity: 0.9
+      ptGeo.setAttribute('ptSize', ptSizeAttr);
+      scene.add(new THREE.Points(ptGeo, new THREE.ShaderMaterial({
+        vertexColors: true,
+        transparent: true,
+        vertexShader: [
+          'attribute float ptSize;',
+          'varying vec3 vColor;',
+          'void main() {',
+          '  vColor = color;',
+          '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
+          '  gl_PointSize = ptSize * (250.0 / -mv.z);',
+          '  gl_Position = projectionMatrix * mv;',
+          '}'
+        ].join('\n'),
+        fragmentShader: [
+          'varying vec3 vColor;',
+          'void main() {',
+          '  float d = length(gl_PointCoord - vec2(0.5));',
+          '  if (d > 0.5) discard;',
+          '  float a = smoothstep(0.5, 0.1, d);',
+          '  gl_FragColor = vec4(vColor, a * 0.9);',
+          '}'
+        ].join('\n')
       })));
 
       // Lines (pre-allocate for N-1 edges)
@@ -270,7 +291,7 @@
       lineGeo.setAttribute('position', linePosAttr);
       lineGeo.setAttribute('color', lineColorAttr);
       scene.add(new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({
-        vertexColors: true, transparent: true, opacity: 0.55
+        vertexColors: true, transparent: true, opacity: 0.6
       })));
     }
 
@@ -335,26 +356,38 @@
 
       if (states[tree.root] !== 'unknown') walk(tree.root, true);
 
-      // Color palette
+      // Color palette — extreme contrast so viable paths pop
       var d = isDark();
-      var viableCol = [0.353, 0.541, 0.235];
+      var viableCol = [0.22, 0.50, 0.12];    // saturated deep green
       var hazardCol = d ? [0.28, 0.25, 0.22] : [0.161, 0.153, 0.145];
-      var ruledCol  = d ? [0.40, 0.38, 0.33] : [0.761, 0.753, 0.722];
+      var ruledCol  = d ? [0.35, 0.33, 0.30] : [0.78, 0.77, 0.74];
       var hiddenCol = d ? [0.08, 0.08, 0.08] : [0.96, 0.95, 0.93];
-      var greenEdge = viableCol;
-      var grayEdge  = d ? [0.25, 0.24, 0.22] : [0.82, 0.80, 0.77];
-      var stateToColor = {
-        viable: viableCol, hazard: hazardCol, 'ruled-out': ruledCol, unknown: hiddenCol
-      };
+      var greenEdge = [0.18, 0.52, 0.08];    // even more saturated for lines
+      var grayEdge  = d ? [0.18, 0.17, 0.16] : [0.93, 0.92, 0.90]; // near-invisible
 
+      // Point colors + per-vertex sizes
       for (var i = 0; i < localTerrain.length; i++) {
-        var c = stateToColor[states[i]];
+        var cs = states[i];
+        var c, sz;
+        if (cs === 'viable') {
+          c = viableCol;
+          sz = localTerrain[i].isGoldenPath ? 16 : 12;
+        } else if (cs === 'hazard') {
+          c = hazardCol; sz = 5;
+        } else if (cs === 'ruled-out') {
+          c = ruledCol; sz = 4;
+        } else {
+          c = hiddenCol; sz = 0;
+        }
         colorAttr.array[i * 3] = c[0];
         colorAttr.array[i * 3 + 1] = c[1];
         colorAttr.array[i * 3 + 2] = c[2];
+        ptSizeAttr.array[i] = sz;
       }
       colorAttr.needsUpdate = true;
+      ptSizeAttr.needsUpdate = true;
 
+      // Edge colors — viable chains bright green, noise near-invisible
       for (var j = 0; j < tree.edges.length; j++) {
         var fi = tree.edges[j][0], ti = tree.edges[j][1];
         var fS = states[fi], tS = states[ti];
