@@ -67,17 +67,25 @@ That's how it actually works. A long accumulation of choices that pointed the sa
 
 My friend Patrick and I have a name for this: playing on hard mode. Not by choice, exactly—more by accumulation.
 
-Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You've been down enough paths to recognize the dead ends from the trailhead.
+Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You recognize the raise that doesn't match the product—too much capital chasing a growth curve before the thing works. You hear "tons of interest, customers love it" and ask how many have paid, and the room gets quiet. You see brilliant technology and no clear answer for who, specifically, will write the check. You take the meeting with the bigger company that's suddenly eager to acquire, and you can feel the competitive intelligence fishing underneath the flattery. You've been down enough paths to recognize the dead ends from the trailhead.
 
 Experience is pattern recognition, mostly.[^1] Researchers found that experts *see* more structure than novices—by recognizing patterns faster, not by considering more options.[^2] A chess master looks at a board and perceives clusters of meaning where a beginner sees individual pieces. The experienced founder looks at a business model and sees where the pressure lands in year three. Same information, completely different resolution.
 
-So the map fills in. That's one axis. Now layer on the principles.
+So the map fills in. That's one force at work. Now layer on the principles.
 
 Every "no" from the previous section—every time you chose coherence over optimization, autonomy over prestige—those are active constraints. Saras Sarasvathy studied expert entrepreneurs and found they don't start from goals and work backward.[^3] They start from who they are, what they know, who they know—and treat constraints as creative inputs. She calls it effectuation. The constraints *are* the game.
 
 And the math backs this up:[^4] each constraint you hold shrinks the space of moves you're willing to make. Every additional objective you refuse to sacrifice reduces the feasible region. Sustainable, purpose-aligned, family-compatible, non-extractive, long-horizon—each one is a filter, and the viable set gets smaller with every filter you add.
 
 <style>
+.Post__content sup{font-size:.6em;vertical-align:super;line-height:0}
+.Post__content sup a.footnote{font-size:inherit;text-decoration:none;color:#837E73}
+.Post__content .footnotes{margin-top:4rem;padding-top:2rem;border-top:1px solid rgba(131,126,115,.3)}
+.Post__content .footnotes ol{padding-left:1.5em}
+.Post__content .footnotes li{font-size:14px;margin-bottom:1em;color:#837E73}
+.Post__content .footnotes li p{font-size:14px;margin-bottom:.5em;color:#837E73}
+body.dark .Post__content sup a.footnote{color:#D9D4C8}
+body.dark .Post__content .footnotes li,body.dark .Post__content .footnotes li p{color:#D9D4C8}
 .Corridor{margin:4.8rem 0;font-family:"Recursive Mono",monospace}
 .Corridor__display{border:2px solid #292725;background:#FFFCF3;position:relative;overflow:hidden;touch-action:none}
 .Corridor__display canvas,.Corridor__display>div{display:block;width:100%}
@@ -250,4 +258,4 @@ If any of that resonates... if you feel a different signal underneath the hunger
 
 [^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
 
-<script src="/js/corridor.js?v=3"></script>
+<script src="/js/corridor.js?v=4"></script>
