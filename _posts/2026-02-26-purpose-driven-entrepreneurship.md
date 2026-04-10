@@ -77,6 +77,52 @@ Every "no" from the previous section—every time you chose coherence over optim
 
 And the math backs this up:[^4] each constraint you hold shrinks the space of moves you're willing to make. Every additional objective you refuse to sacrifice reduces the feasible region. Sustainable, purpose-aligned, family-compatible, non-extractive, long-horizon—each one is a filter, and the viable set gets smaller with every filter you add.
 
+<style>
+.Corridor{margin:4.8rem 0;font-family:"Recursive Mono",monospace}
+.Corridor__toggle{display:flex;margin-bottom:1.6rem}
+.Corridor__toggleBtn{padding:.6rem 1.4rem;font-family:"Recursive Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.15em;border:2px solid #292725;background:transparent;color:#666159;cursor:pointer;-webkit-appearance:none;appearance:none;border-radius:0;transition:all .22s ease-in-out}
+.Corridor__toggleBtn:first-child{border-right:none}
+.Corridor__toggleBtn.is-active{background:#292725;color:#FFFCF3}
+.Corridor__toggleBtn:hover:not(.is-active){background:rgba(41,39,37,.05)}
+.Corridor__display{border:2px solid #292725;background:#FFFCF3;position:relative;overflow:hidden}
+.Corridor__display canvas,.Corridor__display>div{display:block;width:100%}
+.Corridor__legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;font-size:12px;color:#837E73}
+.Corridor__legendItem{display:flex;align-items:center;gap:.6rem}
+.Corridor__legendDot{width:10px;height:10px;display:inline-block;flex-shrink:0}
+.Corridor__legendDot--viable{background:#7a8b5c}
+.Corridor__legendDot--hazard{background:#292725}
+.Corridor__legendDot--ruled-out{background:#c4b99a}
+.Corridor__legendDot--unknown{background:#e8e5dd;border:1px solid #d4d4d4}
+.Corridor__stats{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid #292725;margin-top:1.6rem}
+.Corridor__stat{padding:1rem;border-right:2px solid #292725}
+.Corridor__stat:last-child{border-right:none}
+.Corridor__statLabel{font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#837E73}
+.Corridor__statValue{font-size:25px;font-weight:700;color:#292725;font-variant-numeric:tabular-nums}
+.Corridor__controls{margin-top:2.4rem}
+.Corridor__sliderGroup{margin-bottom:2rem}
+.Corridor__sliderHeader{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.6rem}
+.Corridor__label{font-size:12px;text-transform:uppercase;letter-spacing:.15em;font-weight:700;color:#292725}
+.Corridor__expLabel{font-size:12px;color:#837E73}
+.Corridor__slider{width:100%;accent-color:#292725}
+.Corridor__principleGroup{margin-top:1.6rem}
+.Corridor__principles{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1rem}
+.Corridor__principleBtn{padding:.5rem 1rem;font-family:"Recursive Mono",monospace;font-size:12px;border:2px solid #292725;background:transparent;color:#666159;cursor:pointer;-webkit-appearance:none;appearance:none;border-radius:0;transition:all .22s ease-in-out}
+.Corridor__principleBtn.is-active{background:#292725;color:#FFFCF3}
+.Corridor__principleBtn:hover:not(.is-active){background:rgba(41,39,37,.05)}
+.Corridor__caption{margin-top:3.2rem;padding-top:2rem;border-top:1px solid rgba(131,126,115,.3);font-family:"Inter var","SF Pro Text","Helvetica";font-size:15px;color:#837E73;line-height:1.7}
+.Corridor__loading{padding:4rem;text-align:center;font-size:13px;color:#837E73}
+body.dark .Corridor__display{border-color:#837E73;background:#151515}
+body.dark .Corridor__toggleBtn{border-color:#837E73;color:#FFFCF3}
+body.dark .Corridor__toggleBtn.is-active{background:#FFFCF3;color:#151515}
+body.dark .Corridor__stats,body.dark .Corridor__stat{border-color:#837E73}
+body.dark .Corridor__statValue{color:#FFFCF3}
+body.dark .Corridor__principleBtn{border-color:#837E73;color:#FFFCF3}
+body.dark .Corridor__principleBtn.is-active{background:#FFFCF3;color:#151515}
+body.dark .Corridor__label{color:#FFFCF3}
+body.dark .Corridor__slider{accent-color:#FFFCF3}
+body.dark .Corridor__caption{color:#D9D4C8}
+</style>
+
 <div class="Corridor" id="corridor-viz">
   <div class="Corridor__toggle">
     <button class="Corridor__toggleBtn is-active" data-mode="flow">Flow</button>
