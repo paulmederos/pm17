@@ -99,27 +99,19 @@
   }
 
   // =============================================
-  // Stats
-  // =============================================
-  function updateStats(r) {
-    var el = function (id) { return document.getElementById(id); };
-    el('stat-viable').textContent = r.viable;
-    el('stat-seen').textContent = Math.round(r.seen / r.total * 100) + '%';
-    el('stat-principles').textContent =
-      Object.keys(active).filter(function (k) { return active[k]; }).length +
-      ' / ' + CONSTRAINTS.length;
-  }
-
-  // =============================================
-  // Tree builder (decision paths)
+  // Tree builder (returns tree structure with
+  // parent/children maps for chain traversal)
   // =============================================
   function buildTree(terrain) {
     var sorted = [];
     for (var i = 0; i < terrain.length; i++) sorted.push(i);
     sorted.sort(function (a, b) { return terrain[a].dist3d - terrain[b].dist3d; });
 
+    var root = sorted[0];
     var edges = [];
-    var treeSet = [sorted[0]];
+    var childrenOf = {};
+    var parentOf = {};
+    var treeSet = [root];
 
     for (var i = 1; i < sorted.length; i++) {
       var pi = sorted[i];
@@ -139,10 +131,13 @@
       }
 
       edges.push([bestIdx, pi]);
+      if (!childrenOf[bestIdx]) childrenOf[bestIdx] = [];
+      childrenOf[bestIdx].push(pi);
+      parentOf[pi] = bestIdx;
       treeSet.push(pi);
     }
 
-    return edges;
+    return { root: root, edges: edges, children: childrenOf, parent: parentOf };
   }
 
   // =============================================
@@ -177,12 +172,12 @@
   function SpaceRenderer(container, terrain) {
     var scene, camera, renderer, controls;
     var colorAttr, lineColorAttr;
-    var edges;
+    var tree;
     var aid = null;
     var CUBE = 2;
 
     function init() {
-      edges = buildTree(terrain);
+      tree = buildTree(terrain);
 
       var w = container.clientWidth || container.parentElement.clientWidth || 300;
       var h = w;
@@ -199,7 +194,6 @@
       container.innerHTML = '';
       container.appendChild(renderer.domElement);
 
-      // Touch-friendly: orbit, pinch-to-zoom, pan
       controls = new THREE.OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true;
       controls.dampingFactor = 0.05;
@@ -210,11 +204,11 @@
       controls.maxDistance = 7.0;
       controls.enablePan = false;
       controls.target.set(0, 0, 0);
-      // Stop auto-rotate on interaction, resume after idle
+
+      var idleTimer;
       controls.addEventListener('start', function () {
         controls.autoRotate = false;
       });
-      var idleTimer;
       controls.addEventListener('end', function () {
         clearTimeout(idleTimer);
         idleTimer = setTimeout(function () {
@@ -265,15 +259,15 @@
         opacity: 0.9
       })));
 
-      // Connection lines (decision paths)
-      var edgeCount = edges.length;
+      // Connection lines
+      var edgeCount = tree.edges.length;
       var lineGeo = new THREE.BufferGeometry();
       var linePos = new Float32Array(edgeCount * 6);
       var lineCol = new Float32Array(edgeCount * 6);
 
       for (var j = 0; j < edgeCount; j++) {
-        var fi = edges[j][0];
-        var ti = edges[j][1];
+        var fi = tree.edges[j][0];
+        var ti = tree.edges[j][1];
         linePos[j * 6]     = terrain[fi].x3d * CUBE / 2;
         linePos[j * 6 + 1] = terrain[fi].y3d * CUBE / 2;
         linePos[j * 6 + 2] = terrain[fi].z3d * CUBE / 2;
@@ -289,7 +283,7 @@
       scene.add(new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({
         vertexColors: true,
         transparent: true,
-        opacity: 0.5
+        opacity: 0.55
       })));
 
       syncColors();
@@ -297,45 +291,106 @@
 
     function syncColors() {
       var result = compute(terrain);
+      var states = result.states;
+
+      // ── Walk the tree to find viable chains and classify edges ──
+      var greenSet = {};
+      var viableChains = 0;
+      var totalChains = 0;
+
+      // Recursive walk: returns true if any all-viable chain
+      // passes through this node
+      function walk(node, pathAllViable) {
+        var state = states[node];
+        if (state === 'unknown') return false;
+
+        var chainViable = pathAllViable && state === 'viable';
+
+        // Get visible children (skip unknown)
+        var kids = (tree.children[node] || []).filter(function (k) {
+          return states[k] !== 'unknown';
+        });
+
+        // Terminal node: hazard (dead end) or leaf (no visible children)
+        // Hazards are dead ends — no paths extend past them
+        if (state === 'hazard' || kids.length === 0) {
+          totalChains++;
+          if (chainViable) viableChains++;
+          return chainViable;
+        }
+
+        // Internal node — recurse into children
+        var anyGreenChild = false;
+        kids.forEach(function (kid) {
+          var kidGreen = walk(kid, chainViable);
+          if (kidGreen) {
+            greenSet[node + ':' + kid] = true;
+            anyGreenChild = true;
+          }
+        });
+
+        return anyGreenChild;
+      }
+
+      if (states[tree.root] !== 'unknown') {
+        walk(tree.root, true);
+      }
+
+      // ── Color palette ──
       var d = isDark();
+      var viableCol  = [0.353, 0.541, 0.235];   // #5a8a3c — bright green
+      var hazardCol  = d ? [0.28, 0.25, 0.22] : [0.161, 0.153, 0.145];
+      var ruledCol   = d ? [0.40, 0.38, 0.33] : [0.761, 0.753, 0.722]; // #c2c0b8
+      var hiddenCol  = d ? [0.08, 0.08, 0.08] : [0.96, 0.95, 0.93];
+      var greenEdge  = viableCol;
+      var grayEdge   = d ? [0.25, 0.24, 0.22] : [0.82, 0.80, 0.77];
 
-      var sc = {
-        viable:      [0.478, 0.545, 0.361],
-        hazard:      d ? [0.28, 0.25, 0.22] : [0.161, 0.153, 0.145],
-        'ruled-out': d ? [0.40, 0.38, 0.33] : [0.769, 0.725, 0.604],
-        unknown:     d ? [0.12, 0.12, 0.11] : [0.92, 0.90, 0.87]
+      var stateToColor = {
+        viable: viableCol,
+        hazard: hazardCol,
+        'ruled-out': ruledCol,
+        unknown: hiddenCol
       };
-      var hidden = d ? [0.08, 0.08, 0.08] : [0.96, 0.95, 0.93];
 
-      // Point colors
+      // ── Update point colors ──
       for (var i = 0; i < terrain.length; i++) {
-        var cs = result.states[i];
-        var c = cs !== 'unknown' ? sc[cs] : hidden;
+        var c = stateToColor[states[i]];
         colorAttr.array[i * 3]     = c[0];
         colorAttr.array[i * 3 + 1] = c[1];
         colorAttr.array[i * 3 + 2] = c[2];
       }
       colorAttr.needsUpdate = true;
 
-      // Edge colors — visible when both endpoints are visible
-      for (var j = 0; j < edges.length; j++) {
-        var fState = result.states[edges[j][0]];
-        var tState = result.states[edges[j][1]];
-        var bothVis = fState !== 'unknown' && tState !== 'unknown';
+      // ── Update edge colors ──
+      for (var j = 0; j < tree.edges.length; j++) {
+        var fi = tree.edges[j][0];
+        var ti = tree.edges[j][1];
+        var fState = states[fi];
+        var tState = states[ti];
 
-        var fc = bothVis ? sc[fState] : hidden;
-        var tc = bothVis ? sc[tState] : hidden;
+        // Visible: both not unknown, AND source is not a hazard (dead ends are terminal)
+        var isVis = fState !== 'unknown' && tState !== 'unknown' && fState !== 'hazard';
+        var isGreen = isVis && greenSet[fi + ':' + ti];
 
-        lineColorAttr.array[j * 6]     = fc[0];
-        lineColorAttr.array[j * 6 + 1] = fc[1];
-        lineColorAttr.array[j * 6 + 2] = fc[2];
-        lineColorAttr.array[j * 6 + 3] = tc[0];
-        lineColorAttr.array[j * 6 + 4] = tc[1];
-        lineColorAttr.array[j * 6 + 5] = tc[2];
+        var ec = !isVis ? hiddenCol : isGreen ? greenEdge : grayEdge;
+
+        lineColorAttr.array[j * 6]     = ec[0];
+        lineColorAttr.array[j * 6 + 1] = ec[1];
+        lineColorAttr.array[j * 6 + 2] = ec[2];
+        lineColorAttr.array[j * 6 + 3] = ec[0];
+        lineColorAttr.array[j * 6 + 4] = ec[1];
+        lineColorAttr.array[j * 6 + 5] = ec[2];
       }
       lineColorAttr.needsUpdate = true;
 
-      updateStats(result);
+      // ── Stats ──
+      var pc = Object.keys(active).filter(function (k) { return active[k]; }).length;
+      document.getElementById('stat-viable').textContent =
+        totalChains > 0 ? viableChains + ' / ' + totalChains : '--';
+      document.getElementById('stat-seen').textContent =
+        Math.round(result.seen / result.total * 100) + '%';
+      document.getElementById('stat-principles').textContent =
+        pc + ' / ' + CONSTRAINTS.length;
     }
 
     function loop() {
@@ -369,7 +424,6 @@
     var container = document.getElementById('corridor-space');
     var space = null;
 
-    // Load Three.js and start
     container.innerHTML = '<div class="Corridor__loading">Loading\u2026</div>';
     loadThree(function () {
       requestAnimationFrame(function () {
@@ -414,12 +468,8 @@
         if (space) space.resize();
       }, 150);
     });
-
-    // Initial stats
-    updateStats(compute(terrain));
   }
 
-  // Boot
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

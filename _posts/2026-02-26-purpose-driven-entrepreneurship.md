@@ -92,9 +92,9 @@ body.dark .Post__content .footnotes li,body.dark .Post__content .footnotes li p{
 .Corridor__legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;font-size:12px;color:#837E73}
 .Corridor__legendItem{display:flex;align-items:center;gap:.6rem}
 .Corridor__legendDot{width:10px;height:10px;display:inline-block;flex-shrink:0}
-.Corridor__legendDot--viable{background:#7a8b5c}
+.Corridor__legendDot--viable{background:#5a8a3c}
 .Corridor__legendDot--hazard{background:#292725}
-.Corridor__legendDot--ruled-out{background:#c4b99a}
+.Corridor__legendDot--ruled-out{background:#c2c0b8}
 .Corridor__legendDot--unknown{background:#e8e5dd;border:1px solid #d4d4d4}
 .Corridor__stats{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid #292725;margin-top:1.6rem}
 .Corridor__stat{padding:1rem;border-right:2px solid #292725}
@@ -148,7 +148,7 @@ body.dark .Corridor__caption{color:#D9D4C8}
   </div>
   <div class="Corridor__stats">
     <div class="Corridor__stat">
-      <div class="Corridor__statLabel">Viable moves</div>
+      <div class="Corridor__statLabel">Viable paths</div>
       <div class="Corridor__statValue" id="stat-viable">--</div>
     </div>
     <div class="Corridor__stat">
@@ -178,7 +178,7 @@ body.dark .Corridor__caption{color:#D9D4C8}
   </div>
 </div>
 
-Two forces, pressing from different directions. Experience reveals the dead ends. Principles rule out the shortcuts. What's left is narrow—genuinely narrow—but it's *yours.* You can see every wall, and you chose every wall.
+Two forces, pressing from different directions. Experience reveals the dead ends. Principles rule out the paths you're not willing to take. What's left is narrow—genuinely narrow—but it's *yours.* You can see most of the walls, and the ones you built yourself define you, your product, your business, your way of life.
 
 The hard part is the communication gap. You're standing in a corridor you can see perfectly, making decisions that feel obvious from where you are—and the people around you think you're being stubborn. Or overthinking. Or leaving money on the table. Research on expert-novice gaps shows this is structural, not personal.[^5] The curse of knowledge is that you can't un-know what you've seen, and you can't easily show someone else what's visible from where you're standing.
 
@@ -258,4 +258,4 @@ If any of that resonates... if you feel a different signal underneath the hunger
 
 [^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
 
-<script src="/js/corridor.js?v=4"></script>
+<script src="/js/corridor.js?v=5"></script>
