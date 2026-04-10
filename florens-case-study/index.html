@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Florens — From Bathhouse to Sauna: A Founder Case Study</title>
+<meta name="description" content="A four-year journey from bathhouse dream to at-home sauna — the pivots, prototypes, and lessons learned building Florens.">
+<meta property="og:title" content="Building Florens: From Bathhouse Dream to At-Home Sauna">
+<meta property="og:description" content="A four-year journey from bathhouse dream to at-home sauna — the pivots, prototypes, and lessons learned building Florens.">
+<meta property="og:image" content="https://artifacts.enchant.co/florens-case-study/images/florens-open-graph.png">
+<meta property="og:url" content="https://artifacts.enchant.co/florens-case-study">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="https://enchant.co/favicon.ico">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+<style>
+  :root {
+    --ink: #151515;
+    --cream: #F9F2E8;
+    --sand: #F0E9DF;
+    --dark-sand: #E9DFCA;
+    --stone: #847E72;
+    --obsidian: #151515;
+    --text: #33312C;
+    --text-secondary: #847E72;
+    --border: #E9DFCA;
+    --ocean: #044056;
+    --ocean-light: #e3eef4;
+    --sage: #4a6741;
+    --sage-light: #e8efe6;
+    --gold: #d4a63b;
+    --gold-light: #fdf5e6;
+    --ember: #b44a2d;
+    --ember-light: #fdf0ec;
+    --violet: #826ee6;
+    --violet-light: #eeeafc;
+
+    /* ─── TUNABLE SPACING ─── */
+    --body-line-height: 1.48;
+    --para-margin: 1.35rem;
+    --para-line-height: 1.48;
+    --section-padding: 5rem;
+    --h2-margin-bottom: 1.25rem;
+    --h3-margin-top: 2.25rem;
+    --h3-margin-bottom: 1rem;
+    --list-item-margin: 0.6rem;
+    --base-font-size: 17px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: var(--base-font-size);
+  }
+
+  body {
+    font-family: 'Inter', 'Sohne', -apple-system, 'Helvetica Neue', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: var(--body-line-height);
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: 'ss01' on, 'ss02' on, 'cv01' on;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 100;
+  }
+
+  /* ─── HEADER IMAGE ─── */
+  .header-image {
+    width: 100%;
+    height: 220px;
+    background: url('images/header-desert.jpg') center center / cover no-repeat;
+  }
+
+  /* ─── HEADER ─── */
+  .header {
+    padding: 2rem 2rem 0;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ocean);
+    background: var(--ocean-light);
+    padding: 0.45rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 2rem;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .header-badge::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background: var(--ocean);
+    border-radius: 50%;
+  }
+
+  .hero {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 2rem 3.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .hero h1 {
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+    animation: fadeUp 0.7s ease both;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--ocean);
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 680px;
+    line-height: 1.65;
+    animation: fadeUp 0.7s 0.15s ease both;
+  }
+
+  .hero-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    animation: fadeUp 0.7s 0.25s ease both;
+  }
+
+  .hero-meta-item {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+  }
+
+  .hero-meta-item strong {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  /* ─── FLOATING TOC ─── */
+  .toc-fab {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: var(--ocean);
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 90;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(4, 64, 86, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  }
+
+  .toc-fab:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 24px rgba(4, 64, 86, 0.4);
+  }
+
+  .toc-fab:active {
+    transform: scale(0.96);
+  }
+
+  .toc-fab svg {
+    width: 22px;
+    height: 22px;
+    transition: opacity 0.2s ease;
+  }
+
+  .toc-fab .icon-menu { opacity: 1; }
+  .toc-fab .icon-close { position: absolute; opacity: 0; }
+  .toc-fab.is-open .icon-menu { opacity: 0; }
+  .toc-fab.is-open .icon-close { opacity: 1; }
+
+  .toc-fab.is-open {
+    background: var(--text-secondary);
+  }
+
+  .toc-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 26, 46, 0.3);
+    z-index: 88;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+  }
+
+  .toc-overlay.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .toc-panel {
+    position: fixed;
+    bottom: 5rem;
+    right: 1.5rem;
+    width: 280px;
+    max-height: calc(100vh - 8rem);
+    overflow-y: auto;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.25rem;
+    z-index: 89;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px) scale(0.96);
+    transform-origin: bottom right;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease;
+  }
+
+  .toc-panel.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+  }
+
+  .toc-label {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0.6rem;
+  }
+
+  .toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .toc-link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text);
+    text-decoration: none;
+    padding: 0.4rem 0.55rem;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .toc-link:hover {
+    background: var(--sand);
+    color: var(--ocean);
+  }
+
+  .toc-num {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--stone);
+    font-weight: 500;
+    flex-shrink: 0;
+  }
+
+  /* ─── CONTENT ─── */
+  .content {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  .section {
+    padding: var(--section-padding) 0;
+    border-bottom: 1px solid var(--sand);
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 0 2.5rem;
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .section-label {
+    grid-column: 1;
+    grid-row: 1;
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    padding-top: 0.45rem;
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0;
+    line-height: 1.25;
+  }
+
+  .section > *:not(.section-label) {
+    grid-column: 2;
+  }
+
+  .section h2 {
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    font-size: 1.85rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.25;
+    margin-bottom: var(--h2-margin-bottom);
+    letter-spacing: -0.02em;
+  }
+
+  .section h3 {
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: var(--h3-margin-top) 0 var(--h3-margin-bottom);
+  }
+
+  .section p {
+    font-size: 1rem;
+    color: var(--text);
+    max-width: 680px;
+    margin-bottom: var(--para-margin);
+    line-height: var(--para-line-height);
+  }
+
+  .section p:last-child {
+    margin-bottom: 0;
+  }
+
+  .section p strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .section ul, .section ol {
+    max-width: 680px;
+    margin: 0.75rem 0 1rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .section li {
+    margin-bottom: var(--list-item-margin);
+    line-height: var(--para-line-height);
+  }
+
+  .section blockquote {
+    border-left: 3px solid var(--ocean);
+    padding: 1.25rem 1.5rem;
+    margin: 1.75rem 0;
+    max-width: 680px;
+    background: var(--ocean-light);
+    border-radius: 0 10px 10px 0;
+  }
+
+  .section blockquote p {
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    color: var(--ink);
+    font-size: 1.05rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+
+  .section blockquote cite {
+    display: block;
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    font-size: 0.8rem;
+    font-style: normal;
+    color: var(--text-secondary);
+    margin-top: 0.75rem;
+    letter-spacing: 0.01em;
+  }
+
+  .section blockquote cite strong {
+    color: var(--ocean);
+    font-weight: 600;
+  }
+
+  /* ─── TESTIMONIAL CARDS ─── */
+  .testimonial-grid {
+    columns: 2;
+    column-gap: 1.25rem;
+    margin: 2rem 0;
+    max-width: 820px;
+  }
+
+  .testimonial-card {
+    break-inside: avoid;
+    background: var(--sand);
+    border: 1px solid var(--dark-sand);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .testimonial-card .quote-text {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: var(--text);
+    margin: 0 0 1.25rem 0;
+    font-style: normal;
+  }
+
+  .testimonial-card .quote-text .highlight {
+    text-decoration: underline;
+    text-decoration-color: var(--text);
+    text-underline-offset: 2px;
+  }
+
+  .testimonial-card .quote-attribution {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .testimonial-card .quote-attribution .attr-text {
+    flex: 1;
+  }
+
+  .testimonial-card .quote-attribution .attr-name {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--ink);
+    line-height: 1.3;
+  }
+
+  .testimonial-card .quote-attribution .attr-role {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #666;
+    line-height: 1.3;
+  }
+
+
+  @media (max-width: 640px) {
+    .testimonial-grid {
+      columns: 1;
+    }
+  }
+
+  /* ─── ERA TAGS ─── */
+  .era-tag {
+    display: inline-block;
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    padding: 0.15em 0.5em;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 0.35em;
+  }
+
+  .era-tag.bathhouse {
+    background: var(--ocean-light);
+    color: var(--ocean);
+  }
+
+  .era-tag.sauna {
+    background: var(--sage-light);
+    color: var(--sage);
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline {
+    margin: 2rem 0;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 1.75rem;
+  }
+
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 0.45rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--ocean);
+    transform: translateX(-4px);
+  }
+
+  .timeline-item.pivot::before {
+    background: var(--ember);
+  }
+
+  .timeline-item.end::before {
+    background: var(--stone);
+  }
+
+  .timeline-year {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--ocean);
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+
+  .timeline-item.pivot .timeline-year {
+    color: var(--ember);
+  }
+
+  .timeline-item.end .timeline-year {
+    color: var(--stone);
+  }
+
+  .timeline-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
+  /* ─── STAT GRID ─── */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  }
+
+  .stat-number {
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.35rem;
+  }
+
+  .stat-label {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* ─── PRINCIPLE CARDS ─── */
+  .principle-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 2rem 0 1.5rem;
+    max-width: 680px;
+  }
+
+  .principle-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.25rem;
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  .principle-card::before { display: none; }
+
+  .principle-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    line-height: 1;
+    margin-top: 0.1rem;
+  }
+
+  .principle-body {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .principle-card h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+
+  .principle-card p {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+  }
+
+  /* ─── CALLOUT ─── */
+  .callout {
+    background: var(--sand);
+    border-radius: 16px;
+    padding: 2rem 2.5rem;
+    margin: 2rem 0 1.5rem;
+    color: var(--text);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .callout::after {
+    content: '';
+    position: absolute;
+    top: -40%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.02);
+  }
+
+  .callout h3 {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 1rem 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .callout p {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.7;
+    max-width: 620px;
+    position: relative;
+    margin-bottom: 0.75rem;
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+  .callout strong { color: var(--ink); font-weight: 600; }
+  .callout a { color: var(--ocean); border-bottom: 1px solid var(--ocean-light); }
+  .callout a:hover { border-bottom-color: var(--ocean); }
+  .callout em { color: var(--text-secondary); }
+
+  /* ─── HINDSIGHT NOTE ─── */
+  .hindsight {
+    margin: 1.5rem 0;
+    background: white;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 1.25rem 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .hindsight-label {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+    color: var(--gold);
+  }
+  .hindsight p { margin: 0 0 0.5rem 0; }
+  .hindsight p:last-child { margin-bottom: 0; }
+  .hindsight a { color: var(--ocean); border-bottom: 1px solid var(--ocean-light); }
+  .hindsight a:hover { border-bottom-color: var(--ocean); }
+
+  /* ─── INTERLUDE ─── */
+  .interlude {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 7.5rem 2rem;
+    background: var(--dark-sand);
+    border-top: none;
+    border-bottom: none;
+    text-align: center;
+  }
+
+  .interlude-icon {
+    font-size: 0.75rem;
+    margin-bottom: 2rem;
+    opacity: 0.35;
+    letter-spacing: 0.75em;
+    color: var(--stone);
+  }
+
+  .interlude h2 {
+    font-family: 'Inter', 'Sohne', -apple-system, sans-serif;
+    font-size: 1.85rem;
+    font-weight: 300;
+    color: var(--ink);
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.75rem;
+  }
+
+  .interlude p {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 540px;
+    margin: 0 auto 1.25rem;
+    line-height: 1.75;
+  }
+
+  .interlude p:last-child {
+    margin-top: 2rem;
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 580px;
+    line-height: 1.45;
+  }
+
+  /* ─── LESSONS / TAKEAWAYS ─── */
+  .lesson-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+  }
+
+  .lesson-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    max-width: 680px;
+  }
+
+  .lesson-list li:last-child {
+    border-bottom: none;
+  }
+
+  .lesson-num {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ocean);
+    flex-shrink: 0;
+    line-height: 1.5;
+  }
+
+  .lesson-text {
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .lesson-text strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ─── APPENDIX ─── */
+  .appendix-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .appendix-card {
+    background: var(--sand);
+    border-radius: 10px;
+    padding: 1.25rem;
+    border: 1px dashed var(--border);
+  }
+
+  .appendix-card h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.35rem;
+  }
+
+  .appendix-card p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  .appendix-tag {
+    display: inline-block;
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--stone);
+    background: var(--cream);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+  }
+
+  /* ─── FIGURES ─── */
+  .section figure {
+    margin: 2rem 0;
+    max-width: 100%;
+  }
+
+  .section figure img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+
+  .section figure figcaption {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    margin-top: 0.6rem;
+    line-height: 1.5;
+  }
+
+  .figure-placeholder {
+    background: var(--sand);
+    border: 2px dashed var(--border);
+    border-radius: 12px;
+    padding: 3rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+  }
+
+  .figure-placeholder-label {
+    font-family: 'Sohne Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--stone);
+    margin-bottom: 0.5rem;
+  }
+
+  .figure-placeholder-desc {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    max-width: 480px;
+    margin: 0 auto;
+    line-height: 1.55;
+  }
+
+  /* ─── LINKS ─── */
+  .section a {
+    color: var(--ocean);
+    text-decoration: none;
+    border-bottom: 1px solid var(--ocean-light);
+    transition: border-color 0.2s;
+  }
+
+  .section a:hover {
+    border-bottom-color: var(--ocean);
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 3rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .footer p {
+    font-size: 0.78rem;
+    color: var(--stone);
+    line-height: 1.6;
+  }
+
+  .footer a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 640px) {
+    html { font-size: 16px; }
+    .hero { padding: 0 1.25rem 2.5rem; }
+    .header { padding: 1.5rem 1.25rem 0; }
+    .content { padding: 0 1.25rem; }
+    .section { grid-template-columns: 1fr; gap: 0; }
+    .section-label { position: static; margin-bottom: 1rem; }
+    .section > *:not(.section-label) { grid-column: 1; }
+    .toc-panel { right: 1rem; bottom: 4.5rem; width: calc(100vw - 2rem); max-width: 320px; }
+    .toc-fab { bottom: 1.25rem; right: 1.25rem; }
+    .footer { padding: 2rem 1.25rem 2.5rem; }
+    .callout { padding: 1.75rem; }
+    .stat-grid { grid-template-columns: 1fr 1fr; }
+    .toc-grid { grid-template-columns: 1fr; }
+    .hero-meta { gap: 0.75rem; flex-direction: column; }
+
+  }
+</style>
+</head>
+<body>
+
+<div class="header-image"></div>
+
+<div class="header">
+  <div class="header-badge">Founder Case Study &middot; 2018&ndash;2023</div>
+</div>
+
+<div class="hero">
+  <h1>Florens: from bathhouse dream to <em>at-home sauna</em></h1>
+  <p class="hero-subtitle">A four-year arc of building a wellness company through a pandemic, a full product pivot, and the honest decision to wind it down. Written for founders building in the space&mdash;the real story, not the highlight reel.</p>
+</div>
+
+<!-- Floating TOC -->
+<div class="toc-overlay" id="tocOverlay"></div>
+<nav class="toc-panel" id="tocPanel">
+  <div class="toc-label">Contents</div>
+  <div class="toc-list">
+    <a href="#overview" class="toc-link"><span class="toc-num">00</span> Overview</a>
+    <a href="#spark" class="toc-link"><span class="toc-num">01</span> The spark</a>
+    <a href="#need" class="toc-link"><span class="toc-num">02</span> The need</a>
+    <a href="#early" class="toc-link"><span class="toc-num">03</span> Early steps</a>
+    <a href="#pandemic" class="toc-link"><span class="toc-num">04</span> The pandemic</a>
+    <a href="#pivot" class="toc-link"><span class="toc-num">05</span> The pivot</a>
+    <a href="#prototype" class="toc-link"><span class="toc-num">06</span> Prototyping</a>
+    <a href="#gtm" class="toc-link"><span class="toc-num">07</span> Go-to-market</a>
+    <a href="#funding" class="toc-link"><span class="toc-num">08</span> Funding</a>
+    <a href="#wall" class="toc-link"><span class="toc-num">09</span> The wall</a>
+    <a href="#close" class="toc-link"><span class="toc-num">10</span> Winding down</a>
+    <a href="#tech" class="toc-link"><span class="toc-num">11</span> Technical deep dive</a>
+    <a href="#lessons" class="toc-link"><span class="toc-num">12</span> Lessons</a>
+    <a href="#acknowledgements" class="toc-link"><span class="toc-num">&hearts;</span> Acknowledgements</a>
+    <a href="#afterlife" class="toc-link"><span class="toc-num">13</span> The afterlife</a>
+  </div>
+</nav>
+<button class="toc-fab" id="tocFab" aria-label="Table of contents" aria-expanded="false">
+  <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="3" y1="6" x2="21" y2="6"/>
+    <line x1="3" y1="12" x2="15" y2="12"/>
+    <line x1="3" y1="18" x2="18" y2="18"/>
+  </svg>
+  <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="6" y1="6" x2="18" y2="18"/>
+    <line x1="18" y1="6" x2="6" y2="18"/>
+  </svg>
+</button>
+
+<div class="content">
+
+  <!-- OVERVIEW -->
+  <div class="section" id="overview">
+    <div class="section-label">00 &mdash; Overview</div>
+    <h2>A company about ritual, refresh, and wellbeing</h2>
+    <p>Florens started as a simple question: what would it look like to make recovery feel as accessible and habitual as going to the gym?</p>
+    <p>Coming off my time at Territory, entering early parenthood, and feeling the background hum of modern stress more acutely than ever, I kept returning to the same need: a reliable way to downshift and refill.</p>
+    <p>At first, that idea took a physical form: a Japanese onsen-inspired bathhouse with private rooms. Then COVID forced a hard reset. The bathhouse paused, but the deeper thread sharpened. <a href="https://weareflorens.com" target="_blank">Florens</a> was always a company about <strong>ritual, refresh, and wellbeing</strong>. The product form changed, but the mission stayed intact.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">2018</div>
+        <div class="timeline-title">🌊 Bathhouse concept</div>
+        <div class="timeline-desc">Modern onsen-inspired space with private soak rooms. Location scouting, architect calls, financial modeling.</div>
+      </div>
+      <div class="timeline-item pivot">
+        <div class="timeline-year">Early 2020</div>
+        <div class="timeline-title">🦠 COVID forces a rethink</div>
+        <div class="timeline-desc">Construction uncertainty, public health risk, and shifting consumer behavior make the bathhouse unworkable.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">Mid 2020</div>
+        <div class="timeline-title">🔥 Pivot to in-home sauna</div>
+        <div class="timeline-desc">Recovery rituals matter. Sauna is the smallest, most accessible way to bring them home.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2020&ndash;2022</div>
+        <div class="timeline-title">🛠️ Product development &amp; prototyping</div>
+        <div class="timeline-desc">Heating systems, safety, ventilation, industrial design. Multiple prototype cycles.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">2021&ndash;2022</div>
+        <div class="timeline-title">💬 Community &amp; go-to-market</div>
+        <div class="timeline-desc">Early supporter testing, content strategy, category education.</div>
+      </div>
+      <div class="timeline-item end">
+        <div class="timeline-year">2023</div>
+        <div class="timeline-title">🌅 Decision to wind down</div>
+        <div class="timeline-desc">Honest reckoning with timelines, capital, and founder-model fit. Florens closes with the mission intact.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 01: THE SPARK -->
+  <div class="section" id="spark">
+    <div class="section-label">01 &mdash; The Spark</div>
+    <h2>A bathhouse as an antidote to modern stress</h2>
+    <p>Florens began with a post-startup question that felt half playful, half urgent: "What if we built the place we wish existed?"</p>
+    <p>My spouse <strong><a href="https://www.brittanymederos.com/" target="_blank">Brittany</a></strong> and I had fallen in love with Japanese onsen culture through our travels together. That experience&mdash;the ritual, the quiet, the way your whole nervous system recalibrates&mdash;stuck with both of us. We kept coming back to spaces like <a href="https://www.knotsprings.com/" target="_blank">Knot Springs</a> and <a href="https://www.watercourseway.com/" target="_blank">Watercourse Way</a>. The experience was visceral and subtle: heat and water as a clean reset for body and mind. This is not a luxury treat. It is a <strong>practice</strong>&mdash;something you come back to because it actually changes how you feel.</p>
+    <p>At its core was a belief: we should all have access to safe spaces for bits of brain, body, and heart recharge when we need them. If we did, we'd be happier and healthier in the day-to-day, even as we build long-term resilience.</p>
+
+    <div class="principle-grid">
+      <div class="principle-card ocean">
+        <span class="principle-icon">🚪</span>
+        <div class="principle-body">
+          <h4>Accessible</h4>
+          <p>Not only for special occasions. Something you could return to weekly, the way you'd return to the gym.</p>
+        </div>
+      </div>
+      <div class="principle-card sage">
+        <span class="principle-icon">🤫</span>
+        <div class="principle-body">
+          <h4>Intimate</h4>
+          <p>Private rooms to actually downshift. A space where you could let your guard down completely.</p>
+        </div>
+      </div>
+      <div class="principle-card gold">
+        <span class="principle-icon">🔁</span>
+        <div class="principle-body">
+          <h4>Ritual-driven</h4>
+          <p>Designed around the practice of return. Something you build into your rhythm, not just your calendar.</p>
+        </div>
+      </div>
+      <div class="principle-card ember">
+        <span class="principle-icon">🤝</span>
+        <div class="principle-body">
+          <h4>Community-adjacent</h4>
+          <p>A place you could share with someone without it being "another meal." Connection through shared experience.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>I ran the idea by my friend <a href="https://www.linkedin.com/in/rasmorton/" target="_blank">Robert Morton</a>, who had been exploring mindfulness at work in his own way. He wasn't part of Florens yet&mdash;that would come later, when we pivoted to sauna&mdash;but he was a close advisor and sounding board from the start. Together we kept asking the broader question: why is it so hard to find a place to catch your breath?</p>
+    <p>The other person I leaned on from the very beginning was <strong><a href="https://www.linkedin.com/in/ptrcksmth/" target="_blank">Patrick Smith</a></strong>. Patrick had been one of the co-founders at Territory Foods and the person who originally hired me there. After I left we stayed close, and when I started working on Florens he became one of my most consistent thought partners&mdash;showing up every other week to work through whatever was in front of me, from business strategy to product to team dynamics. He'd stay involved across the entire life of the company.</p>
+    <p>The north star we landed on: <strong>every body and mind refreshed.</strong> The world was getting more stressful, more always-on, more screen-saturated. We wanted to create spaces where people could reconnect with themselves&mdash;places for recovery, for unwinding, for filling back up. Whether that took the form of a bathhouse or a sauna, recovery was always at the center.</p>
+
+    <div class="callout">
+      <h3>The Florens Charter</h3>
+      <p>We wrote a telescoping vision that started from the perpetual mission and zoomed in to what we could build today:</p>
+      <p><strong>Perpetual:</strong> Help people live healthful, joyful, purposeful lives.</p>
+      <p><strong>One day:</strong> Make hormetic stressors easier&mdash;fasting, fitness, mindfulness.</p>
+      <p><strong>Later:</strong> Thermal hormetic stress. Hot and cold exposure therapies.</p>
+      <p><strong>Today:</strong> Heat bathing. Sauna.</p>
+      <p>Each layer nested cleanly inside the one above. Whatever the product form, the mission was the same.</p>
+    </div>
+
+    <h3>How we wanted to build</h3>
+    <p>Even before Florens had a product, Brittany and I had a conviction about the kind of company it would be. If we were building a space for refresh, we couldn't do it while burning ourselves out. We had to practice what we preached&mdash;stay refreshed ourselves, grow at a pace that felt honest, build something we'd actually want to be part of for decades. The goal was never "scale fast and exit." It was closer to a <strong>zebra</strong> than a unicorn: real revenue, real impact, sustainable growth.</p>
+    <p>We didn't have all the language yet&mdash;that would come later, when we formalized <a href="#philosophy">a full operating philosophy</a> around the sauna pivot&mdash;but the instinct was there from day one. Stewardship over extraction. Education over hype. Build the company you'd want to buy from.</p>
+  </div>
+
+  <!-- 02: THE NEED -->
+  <div class="section" id="need">
+    <div class="section-label">02 &mdash; Identifying the Need</div>
+    <h2>Wellbeing seekers who were already doing "the work"</h2>
+    <p>We framed the customer as <strong>wellbeing seekers</strong>&mdash;today more commonly called health optimizers. People already investing in their health and wellness. They don't need to be sold on the value of taking care of themselves; they're actively looking for the next thing that moves the needle. Their ears perk up when conversation turns to breathing routines, cold showers, mindfulness modes, and new modalities to try.</p>
+    <p>This wasn't an abstract persona for us. Robert and I had spent years at <a href="https://www.territoryfoods.com/" target="_blank">Territory Foods</a> discovering exactly who this customer was: what they cared about, where they spent money, what their daily rhythms looked like, what made them trust a brand. We knew wellbeing seekers because we were them. We were building for ourselves as much as for anyone else.</p>
+    <p>They were also time-crunched and accustomed to superior direct-to-consumer experiences. High expectation bar for brands. Willing to invest in wellbeing, but the front-to-back customer experience had better be transparent, attentive, and tuned to fit into the rhythms and spaces of their life.</p>
+    <p>The opportunity sat at the intersection of three forces:</p>
+    <ul>
+      <li>Rising interest in recovery and wellbeing across demographics&mdash;within the $4.5T global wellness economy, a $175B spa and mineral springs market (mostly Asia-Pacific and Europe) and a $595B fitness and mind-body market</li>
+      <li>A category full of fragmented experiences (fitness over here, spa treat over there)&mdash;what Fitt Insider called "disconnected fitness": the desire to unplug giving rise to new self-care and recovery-focused concepts</li>
+      <li>A gap for something holistic, repeatable, and close-by. Comps were promising but limited: <a href="https://www.the-well.com/" target="_blank">The Well</a> in NYC raised $4M seed with ~200 founding members at $375/mo. <a href="https://www.watercourseway.com/" target="_blank">Watercourse Way</a> in the Bay had been booked solid for 35+ years. <a href="https://www.knotsprings.com/" target="_blank">Knot Springs</a> maxed out membership. But nothing sat where we wanted to sit.</li>
+    </ul>
+
+    <div class="callout">
+      <h3>The positioning insight</h3>
+      <p>Most options were either <strong>pure performance</strong> (athletic recovery centers) or <strong>pure pamper</strong> (luxury spas).</p>
+      <p>Florens wanted to sit in the middle: highly functional refresh that still feels beautiful and nourishing. The goal was finding health boosts that feel great and involve less work than things you're already committed to.</p>
+      <p><strong>Live more refreshed.</strong></p>
+    </div>
+  </div>
+
+  <!-- 03: EARLY STEPS -->
+  <div class="section" id="early">
+    <div class="section-label">03 &mdash; Early Steps</div>
+    <h2>Design, planning, and the "almost" moment</h2>
+    <p>We did the unglamorous early work that any physical business demands:</p>
+    <ul>
+      <li>Competitive research and experience research across recovery, spa, and wellness categories</li>
+      <li>Financial modeling for a first location</li>
+      <li>Architect calls and concept development, including collaboration with <strong>Skylab Architecture</strong> (<a href="https://drive.google.com/file/d/1AVYXF9q3mUm2Fvu3rGKs_QNUsJjExgd2/view?usp=sharing" target="_blank">original project proposal</a>)</li>
+      <li>Early location scouting and conversations heading toward a lease</li>
+      <li>A pitch deck that secured <strong>~$1M in funding commitments</strong> from real estate investors (though never collected)</li>
+    </ul>
+    <p>The Skylab collaboration was one of the highlights of the early days. We'd visited <a href="https://www.knotsprings.com/" target="_blank">Knot Springs</a> in Portland years earlier and been completely blown away&mdash;every detail felt intentional, the materials worked together beautifully, and the whole experience stuck with me. When it came time to design our own space, <a href="https://skylabarchitecture.com/" target="_blank">Skylab</a> was the obvious choice. I reached out not knowing if they'd take on a tiny project from a first-time founder in the Bay Area, and <strong>Brent Grubb</strong>, one of their principals, jumped in immediately. Brent was a huge bathhouse enthusiast&mdash;he'd traveled the world visiting them, and Knot Springs was one of his favorite projects. There was no way we could actually afford Skylab, but Brent made it work. He shaped the scope to fit our budget, which was incredibly generous. Within a week of our first call, he was pulling in the broader team. He also connected me with Jeff Kovel, Skylab's founder, which meant a lot. I will never forget that. Brent's generosity and enthusiasm were a huge part of why those early months felt so promising.</p>
+    <p>The result was gorgeous: an 8,100 SF "mineral spa" with 8 private soak rooms, each containing a hot tub, cold plunge, dry sauna, and a rest lounge. The design language drew from "7 Elements of Nature"&mdash;moon, fire, water, trees, metal, earth, sun&mdash;mapped across the building to guide guests through a mood arc: anticipation in the lobby, restoration in the rooms, invigoration on the way out.</p>
+
+    <figure>
+      <img src="images/mineral-spa-concept-spa-room.png" alt="Skylab Architecture concept rendering — private mineral spa room with hot tub, natural materials, and green wall" style="width: 100%; border-radius: 8px;">
+      <figcaption>Concept rendering of a private soak room by Skylab Architecture. <a href="https://drive.google.com/file/d/1veslmiS1Tp4kK7BrxRDRTIH6aiij20mW/view?usp=sharing" target="_blank">View the full 40-page concept design (PDF) &rarr;</a></figcaption>
+    </figure>
+
+    <p>The business model was simple: $40/hr per room per person, 8 rooms, 20% vacancy target. That penciled to about $130K/month in revenue against $50K/month in overhead. We were raising $1.5M on a $4.0M valuation&mdash;$900K for the first location build, $480K for 18 months of operating runway, $120K for a lease deposit.</p>
+    <p>The soak club was a great anchor: sauna, cold plunge, grab-and-go nutrition, a setting for more intimate relationship building, a community of wellness cultivators. But it was always just one piece of the puzzle. The vision laddered up: soak studios and community <em>today</em>, then coaching, nutrition, and programming <em>tomorrow</em>. <strong><a href="https://www.linkedin.com/in/shizu-okusa-87a25415" target="_blank">Shizu Okusa</a></strong>&mdash;who had built Jrink (a juice company she grew to multiple DC locations) and was just starting <a href="https://www.apothekary.co/" target="_blank">Apothekary</a>&mdash;was one of my earliest and strongest supporters. Her deep retail and experiential background shaped how we thought about the wellness-center side: the soak spa as a hub for unwinding, not just a place to sweat. We even explored what an apothecary-style alchemy bar could look like inside a Florens location.</p>
+
+    <h3>The identity</h3>
+    <p>With the concept taking shape, we worked with my friend <strong><a href="https://www.linkedin.com/in/borzou/" target="_blank">Borzou Azabdaftari</a></strong> and his branding agency Falcon to develop the Florens identity. Borzou's team created the original brand system&mdash;the logo, the visual language, the palette. The mark they designed was an ink-wash ens&#x14D; circle: organic, unfinished, a nod to the wabi-sabi aesthetic we loved from Japanese onsen culture.</p>
+
+    <figure>
+      <img src="images/flores-brand-falcon.png" alt="Original Florens brand system by Falcon — logo, typography, color palette, and mood imagery" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+      <figcaption>The original Florens brand system, designed by Borzou Azabdaftari and Falcon. Bodoni typography, earth-toned palette, ink-wash ens&#x14D; mark.</figcaption>
+    </figure>
+
+    <h3>Building momentum</h3>
+    <figure>
+      <img src="images/florens-soak-pitch-overview.png" alt="Overview slides from the Florens bathhouse pitch deck — market sizing, business model, and growth strategy" style="width: 100%; border-radius: 8px;">
+      <figcaption>From the bathhouse pitch deck we used to secure ~$1M in commitments. <a href="https://drive.google.com/file/d/1J4o-eSW9FxBe4Nsh2r6UKL3ZMYij9cZc/view?usp=sharing" target="_blank">View the full deck (PDF) &rarr;</a></figcaption>
+    </figure>
+
+    <p>There was real momentum. Conversations were progressing, the design felt right, the numbers were starting to pencil out. Brittany and I sat down and made the call together: we'd sign a lease in March 2020, begin construction by May, and soft-open by December. But in March 2020, the world changed. 🙃</p>
+    <div class="hindsight">
+      <div class="hindsight-label">Hindsight</div>
+      <p>A handful of operators stayed the course through COVID. Andrew Lachlan kept building <a href="https://www.thesaunahouse.com/" target="_blank">Sauna House</a> in Asheville through the worst of it&mdash;fewer customers, slower growth, SBA relief funding to bridge the gap. It was genuinely hard. But the pandemic's impact on physical wellness businesses lasted far shorter than I'd expected. I was modeling a 3&ndash;5 year disruption; the real hit was closer to 18 months. By year two, people were desperate for connection and coming back to communal spaces, and operators who'd pushed through were adapting in real-time to surging demand. By 2023&ndash;2024, they had strong communities, grounded unit economics, and were poised for serious growth.</p>
+      <p>If we'd stuck with the bathhouse, the first 18 months would've gone to construction anyway. By the time we opened doors, the worst would've been behind us. Building initial community would've been slower than we'd originally projected&mdash;but probably far less of a delay than I feared at the time. Six years later, we'd have an incredible physical asset. This was the big fork in the road.</p>
+    </div>
+  </div>
+
+  <!-- 04: PANDEMIC -->
+  <div class="interlude" id="pandemic">
+    <div class="interlude-icon">&middot; &middot; &middot;</div>
+    <h2>Intermission: the pandemic</h2>
+    <p>COVID made the bathhouse concept unworkable on every axis: construction uncertainty, public health risk, customer behavior shifting toward the home. Brittany and I spent a lot of those early pandemic weeks sitting together, trying to figure out what came next. But the pandemic also clarified something important.</p>
+    <p><strong>The bathhouse had always been one possible expression of a deeper mission.</strong> The mission survived the bathhouse.</p>
+  </div>
+
+  <!-- 05: THE PIVOT -->
+  <div class="section" id="pivot">
+    <div class="section-label">05 &mdash; The Pivot</div>
+    <h2>From a place to a product</h2>
+    <p>The first instinct wasn't to jump straight to hardware. We were still grieving the bathhouse&mdash;it was early in the pandemic, nobody knew what was coming, and there was a lot of fear. So we went back to the drawing board. In April 2020, we reframed Florens as a "healthy habits company" with a broader vision: sub-brands spanning a wellness journal, a culinary club, a community platform, and the soak club. The sauna was one piece of a larger puzzle.</p>
+    <p>But at every path, every turn, every discussion we had, we kept coming back to sauna as the thing we could do <em>right now</em>. If recovery rituals matter, what is the smallest, most accessible way to bring them into daily life?</p>
+    <p>Sauna stood out for three reasons:</p>
+    <ul>
+      <li><strong>Deeply rooted in tradition</strong> across cultures, from Finnish to Japanese to Korean to the onsen we loved</li>
+      <li><strong>Strong health signal</strong> with growing clinical evidence: up to 40% reduction in all-cause mortality, 46% lower hypertension risk, acute anti-depressant effects within one week lasting six weeks. Dose-dependent, meaning more sauna = more benefit.</li>
+      <li><strong>A lever for people who struggle to make meditation "stick" in the body</strong>&mdash;heat does the work for you</li>
+    </ul>
+
+    <p>The first person I called was <strong><a href="https://www.linkedin.com/in/mariokhosla/" target="_blank">Mario Khosla</a></strong>. Mario was a close friend I'd met through parkour at Stanford&mdash;an exceptionally talented mechanical engineer who'd worked at Tesla and ChargePoint. Even before we'd officially decided to pivot to sauna, back when we were still in that in-between state, he was the one I turned to. In the middle of the pandemic, he would come to my house and help me figure out how we could actually build this thing. He ordered everything we needed, helped me assemble it, and together we built and tested our very first prototype in my backyard. Mario played a huge role in getting the sauna out of our heads and into physical reality&mdash;and because of his help, his clarity, and his engineering instincts, Brittany, Robert, and I were able to walk into later conversations with Todd carrying real requirements, real constraints, and a real vision. Not just a pitch deck.</p>
+
+    <p>This is also when Robert officially came on board as co-founder. He'd been a close friend and advisor through the bathhouse phase, but the sauna pivot changed things. Robert had been working on his own meditation booth concept&mdash;a quiet, enclosed space he wanted to bring into offices. When the pandemic hit and he saw what we were building&mdash;this phone-booth-sized sauna that could fit anywhere&mdash;he saw it could be a multi-purpose room: sauna, meditation, a place to make space. Brittany and I talked through what this relationship would look like, how we wanted it to grow, and what shape it should take. We blended Robert's ideas with ours and moved forward together.</p>
+
+    <h3 id="philosophy">The operating philosophy</h3>
+    <p>With Robert on board, we formalized something that had been instinct from the start: a conviction about <em>how</em> to build, not just what to build. Florens was meant to be a purpose-driven company in the fullest sense&mdash;where the mission and the business model were inseparable, not one funding the other.</p>
+    <p>The playbook we admired wasn't the default startup story. It was <strong>Yvon Chouinard and Patagonia</strong>: stewardship as a condition for existence, not a marketing angle. Bootstrapped, take care of your people, grow sustainably. That was the bar.</p>
+    <p>We wrote what we called the Brand Riff&mdash;a document that went deeper than positioning. It laid out commitments that would make Florens a different kind of company:</p>
+
+    <div class="principle-grid">
+      <div class="principle-card">
+        <span class="principle-icon">🌱</span>
+        <div class="principle-body">
+          <h4>Regenerative, not just sustainable</h4>
+          <p>Sustainability was a <em>condition for existence</em>&mdash;sustainably sourced materials, low energy draw, known lifecycle from creation to end of life. But we pushed further: <em>"How can we be regenerative? And where might we be extractive, even unintentionally? Call it out, act on it. The net of Regenerative + Sustainable &ndash; Extractive has to be positive and trending more so."</em></p>
+        </div>
+      </div>
+      <div class="principle-card">
+        <span class="principle-icon">💝</span>
+        <div class="principle-body">
+          <h4>Giveback baked into the model</h4>
+          <p>Every purchase of a Florens unit would fund recharge programs in underserved communities. Not a charitable add-on&mdash;part of the business model. Making sauna accessible across the socioeconomic spectrum was how you actually change a category, not by building luxury and hoping it trickles down.</p>
+        </div>
+      </div>
+      <div class="principle-card">
+        <span class="principle-icon">📖</span>
+        <div class="principle-body">
+          <h4>Education over hype</h4>
+          <p>The health evidence for sauna is strong, but we committed to honesty without preaching. From the Brand Riff: <em>"We'll stay away from the rhetoric that gets over-heated and preachy, focusing instead on what we know to be true&mdash;that sauna feels amazing even as it provides its wonderful health boost."</em> Growing the category mattered more than capturing market share.</p>
+        </div>
+      </div>
+      <div class="principle-card">
+        <span class="principle-icon">♿</span>
+        <div class="principle-body">
+          <h4>Inclusion as a design constraint</h4>
+          <p>Diversity, inclusion, and belonging weren't values on a wall. They were product requirements. We referenced the Microsoft Inclusive Design toolkit and designed for variation in body size, heat tolerance, mobility, and sensory sensitivity. <em>"We're moved by impacting people's health and how they feel. Not by some conventional notion of how they look."</em></p>
+        </div>
+      </div>
+    </div>
+
+    <p>We framed ourselves explicitly as a <strong>zebra startup</strong>&mdash;real revenue, real impact, sustainable growth&mdash;as opposed to the unicorn model of raise big, blitz fast, exit. Self-funding wasn't a fallback plan. It was the plan. We wanted to build at our own pace, make decisions from values rather than a growth curve, and keep the company aligned with the humans it served. Our legal partners at <a href="https://www.optimalcounsel.com/" target="_blank">Optimal Counsel</a>&mdash;<strong><a href="https://www.linkedin.com/in/joseancer/" target="_blank">Jose Ancer</a></strong>, <strong><a href="https://www.linkedin.com/in/marcus-nordstrom/" target="_blank">Marcus Nordstrom</a></strong>, and <strong><a href="https://www.linkedin.com/in/alexlawrence/" target="_blank">Alex Lawrence</a></strong>&mdash;helped us build the legal structure to match: a 7-year stock options window, an ESOP framework for future employee ownership, and a path to B Corp status.</p>
+
+    <div class="callout">
+      <h3>The impact vision</h3>
+      <p>From the Brand Riff: <em>"At the core of Florens is a belief that we should all have access to safe spaces for bits of brain, body and heart recharge when we need them&mdash;and that if we did, we'd be happier and healthier in the day-to-day, even as we build long-term resilience and peace of mind that can bring about all sorts of good stuff in our lives and the world.</em></p>
+      <p><em>"Ultimately we aim to stimulate more innovation in the space and drive down costs so that not only can we make saunas economically feasible for more people, we can also be part of imagining and bringing to life a wave of new ways to refresh that don't exist today."</em></p>
+    </div>
+
+    <p>This philosophy created real tension with the world we were building in. Purpose-driven entrepreneurship means sitting in paradox constantly: how do you market without manipulating? How do you use metrics as feedback without mistaking them for meaning? How do you compete while genuinely wanting your competitors to succeed? The answers don't resolve the tension. You learn to hold it.</p>
+    <p>Florens was as much a practice container as a company. Every decision&mdash;choosing 120V over 240V (accessibility over performance), sharing our Skylab costs openly with a competitor, bootstrapping when raising would have been easier&mdash;expressed the same philosophy. The business didn't exist separately from who I was trying to become as a builder. You'll see this thread run through the rest of the story: in how we approached <a href="#gtm">community and competition</a>, <a href="#funding">funding</a>, and the <a href="#close">honest decision to wind down</a>.</p>
+
+    <h3>A market growing, but poorly served</h3>
+    <p>The US sauna market was $3.84B and growing at 6.82% CAGR, but with less than 1% household penetration. 40 million apartment dwellers and 60 million city dwellers didn't have the space. A third of US households were rentals and couldn't alter their electrical. Traditional distribution&mdash;resale through regional vendors&mdash;was confusing, costly, and choppy. Portable options like IR blankets delivered an inferior heat experience.</p>
+    <p>There were a ton of saunas out there, but they were all the same: infrared, wood boxes, thoughtless bolt-on additions, questionable quality, awkward purchase experience, no dominant brand, and no one focused on end-to-end experience.</p>
+    <p>We believed we could 10x the experience with three things: a <strong>great product experience</strong> (build quality, look and feel, multi-sensory programming through a companion app), a <strong>great brand experience</strong> (beautiful, trustworthy, transparent, sustainable), and a <strong>modern DTC experience</strong> (the kind of end-to-end e-commerce people had come to expect from the best direct brands&mdash;replacing the fragmented wholesale-through-local-vendor model that the sauna industry still ran on).</p>
+
+    <p>Through 50+ customer development interviews, we pulled out the requirements that mattered most:</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number">Dry heat, 180&deg;F</div>
+        <div class="stat-label">Resistive heat&mdash;traditional sauna heat&mdash;was a fundamentally different experience than infrared (think oven vs. microwave). The health evidence behind resistive heat was also much stronger, backed by decades of Finnish research. Standard 15A/110V plug&mdash;no dedicated circuit, no electrician.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">$5,500</div>
+        <div class="stat-label">The price had to be accessible. We landed here after deep dives on price sensitivity, adjacent purchases (home remodels, gym equipment, home wellness construction), and cross-referencing with actual material and build costs. We'd later learn we severely underestimated all of these&mdash;COVID meant prices going up significantly across the board.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Flat-pack</div>
+        <div class="stat-label">To deliver a smooth modern DTC experience, we needed to flat-pack ship with relatively easy IKEA-style self-assembly. This later proved to be an <em>insanely</em> difficult challenge, and blinded us to the learning we could've had by choosing a local delivery concierge route&mdash;which we later attempted to pivot to, but too late.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Companion app</div>
+        <div class="stat-label">Focused on routines and behavior change&mdash;making sauna a daily practice instead of something you did from time to time. Scheduling, protocols personalized to your session data, and multi-modal experiences: lighting, sound, and aromatherapy layered on top of the heat exposure.</div>
+      </div>
+    </div>
+
+    <h3>Design inspirations</h3>
+    <p>A few products shaped our thinking:</p>
+    <ul>
+      <li><strong>Office phone booths</strong>&mdash;co-working spaces like WeWork had started introducing these private phone booths for quiet conversations and focus time. Small but big enough, purposeful design, quality materials, prefab panels for flat-pack shipping. Robert was really drawing from this form factor, and it was a big inspiration for us.</li>
+      <li><strong>Peloton Bike</strong>&mdash;an entire fitness experience packaged as "just a bike." More about the ecosystem (programming + community) than the physical product</li>
+      <li><strong>Grotto Sauna by Partisans</strong>&mdash;organic design, human-scale, light-filled, unassuming from outside but remarkable inside</li>
+    </ul>
+
+    <h3>Evolving the brand</h3>
+    <p>The pivot also meant the brand needed to evolve. The original Falcon identity had been designed for a physical retail experience&mdash;a bathhouse. As we shifted to an at-home connected product, we massaged it internally: keeping the ens&#x14D; mark but shifting the palette toward deep ocean blue, updating the typography, and reframing the tagline to <em>"Live More Refreshed."</em></p>
+
+    <figure>
+      <img src="images/florens-brand-v5.png" alt="Florens brand v5 — refreshed identity with ocean blue, updated mark, and 'Live More Refreshed' tagline" style="width: 100%; border-radius: 8px; border: 1px solid var(--border);">
+      <figcaption>Brand v5: the digital refresh. Deep ocean blue, refined ens&#x14D; mark, "Live More Refreshed" positioning.</figcaption>
+    </figure>
+
+    <h3>How we planned to fund it</h3>
+    <p>With the pivot defined and the product taking shape, we mapped out how to actually pay for it. The options boiled down to three routes:</p>
+    <ul>
+      <li><strong>Continue bootstrapping</strong>&mdash;fund the sauna through some combination of other businesses, consulting, or full-time employment. Keep full control, accept a longer timeline.</li>
+      <li><strong>Crowdfund through pre-orders</strong>&mdash;convert our waitlist into paying customers before we had a product. Kickstarter-style, but through our own channels. This was the option most aligned with our zebra philosophy: real customers, real revenue, no dilution.</li>
+      <li><strong>Raise a small angel round</strong>&mdash;bring on a few aligned investors to accelerate the path to a production unit.</li>
+    </ul>
+    <p>We chose to bootstrap. Self-funding gave us the freedom to make values-driven decisions without a growth curve breathing down our necks. The plan was to get as far as we could on our own, prove the concept, and only raise if we absolutely had to.</p>
+    <div class="hindsight">
+      <div class="hindsight-label">Hindsight</div>
+      <p>We should have been more honest with ourselves about what bootstrapping a hardware company really requires. A different model could have worked: start by building saunas for people&rsquo;s homes at a higher price point, where the differentiator is brand, availability, and craftsmanship. Learn from every build. Then productize over time&mdash;very similar to what <a href="https://www.linkedin.com/in/justin-juntunen-584284146/" target="_blank">Justin Juntunen</a> at <a href="https://cedarandstonesauna.com/" target="_blank">Cedar &amp; Stone Nordic Sauna</a> has done. But we didn&rsquo;t see it then.</p>
+    </div>
+  </div>
+
+  <!-- 06: PROTOTYPING -->
+  <div class="section" id="prototype">
+    <div class="section-label">06 &mdash; Prototyping</div>
+    <h2>Getting real, fast</h2>
+    <p>We brought on <strong><a href="https://www.linkedin.com/in/todd-metlen-757397230/" target="_blank">Todd Metlen</a></strong> for industrial and mechanical design. Todd had a background in ID and engineering from Nokia, Bose, and BMW&mdash;one of those exceptionally rare hardware people who is truly full-stack, from design through build and implementation. He came to us through <strong><a href="https://www.linkedin.com/in/maximwheatley/" target="_blank">Maxim Wheatley</a></strong>, an advisor and angel investor who'd been guiding me through what it actually takes to build a hardware startup. Maxim made the introduction, and it kicked the whole thing off. The plan: engage Todd to produce beautiful renders of a feasible product, with an estimated production cost, a detailed prototyping guide, and an integrated manufacturing plan.</p>
+    <p>Brittany helped me think through the investment side&mdash;what we could commit, what the engagement should look like, what we were really building toward. At the end of that engagement, we'd have what we needed for two things: an amazing web experience to drive pre-orders, and a clear path to building the first units.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number">$30&ndash;60K</div>
+        <div class="stat-label">Initial budget estimate for prototype. We were bootstrapping, so flexibility on payment structure was critical.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Summer 2020</div>
+        <div class="stat-label">Target for first prototype. Aggressive, but we were flexible on timeline.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Jan 2021</div>
+        <div class="stat-label">Original target for first batch produced and shipped. Ha&mdash;this would definitely slip. Remember this one. 😅</div>
+      </div>
+    </div>
+
+    <figure>
+      <img src="images/sauna-earliest-proto.png" alt="Our first prototype rig — a 120V Harvia heater inside a Sunlighten box" style="width: 100%; border-radius: 8px;">
+      <figcaption>Our earliest prototype rig, from a bunch of parts we ordered on McMaster and a 120V space heater. Very scrappy, but it proved the core experience.</figcaption>
+    </figure>
+
+    <p>The product journey was a series of prototypes and learning loops. Each cycle had explicit goals:</p>
+    <ul>
+      <li>Prove heating performance at full scale</li>
+      <li>Prove safety and control systems</li>
+      <li>Explore the sensory experience (light, sound, space)</li>
+      <li>Learn what mattered most to users in a real session</li>
+    </ul>
+
+    <h3>What we learned building</h3>
+    <p>We explored ventilation, sanitation cycles (ozone, UV), and discovered what "simple" really means once you layer real-world requirements onto an elegant concept. We worked with <strong><a href="https://www.linkedin.com/in/mariokhosla/" target="_blank">Mario Khosla</a></strong> between prototype rounds to learn the physics firsthand&mdash;heat transfer, insulation, airflow dynamics, the stuff you can't fake with renders.</p>
+    <p>We fought visual complexity. Early renders introduced too many materials and options. The team aligned toward fewer permutations, one strong design, and clarity. Scope creep is real, even in renders. 😂</p>
+    <p>Alongside the engineering renders, <strong><a href="https://www.linkedin.com/in/agentdunstone/" target="_blank">Agent Dunstone</a></strong>&mdash;a 3D artist and a friend I'd met online through video games&mdash;created concept renders of the sauna in real home environments: living rooms, bedrooms, garages. Those visuals powered our landing page, made their way into pitch decks, and shaped how people saw the product before it existed physically.</p>
+    <div class="callout">
+      <h3>Product POVs (from the brand doc)</h3>
+      <p><strong>On resistive vs. IR:</strong> people enjoy both. We personally prefer dry heat, and there are no good options for small-footprint dry heat at home. The strategy was focus: make resistive excellent first.</p>
+      <p><strong>On social vs. solo:</strong> the social element of heat experiences across the ages is wonderful. So are the contemplative, reset benefits of heat time on your own. The latter is harder to solve for, so we started there.</p>
+      <p><strong>On affordability:</strong> lots of what's out there fails the value-for-money test. Our aim was twofold: create the best value per dollar, and do so at a starting price point meaningfully lower than the higher-value options of today.</p>
+      <p><strong>On stewardship:</strong> total product lifecycle front and center&mdash;designing for reuse, repair, and resale from the start. How do users disassemble and reassemble their sauna when they move? How easy is it to repair components? Where does the product go at end-of-life?</p>
+      <p>The broader commitments&mdash;regenerative sustainability, inclusion, education over hype&mdash;are covered in <a href="#philosophy">the operating philosophy</a>.</p>
+    </div>
+    <h3>Unexpected feedback and outside experts</h3>
+    <p>One of the fun parts of this process was the unexpected feedback that came in from people outside our immediate circle. My close friend <strong><a href="https://www.linkedin.com/in/wbsimpson/" target="_blank">Brady Simpson</a></strong>&mdash;who'd built his own hardware startup (SimTek, a sensor-based security device) and was a constant sounding board on the build&mdash;had a connection with <strong>Palmer Luckey</strong>, the founder and engineer behind Oculus, and ran our sauna concept by him. Palmer's feedback was genuinely useful:</p>
+    <ul>
+      <li>Use a heater core with ventilation to spread heat around</li>
+      <li>Consider battery packs to accelerate a super-heat cycle and reach max temperature quickly</li>
+      <li>Move the heat source away from people to avoid safety concerns (top or bottom placement)</li>
+      <li>Circulate from top to bottom, pushing hot air down through cool</li>
+    </ul>
+    <p>That battery idea, by the way, is exactly what we later explored for V5. Palmer was ahead of us on that one. 😄</p>
+    <p>Through this process we also worked with a few consultants who helped us get much more rigorous about the engineering. We had two different thermal engineers who helped us model out heat distribution, material performance, insulation values, and all the stuff you need to actually make informed decisions about how to design and build the unit. One of them was <strong><a href="https://www.linkedin.com/in/matthewjrehm/" target="_blank">Matthew Rehm</a></strong>, who was instrumental in helping us think through the thermal modeling. We also explored working with <strong><a href="https://www.linkedin.com/in/viccibaigrie/" target="_blank">Vicci Baigrie</a></strong> and the team at <a href="https://www.leveldesignsf.com/" target="_blank">Level Design SF</a> on industrial design&mdash;Vicci helped me understand where ID fits in the hardware lifecycle, even though we never quite made it far enough to engage them formally.</p>
+
+    <p>We also learned about the physics and non-linear nature of heating systems. Small-scale test rigs helped us iterate, but full-scale tests were unavoidable and expensive.</p>
+
+    <h3>The product requirements that mattered</h3>
+    <p>Three requirements drove every design decision:</p>
+    <ul>
+      <li><strong>120V power (standard wall outlet)</strong>&mdash;this was non-negotiable. No dedicated circuits, no electrician, just plug it in. This meant the sauna could work in any apartment or rental. It also meant we were engineering within a tight power budget, which shaped everything downstream.</li>
+      <li><strong>Dry resistive heat</strong>&mdash;not infrared. We wanted the traditional dry heat experience for a few reasons: the feel is fundamentally different, the session experience is different, and the research literature on health benefits actually diverges between dry heat and infrared. We felt strongly about this bet.</li>
+      <li><strong>Small footprint</strong>&mdash;people in apartments don't have a lot of space. The sauna had to fit in a corner, not dominate a room.</li>
+    </ul>
+    <p>Those three together defined the product: an in-home, apartment-friendly sauna you can just plug into a wall because you don't need construction, and you get a real resistive heat experience in a footprint that doesn't take over your living space.</p>
+    <p>Beyond the core three, we also prioritized:</p>
+    <ul>
+      <li>Prefab panels, flat-pack shipping, IKEA-like assembly</li>
+      <li>Programmable sessions: temperature, lighting, smell, sound</li>
+      <li>Sauna safety (door swings out, heat shutoffs)</li>
+      <li>As inclusive as possible: sizes, abilities, heat tolerances. We referenced the Microsoft Inclusive Design toolkit.</li>
+      <li>Beautiful aesthetic, "living room art" quality</li>
+      <li>Interior material that works with a wet person sitting inside, for hot/cold shower contrast sessions</li>
+    </ul>
+
+    <h3>The companion app and daily use scenarios</h3>
+    <p>With the hardware vision taking shape under Todd, I needed help on the software side. <strong><a href="https://www.linkedin.com/in/adeal/" target="_blank">Andrew Deal</a></strong> came on board to help build out the companion app&mdash;the piece that would make the sauna more than just a box with a heater. The plan was for Andrew to take the lead on the software: the heat exposure programming and protocols, the interaction between the iOS app, the server infrastructure, and the firmware. He got hands-on and started exploring what it would take to bring that vision to life.</p>
+    <p>One of the common challenges we saw with sauna users is they didn't really know how to sauna. Some people would jump into a really hot sauna, not able to breathe, not able to handle it, have a bad experience at their local gym, and decide sauna wasn't for them. The companion app was a big piece of making heat exposure accessible&mdash;helping people get into the experience little by little so they felt comfortable and in control the whole way. We designed around five daily use scenarios to prove the product could serve different needs across a single day:</p>
+    <ol>
+      <li><strong>Morning intention</strong>&mdash;warm your body, breathe in energetic vibes, visualize a great day</li>
+      <li><strong>Workout substitute</strong>&mdash;high heat, high energy, invigorating scents when you can't get to the gym</li>
+      <li><strong>Post-workout warmdown</strong>&mdash;slowly cool, red light for muscle protection, soothing sounds to rebalance</li>
+      <li><strong>Weekend restore</strong>&mdash;pure self-indulgence on a Saturday afternoon. Whatever vibes, whatever lights, whatever scent you pick</li>
+      <li><strong>Evening unwind</strong>&mdash;warm comforting temp, calming purple-blue lighting that winds down, lavender, and a guided session to prepare for sleep</li>
+    </ol>
+
+    <figure>
+      <img src="images/florens-daily-routines.png" alt="Florens app showing daily sauna routines — morning intention, workout substitute, post-workout warmdown, weekend restore, and evening unwind" style="width: 100%; border-radius: 8px;">
+      <figcaption>Daily routines as they appeared in the Florens app — each session tailored to a different moment in the day.</figcaption>
+    </figure>
+
+    <p>This was also where customer development went deep: surveys, interviews, and the slow grind of hearing the same pains and desires repeated back to us.</p>
+  </div>
+
+  <!-- 07: GO-TO-MARKET -->
+  <div class="section" id="gtm">
+    <div class="section-label">07 &mdash; Go-to-Market</div>
+    <h2>Community before scale</h2>
+    <p>Even while building hardware, we treated community as a first-class product.</p>
+    <p>We ran experiments like:</p>
+    <ul>
+      <li>Early supporter testing with local invites, filmed reactions, and shared feedback loops</li>
+      <li>Content projects meant to grow the category, not just the company</li>
+      <li>A Discord community where we shared the build process openly</li>
+      <li>A word-of-mouth waitlist that grew to <strong>700+ people</strong>&mdash;organically, no paid acquisition</li>
+    </ul>
+    <p>The waitlist was more than community-building. It was central to our funding thesis. The plan was to convert those early supporters into pre-orders&mdash;Kickstarter-style, but through our own channels&mdash;and use that revenue to crowdfund the first production run. Build the audience first, prove demand, then let the community bankroll the product. In theory, it was the perfect bootstrap move: no investors, no dilution, just customers who believed in what we were making.</p>
+    <p>The waitlist itself was real. Community leaders, word-spreaders, and sauna enthusiasts who came to us through personal networks and Twitter. A few of the names that showed up (still makes me smile 🥹):</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p class="quote-text">I am a huge sauna lover and tried hundreds in hotels haha. <span class="highlight">Can't wait to use it [Florens] and share about it.</span></p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Matteo Franceschetti</div>
+            <div class="attr-role">Co-founder, Eight Sleep</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text">wen [Florens] sauna? I need it.</p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Raj Gokal</div>
+            <div class="attr-role">Co-founder, Solana</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text">Dude. Your sauna. Yes. <span class="highlight">Can I invest?</span></p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Sam Parr</div>
+            <div class="attr-role">Co-founder, The Hustle</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text">Yooo! When can I buy one? I have access [to sauna, today] <span class="highlight">but want to buy yours!</span> I will come pick it up.</p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Peiman Raf</div>
+            <div class="attr-role">Founder, MadHappy</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text"><span class="highlight">I've been waiting for a product like this to show up</span> that we can sell. Recovery/relaxation has been an incredibly good category for us.</p>
+        <p class="quote-text" style="margin-top: 0.75rem;">I actually can't recall exactly where but I saw this in a tweet. Was definitely signing up on behalf of b8ta. Personally I don't have enough space in my condo but <span class="highlight">I will recommend that our HOA buy them for our shared gym.</span></p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Vibhu Norby</div>
+            <div class="attr-role">Co-founder, b8ta</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text"><span class="highlight">Super excited for this [Florens]</span>, people really have no idea the impact more accessible saunas will have on global health. It's like cheating.</p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Sean Rose</div>
+            <div class="attr-role">Angel Investor, Health Optimizer</div>
+          </div>
+
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p class="quote-text">Super excited for this [Florens]. <span class="highlight">I need one</span>, and I'm gonna tell everyone else about it.</p>
+        <div class="quote-attribution">
+          <div class="attr-text">
+            <div class="attr-name">Anthony Vennare</div>
+            <div class="attr-role">Co-founder, Fitt Insider</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <p>The intent was to earn trust through transparency and usefulness. If Florens was going to exist, it had to stand for something beyond the hardware.</p>
+    <p>The category was paying attention. <a href="https://insider.fitt.co/issue-no-207-hot-and-cold/" target="_blank">Fitt Insider's Issue No. 207: Hot and Cold</a> (November 2022) named Florens alongside <a href="https://www.ancientritual.com/" target="_blank">Ancient Ritual</a> as upstarts "combining sauna with immersive wellness to create a new at-home experience." That kind of earned coverage&mdash;from the newsletter that had become the go-to for wellness industry insiders&mdash;was exactly what we wanted: the category growing, and Florens seen as part of it.</p>
+    <p>The go-to-market phased outward: <strong>at-home DTC first</strong>, then gyms and boutique fitness studios, then auxiliary spaces like clinical/PT offices, hospitality, and workspaces. But phase one was always about getting units into homes and learning from real daily use.</p>
+
+    <h3>A kindred builder: Ancient Ritual</h3>
+    <p>One of the more serendipitous threads of the Florens story started in February 2020, when <strong>Nate Bosshard</strong>&mdash;co-founder of Tonal&mdash;connected me with David Bladow and Matt Schwab. Nate had been incubating <a href="https://www.ancientritual.com/" target="_blank">Ancient Ritual</a> through his venture studio Offline Ventures, and it turned out they were also working on a bathhouse concept.</p>
+    <p>We met up in San Francisco shortly after the intro and the energy was immediate. There was so much overlap in what we were building and how we thought about the space. Within a few weeks, David and Matt came down to Palo Alto and I booked us a room at <a href="https://www.watercourseway.com/" target="_blank">Watercourse Way</a>&mdash;my local, go-to bathhouse, and one of the places that planted the seed for Florens in the first place. Room "One Pine," my personal favorite. We shared everything openly: I walked them through the Skylab costs, they shared where they were on fundraising and model validation. Total transparency, from the start.</p>
+    <p>Around the same time, I'd come across a scrappy communal bathhouse in Asheville, NC called <a href="https://www.thesaunahouse.com/" target="_blank">Sauna House</a>. I connected David and Matt with Andrew Lachlan, the founder&mdash;an ex-SF transplant who'd bootstrapped the whole thing on ~$400K in savings plus an SBA loan. An ideal MVP build for the communal model. Andrew had done ~$1.4M in his first year.</p>
+    <p>Then COVID hit. In March, I sent a long email to David and Matt laying out how I planned to push forward despite everything. David responded pretty quickly, capturing where everyone's head was at: if COVID didn't blow up the way people feared, there was obviously a real opportunity&mdash;favorable lease rates, people craving social spaces more than ever before. They were regrouping and would likely come back with a new approach, bathhouse-related or not.</p>
+    <p>We both came out the other end focused on the same core idea: an at-home sauna experience that combined heat, light, and sound to help people find a place for recovery and calm. Both products were designed for a standard 120V outlet. Both were compact enough to fit into a bedroom or garage. We were solving the same problem from the same conviction&mdash;that more people should have access to deliberate heat exposure without overhauling their home.</p>
+    <p>The products diverged in approach. Ancient Ritual's <a href="https://www.ancientritual.com/" target="_blank">Arc</a> is a full-spectrum infrared experience with immersive chromotherapy (developed with James Turrell's lighting engineer), surround sound, guided content, and AI-personalized sessions&mdash;industrial design by <a href="https://www.whipsaw.com/work/ancient-ritual-arc-sauna" target="_blank">Whipsaw</a>, priced at $10&ndash;12.5K. Florens used PTC resistive heat (closer to a traditional dry sauna), targeted a lower price point, and leaned into community-driven development with an open build process. They raised a $5.6M seed round through Offline Ventures; we self-funded to ~$400K.</p>
+    <p>Different entry points, different capital structures, different heating technology&mdash;but the mission overlapped almost entirely. They got far: in-person demos in LA and SF, design awards from iF and Good Design Australia, press in Wallpaper* and Maxim, and they're still shipping today. It was genuinely cool having a kindred builder like that. 🤝</p>
+
+    <div class="callout">
+      <h3>On competition</h3>
+      <p>One of my core beliefs: <strong>competitors are your best friends.</strong> They know the problem better than anyone else in the space. They're tackling the same challenges you are, and they care about it just as much as you do.</p>
+      <p>For me, it's always been about the rising tide. Two companies making better saunas, approaching the problem from different angles, educating the same market&mdash;that lifts everyone. This is a strong philosophy for me around competition and around entrepreneurship: the best way to build something new is alongside people who are just as committed to the category as you are.</p>
+    </div>
+  </div>
+
+  <!-- 08: FUNDING -->
+  <div class="section" id="funding">
+    <div class="section-label">08 &mdash; Funding Philosophy</div>
+    <h2>Milestones, confidence, and fit</h2>
+    <p>We explored fundraising with a specific philosophy:</p>
+
+    <div class="principle-grid">
+      <div class="principle-card ocean">
+        <span class="principle-icon">🦓</span>
+        <div class="principle-body">
+          <h4>Zebra over unicorn</h4>
+          <p>Our <a href="#philosophy">operating philosophy</a> in practice. We wanted to earn our way to the product, not raise our way there.</p>
+        </div>
+      </div>
+      <div class="principle-card sage">
+        <span class="principle-icon">🧭</span>
+        <div class="principle-body">
+          <h4>Values alignment</h4>
+          <p>The internal bar for investors was as much about shared values as it was about dollars.</p>
+        </div>
+      </div>
+      <div class="principle-card gold">
+        <span class="principle-icon">🏔️</span>
+        <div class="principle-body">
+          <h4>Milestone-driven</h4>
+          <p>Bootstrap as long as possible. Raise in a way that unlocked specific milestones, not runway for its own sake.</p>
+        </div>
+      </div>
+      <div class="principle-card ember">
+        <span class="principle-icon">🛟</span>
+        <div class="principle-body">
+          <h4>Reduce existential stress</h4>
+          <p>Capital should reduce the founder's existential pressure without trading away the soul of the work.</p>
+        </div>
+      </div>
+    </div>
+
+    <p>We'd <a href="#pivot">planned to bootstrap</a> from the start, and for a while it worked. But as prototyping progressed and real costs materialized, we had to confront the gap between our budget and what the product actually needed. The renders looked great. The physics didn't care about our budget.</p>
+    <div class="hindsight">
+      <div class="hindsight-label">Hindsight</div>
+      <p>The crowdfunding path looked promising on paper, but it had a fatal flaw: it just pulled money forward. Pre-orders might generate $50&ndash;100K, but we needed multiples of that to get through prototyping, tooling, and a first production run. You&rsquo;re still on the hook for everything after&mdash;and now you owe people a product on a timeline you can&rsquo;t control.</p>
+    </div>
+
+    <p>We made a deliberate decision: we couldn't bootstrap our way to a production unit. But we could be really tight and really lean about outside funding. The criteria for who we'd accept investment from was clear: mission-aligned people who understood the zebra model, who were more focused on building something real than chasing a billion-dollar exit. We thought we had something genuinely great in the product, and the only way to bring it to life was to shift how we thought about our funding strategy.</p>
+
+    <h3>Putting values into the paperwork</h3>
+    <p>The zebra model shaped every legal document. We incorporated as a Delaware C-Corp&mdash;standard for startups&mdash;but the specifics diverged from the default playbook almost immediately.</p>
+    <p>The biggest departure: extending the stock options exercise window from 90 days to 7 years. The standard setup gives someone three months after leaving to come up with the cash to exercise their vested options, or they forfeit them. For early team members who can't write a five-figure check on short notice, that means losing the equity they helped build. Seven years gave people real time to exercise on their own terms&mdash;and it signaled that we meant it when we said we were building an employee-friendly company.</p>
+    <p>We also structured the company from formation to transition to a B Corp and built an ESOP framework into the equity plan so the path to employee ownership existed from day one&mdash;not as a later recruiting perk. Stock options included early exercise, letting team members file 83(b) elections and start their long-term capital gains clock immediately. For a company that might take years to reach any liquidity event, that timing mattered.</p>
+    <p>For the fundraise, we used modified YC SAFEs&mdash;already simpler and more founder-friendly than convertible notes (no debt, no interest, no maturity date)&mdash;with additional protections our attorneys had published and stress-tested. We paired a valuation cap with a discount to reward early believers while keeping terms clean for a small, mission-aligned round. The modifications specifically addressed edge cases that matter for zebra-type companies: wind-down scenarios, investor information rights, and pro rata mechanics for follow-on rounds.</p>
+    <p>If you're a founder working through any of this&mdash;incorporation structure, equity plans, SAFE modifications, B Corp setup&mdash;feel free to <a href="mailto:paul@enchant.co">reach out</a>. Happy to share the specifics.</p>
+
+    <h3>Finding our limits</h3>
+    <p>We self-funded as far as we could go. The plan was always to bootstrap&mdash;keep control, move at our own pace, make decisions from values. But after our first engagement with Todd, we started seeing what full custom hardware actually costs. It was much, much more expensive and took much longer than we originally estimated. There was no way I could bootstrap this from personal savings alone.</p>
+    <p>We hit our limit around <strong>~$400K invested</strong>. At that point, we looked at the next milestones and calculated we'd need about <strong>$700K more on top of what we'd already put in to get to a design validation test (DVT)</strong>&mdash;a demo unit ready for production. From there, we'd need more to produce our first hundred units, then more again to scale into real manufacturing.</p>
+    <p>One person who was incredibly generous in helping me understand what this road actually looks like was <strong><a href="https://www.linkedin.com/in/krisnab/" target="_blank">Krisna Bhargava</a></strong>, founder and CEO of <a href="https://arena.fit" target="_blank">Arena</a>&mdash;a portable robotic strength training platform. Arena was going through the same gauntlet: custom hardware, US manufacturing, the full slog from prototyping to early units to production. Krisna helped me see what the road ahead actually looked like and how to think about the capital required at each stage.</p>
+    <p>The allocation for our $700K Phase 01 raise: 55% product development, 20% community and brand, 20% team, 5% admin and legal. The four-phase roadmap stretched from there: deliver first production batches (~$500-700K revenue), scale to 1,000+ units (~$5-7M), then expand into commercial channels (~$50M+).</p>
+    <p>As we got deeper into the fundraise, a longer-term hypothesis started taking shape. The clinical evidence on sauna and cardiovascular health was hard to ignore&mdash;deliberate heat exposure as a low-mobility intervention for aging populations. We started thinking beyond health optimizers toward people dealing with cardiovascular risk who could benefit enormously from regular heat exposure but had no accessible way to get it. That thread eventually grew into a full <a href="#tech">diagnostic sauna vision</a>.</p>
+    <p>All fundraising was angels from personal network and word-of-mouth. We used an RUV (rolling uncapped note) via AngelList. Our earliest believers&mdash;<strong><a href="https://www.linkedin.com/in/kevindewalt/" target="_blank">Kevin Dewalt</a></strong>, <strong>Joseph J. Gardner III</strong>, <strong>Guy Sivan</strong>, and <strong><a href="https://www.linkedin.com/in/seanrose/" target="_blank">Sean Rose</a></strong>&mdash;were the first to commit capital, and that momentum meant everything. We had commitments to fully finish our round&mdash;but the timing was terrible. Right as we were getting close to closing, the cognitive dissonance between building a zebra bootstrapped company and going out to raise capital again became too much to bear. That tension had been building for a while, but this was the final straw. We returned the funds before closing&mdash;and those four made it easy, with nothing but grace. It was the beginning of the end.</p>
+    <p>Looking back, this was the clearest symptom of a deeper problem: <strong>the product we were building was fundamentally incompatible with how we wanted to build a business.</strong> We had such a strong vision for the zebra model&mdash;bootstrap, stay lean, grow sustainably. But fully custom hardware at a consumer price point doesn't work that way. It demands venture-scale capital, long development timelines, and tolerance for years of negative cash flow before the first unit ships. Every funding path we tried&mdash;bootstrapping, crowdfunding, small angel rounds&mdash;was a version of trying to make a zebra budget work for a unicorn product. The signs were there the whole time. We just didn't want to see them.</p>
+  </div>
+
+  <!-- 09: THE WALL -->
+  <div class="section" id="wall">
+    <div class="section-label">09 &mdash; The Wall</div>
+    <h2>Why it became hard to keep going</h2>
+    <p>Over time, several pressures stacked on top of each other:</p>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-number" style="font-size: 1.3rem;">~$400K invested</div>
+        <div class="stat-label">Three years of self-funding. We needed at least another 2 years and likely 4x more capital.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="font-size: 1.3rem;">Capital drag</div>
+        <div class="stat-label">Fundraising misalignment and the emotional weight of constant capital conversations.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="font-size: 1.3rem;">$7K+ BoM</div>
+        <div class="stat-label">Bill of materials for our custom build already exceeded our $5,500 consumer target price.</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="font-size: 1.3rem;">Shifting tailwinds</div>
+        <div class="stat-label">A colder environment for DTC hardware narratives as the market cooled.</div>
+      </div>
+    </div>
+
+    <h3>October 2022: the honest journal</h3>
+    <p>I wrote down three possible paths when the money was running out:</p>
+    <ol>
+      <li><strong>Continue hardware + raise</strong>&mdash;revisit financial expectations with our team, keep pushing on angel closes, build and ship. Budget needed: $100K minimum, for one year. Probably not enough, while stacking on more and more stress.</li>
+      <li><strong>Pivot to software raise</strong>&mdash;pause hardware, reframe the raise for a cardiovascular health software MVP. Pay myself $8K/month to find product-market fit in 6 months. But honestly, I didn't want to raise money for a software build.</li>
+      <li><strong>Get a job, bootstrap on the side</strong>&mdash;pause fundraising, set long timeline expectations with the team, get a $180-210K FTE role, build software part-time, fund hardware as-possible. Risk: Florens falls to the side if the job is too engaging.</li>
+    </ol>
+
+    <p>The deeper problem was the same one we'd been dancing around since the fundraise: <strong>how we wanted to build the business and what the product actually required were pulling in opposite directions.</strong> We wanted to bootstrap. We wanted to stay lean, stay values-driven, grow at our own pace. But we'd chosen to build a fully custom hardware product that demanded exactly the opposite&mdash;heavy capital, long timelines, high burn. The zebra philosophy we loved so much was the wrong operating system for the product we were making.</p>
+    <p>Maybe if we'd raised big VC, we could've pulled off the product as imagined. Maybe if we'd started as a bootstrap sauna business&mdash;building units for customers at a higher price and productizing over time. Maybe if we'd seen the mismatch earlier and picked a product that fit the business we wanted to run. A lot of maybes. 😅</p>
+    <p>There was also a deeper question about <strong>founder-model fit</strong>: the business Florens needed to become might not be the one I was best positioned to run. Full custom hardware is incredibly hard&mdash;much more expensive than you think, and timelines are much longer than you plan for.</p>
+    <p>At a certain point, the honest answer was: we could keep pushing, but it would be pushing against the grain of reality.</p>
+  </div>
+
+  <!-- 10: WINDING DOWN -->
+  <div class="section" id="close">
+    <div class="section-label">10 &mdash; Closing the Loop</div>
+    <h2>Winding down to make space</h2>
+    <p>Brittany and I had been talking about it for a while&mdash;what would it take to keep going, what would it mean to stop, what criteria we'd use to make the call. She helped me get clear on what I actually wanted, not just what I felt obligated to do. In July 2023, I had the conversation with Robert. We'd been hibernating with Florens, and I was ready to close it up and move on. The next exploration: a cardiovascular risk company.</p>
+    <p>Winding down a company&mdash;even a small one&mdash;is its own kind of project. We had to align with our teammates on the decision and make sure everyone felt good about it. From there it was coordinating to release people from any obligations, reaching out to our shareholders to keep them in the loop, and handling the legal and tax cleanup to formally close the entity. <a href="https://www.linkedin.com/in/marcus-nordstrom/" target="_blank">Marcus</a> at Optimal Counsel handled the dissolution paperwork, and <a href="https://www.linkedin.com/in/billyhay/" target="_blank">Billy Hay</a>, our CPA, made sure the final filings were clean. None of it was dramatic, but all of it mattered. Doing it with care was important to us.</p>
+    <p>Winding down was not a failure of the mission. It was a decision about timing, fit, and energy.</p>
+    <p>The biggest takeaway I carry forward: <strong>you often discover the business you should build by starting to build the business you thought you should build.</strong></p>
+  </div>
+
+  <!-- 11: TECHNICAL DEEP DIVE -->
+  <div class="section" id="tech">
+    <div class="section-label">11 &mdash; Technical Deep Dive</div>
+    <h2>What we actually built (for founders building in the space)</h2>
+    <p>This section is for the builders. Here are the specifics from our last prototype (v4) and the lessons that came with it. Nearly all of this was driven by Todd and his team&mdash;prototyping, testing, iterating, and earning the insights through hands-on work at every stage.</p>
+
+    <figure>
+      <img src="images/florens-proto-build.png" alt="Florens v4 custom sauna build — interior bench detail, chromatherapy session, and full unit in the shop" style="width: 100%; border-radius: 8px;">
+      <figcaption>Our last (v4) custom build: 3'x4'x7' footprint, dual insulated glass panels, PTC heater core, R-14 insulated wood panels.</figcaption>
+    </figure>
+
+    <h3>V4 custom build specs</h3>
+    <ul>
+      <li><strong>Footprint:</strong> 3' x 4' x 7' interior</li>
+      <li><strong>Walls:</strong> Two insulated glass panels (1/2" gap, argon-filled) to reduce the "coffin feeling" that early testers reported. Expensive, and still too heavy for self-assembly. 3/8" krypton fill was on the exploration list to shave ~30lbs and improve safety</li>
+      <li><strong>Insulation:</strong> R-14 in wood panels (solid choice&mdash;especially important with a constrained 1.8kW heater where every bit of thermal retention counts)</li>
+      <li><strong>Heat loss:</strong> UA coefficient of ~35 W/K at 72&deg;F indoor ambient. Barely treading water at 1.8kW input</li>
+      <li><strong>Heater:</strong> PTC (Positive Temperature Coefficient) heater core&mdash;same technology used for air conditioning in cars. A mesh of thin resistive wires that heat up fast and disperse heat quickly as air blows through</li>
+      <li><strong>Power:</strong> 1.8kW peak draw @ 120V/20A (standard household outlet, hard requirement for our rental-apartment audience)</li>
+    </ul>
+
+    <h3>Why PTC over a traditional resistive coil</h3>
+    <p>Three reasons drove the decision:</p>
+    <ol>
+      <li><strong>Combined heat + ventilation</strong>&mdash;PTC requires airflow, so we merged heating and ventilation into one system. Fewer parts, easier assembly, one less subsystem.</li>
+      <li><strong>Safety</strong>&mdash;the core is super thin and flat. In our tiny footprint, we literally couldn't fit a traditional resistive coil heater without violating minimum safety clearance regulations.</li>
+      <li><strong>Self-regulating power draw</strong>&mdash;cold start resistance is low, so it draws more current and produces more heat (front-loading the heating phase). As temperature rises, resistance goes up and power draw goes down. Never peaked past ~1.8kW. Energy efficient by physics, not just firmware.</li>
+    </ol>
+
+    <h3>The ventilation trap</h3>
+    <p>CO2 matters more than most builders realize. You want to keep it sub-550 PPM&mdash;cognitive function starts declining around there, and by 700+ the session quality drops noticeably. Past 1,500, you're well into headache territory. At 1.8kW with a single heater, balancing ventilation and temperature is a real challenge. Dual 2kW heaters makes the balance easier, but then you're asking for 240V/30A hookup&mdash;which cuts a significant portion of the target audience.</p>
+    <p>Our take: most people don't need a 155&deg;F+ sauna. Health optimizers and Finns will swear by 177&deg;F+, but getting <em>some</em> heat at a lower temperature into someone's life is 10x better than having no heat exposure at all.</p>
+
+    <h3>If we'd built a V5</h3>
+    <p>We ran out of energy before getting here, but these were the directions we would have explored:</p>
+    <ul>
+      <li><strong>Bump price point from $5.5K to $20K.</strong> At $5.5K it was impossible. At $10K doable but incredibly tight. $15K was better but not enough margin to sustain. At $20K it would've been a good business.</li>
+      <li><strong>Single glass pane instead of two.</strong> Huge weight reduction for flat-pack shipping.</li>
+      <li><strong>Move to 240V/30A.</strong> Instantly cuts part of the audience but still plenty to build sustainably. Or just commit to 155&deg;F @ 45 minutes and market it as intentional.</li>
+      <li><strong>Battery integration.</strong> The super-secret option: a 4-6kWh battery on the floor. 120V trickle charges the battery, then when someone starts a session it heats to ~190&deg;F in ~9 minutes. Our thermal engineers ran the numbers and were confident. Companies like Impulse, Copper, and Gradient are now experimenting with battery packs in home appliances. Impulse is opening up its platform for other appliances to build on&mdash;and given their kitchen + bath focus, I'd bet Kohler is already in there working with them.</li>
+    </ul>
+
+    <h3>The "diagnostic sauna" vision</h3>
+    <p>Near end-game, the product vision was evolving toward something more ambitious: the sauna as a cardiovascular health monitoring platform. Three approaches we explored:</p>
+    <ol>
+      <li><strong>Wearable integration</strong>&mdash;users track sessions, we monitor vitals during heat exposure. Apple Watch worked great for heart rate.</li>
+      <li><strong>Custom wearables</strong>&mdash;galvanic skin response (GSR) and sweat sensors. Cheap to produce overseas. More hardware to manage, though.</li>
+      <li><strong>Sensor-embedded unit</strong>&mdash;a diagnostic sauna. PPG, NIRS, FLIR, SpO2, bioimpedance spectroscopy, GSR. Plus disposable sweat patches for cortisol, lactate, glucose, electrolytes. Essentially a cardiovascular stress test that feels amazing instead of clinical.</li>
+    </ol>
+    <p>The output we imagined: a Vascular Fitness Score, Heat Adaptation Progress tracking, a Stress Recovery Curve, and a Hydration Report. Sauna is an amazing low-mobility cardio modality&mdash;especially for aging populations where traditional exercise is harder.</p>
+
+    <h3>Manufacturing reality check</h3>
+    <p>We did the full custom build from scratch, which meant our BoM was already $7K+ and we weren't anywhere near design verification testing (DVT). If you're going off-the-shelf components, you may be able to hit a $5K consumer price, but you'll have very thin margin.</p>
+    <p>We didn't do anything overseas. All mainland US suppliers, manufacturers, and assemblers. We had one final assembly manufacturer picked out who was fairly confident about sourcing, and they were dealing with some vendors in Mexico and South America. We projected something like 30% cost reduction once we got to 1,000+ units, but I can't give good answers on that since we never got far enough.</p>
+    <p>Building hardware through a pandemic was especially strange. Supplier timelines were unpredictable, costs were inflated, and the usual cadence of sample-review-iterate was much slower than anyone planned for. Would not recommend. 😅</p>
+  </div>
+
+  <!-- 12: LESSONS -->
+  <div class="section" id="lessons">
+    <div class="section-label">12 &mdash; What I Carry Forward</div>
+    <h2>Lessons from four years of Florens</h2>
+
+    <ul class="lesson-list">
+      <li>
+        <span class="lesson-num">1</span>
+        <span class="lesson-text"><strong>Your product has to match how you want to build&mdash;and who you are as a builder.</strong> We had a clear philosophy: bootstrap, zebra, sustainable. And I was a good fit for the mission, the brand, the community, the vision. But we chose a product that was incompatible with both. Custom hardware demanded venture-scale capital, multi-year timelines, and a founder who lives and breathes manufacturing and supply chain. Every funding path we tried was a workaround for a mismatch we didn't want to name. I could learn enough to be dangerous, but "dangerous" is exactly what you don't want when you're designing something people sit inside at 180&deg;F. If you love the mission but the product doesn't fit how you want to operate or who you are as a founder, change the product.</span>
+      </li>
+      <li>
+        <span class="lesson-num">2</span>
+        <span class="lesson-text"><strong>Build the community before you build the product.</strong> Building audience before product is how you find out whether you're building the right thing. Robert showed me this. He was incredible at customer development&mdash;finding our people, having real conversations with them, understanding their needs and jobs to be done, spotting the patterns, and bringing all of that back into our product decisions. What to keep, what to cut, what to focus on&mdash;those calls got sharper every time he came back from a round of interviews. I learned from him that community isn't just about having an audience. It's about having a feedback loop that actually shapes what you build.</span>
+      </li>
+      <li>
+        <span class="lesson-num">3</span>
+        <span class="lesson-text"><strong>Hardware is hard. Be razor-focused.</strong> I cannot say this loudly enough. If you are a software founder thinking about hardware: it is so, so much harder than you think. The distance between a beautiful render and a shippable product is enormous. Every "simple" design decision cascades into thermal, safety, and manufacturing constraints you didn't know existed. And every feature you add doesn't just add cost&mdash;it multiplies complexity across design, engineering, manufacturing, and support. In software, you can ship a feature and patch it next week. In hardware, every decision gets baked into tooling, molds, and production runs. Surround yourself with hardware people&mdash;not just one, several&mdash;who will keep telling you it's hard, because you will keep underestimating it. Brady told me. Todd told me. Maxim told me. I still underestimated it.</span>
+      </li>
+    </ul>
+
+    <p>And underneath it all, the lesson the bathhouse taught me first and everything since has confirmed: the mission persists, but the shape of the thing will change. A bathhouse becomes a sauna becomes something else entirely. That's not failure&mdash;that's the process. Hold the mission tight, hold the form loose.</p>
+    <p><strong>Build things that help people feel more alive, more grounded, and more capable of showing up for their lives.</strong> The shape will keep changing. The mission won't.</p>
+  </div>
+
+  <!-- ACKNOWLEDGEMENTS -->
+  <div class="section" id="acknowledgements">
+    <div class="section-label">Acknowledgements</div>
+    <h2>The people who made Florens real</h2>
+
+    <p>Startups are often told as solo founder stories, but that's never the whole truth. Florens existed because people showed up&mdash;with their time, their expertise, their belief, and sometimes just their presence when things were hard. This is me trying to say what I should have said more often.</p>
+
+    <p><strong><a href="https://www.brittanymederos.com/" target="_blank">Brittany</a></strong>&mdash;my life partner, co-founder, and the person who made Florens possible in every sense. The original bathhouse idea came from our shared love of Japanese onsen. She shaped the concept, drove design decisions across the bathhouse, the app, and the brand. She was our primary investor. She held down a full-time role at Microsoft, which gave me the ability to work on Florens full-time through all four years. Every month we'd sit down for deep conversations about where things stood and where to go next. But the hardest-to-describe part is everything between the lines: being there at every critical decision, helping me think clearly when I couldn't, and making sure I never confused obligation for purpose. I would not have started Florens, continued Florens, or wound it down well without her.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/rasmorton/" target="_blank">Robert</a></strong>&mdash;co-founder, and one of the most impactful people in my life. Robert brought deep connections across health and wellness from his time co-founding Territory Foods. He became our customer development lead, ran the key interviews, spotted the patterns, and set the foundation for why Florens existed at all. But what I didn't fully appreciate at the time was how much he would shape me as a person. Alongside Florens, Robert was building his coaching practice and studying executive coaching at Georgetown. I got to be on the receiving end of that. He helped me discover things about my leadership, my philosophy, and my approach that I couldn't have found on my own. Robert made me more optimistic, more grounded, more present, and more generous. I am deeply grateful for his presence and his friendship.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/ptrcksmth/" target="_blank">Patrick</a></strong>&mdash;outside of Brittany and Robert, my closest thought partner throughout all of Florens. Patrick co-founded Territory Foods and was the person who originally hired me there. After I left we stayed close, and he showed up every other week for the entire life of Florens&mdash;business strategy, customer development, product, team dynamics, all of it. You could really consider him a spiritual co-founder. But the biggest thing Patrick helped me with wasn't any single business decision. It was helping me work through my own leadership&mdash;my confidence in myself, what it meant to lead with the principles I cared about, and how to build a business the way I actually envisioned it. That kind of support is rare and hard to overstate.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/todd-metlen-757397230/" target="_blank">Todd</a></strong>&mdash;our lead hardware collaborator and a mentor as much as a partner. Todd is one of those exceptionally rare hardware people who is truly full-stack: industrial design, mechanical engineering, build, and implementation. He came from Nokia, Bose, and BMW. He shepherded us through parts of the hardware development lifecycle I had zero experience with, and he did it with incredible generosity, patience, and care. He had a small but mighty team&mdash;including Cam, one of his understudies who was absolutely rad to work with&mdash;who were so kind, joyful, and exceptional at making things. Todd and his team drove so many of the hardware decisions by putting in the work to prototype and test at each stage. None of it was guesswork&mdash;it was all precise, hands-on, hard-earned wisdom that led to the design decisions you see in the technical deep dive. If it wasn't for Todd and his team, we would have given up very early in the pivot to sauna. We wouldn't have gotten anywhere without them.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/mariokhosla/" target="_blank">Mario</a></strong>&mdash;the first person I called when the sauna idea started taking shape. A close friend from parkour at Stanford, an exceptionally talented mechanical engineer from Tesla and ChargePoint. In the middle of the pandemic, he'd come to my house, order everything we needed, and help me build and test our very first prototype in the backyard. Mario played a huge role in getting the sauna out of our heads and into physical reality. Because of his help, his clarity, and his engineering instincts, we walked into later conversations carrying real requirements and real constraints&mdash;not just a pitch deck.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/wbsimpson/" target="_blank">Brady</a></strong>&mdash;advisor and close friend from college. Brady had built SimTek, a hardware startup, so he knew exactly what we were getting into. He was a constant sounding board on the build&mdash;and the one consistently telling me I'd need more money, more time, and fewer features. He was right about all of it. I wish I'd listened more closely.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/maximwheatley/" target="_blank">Maxim</a></strong>&mdash;advisor and angel investor. Maxim taught me the hardware lifecycle, especially around manufacturing and sourcing. Like Todd and Brady, he guided me through what it actually takes to bring a physical product to market. Most importantly, Maxim is the one who introduced me to Todd. That connection changed everything.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/adeal/" target="_blank">Andrew Deal</a></strong>&mdash;helped us explore the software and companion app side of Florens. The vision was for Andrew to lead the digital product: heat exposure protocols, the iOS app, server infrastructure, firmware interaction. He got hands-on and helped us push that vision forward during a stretch when I was spread across too many things to make progress on the software alone.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/borzou/" target="_blank">Borzou Azabdaftari</a></strong> and his agency Falcon&mdash;built our brand identity from the ground up. The logo, the visual system, the feel of Florens. Borzou took something that was still abstract and gave it a form that felt real and honest.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/shizu-okusa-87a25415" target="_blank">Shizu Okusa</a></strong>&mdash;one of my earliest and strongest supporters. Shizu had built Jrink and was just starting <a href="https://www.apothekary.co/" target="_blank">Apothekary</a>. Her deep retail and experiential background shaped how we thought about the wellness-center side of Florens&mdash;the soak spa as a hub for unwinding, not just a place to sweat. Her confidence in the concept meant a lot when the idea was still new.</p>
+
+    <p><strong><a href="https://www.skylabarchitecture.com/" target="_blank">Skylab Architecture</a></strong> and principal <strong>Brent Grubb</strong>&mdash;designed our bathhouse concept. Brent was a lifelong bathhouse enthusiast and made the work fit our budget despite Skylab being well out of our price range. The firm behind Knot Springs in Portland&mdash;they brought the vision to life before COVID changed the plan.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/joseancer/" target="_blank">Jose Ancer</a></strong>, <strong><a href="https://www.linkedin.com/in/marcus-nordstrom/" target="_blank">Marcus Nordstrom</a></strong>, and <strong><a href="https://www.linkedin.com/in/alexlawrence/" target="_blank">Alex Lawrence</a></strong> at <a href="https://www.optimalcounsel.com/" target="_blank">Optimal Counsel</a>&mdash;our legal partners from formation through dissolution. I found Jose through his blog, Silicon Hills Investor, where he'd published a redlined version of the standard SAFE note with founder-friendly changes. His whole ethos was making startups better for founders, and that resonated immediately with what we were trying to build. Marcus and Alex ran with it across every dimension of Florens: extending our stock options window from 90 days to 7 years, structuring the company to transition to a B Corp, setting up our ESOP framework so the business could become employee-owned over time. We wanted to build something employee-friendly and founder-aligned from day one, and they went back and forth with me on every strategic legal decision to make that possible. When it came time to wind down, Marcus handled the full dissolution&mdash;Delaware Certificate of Dissolution, California Certificate of Withdrawal, the 228(e) Notice&mdash;with the same care and patience they'd brought to building it. Building a zebra startup meant the legal work was different at every turn, and they never flinched.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/billyhay/" target="_blank">Billy Hay</a></strong> at <a href="https://www.cpahay.com/" target="_blank">CPA Hay</a>&mdash;our CPA and one of my closest friends from college. Billy handled our bookkeeping and tax filings throughout all of Florens, and his counsel on the accounting side saved us an enormous amount of money&mdash;especially meaningful when we weren't making any. Starting a company is stressful enough without worrying about whether your books are right. Billy made sure I never had to.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/kevindewalt/" target="_blank">Kevin Dewalt</a></strong>, <strong>Joseph J. Gardner III</strong>, <strong>Guy Sivan</strong>, and <strong><a href="https://www.linkedin.com/in/seanrose/" target="_blank">Sean Rose</a></strong>&mdash;our earliest investors, the first to commit capital to the Florens RUV. These four gave me so much confidence that this thing could actually happen. They kicked off the fundraise by being first to say yes, and that momentum was everything. When I had to make the hard decision to return their money two months later&mdash;realizing we'd hit the wall and the raise wasn't aligned with how we wanted to build&mdash;they made it easy. No pushback, no drama, just grace. I'm sorry for the whiplash, and deeply grateful for the belief.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/viccibaigrie/" target="_blank">Vicci Baigrie</a></strong> and <strong><a href="https://www.linkedin.com/in/nicholerouillac/" target="_blank">Nichole Rouillac</a></strong> at <a href="https://www.leveldesignsf.com/" target="_blank">Level Design SF</a>&mdash;an industrial design firm we explored working with in early 2022. Vicci especially humored me through a stretch of bouncing around, and helped me understand where industrial design fits best in the hardware development lifecycle. It was a huge learning moment for me in the world of hardware&mdash;knowing when to bring in which expertise. I would have loved working with them. We just never quite made it that far.</p>
+
+    <p><strong><a href="https://www.linkedin.com/in/agentdunstone/" target="_blank">Agent Dunstone</a></strong>&mdash;our 3D artist, and a friend I met online through video games. Agent was early in his career as a 3D modeler when he came on board, but he did so much with so little. He created beautiful concept renders of the Florens sauna in real home environments&mdash;living rooms, bedrooms, garages&mdash;and those visuals had a massive impact on making Florens feel polished and real. They powered our landing page, made their way into pitch decks, and shaped how people saw the product before it existed physically. Looking at where his career has gone since, it's no surprise&mdash;but I'm grateful he was part of Florens when he was still getting started.</p>
+
+    <p>Building a company is hard. Building one that doesn't make it is a different kind of hard. These people made both versions worth it.</p>
+  </div>
+
+  <!-- 13: AFTERLIFE -->
+  <div class="section" id="afterlife">
+    <div class="section-label">13 &mdash; The Afterlife</div>
+    <h2>Next-gen builders picking up the thread</h2>
+    <p>Florens wound down, but the mission didn't die. The space is alive with founders building the next generation of accessible sauna experiences. I'm fortunate to be advising several of them: <a href="https://www.linkedin.com/in/slate/" target="_blank">Slate</a>, <a href="https://www.linkedin.com/in/max-ratkovich-4aa48b183/" target="_blank">Max</a>, and <a href="https://www.linkedin.com/in/aryzach/" target="_blank">Zach</a>.</p>
+    <p>And <a href="https://www.ancientritual.com/" target="_blank">Ancient Ritual</a>&mdash;the kindred builder from the Watercourse Way soak&mdash;is still going, shipping their Arc experiential sauna. David is now mentoring several of these next-gen builders too.</p>
+    <p>Meanwhile, the bathhouse side of the story has its own afterlife. <a href="https://www.thesaunahouse.com/" target="_blank">Sauna House</a>&mdash;the Asheville bathhouse I <a href="#gtm">mentioned earlier</a>&mdash;has grown into a legit brand: 6+ locations open across the Carolinas, Florida, and Texas, with franchise territories sold in over a dozen more cities. They posted 276% two-year revenue growth (earning an Inc. Magazine fastest-growing company nod), raised a $2M seed round, and are building their first ground-up 10,000 SF location near Charleston. Andrew's stated goal: become the largest communal bathing brand in the US.</p>
+    <p>The conversations between these builders mirror every question we wrestled with at Florens: how to balance innovation with manufacturing costs, whether to go custom or off-the-shelf, 120V vs. 240V tradeoffs, price point realities, and how to find the right entry point for each audience.</p>
+    <p>What gives me hope: they're starting from different places and with different constraints, but they're sharing openly and building on each other's work. That's how categories actually move forward.</p>
+  </div>
+
+  <!-- APPENDIX -->
+  <div class="section" id="appendix">
+    <div class="section-label">Appendix &mdash; Threads to Expand</div>
+    <h2>Draft notes for deeper dives</h2>
+    <p>The following threads have source material in Notion and could each become their own section or standalone artifact.</p>
+
+    <div class="appendix-grid">
+      <div class="appendix-card">
+        <h4>The bathhouse concept</h4>
+        <p>What it would have been like, what we learned in the planning process, Skylab collaboration details.</p>
+        <span class="appendix-tag">Chapter 1: Bathhouse</span>
+      </div>
+      <div class="appendix-card">
+        <h4>Customer development methodology</h4>
+        <p>How we recruited, how we ran conversations, what patterns surprised us most.</p>
+        <span class="appendix-tag">Research</span>
+      </div>
+      <div class="appendix-card">
+        <h4>Prototype timeline</h4>
+        <p>V1 through V3 with decision points, photos, and what each round taught us.</p>
+        <span class="appendix-tag">Chapter 2: Sauna</span>
+      </div>
+      <div class="appendix-card">
+        <h4>The "resistive heat first" bet</h4>
+        <p>Why we chose traditional heating over infrared, the customer signal, and how it shaped the product.</p>
+        <span class="appendix-tag">Product</span>
+      </div>
+      <div class="appendix-card">
+        <h4>Community content strategy</h4>
+        <p>What worked, what didn't, and how we thought about growing the category vs. the brand.</p>
+        <span class="appendix-tag">Go-to-market</span>
+      </div>
+      <div class="appendix-card">
+        <h4>Fundraising details</h4>
+        <p>The milestones approach, investor conversations, what we'd do differently.</p>
+        <span class="appendix-tag">Business</span>
+      </div>
+      <div class="appendix-card">
+        <h4>Founder-model fit</h4>
+        <p>What I learned about myself as a builder, and how this shaped what came next.</p>
+        <span class="appendix-tag">Reflection</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Written by <a href="https://paulmederos.com">Paul Mederos</a>. <a href="https://weareflorens.com">Florens</a> operated from 2018 to 2023. Source material from internal Notion workspace. Bathhouse concept design by <a href="https://drive.google.com/file/d/1veslmiS1Tp4kK7BrxRDRTIH6aiij20mW/view?usp=sharing">Skylab Architecture</a>. Published via <a href="https://artifacts.enchant.co">artifacts.enchant.co</a>.</p>
+</div>
+
+<script>
+  const fab = document.getElementById('tocFab');
+  const panel = document.getElementById('tocPanel');
+  const overlay = document.getElementById('tocOverlay');
+
+  function toggleToc() {
+    const open = panel.classList.toggle('is-visible');
+    overlay.classList.toggle('is-visible', open);
+    fab.classList.toggle('is-open', open);
+    fab.setAttribute('aria-expanded', open);
+  }
+
+  function closeToc() {
+    panel.classList.remove('is-visible');
+    overlay.classList.remove('is-visible');
+    fab.classList.remove('is-open');
+    fab.setAttribute('aria-expanded', 'false');
+  }
+
+  fab.addEventListener('click', toggleToc);
+  overlay.addEventListener('click', closeToc);
+
+  // Close when a TOC link is clicked
+  panel.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', closeToc);
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeToc();
+  });
+</script>
+
+<!-- Hindsight style config panel -->
+
+</body>
+</html>
