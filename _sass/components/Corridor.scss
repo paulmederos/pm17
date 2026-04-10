@@ -1,0 +1,243 @@
+.Corridor {
+  margin: 4.8rem 0;
+  font-family: $font_meta;
+
+  // Toggle
+  &__toggle {
+    display: flex;
+    margin-bottom: 1.6rem;
+  }
+
+  &__toggleBtn {
+    padding: 0.6rem 1.4rem;
+    font-family: $font_meta;
+    font-size: $font_size_xxs;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border: 2px solid $color_dark_oak;
+    background: transparent;
+    color: $color_bark;
+    cursor: pointer;
+    @include transition;
+
+    &:first-child { border-right: none; }
+
+    &.is-active {
+      background: $color_dark_oak;
+      color: $color_cream;
+    }
+
+    &:hover:not(.is-active) {
+      background: rgba($color_dark_oak, 0.05);
+    }
+  }
+
+  // Display area
+  &__display {
+    border: 2px solid $color_dark_oak;
+    background: $color_cream;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__display canvas,
+  &__display > div {
+    display: block;
+    width: 100%;
+  }
+
+  // Legend
+  &__legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+    font-size: $font_size_xxs;
+    color: $color_sand;
+  }
+
+  &__legendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  &__legendDot {
+    width: 10px;
+    height: 10px;
+    display: block;
+
+    &--viable    { background-color: $color_moss; }
+    &--hazard    { background-color: $color_dark_oak; }
+    &--ruled-out { background-color: #c4b99a; }
+    &--unknown   { background-color: #e8e5dd; border: 1px solid #d4d4d4; }
+  }
+
+  // Stats
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: 2px solid $color_dark_oak;
+    margin-top: 1.6rem;
+  }
+
+  &__stat {
+    padding: 1rem;
+    border-right: 2px solid $color_dark_oak;
+    &:last-child { border-right: none; }
+  }
+
+  &__statLabel {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: $color_sand;
+  }
+
+  &__statValue {
+    font-size: $font_size_xl;
+    font-weight: 700;
+    color: $color_dark_oak;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // Controls
+  &__controls {
+    margin-top: 2.4rem;
+  }
+
+  &__sliderGroup {
+    margin-bottom: 2rem;
+  }
+
+  &__sliderHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.6rem;
+  }
+
+  &__label {
+    font-size: $font_size_xxs;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
+    color: $color_dark_oak;
+  }
+
+  &__expLabel {
+    font-size: $font_size_xxs;
+    color: $color_sand;
+  }
+
+  &__slider {
+    width: 100%;
+    accent-color: $color_dark_oak;
+  }
+
+  &__principleGroup {
+    margin-top: 1.6rem;
+  }
+
+  &__principles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+  }
+
+  &__principleBtn {
+    padding: 0.5rem 1rem;
+    font-family: $font_meta;
+    font-size: $font_size_xxs;
+    border: 2px solid $color_dark_oak;
+    background: transparent;
+    color: $color_bark;
+    cursor: pointer;
+    @include transition;
+
+    &.is-active {
+      background: $color_dark_oak;
+      color: $color_cream;
+    }
+
+    &:hover:not(.is-active) {
+      background: rgba($color_dark_oak, 0.05);
+    }
+  }
+
+  // Caption
+  &__caption {
+    margin-top: 3.2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba($color_sand, 0.3);
+    font-family: $font_copy;
+    font-size: $font_size_sm;
+    color: $color_sand;
+    line-height: 1.7;
+  }
+
+  // Loading state
+  &__loading {
+    padding: 4rem;
+    text-align: center;
+    font-size: $font_size_xs;
+    color: $color_sand;
+  }
+}
+
+// Dark mode
+body.dark .Corridor {
+  .Corridor__display {
+    border-color: $color_sand;
+    background-color: $color_obsidian;
+  }
+
+  .Corridor__toggleBtn {
+    border-color: $color_sand;
+    color: $color_cream;
+
+    &.is-active {
+      background: $color_cream;
+      color: $color_obsidian;
+    }
+  }
+
+  .Corridor__stats {
+    border-color: $color_sand;
+  }
+
+  .Corridor__stat {
+    border-color: $color_sand;
+  }
+
+  .Corridor__statValue {
+    color: $color_cream;
+  }
+
+  .Corridor__legendDot--unknown {
+    border-color: #555;
+  }
+
+  .Corridor__principleBtn {
+    border-color: $color_sand;
+    color: $color_cream;
+
+    &.is-active {
+      background: $color_cream;
+      color: $color_obsidian;
+    }
+  }
+
+  .Corridor__label {
+    color: $color_cream;
+  }
+
+  .Corridor__slider {
+    accent-color: $color_cream;
+  }
+
+  .Corridor__caption {
+    color: #D9D4C8;
+  }
+}

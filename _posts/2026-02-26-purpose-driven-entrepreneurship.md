@@ -63,6 +63,87 @@ That's how it actually works. A long accumulation of choices that pointed the sa
 
 > 🌱 Season after season. You can't rush soil. You can only keep adding organic matter, one handful at a time, and trust the process.
 
+## The narrowing
+
+My friend Patrick and I have a name for this: playing on hard mode. Not by choice, exactly—more by accumulation.
+
+Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You've been down enough paths to recognize the dead ends from the trailhead.
+
+Experience is pattern recognition, mostly.[^1] Researchers found that experts *see* more structure than novices—by recognizing patterns faster, not by considering more options.[^2] A chess master looks at a board and perceives clusters of meaning where a beginner sees individual pieces. The experienced founder looks at a business model and sees where the pressure lands in year three. Same information, completely different resolution.
+
+So the map fills in. That's one axis. Now layer on the principles.
+
+Every "no" from the previous section—every time you chose coherence over optimization, autonomy over prestige—those are active constraints. Saras Sarasvathy studied expert entrepreneurs and found they don't start from goals and work backward.[^3] They start from who they are, what they know, who they know—and treat constraints as creative inputs. She calls it effectuation. The constraints *are* the game.
+
+And the math backs this up:[^4] each constraint you hold shrinks the space of moves you're willing to make. Every additional objective you refuse to sacrifice reduces the feasible region. Sustainable, purpose-aligned, family-compatible, non-extractive, long-horizon—each one is a filter, and the viable set gets smaller with every filter you add.
+
+<div class="Corridor" id="corridor-viz">
+  <div class="Corridor__toggle">
+    <button class="Corridor__toggleBtn is-active" data-mode="flow">Flow</button>
+    <button class="Corridor__toggleBtn" data-mode="space">Space</button>
+  </div>
+  <div class="Corridor__display">
+    <canvas id="corridor-flow-canvas"></canvas>
+    <div id="corridor-space-container" style="display:none"></div>
+  </div>
+  <div class="Corridor__legend">
+    <div class="Corridor__legendItem">
+      <span class="Corridor__legendDot Corridor__legendDot--unknown"></span>
+      <span>Unseen</span>
+    </div>
+    <div class="Corridor__legendItem">
+      <span class="Corridor__legendDot Corridor__legendDot--viable"></span>
+      <span>Viable path</span>
+    </div>
+    <div class="Corridor__legendItem">
+      <span class="Corridor__legendDot Corridor__legendDot--ruled-out"></span>
+      <span>Ruled out by principle</span>
+    </div>
+    <div class="Corridor__legendItem">
+      <span class="Corridor__legendDot Corridor__legendDot--hazard"></span>
+      <span>Known dead end</span>
+    </div>
+  </div>
+  <div class="Corridor__stats">
+    <div class="Corridor__stat">
+      <div class="Corridor__statLabel">Viable moves</div>
+      <div class="Corridor__statValue" id="stat-viable">--</div>
+    </div>
+    <div class="Corridor__stat">
+      <div class="Corridor__statLabel">Space seen</div>
+      <div class="Corridor__statValue" id="stat-seen">--</div>
+    </div>
+    <div class="Corridor__stat">
+      <div class="Corridor__statLabel">Principles held</div>
+      <div class="Corridor__statValue" id="stat-principles">--</div>
+    </div>
+  </div>
+  <div class="Corridor__controls">
+    <div class="Corridor__sliderGroup">
+      <div class="Corridor__sliderHeader">
+        <label class="Corridor__label">Experience</label>
+        <span class="Corridor__expLabel" id="exp-label">new founder</span>
+      </div>
+      <input type="range" id="corridor-experience" class="Corridor__slider" min="0" max="1" step="0.01" value="0.2">
+    </div>
+    <div class="Corridor__principleGroup">
+      <label class="Corridor__label">Principles you refuse to violate</label>
+      <div class="Corridor__principles" id="corridor-principles"></div>
+    </div>
+  </div>
+  <div class="Corridor__caption">
+    Crank up <strong>experience</strong> and watch the map fill in—most of what gets revealed is where <em>not</em> to go. Toggle the <strong>principles</strong> you won't violate, and watch the viable corridor shrink again, from a different direction.
+  </div>
+</div>
+
+Two forces, pressing from different directions. Experience reveals the dead ends. Principles rule out the shortcuts. What's left is narrow—genuinely narrow—but it's *yours.* You can see every wall, and you chose every wall.
+
+The hard part is the communication gap. You're standing in a corridor you can see perfectly, making decisions that feel obvious from where you are—and the people around you think you're being stubborn. Or overthinking. Or leaving money on the table. Research on expert-novice gaps shows this is structural, not personal.[^5] The curse of knowledge is that you can't un-know what you've seen, and you can't easily show someone else what's visible from where you're standing.
+
+Patrick calls it hard mode. The decisions are often clearer than they've ever been—it's hard because almost nobody else can see the corridor you're in.
+
+> 🌱 The path gets narrower, and it gets more yours. Everything that grows here, you planted on purpose.
+
 ---
 
 **Act II**
@@ -124,3 +205,15 @@ What I *can* say... maybe the only thing I can say with real honesty... is that 
 It's hard. It's very meaningful. And I wouldn't trade it, not because it's the best path, but because it's mine.
 
 If any of that resonates... if you feel a different signal underneath the hunger, even faintly... you're not imagining it. That feeling is real, and you're not the only one who has it. Send me a note, I always love connecting with outher purpose-driven founders taking the road less traveled. ✌️
+
+[^1]: Gary Klein's *Recognition-Primed Decision Making* model found that experienced decision-makers recognize situations and act, rather than weighing options analytically. See *Sources of Power: How People Make Decisions* (MIT Press, 1998).
+
+[^2]: Chase & Simon's 1973 study showed chess masters recall meaningful board positions far better than novices, but show no advantage with randomly placed pieces. The expertise is in perception, not computation.
+
+[^3]: Saras Sarasvathy's effectuation research contrasts "effectual" reasoning (start from means, embrace constraints) with "causal" reasoning (start from goals, minimize constraints). See [effectuation.org](https://www.effectuation.org/).
+
+[^4]: In multi-objective optimization, adding constraints shrinks the Pareto frontier—the set of solutions where you can't improve one objective without worsening another.
+
+[^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
+
+<script src="/js/corridor.js"></script>
