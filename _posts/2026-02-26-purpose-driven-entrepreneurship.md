@@ -116,6 +116,9 @@ body.dark .Corridor__principleBtn.is-active{background:#FFFCF3;color:#151515}
 body.dark .Corridor__label{color:#FFFCF3}
 body.dark .Corridor__slider{accent-color:#FFFCF3}
 body.dark .Corridor__caption{color:#D9D4C8}
+.Corridor__pivotBtn{display:block;margin-top:2rem;padding:.5rem 1.2rem;font-family:"Recursive Mono",monospace;font-size:12px;border:1px solid #837E73;background:transparent;color:#837E73;cursor:pointer;-webkit-appearance:none;appearance:none;border-radius:0;transition:all .22s ease-in-out}
+.Corridor__pivotBtn:hover{background:rgba(131,126,115,.08)}
+body.dark .Corridor__pivotBtn{border-color:#666;color:#D9D4C8}
 </style>
 
 <div class="Corridor" id="corridor-viz">
@@ -206,7 +209,7 @@ After enough accumulation, after enough time holding paradox... something settle
 
 **You designed your life.** Not theoretically, not "someday when I exit"—right now. The autonomy isn't a reward you earned at the end. It's a choice you kept making along the way.
 
-**Each person you help genuinely matters to you.** You solved a real problem for a real person, and the feeling of that is gratitude. Actual gratitude 🙏. The one was already complete.
+**Each person you help genuinely matters to you.** You solved a real problem for a real person, and the feeling of that is gratitude. Actual gratitude 🙏. That's enough. That's the whole point.
 
 **Every challenge is growth, in the *you* sense.** The business isn't separate from your development... it *is* your development. You're always learning, not because you're behind but because you're *awake.*
 
@@ -240,4 +243,4 @@ If any of that resonates... if you feel a different signal underneath the hunger
 
 [^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
 
-<script src="/js/corridor.js?v=5"></script>
+<script src="/js/corridor.js?v=6"></script>
