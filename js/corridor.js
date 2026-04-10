@@ -262,13 +262,14 @@
       scene.add(new THREE.Points(ptGeo, new THREE.ShaderMaterial({
         vertexColors: true,
         transparent: true,
+        depthTest: false,
         vertexShader: [
           'attribute float ptSize;',
           'varying vec3 vColor;',
           'void main() {',
           '  vColor = color;',
           '  vec4 mv = modelViewMatrix * vec4(position, 1.0);',
-          '  gl_PointSize = ptSize * (250.0 / -mv.z);',
+          '  gl_PointSize = max(ptSize * (3.0 / -mv.z), 0.0);',
           '  gl_Position = projectionMatrix * mv;',
           '}'
         ].join('\n'),
@@ -371,11 +372,11 @@
         var c, sz;
         if (cs === 'viable') {
           c = viableCol;
-          sz = localTerrain[i].isGoldenPath ? 16 : 12;
+          sz = localTerrain[i].isGoldenPath ? 12 : 8;
         } else if (cs === 'hazard') {
-          c = hazardCol; sz = 5;
+          c = hazardCol; sz = 3;
         } else if (cs === 'ruled-out') {
-          c = ruledCol; sz = 4;
+          c = ruledCol; sz = 2.5;
         } else {
           c = hiddenCol; sz = 0;
         }

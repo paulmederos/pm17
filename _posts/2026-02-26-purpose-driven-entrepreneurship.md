@@ -243,4 +243,4 @@ If any of that resonates... if you feel a different signal underneath the hunger
 
 [^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
 
-<script src="/js/corridor.js?v=7"></script>
+<script src="/js/corridor.js?v=8"></script>
