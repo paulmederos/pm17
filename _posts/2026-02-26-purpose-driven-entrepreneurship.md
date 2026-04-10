@@ -47,7 +47,7 @@ You share something valuable with someone who's technically a competitor (a real
 
 You say no to something that looks impressive on paper (the rocket ship startup, the big raise, the prestigious title) because something in you knows it doesn't fit. You can't fully articulate why. You just know. And that "knowing" costs you something, because everyone around you would have said yes.
 
-You help one person solve a real problem, actually solve it, in a *their-life-is-a-little-better-now* way... and the feeling is complete. Not a stepping stone. Not a proof of concept. Just: *I helped, and that matters.* The one was already whole.
+You help one person solve a real problem, actually solve it, in a *their-life-is-a-little-better-now* way... and the feeling is complete. You helped someone. And now you want to do it again. And you do, slowly at first. Building.
 
 You choose autonomy over prestige. Coherence over optimization. Learning over winning.
 
@@ -59,7 +59,7 @@ That's how it actually works. A long accumulation of choices that pointed the sa
 
 ## The narrowing
 
-My friend Patrick and I have a name for this: playing on hard mode. Not by choice, exactly—more by accumulation.
+My friend Patrick and I have a name for this: playing on hard mode. Not all at once—it accumulates, one decision at a time.
 
 Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You recognize the raise that doesn't match the product—too much capital chasing a growth curve before the thing works. You hear "tons of interest, customers love it" and ask how many have paid, and the room gets quiet 😅. You see brilliant technology and no clear answer for who, specifically, will write the check. You take the meeting with the bigger company that's suddenly eager to acquire, and you can feel the competitive intelligence fishing underneath the flattery 👀. You've been down enough paths to recognize the dead ends from the trailhead.
 
