@@ -79,12 +79,7 @@ And the math backs this up:[^4] each constraint you hold shrinks the space of mo
 
 <style>
 .Corridor{margin:4.8rem 0;font-family:"Recursive Mono",monospace}
-.Corridor__toggle{display:flex;margin-bottom:1.6rem}
-.Corridor__toggleBtn{padding:.6rem 1.4rem;font-family:"Recursive Mono",monospace;font-size:12px;text-transform:uppercase;letter-spacing:.15em;border:2px solid #292725;background:transparent;color:#666159;cursor:pointer;-webkit-appearance:none;appearance:none;border-radius:0;transition:all .22s ease-in-out}
-.Corridor__toggleBtn:first-child{border-right:none}
-.Corridor__toggleBtn.is-active{background:#292725;color:#FFFCF3}
-.Corridor__toggleBtn:hover:not(.is-active){background:rgba(41,39,37,.05)}
-.Corridor__display{border:2px solid #292725;background:#FFFCF3;position:relative;overflow:hidden}
+.Corridor__display{border:2px solid #292725;background:#FFFCF3;position:relative;overflow:hidden;touch-action:none}
 .Corridor__display canvas,.Corridor__display>div{display:block;width:100%}
 .Corridor__legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;font-size:12px;color:#837E73}
 .Corridor__legendItem{display:flex;align-items:center;gap:.6rem}
@@ -112,8 +107,6 @@ And the math backs this up:[^4] each constraint you hold shrinks the space of mo
 .Corridor__caption{margin-top:3.2rem;padding-top:2rem;border-top:1px solid rgba(131,126,115,.3);font-family:"Inter var","SF Pro Text","Helvetica";font-size:15px;color:#837E73;line-height:1.7}
 .Corridor__loading{padding:4rem;text-align:center;font-size:13px;color:#837E73}
 body.dark .Corridor__display{border-color:#837E73;background:#151515}
-body.dark .Corridor__toggleBtn{border-color:#837E73;color:#FFFCF3}
-body.dark .Corridor__toggleBtn.is-active{background:#FFFCF3;color:#151515}
 body.dark .Corridor__stats,body.dark .Corridor__stat{border-color:#837E73}
 body.dark .Corridor__statValue{color:#FFFCF3}
 body.dark .Corridor__principleBtn{border-color:#837E73;color:#FFFCF3}
@@ -124,13 +117,8 @@ body.dark .Corridor__caption{color:#D9D4C8}
 </style>
 
 <div class="Corridor" id="corridor-viz">
-  <div class="Corridor__toggle">
-    <button class="Corridor__toggleBtn is-active" data-mode="flow">Flow</button>
-    <button class="Corridor__toggleBtn" data-mode="space">Space</button>
-  </div>
   <div class="Corridor__display">
-    <canvas id="corridor-flow-canvas"></canvas>
-    <div id="corridor-space-container" style="display:none"></div>
+    <div id="corridor-space"></div>
   </div>
   <div class="Corridor__legend">
     <div class="Corridor__legendItem">
@@ -262,4 +250,4 @@ If any of that resonates... if you feel a different signal underneath the hunger
 
 [^5]: Pamela Hinds' work on the "curse of expertise" shows that experts systematically fail to predict how difficult tasks will be for novices. Hinds, P. J. (1999). *Journal of Experimental Psychology: Applied*, 5(2), 205–221.
 
-<script src="/js/corridor.js"></script>
+<script src="/js/corridor.js?v=3"></script>
