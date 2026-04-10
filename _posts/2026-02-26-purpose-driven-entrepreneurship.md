@@ -73,7 +73,7 @@ Experience is pattern recognition, mostly.[^1] Researchers found that experts *s
 
 So the map fills in. That's one force at work. Now layer on the principles.
 
-Every "no" from the previous section—every time you chose coherence over optimization, autonomy over prestige—those are active constraints. Saras Sarasvathy studied expert entrepreneurs and found they don't start from goals and work backward.[^3] They start from who they are, what they know, who they know—and treat constraints as creative inputs. She calls it effectuation. The constraints *are* the game.
+Every "no" from the previous section—every time you chose coherence over optimization, autonomy over prestige—those are active constraints. Saras Sarasvathy studied expert entrepreneurs and found they don't start from goals and work backward.[^3] They start from who they are, what they know, who they know—and treat constraints as creative inputs. She calls it **effectuation.** The constraints *are* the game.
 
 And the math backs this up:[^4] each constraint you hold shrinks the space of moves you're willing to make. Every additional objective you refuse to sacrifice reduces the feasible region. Sustainable, purpose-aligned, family-compatible, non-extractive, long-horizon—each one is a filter, and the viable set gets smaller with every filter you add.
 
