@@ -67,7 +67,7 @@ That's how it actually works. A long accumulation of choices that pointed the sa
 
 My friend Patrick and I have a name for this: playing on hard mode. Not by choice, exactly—more by accumulation.
 
-Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You recognize the raise that doesn't match the product—too much capital chasing a growth curve before the thing works. You hear "tons of interest, customers love it" and ask how many have paid, and the room gets quiet. You see brilliant technology and no clear answer for who, specifically, will write the check. You take the meeting with the bigger company that's suddenly eager to acquire, and you can feel the competitive intelligence fishing underneath the flattery. You've been down enough paths to recognize the dead ends from the trailhead.
+Every year you build, you see more of the map. You watch a certain kind of partnership blow up three times, and now you can spot the structure before the first meeting ends. You see a pricing model that looks clever and know exactly where it leads in eighteen months. You recognize the raise that doesn't match the product—too much capital chasing a growth curve before the thing works. You hear "tons of interest, customers love it" and ask how many have paid, and the room gets quiet 😅. You see brilliant technology and no clear answer for who, specifically, will write the check. You take the meeting with the bigger company that's suddenly eager to acquire, and you can feel the competitive intelligence fishing underneath the flattery 👀. You've been down enough paths to recognize the dead ends from the trailhead.
 
 Experience is pattern recognition, mostly.[^1] Researchers found that experts *see* more structure than novices—by recognizing patterns faster, not by considering more options.[^2] A chess master looks at a board and perceives clusters of meaning where a beginner sees individual pieces. The experienced founder looks at a business model and sees where the pressure lands in year three. Same information, completely different resolution.
 
@@ -182,7 +182,7 @@ Two forces, pressing from different directions. Experience reveals the dead ends
 
 The hard part is the communication gap. You're standing in a corridor you can see perfectly, making decisions that feel obvious from where you are—and the people around you think you're being stubborn. Or overthinking. Or leaving money on the table. Research on expert-novice gaps shows this is structural, not personal.[^5] The curse of knowledge is that you can't un-know what you've seen, and you can't easily show someone else what's visible from where you're standing.
 
-Patrick calls it hard mode. The decisions are often clearer than they've ever been—it's hard because almost nobody else can see the corridor you're in.
+Patrick and I like to call it "playing on hard mode" 😎 The decisions are often clearer than they've ever been—it's hard because almost nobody else can see the corridor you're in.
 
 > 🌱 The path gets narrower, and it gets more yours. Everything that grows here, you planted on purpose.
 
