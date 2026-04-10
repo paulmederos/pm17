@@ -12,7 +12,6 @@
     { key: 'nonExtractive', label: 'Non-extractive' },
     { key: 'longHorizon', label: 'Long-horizon' }
   ];
-  var PROTECTED_COUNT = 5;
   var HAZ_SHARE = 0.22;
 
   // =============================================
@@ -33,14 +32,11 @@
   function isDark() { return document.body.classList.contains('dark'); }
 
   // =============================================
-  // Terrain
+  // Terrain (parameterized seed, no random protected)
   // =============================================
-  function buildTerrain() {
-    var rand = prng(7);
+  function buildTerrain(seed) {
+    var rand = prng(seed);
     var total = GRID * GRID;
-    var prot = new Set();
-    while (prot.size < PROTECTED_COUNT) prot.add(Math.floor(rand() * total));
-
     var cells = [];
     for (var i = 0; i < total; i++) {
       var v = {};
@@ -54,7 +50,7 @@
       cells.push({
         hazard: rand(),
         violates: v,
-        isProtected: prot.has(i),
+        isGoldenPath: false,
         x3d: x3d, y3d: y3d, z3d: z3d,
         dist3d: dist3d
       });
@@ -83,9 +79,10 @@
     var viable = 0, seen = 0;
 
     var states = terrain.map(function (c) {
-      if (c.isProtected) { viable++; seen++; return 'viable'; }
       if (c.dist3d > visRadius) return 'unknown';
       seen++;
+      // Golden path: always viable (immune to hazard + constraints)
+      if (c.isGoldenPath) { viable++; return 'viable'; }
       if (c.hazard > hf) return 'hazard';
       for (var k = 0; k < CONSTRAINTS.length; k++) {
         if (active[CONSTRAINTS[k].key] && c.violates[CONSTRAINTS[k].key]) return 'ruled-out';
@@ -99,8 +96,7 @@
   }
 
   // =============================================
-  // Tree builder (returns tree structure with
-  // parent/children maps for chain traversal)
+  // Tree builder
   // =============================================
   function buildTree(terrain) {
     var sorted = [];
@@ -141,10 +137,37 @@
   }
 
   // =============================================
+  // Golden path: deepest root-to-leaf chain
+  // Marked nodes are always viable when visible
+  // =============================================
+  function markGoldenPath(tree, terrain) {
+    for (var i = 0; i < terrain.length; i++) terrain[i].isGoldenPath = false;
+
+    // Find deepest leaf via DFS
+    var bestLeaf = tree.root;
+    var bestDepth = 0;
+    function dfs(node, depth) {
+      var kids = tree.children[node] || [];
+      if (kids.length === 0) {
+        if (depth > bestDepth) { bestDepth = depth; bestLeaf = node; }
+        return;
+      }
+      kids.forEach(function (k) { dfs(k, depth + 1); });
+    }
+    dfs(tree.root, 0);
+
+    // Trace leaf back to root, mark the whole chain
+    var current = bestLeaf;
+    while (current !== undefined) {
+      terrain[current].isGoldenPath = true;
+      current = tree.parent[current];
+    }
+  }
+
+  // =============================================
   // Three.js loader
   // =============================================
   var threeReady = false;
-
   function loadThree(cb) {
     if (threeReady) return cb();
     var s1 = document.createElement('script');
@@ -161,7 +184,7 @@
     };
     s1.onerror = function () {
       document.getElementById('corridor-space').innerHTML =
-        '<div class="Corridor__loading">Could not load 3D library. Try refreshing.</div>';
+        '<div class="Corridor__loading">Could not load 3D library.</div>';
     };
     document.head.appendChild(s1);
   }
@@ -169,18 +192,16 @@
   // =============================================
   // Space Renderer
   // =============================================
-  function SpaceRenderer(container, terrain) {
+  function SpaceRenderer(container, initialTerrain) {
     var scene, camera, renderer, controls;
-    var colorAttr, lineColorAttr;
+    var colorAttr, lineColorAttr, ptPosAttr, linePosAttr;
+    var localTerrain = initialTerrain;
     var tree;
     var aid = null;
     var CUBE = 2;
 
-    function init() {
-      tree = buildTree(terrain);
-
+    function setupScene() {
       var w = container.clientWidth || container.parentElement.clientWidth || 300;
-      var h = w;
 
       scene = new THREE.Scene();
       camera = new THREE.PerspectiveCamera(50, 1, 0.1, 100);
@@ -188,7 +209,7 @@
       camera.lookAt(0, 0, 0);
 
       renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setSize(w, h);
+      renderer.setSize(w, w);
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
       renderer.setClearColor(0x000000, 0);
       container.innerHTML = '';
@@ -206,14 +227,10 @@
       controls.target.set(0, 0, 0);
 
       var idleTimer;
-      controls.addEventListener('start', function () {
-        controls.autoRotate = false;
-      });
+      controls.addEventListener('start', function () { controls.autoRotate = false; });
       controls.addEventListener('end', function () {
         clearTimeout(idleTimer);
-        idleTimer = setTimeout(function () {
-          controls.autoRotate = true;
-        }, 3000);
+        idleTimer = setTimeout(function () { controls.autoRotate = true; }, 3000);
       });
 
       // Wireframe cube
@@ -223,157 +240,126 @@
       box.material.opacity = 0.12;
       scene.add(box);
 
-      // Faint axis hints
-      var axMat = new THREE.LineBasicMaterial({
-        color: 0x837e73, transparent: true, opacity: 0.06
-      });
-      [[[-1, 0, 0], [1, 0, 0]], [[0, -1, 0], [0, 1, 0]], [[0, 0, -1], [0, 0, 1]]].forEach(function (pair) {
-        var geo = new THREE.BufferGeometry().setFromPoints([
-          new THREE.Vector3(pair[0][0], pair[0][1], pair[0][2]),
-          new THREE.Vector3(pair[1][0], pair[1][1], pair[1][2])
+      // Axis hints
+      var axMat = new THREE.LineBasicMaterial({ color: 0x837e73, transparent: true, opacity: 0.06 });
+      [[[-1, 0, 0], [1, 0, 0]], [[0, -1, 0], [0, 1, 0]], [[0, 0, -1], [0, 0, 1]]].forEach(function (p) {
+        var g = new THREE.BufferGeometry().setFromPoints([
+          new THREE.Vector3(p[0][0], p[0][1], p[0][2]),
+          new THREE.Vector3(p[1][0], p[1][1], p[1][2])
         ]);
-        scene.add(new THREE.Line(geo, axMat));
+        scene.add(new THREE.Line(g, axMat));
       });
 
-      // Points
-      var count = terrain.length;
+      // Points (pre-allocate)
+      var count = localTerrain.length;
       var ptGeo = new THREE.BufferGeometry();
-      var positions = new Float32Array(count * 3);
-      var colors = new Float32Array(count * 3);
-
-      for (var i = 0; i < count; i++) {
-        positions[i * 3]     = terrain[i].x3d * CUBE / 2;
-        positions[i * 3 + 1] = terrain[i].y3d * CUBE / 2;
-        positions[i * 3 + 2] = terrain[i].z3d * CUBE / 2;
-      }
-
-      ptGeo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
-      colorAttr = new THREE.BufferAttribute(colors, 3);
+      ptPosAttr = new THREE.BufferAttribute(new Float32Array(count * 3), 3);
+      colorAttr = new THREE.BufferAttribute(new Float32Array(count * 3), 3);
+      ptGeo.setAttribute('position', ptPosAttr);
       ptGeo.setAttribute('color', colorAttr);
-
       scene.add(new THREE.Points(ptGeo, new THREE.PointsMaterial({
-        vertexColors: true,
-        size: 0.06,
-        sizeAttenuation: true,
-        transparent: true,
-        opacity: 0.9
+        vertexColors: true, size: 0.06, sizeAttenuation: true,
+        transparent: true, opacity: 0.9
       })));
 
-      // Connection lines
-      var edgeCount = tree.edges.length;
+      // Lines (pre-allocate for N-1 edges)
+      var edgeMax = count - 1;
       var lineGeo = new THREE.BufferGeometry();
-      var linePos = new Float32Array(edgeCount * 6);
-      var lineCol = new Float32Array(edgeCount * 6);
-
-      for (var j = 0; j < edgeCount; j++) {
-        var fi = tree.edges[j][0];
-        var ti = tree.edges[j][1];
-        linePos[j * 6]     = terrain[fi].x3d * CUBE / 2;
-        linePos[j * 6 + 1] = terrain[fi].y3d * CUBE / 2;
-        linePos[j * 6 + 2] = terrain[fi].z3d * CUBE / 2;
-        linePos[j * 6 + 3] = terrain[ti].x3d * CUBE / 2;
-        linePos[j * 6 + 4] = terrain[ti].y3d * CUBE / 2;
-        linePos[j * 6 + 5] = terrain[ti].z3d * CUBE / 2;
-      }
-
-      lineGeo.setAttribute('position', new THREE.BufferAttribute(linePos, 3));
-      lineColorAttr = new THREE.BufferAttribute(lineCol, 3);
+      linePosAttr = new THREE.BufferAttribute(new Float32Array(edgeMax * 6), 3);
+      lineColorAttr = new THREE.BufferAttribute(new Float32Array(edgeMax * 6), 3);
+      lineGeo.setAttribute('position', linePosAttr);
       lineGeo.setAttribute('color', lineColorAttr);
-
       scene.add(new THREE.LineSegments(lineGeo, new THREE.LineBasicMaterial({
-        vertexColors: true,
-        transparent: true,
-        opacity: 0.55
+        vertexColors: true, transparent: true, opacity: 0.55
       })));
+    }
 
+    function loadTerrain(t) {
+      localTerrain = t;
+      tree = buildTree(localTerrain);
+      markGoldenPath(tree, localTerrain);
+
+      for (var i = 0; i < localTerrain.length; i++) {
+        ptPosAttr.array[i * 3]     = localTerrain[i].x3d * CUBE / 2;
+        ptPosAttr.array[i * 3 + 1] = localTerrain[i].y3d * CUBE / 2;
+        ptPosAttr.array[i * 3 + 2] = localTerrain[i].z3d * CUBE / 2;
+      }
+      ptPosAttr.needsUpdate = true;
+
+      for (var j = 0; j < tree.edges.length; j++) {
+        var fi = tree.edges[j][0], ti = tree.edges[j][1];
+        linePosAttr.array[j * 6]     = localTerrain[fi].x3d * CUBE / 2;
+        linePosAttr.array[j * 6 + 1] = localTerrain[fi].y3d * CUBE / 2;
+        linePosAttr.array[j * 6 + 2] = localTerrain[fi].z3d * CUBE / 2;
+        linePosAttr.array[j * 6 + 3] = localTerrain[ti].x3d * CUBE / 2;
+        linePosAttr.array[j * 6 + 4] = localTerrain[ti].y3d * CUBE / 2;
+        linePosAttr.array[j * 6 + 5] = localTerrain[ti].z3d * CUBE / 2;
+      }
+      linePosAttr.needsUpdate = true;
+
+      bump();
       syncColors();
     }
 
     function syncColors() {
-      var result = compute(terrain);
+      var result = compute(localTerrain);
       var states = result.states;
 
-      // ── Walk the tree to find viable chains and classify edges ──
+      // Walk tree: classify edges, count viable chains
       var greenSet = {};
       var viableChains = 0;
       var totalChains = 0;
 
-      // Recursive walk: returns true if any all-viable chain
-      // passes through this node
       function walk(node, pathAllViable) {
         var state = states[node];
         if (state === 'unknown') return false;
-
         var chainViable = pathAllViable && state === 'viable';
-
-        // Get visible children (skip unknown)
         var kids = (tree.children[node] || []).filter(function (k) {
           return states[k] !== 'unknown';
         });
-
-        // Terminal node: hazard (dead end) or leaf (no visible children)
-        // Hazards are dead ends — no paths extend past them
         if (state === 'hazard' || kids.length === 0) {
           totalChains++;
           if (chainViable) viableChains++;
           return chainViable;
         }
-
-        // Internal node — recurse into children
-        var anyGreenChild = false;
+        var anyGreen = false;
         kids.forEach(function (kid) {
           var kidGreen = walk(kid, chainViable);
           if (kidGreen) {
             greenSet[node + ':' + kid] = true;
-            anyGreenChild = true;
+            anyGreen = true;
           }
         });
-
-        return anyGreenChild;
+        return anyGreen;
       }
 
-      if (states[tree.root] !== 'unknown') {
-        walk(tree.root, true);
-      }
+      if (states[tree.root] !== 'unknown') walk(tree.root, true);
 
-      // ── Color palette ──
+      // Color palette
       var d = isDark();
-      var viableCol  = [0.353, 0.541, 0.235];   // #5a8a3c — bright green
-      var hazardCol  = d ? [0.28, 0.25, 0.22] : [0.161, 0.153, 0.145];
-      var ruledCol   = d ? [0.40, 0.38, 0.33] : [0.761, 0.753, 0.722]; // #c2c0b8
-      var hiddenCol  = d ? [0.08, 0.08, 0.08] : [0.96, 0.95, 0.93];
-      var greenEdge  = viableCol;
-      var grayEdge   = d ? [0.25, 0.24, 0.22] : [0.82, 0.80, 0.77];
-
+      var viableCol = [0.353, 0.541, 0.235];
+      var hazardCol = d ? [0.28, 0.25, 0.22] : [0.161, 0.153, 0.145];
+      var ruledCol  = d ? [0.40, 0.38, 0.33] : [0.761, 0.753, 0.722];
+      var hiddenCol = d ? [0.08, 0.08, 0.08] : [0.96, 0.95, 0.93];
+      var greenEdge = viableCol;
+      var grayEdge  = d ? [0.25, 0.24, 0.22] : [0.82, 0.80, 0.77];
       var stateToColor = {
-        viable: viableCol,
-        hazard: hazardCol,
-        'ruled-out': ruledCol,
-        unknown: hiddenCol
+        viable: viableCol, hazard: hazardCol, 'ruled-out': ruledCol, unknown: hiddenCol
       };
 
-      // ── Update point colors ──
-      for (var i = 0; i < terrain.length; i++) {
+      for (var i = 0; i < localTerrain.length; i++) {
         var c = stateToColor[states[i]];
-        colorAttr.array[i * 3]     = c[0];
+        colorAttr.array[i * 3] = c[0];
         colorAttr.array[i * 3 + 1] = c[1];
         colorAttr.array[i * 3 + 2] = c[2];
       }
       colorAttr.needsUpdate = true;
 
-      // ── Update edge colors ──
       for (var j = 0; j < tree.edges.length; j++) {
-        var fi = tree.edges[j][0];
-        var ti = tree.edges[j][1];
-        var fState = states[fi];
-        var tState = states[ti];
-
-        // Visible: both not unknown, AND source is not a hazard (dead ends are terminal)
-        var isVis = fState !== 'unknown' && tState !== 'unknown' && fState !== 'hazard';
-        var isGreen = isVis && greenSet[fi + ':' + ti];
-
-        var ec = !isVis ? hiddenCol : isGreen ? greenEdge : grayEdge;
-
+        var fi = tree.edges[j][0], ti = tree.edges[j][1];
+        var fS = states[fi], tS = states[ti];
+        var isVis = fS !== 'unknown' && tS !== 'unknown' && fS !== 'hazard';
+        var ec = !isVis ? hiddenCol : greenSet[fi + ':' + ti] ? greenEdge : grayEdge;
         lineColorAttr.array[j * 6]     = ec[0];
         lineColorAttr.array[j * 6 + 1] = ec[1];
         lineColorAttr.array[j * 6 + 2] = ec[2];
@@ -383,14 +369,12 @@
       }
       lineColorAttr.needsUpdate = true;
 
-      // ── Stats ──
       var pc = Object.keys(active).filter(function (k) { return active[k]; }).length;
       document.getElementById('stat-viable').textContent =
         totalChains > 0 ? viableChains + ' / ' + totalChains : '--';
       document.getElementById('stat-seen').textContent =
         Math.round(result.seen / result.total * 100) + '%';
-      document.getElementById('stat-principles').textContent =
-        pc + ' / ' + CONSTRAINTS.length;
+      document.getElementById('stat-principles').textContent = pc + ' / ' + CONSTRAINTS.length;
     }
 
     function loop() {
@@ -400,7 +384,10 @@
     }
 
     return {
-      start: function () { if (!scene) init(); if (!aid) loop(); },
+      start: function () {
+        if (!scene) { setupScene(); loadTerrain(localTerrain); }
+        if (!aid) loop();
+      },
       stop: function () { if (aid) { cancelAnimationFrame(aid); aid = null; } },
       resize: function () {
         if (!renderer) return;
@@ -409,7 +396,8 @@
         camera.aspect = 1;
         camera.updateProjectionMatrix();
       },
-      syncColors: syncColors
+      syncColors: syncColors,
+      loadTerrain: loadTerrain
     };
   }
 
@@ -420,7 +408,8 @@
     var root = document.getElementById('corridor-viz');
     if (!root) return;
 
-    var terrain = buildTerrain();
+    var currentSeed = 7;
+    var terrain = buildTerrain(currentSeed);
     var container = document.getElementById('corridor-space');
     var space = null;
 
@@ -459,6 +448,19 @@
       });
       btnWrap.appendChild(btn);
     });
+
+    // New Pivot button
+    var controlsEl = root.querySelector('.Corridor__controls');
+    var pivotBtn = document.createElement('button');
+    pivotBtn.className = 'Corridor__pivotBtn';
+    pivotBtn.textContent = 'New pivot \uD83D\uDD04';
+    pivotBtn.addEventListener('click', function () {
+      currentSeed++;
+      terrain = buildTerrain(currentSeed);
+      bump();
+      if (space) space.loadTerrain(terrain);
+    });
+    controlsEl.appendChild(pivotBtn);
 
     // Resize
     var resizeTimer;
