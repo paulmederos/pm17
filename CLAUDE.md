@@ -25,10 +25,6 @@ teaser: "Short description for previews and social."
 - Use `categories: journal, wip` to mark a post as work-in-progress (shows a 🌱 banner)
 - Optional fields: `hero_image`, `subtitle`
 
-## Author
-
-See `paul-profile.md` at the repo root for Paul's personal context, career background, and detailed writing voice guide. Review it before drafting content in his voice.
-
 ## Writing
 
 All copy and written content should follow the writing guide in `writing-guide.md` at the repo root. Review it before drafting or editing any text.
