@@ -15,6 +15,57 @@
   top: 1px;
 }
 
+.Home__Apps {
+  margin-bottom: 8.4rem;
+}
+
+.app-card {
+  margin-bottom: 4.4rem;
+
+  @include media-md-up {
+    margin-bottom: 0;
+    padding-right: 4rem;
+  }
+}
+
+.app-icon-link {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+}
+
+.app-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  display: block;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
+}
+
+.app-tagline {
+  margin-bottom: 1.8rem;
+}
+
+.app-cta-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.badge-appstore {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+
+  img {
+    height: 40px;
+    width: auto;
+  }
+}
+
+.badge-light-mode { display: block; }
+.badge-dark-mode  { display: none; }
+
 .case-study-tag {
   color: darken($color_love, 10%);
 }

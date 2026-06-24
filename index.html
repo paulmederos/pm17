@@ -59,7 +59,49 @@ layout: default
       </div>
     </div>
 
+    <div class="row Home__Apps">
+      <div class="col-xs-12 col-md-4 col-md-offset-2 app-card">
+        <a href="https://kasanelife.com" target="_blank" rel="noopener" class="app-icon-link">
+          <img class="app-icon" src="/images/apps/kasane-icon.png" alt="Kasane app icon" width="72" height="72" loading="lazy" />
+        </a>
+        <p class="mb-1"><a href="https://kasanelife.com" target="_blank" rel="noopener" class="font-md font-500">Kasane</a></p>
+        <p class="font-md app-tagline">Turn your lab results into a daily health practice, three habits at a time.</p>
+        <div class="app-cta-row">
+          <a href="https://apps.apple.com/us/app/kasane/id6776748596" target="_blank" rel="noopener" class="badge-appstore" aria-label="Download Kasane on the App Store">
+            <img class="badge-light-mode" src="/images/apps/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40" />
+            <img class="badge-dark-mode" src="/images/apps/app-store-badge-white.svg" alt="Download on the App Store" width="120" height="40" />
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-md-4 app-card">
+        <a href="https://lodestone.paulmederos.com" target="_blank" rel="noopener" class="app-icon-link">
+          <img class="app-icon" src="/images/apps/lodestone-icon.png" alt="Lodestone app icon" width="72" height="72" loading="lazy" />
+        </a>
+        <p class="mb-1"><a href="https://lodestone.paulmederos.com" target="_blank" rel="noopener" class="font-md font-500">Lodestone</a></p>
+        <p class="font-md app-tagline">A beautiful, no-menu tuner for guitar, ukulele, bass, and anything with strings.</p>
+        <div class="app-cta-row">
+          <a href="https://apps.apple.com/us/app/lodestone-guitar-tuner/id6782477642" target="_blank" rel="noopener" class="badge-appstore" aria-label="Download Lodestone on the App Store">
+            <img class="badge-light-mode" src="/images/apps/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40" />
+            <img class="badge-dark-mode" src="/images/apps/app-store-badge-white.svg" alt="Download on the App Store" width="120" height="40" />
+          </a>
+        </div>
+      </div>
+    </div>
+
     <ul class="omg-so-many-posts">
+      <li class="essay mb-6">
+        <div class="row">
+          <div class="col-xs-12 col-md-offset-2 col-md-2">
+            <time class="font-meta font-sm font-300 color-sand">Jul 2023</time>
+            <span class="font-meta font-sm font-300 color-sand d-block case-study-tag">Case Study</span>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <p><a href="https://artifacts.enchant.co/florens-case-study/" target="_blank" rel="noopener" class="font-md font-500">Florens: from bathhouse dream to at-home sauna</a></p>
+            <p class="font-md">A four-year arc of building a wellness company through a pandemic, a full product pivot, and the honest decision to wind it down.</p>
+          </div>
+        </div>
+      </li>
       {% for post in site.posts %}
         {% if post.categories contains 'case_study' %}
           {% include post_item.html post=post %}

@@ -25,6 +25,9 @@ body.dark {
   .case-study-tag { color: $color_love; }
   .wip-tag        { color: $color_sunlight; }
 
+  .badge-light-mode { display: none; }
+  .badge-dark-mode  { display: block; }
+
   .wip {
     background-color: transparentize($color_sunlight, .7);
     border-color: transparentize($color_sunlight, .2);
