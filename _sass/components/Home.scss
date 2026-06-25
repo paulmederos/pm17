@@ -19,18 +19,31 @@
   margin-bottom: 8.4rem;
 }
 
-.app-card {
+/* Each product is a row: icon on the left, name + tagline on the right.
+   Icon and name link out to the product's landing page (no in-page CTAs). */
+.app-row {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
   margin-bottom: 4.4rem;
 
-  @include media-md-up {
+  &:last-child {
     margin-bottom: 0;
-    padding-right: 4rem;
+  }
+
+  @include media-md-up {
+    gap: 2.4rem;
   }
 }
 
 .app-icon-link {
   display: inline-block;
-  margin-bottom: 1.2rem;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+}
+
+.app-body {
+  flex: 1 1 auto;
 }
 
 .app-icon {
@@ -41,30 +54,12 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, .12);
 }
 
+.app-row p:first-child { margin-top: 0; }
+
 .app-tagline {
-  margin-bottom: 1.8rem;
-}
-
-.app-cta-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.2rem;
-}
-
-.badge-appstore {
-  display: inline-flex;
-  align-items: center;
   margin-bottom: 0;
-
-  img {
-    height: 40px;
-    width: auto;
-  }
+  max-width: 46rem;
 }
-
-.badge-light-mode { display: block; }
-.badge-dark-mode  { display: none; }
 
 .case-study-tag {
   color: darken($color_love, 10%);
