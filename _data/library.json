@@ -1,38 +1,14 @@
 [
   {
-    "id": "2026060101",
-    "title": "Frieren: Beyond Journey's End (Vols. 1–14)",
-    "author": "Kanehito Yamada, Tsukasa Abe",
-    "isbn": null,
-    "isbn13": "9781974725762",
-    "year": "2020",
-    "rating": null,
-    "pages": null,
-    "date_read": "2026/06/01",
-    "date_added": "2026/06/25"
-  },
-  {
-    "id": "2026060701",
-    "title": "Witch Hat Atelier (Vols. 1–14)",
-    "author": "Kamome Shirahama",
-    "isbn": null,
-    "isbn13": "9781632367709",
-    "year": "2017",
-    "rating": null,
-    "pages": null,
-    "date_read": "2026/06/07",
-    "date_added": "2026/06/25"
-  },
-  {
-    "id": "2026061401",
-    "title": "Dungeon Crawler Carl",
+    "id": "2026062801",
+    "title": "The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)",
     "author": "Matt Dinniman",
     "isbn": null,
-    "isbn13": "9780593820247",
-    "year": "2020",
+    "isbn13": "9780593820285",
+    "year": "2021",
     "rating": null,
     "pages": null,
-    "date_read": "2026/06/14",
+    "date_read": "2026/06/28",
     "date_added": "2026/06/25"
   },
   {
@@ -48,15 +24,39 @@
     "date_added": "2026/06/25"
   },
   {
-    "id": "2026062801",
-    "title": "The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)",
+    "id": "2026061401",
+    "title": "Dungeon Crawler Carl",
     "author": "Matt Dinniman",
     "isbn": null,
-    "isbn13": "9780593820285",
-    "year": "2021",
+    "isbn13": "9780593820247",
+    "year": "2020",
     "rating": null,
     "pages": null,
-    "date_read": "2026/06/28",
+    "date_read": "2026/06/14",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2026060701",
+    "title": "Witch Hat Atelier (Vols. 1–14)",
+    "author": "Kamome Shirahama",
+    "isbn": null,
+    "isbn13": "9781632367709",
+    "year": "2017",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/07",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2026060101",
+    "title": "Frieren: Beyond Journey's End (Vols. 1–14)",
+    "author": "Kanehito Yamada, Tsukasa Abe",
+    "isbn": null,
+    "isbn13": "9781974725762",
+    "year": "2020",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/01",
     "date_added": "2026/06/25"
   },
   {
