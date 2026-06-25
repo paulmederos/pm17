@@ -1,5 +1,65 @@
 [
   {
+    "id": "2026060101",
+    "title": "Frieren: Beyond Journey's End (Vols. 1–14)",
+    "author": "Kanehito Yamada, Tsukasa Abe",
+    "isbn": null,
+    "isbn13": "9781974725762",
+    "year": "2020",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/01",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2026060701",
+    "title": "Witch Hat Atelier (Vols. 1–14)",
+    "author": "Kamome Shirahama",
+    "isbn": null,
+    "isbn13": "9781632367709",
+    "year": "2017",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/07",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2026061401",
+    "title": "Dungeon Crawler Carl",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9780593820247",
+    "year": "2020",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/14",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2026062101",
+    "title": "Carl's Doomsday Scenario (Dungeon Crawler Carl, #2)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9780593820261",
+    "year": "2021",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/21",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2026062801",
+    "title": "The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9780593820285",
+    "year": "2021",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/06/28",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "2026040701",
     "title": "Klara and the Sun",
     "author": "Kazuo Ishiguro",
@@ -178,6 +238,18 @@
     "pages": 411,
     "date_read": "2022/10/03",
     "date_added": "2022/09/27"
+  },
+  {
+    "id": "2022090501",
+    "title": "One Piece: Egghead",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781974743278",
+    "year": "2022",
+    "rating": null,
+    "pages": null,
+    "date_read": "2022/09/05",
+    "date_added": "2026/06/25"
   },
   {
     "id": "55535618",
@@ -1008,6 +1080,18 @@
     "date_added": "2018/09/04"
   },
   {
+    "id": "2018071601",
+    "title": "One Piece: Wano Country",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781974707003",
+    "year": "2018",
+    "rating": null,
+    "pages": null,
+    "date_read": "2018/07/16",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "18423",
     "title": "The Left Hand of Darkness",
     "author": "Ursula K. Le Guin",
@@ -1092,6 +1176,18 @@
     "date_added": "2018/01/14"
   },
   {
+    "id": "2016050901",
+    "title": "One Piece: Whole Cake Island",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421592695",
+    "year": "2016",
+    "rating": null,
+    "pages": null,
+    "date_read": "2016/05/09",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "13436116",
     "title": "Lean UX: Applying Lean Principles to Improve User Experience",
     "author": "Jeff Gothelf",
@@ -1102,6 +1198,18 @@
     "pages": 148,
     "date_read": "2014/01/01",
     "date_added": "2018/09/04"
+  },
+  {
+    "id": "2013031801",
+    "title": "One Piece: Dressrosa",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421564609",
+    "year": "2013",
+    "rating": null,
+    "pages": null,
+    "date_read": "2013/03/18",
+    "date_added": "2026/06/25"
   },
   {
     "id": "11084145",
@@ -1140,6 +1248,18 @@
     "date_added": "2019/03/13"
   },
   {
+    "id": "2010102501",
+    "title": "One Piece: Fish-Man Island",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421541969",
+    "year": "2010",
+    "rating": null,
+    "pages": null,
+    "date_read": "2010/10/25",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "386162",
     "title": "The Hitchhiker’s Guide to the Galaxy (The Hitchhiker's Guide to the Galaxy, #1)",
     "author": "Douglas Adams",
@@ -1174,6 +1294,18 @@
     "pages": 208,
     "date_read": "2010/01/01",
     "date_added": "2018/05/09"
+  },
+  {
+    "id": "2009080301",
+    "title": "One Piece: Marineford",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421538501",
+    "year": "2009",
+    "rating": null,
+    "pages": null,
+    "date_read": "2009/08/03",
+    "date_added": "2026/06/25"
   },
   {
     "id": "227265",
@@ -1224,6 +1356,18 @@
     "date_added": "2019/03/13"
   },
   {
+    "id": "2007021201",
+    "title": "One Piece: Thriller Bark",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421534626",
+    "year": "2007",
+    "rating": null,
+    "pages": null,
+    "date_read": "2007/02/12",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "3836",
     "title": "Don Quixote",
     "author": "Miguel de Cervantes Saavedra",
@@ -1260,6 +1404,18 @@
     "date_added": "2019/03/13"
   },
   {
+    "id": "2005081501",
+    "title": "One Piece: Enies Lobby",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421534558",
+    "year": "2005",
+    "rating": null,
+    "pages": null,
+    "date_read": "2005/08/15",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "24583",
     "title": "The Adventures of Tom Sawyer",
     "author": "Mark Twain",
@@ -1294,6 +1450,18 @@
     "pages": 288,
     "date_read": "2005/01/01",
     "date_added": "2019/03/13"
+  },
+  {
+    "id": "2004061401",
+    "title": "One Piece: Water 7",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421534503",
+    "year": "2004",
+    "rating": null,
+    "pages": null,
+    "date_read": "2004/06/14",
+    "date_added": "2026/06/25"
   },
   {
     "id": "17157681",
@@ -1344,6 +1512,30 @@
     "date_added": "2019/03/13"
   },
   {
+    "id": "2002070801",
+    "title": "One Piece: Skypiea",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421534428",
+    "year": "2002",
+    "rating": null,
+    "pages": null,
+    "date_read": "2002/07/08",
+    "date_added": "2026/06/25"
+  },
+  {
+    "id": "2000100701",
+    "title": "One Piece: Alabasta",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781421515120",
+    "year": "2000",
+    "rating": null,
+    "pages": null,
+    "date_read": "2000/10/07",
+    "date_added": "2026/06/25"
+  },
+  {
     "id": "19543",
     "title": "Where the Wild Things Are",
     "author": "Maurice Sendak",
@@ -1354,6 +1546,18 @@
     "pages": 38,
     "date_read": "2000/01/01",
     "date_added": "2019/03/13"
+  },
+  {
+    "id": "1997072201",
+    "title": "One Piece: East Blue",
+    "author": "Eiichiro Oda",
+    "isbn": null,
+    "isbn13": "9781569319017",
+    "year": "1997",
+    "rating": null,
+    "pages": null,
+    "date_read": "1997/07/22",
+    "date_added": "2026/06/25"
   },
   {
     "id": "54843019",
