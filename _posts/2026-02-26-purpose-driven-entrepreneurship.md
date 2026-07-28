@@ -9,7 +9,7 @@ teaser: "Trail notes from 20 years on the path less taken. What the terrain look
 
 You know the shape of the story, you've seen it a thousand times: someone has an idea, raises money, scales fast, exits big. There's a TechCrunch piece, podcast episodes, maybe keynotes, congratulatory postso n social with up and to the right growth, the whole shebang. That's the typical story the tech industry tells about success... and, well, it _is_ a real story. It works for some people. It also chews out, burns up, and destroys way way way more people.
 
-But... there's another story that almost nobody tells, because it's not loud and sexy and exciting or dramatic. It's the story of people who've been building for a long time, who could have taken the big-money path a dozen times and chose not to—not because they couldn't, but because they saw something else.
+But... there's another story that almost nobody tells. It doesn't have an ending, which is part of why it's hard to tell. It's the story of people who've been building for a long time, who could have taken the big-money path a dozen times and chose not to—not because they couldn't, but because they saw something else.
 
 These are my trail notes from that path, a collection of thoughts and notes that I've tried to organize so it's useful to others who feel like there must be a better way. 
 
