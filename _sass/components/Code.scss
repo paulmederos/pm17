@@ -4,21 +4,15 @@
   "Forest" system
   ********************
 
-  Operator Mono is loaded via local() only — no font file is embedded or
-  served from this repo. It renders for anyone who has it installed on
-  their machine (HCo desktop license); everyone else gets the fallback
-  stack. See notes in writing-guide.md if we ever license it for web.
+  Code font is Victor Mono (SIL OFL 1.1), loaded from Google Fonts in
+  base/webfonts.scss. Picked for its semi-connected cursive italics,
+  which carry the comment styling below.
 */
 
-// Operator Mono first for anyone who owns + installed it (desktop license,
-// local() only — no file is served from this repo). Victor Mono is the
-// open-source stand-in everyone else gets: SIL OFL 1.1, and the closest
-// free face with true semi-connected cursive italics.
-$font_code: "Operator Mono", "Operator Mono Book", "OperatorMono-Book",
-            "Victor Mono", "Recursive", ui-monospace, "SF Mono",
+$font_code: "Victor Mono", "Recursive", ui-monospace, "SF Mono",
             SFMono-Regular, Menlo, Consolas, monospace;
 
-// Axes only Recursive has; Operator and Victor Mono ignore them harmlessly.
+// Axes only Recursive has; Victor Mono ignores them harmlessly.
 $font_code_settings: "MONO" 1, "CASL" 0.3, "slnt" 0;
 
 // --- light (on $color_cream page) ---
