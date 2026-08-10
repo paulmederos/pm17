@@ -235,14 +235,14 @@ Two tiers, because volume outruns the calendar. A ten-minute light pass covers r
 
 The success metric isn't lines removed. What I'm after is a kaizen practice, a continuous-improvement loop, where the next session needs less reasoning because better guidelines and operating philosophies are already baked in.
 
-This same era is when I gave each surface exactly one job, because the sprawl had gotten silly:
+Around this time I switched to clarifying the job each location had, because the sprawl had started to frustrate me:
 
-- **Linear** is the queue. It answers *what's next*, and nothing else.
 - **The handbook repo** holds strategy docs. It answers *why we're doing it*.
+- **Linear** is the queue. It answers *what's next*, and nothing else.
 - **The code repos** hold the code. They answer *what exists and how it works*.
 - **Session logs** hold the narrative. They answer *what happened when*.
 
-It sounds obvious written down. It wasn't obvious at all while I was living inside the sprawl. Once a question has exactly one home, "where does this go?" stops being a decision you make forty times a week.
+Written out like that it looks clean and obvious. In the middle of it, as usual, it was chaos. It took a lot of iteration to get each tool down to its own job with minimal overlap, and more iteration still before I could describe the split clearly enough for the system to hold it.
 
 ## Surviving a model upgrade
 
