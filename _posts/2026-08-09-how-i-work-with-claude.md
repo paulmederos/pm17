@@ -179,7 +179,7 @@ Each file carries Overview, Context, What Got Done, Decisions, Files Modified, O
 
 The Decisions block is the sleeper, because it records what I *rejected* and why. Six weeks later the rejected option always comes back wearing a new hat, and past-you already did the analysis.
 
-This is also where the loader file earned its place. Claude Code reads `~/.claude/CLAUDE.md` at the start of every session. Mine is deliberately thin. Three paragraphs, and it does one job: it points at the real thing.
+This is also where the loader file earned its place. Claude Code reads `~/.claude/CLAUDE.md` at the start of every session. Mine is deliberately thin. Three lines: a heading, one sentence saying where the real file lives, and the include that pulls it in.
 
 ```markdown
 # My context lives in `~/my-context/`
