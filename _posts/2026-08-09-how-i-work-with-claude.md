@@ -133,11 +133,11 @@ Please don't build all of this at once 🙏 I didn't, and if I'd tried on day on
 
 ---
 
-# How I got here
+## How I got here
 
 None of this was designed up front. Each layer showed up because the one before it broke in a specific way, which is also the order I'd recommend building it.
 
-## It started with one file 🌱
+### It started with one file 🌱
 
 I read [Matt Greenfield](https://www.threads.com/@sobri909) posting about session milestones and partner models. He builds Arc, and he'd been keeping markdown scaffolding alongside his projects for months.
 
@@ -163,7 +163,7 @@ That cost one mildly embarrassing exchange on a Sunday afternoon 😅. It now pr
 
 Multiply that by a few hundred wraps. The file isn't a preferences doc, it's a record of things that went wrong once—each one cheap to write down, expensive to relearn. Week after week it gets a little harder to make the same mistake twice.
 
-## Remembering what happened last session
+### Remembering what happened last session
 
 The partner model captured *how* we work. It said nothing about what we'd done last Tuesday, so every session still opened with me reconstructing context out loud.
 
@@ -212,7 +212,7 @@ The `@` include pulls in the real file, which is where the rules live. Its most 
 
 Step 3 has its own scar. I once spent a full afternoon building on a nine-commit-stale base. `git status` reported clean the whole time. It was comparing against a cached ref nobody had refreshed.
 
-## Keeping the files from bloating
+### Keeping the files from bloating
 
 Both model files grew fast, and growth—counterintuitively—turned out to be a problem. An always-loaded file competes for attention with everything else inside it.
 
@@ -242,7 +242,7 @@ Around this time I switched to clarifying the job each location had, because the
 
 Written out like that it looks clean and obvious. In the middle of it, as usual, it was chaos. It took a lot of iteration to get each tool down to its own job with minimal overlap, and more iteration still before I could describe the split clearly enough for the system to hold it.
 
-## Surviving a model upgrade
+### Surviving a model upgrade
 
 A model version changed, and a behavioral note that had been true for months stopped being true without any announcement.
 
@@ -262,7 +262,7 @@ All three go into one commit and get pushed. The trigger is usually "let's wrap,
 
 The three lenses do different jobs and none substitutes for the others. The log gives me recoverable context. The models give me calibration that compounds.
 
-## Sharing the context with other people
+### Sharing the context with other people
 
 This is the point where it stopped being a personal productivity setup.
 
@@ -292,7 +292,7 @@ None of that works without the context repos. A generic assistant with our calen
 
 The thing I didn't anticipate is that context built for *me* turned out to be most of what Danu needed to be useful to *us*. Voice, family details, standing preferences, the rules about how we talk to each other's people. Almost all of it ported over intact.
 
-## What sharing forced me to decide
+### What sharing forced me to decide
 
 Once three agents and two people were reading the same substrate, the boundaries had to get explicit. My repos hold my dad's medication history, my own lab work, family financial positions, and neighbors' correspondence.
 
@@ -310,7 +310,7 @@ Once three agents and two people were reading the same substrate, the boundaries
 
 **Write boundaries between agents.** My Claude Code writes to my person repo and the shared one. Brittany's writes to hers. Danu reads all three and writes only to the family lane.
 
-## Rituals that compound into long-term performance
+### Rituals that compound into long-term performance
 
 If you take one thing from this, take this one.
 

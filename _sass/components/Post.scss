@@ -114,20 +114,14 @@
     em { color: $color_bark; }
   }
 
-  /* The post title is the first h1 in here (rendered by the layout), so the
-     part-break treatment must only hit h1s that come from the markdown.
-     :first-child fails because the wip banner precedes the title. */
-  h1:not(:first-of-type) {
-    margin-top: 10.4rem;
-    padding-top: 5.6rem;
-    border-top: 1px solid transparentize($color_sand, .7);
-    font-size: 3.2rem;
-    font-weight: 600;
-    color: $color_wet_sand;
-  }
-
+  /* Posts use h1 for the title only; h2 for sections, h3 beneath them.
+     h3 sits tighter than h2 so the hierarchy reads without extra rules. */
   h2 { font-size: 2.4rem; }
-  h3 { font-size: 2rem; }
+
+  h3 {
+    font-size: 1.95rem;
+    margin-top: 5.6rem;
+  }
 }
 
 body.dark .Post__content {
@@ -138,5 +132,4 @@ body.dark .Post__content {
     em { color: #B3ADA1; }
   }
 
-  h1:not(:first-of-type) { border-top-color: transparentize(#B3ADA1, .78); color: $color_cream; }
 }
