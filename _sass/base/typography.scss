@@ -1,5 +1,6 @@
 $font_copy: "Inter var", "SF Pro Text", "Helvetica";
-$font_meta: "Recursive Mono", monospace;
+$font_meta: "Recursive", ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+$font_meta_settings: "MONO" 1, "CASL" 0.4, "slnt" 0;
 
 $font_size_xxs: 12px;
 $font_size_xs:  13px;
