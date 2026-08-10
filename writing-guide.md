@@ -28,6 +28,51 @@ Words like "quietly," "intentional," "shift," "corner," "landscape," "navigate,"
 - Filler that adds nothing and delays the point.
 - ✅ Just start with the actual point.
 
+**Verbless fragments used as pacing: "Not prompting. Context." / "Three lenses, none replaces the others."**
+- Short sentences are fine and this site uses a lot of them. The problem is fragments with *no subject and no verb*, stacked for rhythm. They scan as punchy in isolation and as a nervous tic in aggregate.
+- The test is the read-aloud one: "This isn't fringe" and "That's what brains do" are short *sentences* someone would actually say. "Not prompting. Context." is two nouns in a trench coat.
+- Watch the appositive pile too — "Not chat transcripts, actual logs, one markdown file per session, filed by week" defers the verb so long the sentence never arrives.
+- ✅ Keep it short, but give it a subject and a verb. Single-word intensifiers you'd genuinely say out loud ("Literally." "Honestly.") are the exception, not the pattern.
+
+**Genteel contrast: "rather than" / "instead of" / "X, never Y"**
+- The sibling of the binary-contrast rule above, and it slips the scan clean because each instance reads as correct English. The tell is density: if "rather than" shows up a dozen times in one piece, the reflex is defining everything by what it isn't.
+- ✅ Count them before shipping. Most can just be stated positively. "Pruning is recall protection rather than tidiness" → "Pruning protects recall."
+- Inline contrast ("candor, not code") is fine and is genuinely part of the voice here. The banned shape is the two-sentence TED version and the every-paragraph habit.
+
+### Rhythm targets (measured from this site's own posts)
+
+Useful when editing, and especially when an LLM drafted the first pass. Numbers are from the prose in `_posts/`, excluding code blocks, tables, and block quotes.
+
+| Metric | Target | Why |
+|---|---|---|
+| Mean sentence length | **13–16 words** | The essays here run 13–14. Anything north of 20 has drifted into report voice. |
+| Short sentences (≤4 words) | **~15–20%** of sentences | They're a real feature of the voice. Just make them complete sentences. |
+| Spaced em dashes | **0** | Tight only. |
+| Tight em dashes | Generous | The evolution post has 27 and they carry it. |
+
+A quick check worth running on any long draft before publishing:
+
+```bash
+python3 - <<'EOF'
+import re,sys
+body=open(sys.argv[1] if len(sys.argv)>1 else '_posts/draft.md').read().split('---',2)[-1]
+p=re.sub(r'```.*?```','',body,flags=re.S)
+p=re.sub(r'^[|>].*$','',p,flags=re.M)
+s=[x.strip() for x in re.split(r'(?<=[.!?])\s+',p) if x.strip() and not x.strip().startswith(('-','*','#'))]
+w=[len(x.split()) for x in s]
+print('mean %.1fw | short %d%% | spaced-emdash %d | rather-than %d'
+      % (sum(w)/len(w), 100*len([x for x in w if x<=4])//len(w),
+         p.count(' — '), p.lower().count('rather than')))
+EOF
+```
+
+### Register: long-form vs. comms
+
+The five voice modes in `paul-voice.md` cover messages to people. Posts on this site are a sixth register and differ in two specific ways:
+
+- **Capital "I".** Lowercase "i" belongs to texts, email, Discord, and Threads. Essays use standard capitalization.
+- **Still casual underneath.** Contractions, "hah," the occasional 😅 or 🌿 at an emotional beat, and a willingness to say "I got this wrong." Long-form doesn't mean corporate.
+
 **Cliché closers: "At the end of the day…" / "In a world where…"**
 - ✅ End with something specific and concrete, or just stop when you're done.
 
