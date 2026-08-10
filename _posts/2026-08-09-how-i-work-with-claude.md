@@ -177,7 +177,7 @@ The convention is `YYYY-MM-DD_HHMM_project_brief-description.md`, with timestamp
 
 Each file carries Overview, Context, What Got Done, Decisions, Files Modified, Open Threads, Commits.
 
-The Decisions block is the sleeper, because it records what I *rejected* and why. Six weeks later the rejected option always comes back wearing a new hat, and past-you already did the analysis.
+The Decisions block is the sleeper, because it records what I *rejected* and why. A few sessions later your agent hits a similar fork, and now it has the record loaded in context to make that call *better* than it did last time. Compounding interest babyyy 📈
 
 This is also where the loader file earned its place. Claude Code reads `~/.claude/CLAUDE.md` at the start of every session. Mine is deliberately thin. Three lines: a heading, one sentence saying where the real file lives, and the include that pulls it in.
 
