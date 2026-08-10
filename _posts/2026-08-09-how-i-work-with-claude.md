@@ -39,7 +39,7 @@ Below is the whole thing at a glance, a prompt that will build it for you, a che
 - `.self_model.md`: Claude's model of itself, including its own failure patterns.
 - `sessions/YYYY_wNN/`: one log per working session, written by Claude at the wrap.
 
-**How it works.** Every session opens the same way. Pull the repo, read both model files, read the most recent session log, sync whichever project repos have been active. Every session closes the same way too, with Claude writing three artifacts: the session log, a partner-model update, a self-model update. One commit, pushed. Roughly weekly, I run a distillation pass over the two model files to cut what's gone stale.
+**How it works.** Every session opens the same way. Pull the repo, read both model files, read the most recent session log, sync whichever project repos have been active. Every session closes the same way too, with Claude writing three artifacts: the session log, a partner-model update, a self-model update. One commit, pushed. Roughly weekly, Claude runs a distillation pass over the two model files to cut what's gone stale.
 
 **Why I keep doing it.** The model gets better on its own with every release. Your context doesn't. Everything above exists so I stop paying the retelling tax, and so corrections compound instead of evaporating when the window closes.
 
@@ -224,7 +224,7 @@ So a stale entry isn't neutral clutter sitting harmlessly in the corner. It's a 
 
 The maintenance pass borrows its name from Karpathy's [LLM Wiki](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f) gist, which names three operations on a knowledge base: ingest, query, and lint. His definition of lint is a ready-made checklist: *"Periodically, ask the LLM to health-check the wiki. Look for: contradictions between pages, stale claims that newer sources have superseded, orphan pages with no inbound links, important concepts mentioned but lacking their own page, missing cross-references, data gaps."*
 
-I run it in four phases:
+Claude runs it in four phases, checking in with me at the points where judgment matters:
 
 1. **Orient.** Read both files top to bottom, then scan the last two weeks of session logs for lessons that never made it in. Catching up comes before cutting. The real work here is re-homing, since per-session notes pile up as raw dated blocks at the bottom.
 2. **Identify iron laws.** Anything appearing three or more times gets promoted into a single named entry with all the dates folded into one citation. Those become the structure. Everything else is texture.
@@ -233,7 +233,7 @@ I run it in four phases:
 
 Two tiers, because volume outruns the calendar. A ten-minute light pass covers re-homing and runs weekly. The full four-phase Lint runs when the file gets noisy or crosses roughly 350 lines.
 
-The success metric isn't lines removed. The question I ask is whether the pass reduced the reasoning I'll need next session.
+The success metric isn't lines removed. What I'm after is a kaizen practice, a continuous-improvement loop, where the next session needs less reasoning because better guidelines and operating philosophies are already baked in.
 
 This same era is when I gave each surface exactly one job, because the sprawl had gotten silly:
 
