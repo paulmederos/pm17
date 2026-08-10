@@ -90,3 +90,53 @@
 
   p { font-size: $font_size_xs; margin: 0; }
 }
+
+/* ---------- pull quotes / file specimens ---------- */
+
+.Post__content {
+
+  blockquote {
+    background-color: #F3EFE2;
+    border-radius: 6px;
+    padding: 2.4rem 2.8rem;
+    margin: 0 0 3.6rem;
+
+    p {
+      font-size: 1.6rem;
+      line-height: 1.6;
+      color: $color_wet_sand;
+      margin-bottom: 1.4rem;
+
+      &:last-child { margin-bottom: 0; }
+    }
+
+    strong, b { color: $color_dark_oak; }
+    em { color: $color_bark; }
+  }
+
+  /* The post title is the first h1 in here (rendered by the layout), so the
+     part-break treatment must only hit h1s that come from the markdown.
+     :first-child fails because the wip banner precedes the title. */
+  h1:not(:first-of-type) {
+    margin-top: 10.4rem;
+    padding-top: 5.6rem;
+    border-top: 1px solid transparentize($color_sand, .7);
+    font-size: 3.2rem;
+    font-weight: 600;
+    color: $color_wet_sand;
+  }
+
+  h2 { font-size: 2.4rem; }
+  h3 { font-size: 2rem; }
+}
+
+body.dark .Post__content {
+  blockquote {
+    background-color: #1D1C1A;
+    p { color: #D9D4C8; }
+    strong, b { color: $color_cream; }
+    em { color: #B3ADA1; }
+  }
+
+  h1:not(:first-of-type) { border-top-color: transparentize(#B3ADA1, .78); color: $color_cream; }
+}

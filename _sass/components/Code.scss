@@ -1,0 +1,262 @@
+/*
+  ********************
+  Code blocks
+  "Forest" system
+  ********************
+
+  Operator Mono is loaded via local() only — no font file is embedded or
+  served from this repo. It renders for anyone who has it installed on
+  their machine (HCo desktop license); everyone else gets the fallback
+  stack. See notes in writing-guide.md if we ever license it for web.
+*/
+
+// Operator Mono first for anyone who owns + installed it (desktop license,
+// local() only — no file is served from this repo). Victor Mono is the
+// open-source stand-in everyone else gets: SIL OFL 1.1, and the closest
+// free face with true semi-connected cursive italics.
+$font_code: "Operator Mono", "Operator Mono Book", "OperatorMono-Book",
+            "Victor Mono", "Recursive", ui-monospace, "SF Mono",
+            SFMono-Regular, Menlo, Consolas, monospace;
+
+// Axes only Recursive has; Operator and Victor Mono ignore them harmlessly.
+$font_code_settings: "MONO" 1, "CASL" 0.3, "slnt" 0;
+
+// --- light (on $color_cream page) ---
+$code_bg_light:      #F3EFE2;
+$code_text_light:    $color_dark_oak;
+$code_comment_light: #6E6960;
+$code_keyword_light: #A2356A;
+$code_string_light:  #566A3C;
+$code_const_light:   #856618;
+$code_name_light:    #35606F;
+$code_punct_light:   #706B61;
+
+// --- dark (on $color_obsidian page) ---
+$code_bg_dark:      #1D1C1A;
+$code_text_dark:    #EDE8DA;
+$code_comment_dark: #979186;
+$code_keyword_dark: $color_love;
+$code_string_dark:  #A9C088;
+$code_const_dark:   $color_sunlight;
+$code_name_dark:    #83B6CB;
+$code_punct_dark:   #B3ADA1;
+
+/* ---------- inline code ---------- */
+
+.Post__content {
+
+  code {
+    font-family: $font_code;
+    font-variation-settings: $font_code_settings;
+    font-size: .88em;
+    font-weight: 500;
+    font-feature-settings: "liga" 0, "calt" 0;
+    background-color: $code_bg_light;
+    color: $code_keyword_light;
+    padding: .15em .4em;
+    border-radius: 3px;
+    white-space: break-spaces;
+    word-break: break-word;
+  }
+
+  a code {
+    color: inherit;
+  }
+
+  /* ---------- fenced blocks ---------- */
+
+  .highlighter-rouge {
+    margin: 0 0 3.6rem;
+  }
+
+  /* Rouge puts class="highlight" on BOTH the wrapper div and the <pre>,
+     so scope the panel styling to the div or `overflow:hidden` lands on
+     the <pre> and clips long lines instead of letting them scroll. */
+  div.highlight {
+    background-color: $code_bg_light;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  pre {
+    font-family: $font_code;
+    font-variation-settings: $font_code_settings;
+    background-color: transparent;
+    margin: 0;
+    padding: 2rem 2.2rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    tab-size: 2;
+  }
+
+  pre code {
+    font-family: inherit;
+    display: block;
+    background-color: transparent;
+    color: $code_text_light;
+    padding: 0;
+    border-radius: 0;
+    font-size: 1.45rem;
+    line-height: 1.65;
+    font-weight: 400;
+    white-space: pre;
+    word-break: normal;
+    min-width: 0;
+  }
+
+  /* Rouge tokens — light */
+  .highlight {
+    .c, .c1, .cm, .cs, .cd  { color: $code_comment_light; font-style: italic;
+                              font-variation-settings: $font_code_settings, "CRSV" 1; }
+    .k, .kd, .kn, .kp, .kr, .kt, .kc { color: $code_keyword_light; }
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr { color: $code_string_light; }
+    .m, .mi, .mf, .mh, .mo, .il, .no, .bp { color: $code_const_light; }
+    .n, .na, .nb, .nc, .nd, .ne, .nf, .ni, .nl, .nn, .nt, .nv, .vi, .vg, .vc { color: $code_name_light; }
+    .o, .ow, .p, .pi { color: $code_punct_light; }
+    .gh, .gu { color: $code_keyword_light; font-weight: 600; }
+    .gs { font-weight: 600; }
+    .ge { font-style: italic; }
+    .gd { color: #8C3A3A; }
+    .gi { color: #4F6B34; }
+    .err { color: #8C3A3A; background-color: transparent; }
+    .nb, .bp { color: $code_name_light; }
+  }
+}
+
+/* ---------- dark mode ---------- */
+
+body.dark .Post__content {
+
+  code {
+    background-color: $code_bg_dark;
+    color: $code_keyword_dark;
+  }
+
+  div.highlight {
+    background-color: $code_bg_dark;
+  }
+
+  pre code {
+    color: $code_text_dark;
+  }
+
+  .highlight {
+    .c, .c1, .cm, .cs, .cd  { color: $code_comment_dark; }
+    .k, .kd, .kn, .kp, .kr, .kt, .kc { color: $code_keyword_dark; }
+    .s, .s1, .s2, .sb, .sc, .sd, .se, .sh, .si, .sx, .sr { color: $code_string_dark; }
+    .m, .mi, .mf, .mh, .mo, .il, .no, .bp { color: $code_const_dark; }
+    .n, .na, .nb, .nc, .nd, .ne, .nf, .ni, .nl, .nn, .nt, .nv, .vi, .vg, .vc { color: $code_name_dark; }
+    .o, .ow, .p, .pi { color: $code_punct_dark; }
+    .gh, .gu { color: $code_keyword_dark; }
+    .gd { color: #D98A8A; }
+    .gi { color: #A9C088; }
+    .err { color: #D98A8A; }
+  }
+}
+
+/* ---------- copy button ---------- */
+
+.CodeBlock {
+  position: relative;
+  margin: 0 0 3.6rem;
+
+  &:hover .CodeBlock__copy,
+  .CodeBlock__copy:focus-visible { opacity: 1; }
+}
+
+.CodeBlock__copy {
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+  z-index: 2;
+
+  appearance: none;
+  border: none;
+  cursor: pointer;
+  padding: .5rem .9rem;
+  border-radius: 4px;
+
+  font-size: 1.15rem;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  color: $code_punct_light;
+  background-color: transparentize($color_cream, .25);
+  box-shadow: 0 1px 3px transparentize($color_dark_oak, .9);
+
+  opacity: 0;
+  @include transition($type: opacity, $duration: .18s);
+
+  &:hover { color: $code_text_light; background-color: $color_cream; }
+
+  &.is-copied { color: #4F6B34; opacity: 1; }
+  &.is-failed { color: #8C3A3A; opacity: 1; }
+  &[disabled] { cursor: default; }
+
+  /* touch devices have no hover — keep it visible */
+  @media (hover: none) { opacity: 1; }
+}
+
+body.dark {
+  .CodeBlock__copy {
+    color: $code_punct_dark;
+    background-color: transparentize(#2C2A27, .2);
+    box-shadow: none;
+
+    &:hover { color: $code_text_dark; background-color: #33302C; }
+    &.is-copied { color: #A9C088; }
+    &.is-failed { color: #D98A8A; }
+  }
+}
+
+/* ---------- tables ---------- */
+
+.Post__content {
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 0 3.6rem;
+    font-size: 1.6rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @include media-sm-up { display: table; }
+  }
+
+  thead th {
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: $color_sand;
+    padding: 0 1.6rem .8rem 0;
+    border-bottom: 1px solid transparentize($color_sand, .6);
+    white-space: nowrap;
+  }
+
+  tbody td {
+    padding: 1.2rem 1.6rem 1.2rem 0;
+    border-bottom: 1px solid transparentize($color_sand, .8);
+    vertical-align: top;
+    color: $color_bark;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+}
+
+body.dark .Post__content {
+  thead th { color: #B5AFA3; border-bottom-color: transparentize(#B5AFA3, .6); }
+  tbody td { color: $color_cream; border-bottom-color: transparentize(#B5AFA3, .82); }
+}
+
+/* ---------- small screens ---------- */
+
+@include media-up-to-sm {
+  .Post__content {
+    pre { padding: 1.6rem 1.6rem; }
+    pre code { font-size: 1.3rem; }
+  }
+}
