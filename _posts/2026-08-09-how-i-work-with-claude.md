@@ -145,16 +145,6 @@ My very first session log is titled "Partner model bootstrapped." The note insid
 
 One file. `.partner_model.md`, Claude's model of how to work with me. I told it to own the file, update it silently, and never announce that it had. That last rule matters more than it sounds. The moment these become deliverables you're performing for—something you review rather than something that works on you—they get worse.
 
-## The first thing it caught
-
-Here's a real entry, lightly trimmed:
-
-> **[Confirmed — 2026-08-03] His "is this real?" questions are load-bearing corrections wearing a question mark.** I drafted an HOA condition requiring a homeowner to re-commission their charger from 48A down to 30A. He asked: *"is this real? what's it say in the guidelines? almost everyone i know uses the Tesla UWC at 48A, including me."* There is no amperage limit anywhere in the rules. The entire text is one advisory sentence calling 30A the "ideal," and I had inflated it into a design premise.
-> **Why:** he lives inside the systems he's governing. When my reading contradicts what he's observed across the community, the community wins.
-> **How to apply:** when he asks "is this real?", re-read the primary source verbatim before defending the draft, and quote the exact sentence back.
-
-That cost one mildly embarrassing exchange on a Sunday afternoon 😅. It now prevents a whole class of mistake, permanently, in every future session and every domain. That's a very good trade.
-
 Every entry follows one format, because consistency is what makes a file queryable:
 
 ```markdown
@@ -163,7 +153,15 @@ Every entry follows one format, because consistency is what makes a file queryab
   How to apply: concrete trigger + action.
 ```
 
-Once I had a few of these I understood what the file actually was. It isn't a preferences doc. It's a record of things that went wrong once—each one cheap to write down, expensive to relearn—and shouldn't again.
+That file is past 500 lines now, and every line arrived the same way: something went sideways, we named why, and the fix got written down where the next session would read it. Here's a recent one, lightly trimmed, from an HOA review a few days ago:
+
+> **[Confirmed — 2026-08-03] His "is this real?" questions are load-bearing corrections wearing a question mark.** I drafted an HOA condition requiring a homeowner to re-commission their charger from 48A down to 30A. He asked: *"is this real? what's it say in the guidelines? almost everyone i know uses the Tesla UWC at 48A, including me."* There is no amperage limit anywhere in the rules. The entire text is one advisory sentence calling 30A the "ideal," and I had inflated it into a design premise.
+> **Why:** he lives inside the systems he's governing. When my reading contradicts what he's observed across the community, the community wins.
+> **How to apply:** when he asks "is this real?", re-read the primary source verbatim before defending the draft, and quote the exact sentence back.
+
+That cost one mildly embarrassing exchange on a Sunday afternoon 😅. It now prevents a whole class of mistake, permanently, in every future session and every domain. That's a very good trade.
+
+Multiply that by a few hundred wraps. The file isn't a preferences doc, it's a record of things that went wrong once—each one cheap to write down, expensive to relearn. Week after week it gets a little harder to make the same mistake twice.
 
 ## Remembering what happened last session
 
