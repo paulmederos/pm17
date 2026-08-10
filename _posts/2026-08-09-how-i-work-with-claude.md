@@ -18,7 +18,7 @@ We cover a lot of ground together. Some of what's in there:
 - my dad's medications, reconciled against the physical pill bottles after a hospital discharge
 - flipping our marketing speartip from sleep to energy after a three-lane research spike, then shipping the new landing page live that same afternoon
 - why my SHBG and prolactin were both drifting
-- an overnight build that ran while I was at the theater, screenshots landing on my phone as each phase finished 🎭
+- our family assistant filling in the whole school year on the shared calendar, 35 no-school days and 13 early dismissals, working off that same context repo 🗓️
 - an offer-architecture reframe pushed across three client decks and out to production
 - a school auction proposal written for one specific parent who had to be able to send it around herself
 
@@ -274,18 +274,23 @@ Brittany runs her own self and partner models, built on the same shape as mine, 
 
 Then there's Danu, our family assistant. She's an OpenClaw instance we reach over WhatsApp, connected to both of our accounts, our calendars, and the kids' school information. She handles the family lane: roadtrip planning, meal loops, the daily and weekly family briefs.
 
-The part worth showing is *how* she uses the same files. One of her crons is called Plate Assist. It runs at 7:45 each morning and sends me exactly one WhatsApp message. Its first instruction isn't "read my todo list." It's this:
+The part worth showing is *how* she uses the same files. One of her crons is called Plate Assist. It runs each morning and sends exactly one message to our family group. Its first instruction isn't "read the todo list." It's this:
 
 ```bash
 git -C ~/repos/paul-context pull --ff-only \
   || gh repo clone <me>/paul-context ~/repos/paul-context
+
+git -C ~/repos/partner-context pull --ff-only \
+  || gh repo clone <partner>/partner-context ~/repos/partner-context
 ```
 
-She clones my context repo, reads the latest CEO review and the last few days of session logs, and only then pulls my Notion todos, calendar, inbox, and workout journal. The ordering is written into her spec as a rule: load the priority context first, then interpret the todo list through that lens. When the newest weekly review and an older Notion note disagree, the review wins.
+She clones both of our context repos, reads the latest CEO review and the last few days of session logs, and only then pulls our todos and calendars. The ordering is written into her spec as a rule: load the priority context first, then interpret the todo list through that lens. When the newest weekly review and an older note disagree, the review wins.
 
-What comes back is four lines. The highest-leverage move available today. One piece she can take off my hands, phrased so "do it" is a complete reply. A couple of suggested todo edits, including deletions. And a read on whether the day should assume real energy or protect recovery, inferred from gaps in my workout journal rather than asked about.
+What comes back is three short sections. The highest-leverage move available today, across both our plates. One to three todo edits, including deletions. And one piece she can take off our hands, phrased so "do it" is a complete reply.
 
-None of that works without the context repo. A generic assistant with my calendar and my todos would read them back to me in a different font. The difference is a file that already knows which todo I've been circling for three weeks, and why.
+She also archives every brief she sends and reads the last few before writing a new one, so she stops repeating a nudge we've already heard. Same trick as the session logs, pointed at herself.
+
+None of that works without the context repos. A generic assistant with our calendars and our todos would read them back to us in a different font. The difference is a file that already knows which todo I've been circling for three weeks, and why.
 
 The thing I didn't anticipate is that context built for *me* turned out to be most of what Danu needed to be useful to *us*. Voice, family details, standing preferences, the rules about how we talk to each other's people. Almost all of it ported over intact.
 
