@@ -11,28 +11,26 @@ coauthored_note: "I sketched the outline and the direction, Claude explored a fe
 teaser: "I wanted a setup with Claude that got a little better every session instead of starting over each time. Four months and 135 session logs later, this is where I landed, and it's working better than I expected."
 ---
 
-Over the last four months Claude and I have built up 135 session logs. These aren't chat transcripts. At the end of each working session Claude writes a markdown file naming what got done, what got decided, and what's still open.
+Over the last four months Claude and I have built up 135 session logs. We've covered a lot of ground together. Some of what's in there:
 
-We cover a lot of ground together. Some of what's in there:
-
-- a whole feature for my iOS app, taken from research through design crit to a merged PR with thirteen new passing tests ⚡
-- an HOA EV-charger review, so one homeowner doesn't become the test case for a dormant rule
-- my dad's medications, reconciled against the physical pill bottles after a hospital discharge
-- flipping our marketing speartip from sleep to energy after a three-lane research spike, then shipping the new landing page live that same afternoon
-- why my SHBG and prolactin were both drifting
+- a whole feature for my iOS app, taken from research through design crit to a merged PR with thirteen new passing tests (ran overnight, unsupervised, and I woke up to a fresh build on my phone) ⚡
+- an HOA EV-charger review, so one homeowner doesn't become the test case for a dormant rule 🔌
+- my dad's medications, reconciled against the physical pill bottles after a hospital discharge, with notes on what to send his primary care about the next milestone 💊
+- flipping our marketing speartip from sleep to energy after a three-lane research spike, then shipping the new landing page live that same afternoon 🎯
+- why my SHBG and prolactin were both drifting 🩸
 - our family assistant filling in the whole school year on the shared calendar, 35 no-school days and 13 early dismissals, working off that same context repo 🗓️
-- an offer-architecture reframe pushed across three client decks and out to production
-- a school auction proposal written for one specific parent who had to be able to send it around herself
+- an offer-architecture reframe pushed across three client decks and out to production 🗂️
+- a school auction proposal written for one specific parent who had to be able to send it around herself 🎟️
 
-Every one of those ran on the same machine, against the same accumulated context. Claude knows my voice, my family, my projects, and the calls I've already made about all three. Nothing needs re-explaining. Because it all lives in one place it interconnects, so something settled in one part of my life shows up where it's useful in another. The work feels persistent instead of episodic, and it keeps getting sharper as we both learn.
+Every one of those ran on the same machine, against the same accumulated context. Claude knows my voice, my family, and my projects, along with the decisions I've already made and the reasons behind them. It keeps learning as things change, so it gets a little sharper each turn. Nothing needs re-explaining. Because it all lives in one place it interconnects, so something settled in one part of my life shows up where it's useful in another. The work feels persistent instead of episodic, and it keeps getting sharper as we both learn.
 
-Below is the whole thing at a glance, a prompt that will build it for you, and a build order with the real costs attached. Then the story of how it got this way, which is really a story about the order things broke in.
+Below is the whole thing at a glance, a prompt that will build it for you, and a build order with the trade-offs I wrangled through along the way. Then the story of how it got this way, which is really a story about the order things broke in.
 
 ---
 
 ## At a glance
 
-**What I built.** One private git repo, `~/my-context/`, holding six things:
+**What I built.** One private git repo, `~/paul-context/`, holding six things:
 
 - `CLAUDE.md`: the loader. Names the session-start and end-of-session rituals.
 - `profile.md`: who I am, what I'm building, how I want to be reasoned with.
@@ -55,7 +53,8 @@ This is designed to be set up by the assistant that's going to use it. Paste thi
 
 ```
 Read https://www.paulmederos.com/how-i-work-with-claude-in-august-2026 and set this up
-for me in ~/my-context/.
+for me in ~/<name>-context/. Use my first name if you know it, otherwise
+personal-context.
 
 Build rungs 1 through 4: the repo, profile.md, voice.md, the thin global
 CLAUDE.md with the @ include, the loaded CLAUDE.md with the session-start
@@ -97,17 +96,19 @@ through use.
 git init it, but do not create a remote. I'll decide where it lives.
 ```
 
-Two things in there matter more than they look. **Reading across time is the trick.** Two months tells you how you write now, and the older samples tell you which parts are actually you rather than whatever mood you've been in since spring. And **asking which register came back thinnest** turns a blind spot into a question you can answer in one message, instead of a file that gets your work voice wrong for a month without either of you noticing.
+Two things in there matter more than they look, and both are easy to skim past.
 
-That last line about the remote is deliberate too. Decide the privacy posture yourself, before anything goes into the repo.
+**#1. Building a voice file takes samples from across time.** Two months of your writing tells you how you sound now. The older samples tell you which parts are actually you, rather than whatever mood you've been in since spring.
+
+**#2. Ask which register came back thinnest.** That turns a blind spot into a question you can answer in one message, instead of a file that gets your work voice wrong for a month without either of you noticing.
 
 ---
 
 ## Where to start, and what it costs
 
-Please don't build all of this at once 🙏 I didn't, and if I'd tried on day one I would have built the wrong thing and then defended it. Here's the ladder in the order the value actually arrives:
+Please don't build all of this at once 🙏 I didn't, and if I had, it'd be an overengineered pile I didn't understand well. I'd have ripped it out later once it got too complex, because I wouldn't want to shave that yak. Here's the ladder in the order the value actually arrives:
 
-1. **The repo, a profile, and a voice file, in about twenty minutes.** Make `~/my-context/` a git repo. Put a `profile.md` in it covering what you do, what you're working on, and how you want to be reasoned with. Add a `voice.md` holding three real things you've written, one per register. Point your global `CLAUDE.md` at the repo with an `@` include.
+1. **The repo, a profile, and a voice file, in about twenty minutes.** Make `~/<name>-context/` a git repo. Put a `profile.md` in it covering what you do, what you're working on, and how you want to be reasoned with. Add a `voice.md` holding three real things you've written, one per register. Point your global `CLAUDE.md` at the repo with an `@` include.
 2. **Session logs, over your first week.** Have your assistant write one dated file per session at the end of it, not you. A lazy log beats no log by a wide margin. Add the session-start ritual to your `CLAUDE.md` so the most recent one gets read at the top of every session.
 3. **The partner model, which is the real unlock.** Add `.partner_model.md`. Tell your assistant it owns this file, updates it silently, and prioritizes course corrections above everything else. Give it the entry format, then wait. Two weeks of genuine corrections beat anything either of you could write on day one.
 4. **The self model and the wrap ritual.** Add `.self_model.md`, and have every session close by writing all three artifacts.
@@ -177,13 +178,13 @@ The Decisions block is the sleeper, because it records what I *rejected* and why
 This is also where the loader file earned its place. Claude Code reads `~/.claude/CLAUDE.md` at the start of every session. Mine is deliberately thin. Three lines: a heading, one sentence saying where the real file lives, and the include that pulls it in.
 
 ```markdown
-# My context lives in `~/my-context/`
+# Paul's context lives in `~/paul-context/`
 
-All loading rules, model conventions, and session log practices live in the
-canonical repo. This file is intentionally thin. A fresh machine is
-`bash ~/my-context/setup.sh`.
+All loading rules, partner+self model conventions, and session log practices
+live in the canonical repo. This file is intentionally thin. A fresh machine
+setup is `bash ~/paul-context/setup.sh`.
 
-@~/my-context/CLAUDE.md
+@~/paul-context/CLAUDE.md
 ```
 
 The `@` include pulls in the real file, which is where the rules live. Its most important job is the session-start ritual:
@@ -191,7 +192,7 @@ The `@` include pulls in the real file, which is where the rules live. Its most 
 ```markdown
 **Loading behavior at session start:**
 
-0. Pull the context repo first: `cd ~/my-context && git pull --ff-only`.
+0. Pull the context repo first: `cd ~/paul-context && git pull --ff-only`.
    It's edited by parallel sessions, so pull *before* reading anything.
 1. Read `.partner_model.md` AND `.self_model.md`. Always, every session.
 2. `ls -t sessions/*/*.md | head -3` → read the most recent session log.
