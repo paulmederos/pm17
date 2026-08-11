@@ -19,6 +19,8 @@ These constraints exist to force differentiation. Unique voice → spiky (outsid
 **Em dashes with spaces: "something — like this — everywhere"**
 - A hallmark of LLM prose. Real writers either use tight em dashes (something—like this) or don't em-dash every other sentence.
 - ✅ Use em dashes sparingly and without spaces. Or use commas, parentheses, or just break into two sentences.
+- **This rule is about grammar, not layout.** A spaced em dash used as a *formatting* device is fine and often the right call: label separators (`#1 — Reading across time`), list lead-ins, table cells, entry markers (`[Confirmed — 2026-08-03]`), key–value pairs. What's banned is the em dash as a sentence-structure crutch, mid-clause, over and over.
+- Practical test before "fixing" one: is it joining two parts of a sentence, or separating a label from its content? Only the first counts.
 
 **Overused "vibe" words**
 Words like "quietly," "intentional," "shift," "corner," "landscape," "navigate," "straightforward," "leverage," "delve," "tapestry" — not wrong individually, but suspiciously overrepresented in AI copy.
