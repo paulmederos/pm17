@@ -24,7 +24,7 @@ We cover a lot of ground together. Some of what's in there:
 
 Every one of those ran on the same machine, against the same accumulated context. Claude knows my voice, my family, my projects, and the calls I've already made about all three. Nothing needs re-explaining. Because it all lives in one place it interconnects, so something settled in one part of my life shows up where it's useful in another. The work feels persistent instead of episodic, and it keeps getting sharper as we both learn.
 
-Below is the whole thing at a glance, a prompt that will build it for you, a checklist, and the honest trade-offs. Then the story of how it got this way, which is really a story about the order things broke in.
+Below is the whole thing at a glance, a prompt that will build it for you, and a build order with the real costs attached. Then the story of how it got this way, which is really a story about the order things broke in.
 
 ---
 
@@ -101,35 +101,28 @@ That last line about the remote is deliberate too. Decide the privacy posture yo
 
 ---
 
-## The checklist
+## Where to start, and what it costs
 
 Please don't build all of this at once 🙏 I didn't, and if I'd tried on day one I would have built the wrong thing and then defended it. Here's the ladder in the order the value actually arrives:
 
-**Rung 1 (twenty minutes).** Make `~/my-context/` a git repo. Put a `profile.md` in it covering what you do, what you're working on, and how you want to be reasoned with. Add a `voice.md` holding three real things you've written, one per register. Point your global `CLAUDE.md` at the repo with an `@` include.
+1. **The repo, a profile, and a voice file, in about twenty minutes.** Make `~/my-context/` a git repo. Put a `profile.md` in it covering what you do, what you're working on, and how you want to be reasoned with. Add a `voice.md` holding three real things you've written, one per register. Point your global `CLAUDE.md` at the repo with an `@` include.
+2. **Session logs, over your first week.** Have your assistant write one dated file per session at the end of it, not you. A lazy log beats no log by a wide margin. Add the session-start ritual to your `CLAUDE.md` so the most recent one gets read at the top of every session.
+3. **The partner model, which is the real unlock.** Add `.partner_model.md`. Tell your assistant it owns this file, updates it silently, and prioritizes course corrections above everything else. Give it the entry format, then wait. Two weeks of genuine corrections beat anything either of you could write on day one.
+4. **The self model and the wrap ritual.** Add `.self_model.md`, and have every session close by writing all three artifacts.
+5. **Distillation, so the files stay sharp.** Put a `Last distillation:` line at the top of each model file, and have the session-start ritual surface it once it goes stale.
+6. **Shared context, once the files are good.** A partner's own models, a household agent reading the same repos.
 
-**Rung 2 (one week).** Start session logs. Have your assistant write one dated file per session at the end of it, not you. A lazy log beats no log by a wide margin. Add the session-start ritual to your `CLAUDE.md` so the most recent one gets read at the top of every session.
+That's the build order. Here's what it costs to keep running, because none of it is free:
 
-**Rung 3 (the real unlock).** Add `.partner_model.md`. Tell your assistant it owns this file, updates it silently, and prioritizes course corrections above everything else. Give it the entry format, then wait. Two weeks of genuine corrections beat anything either of you could write on day one.
+🧹 **There's real upkeep, though less than you'd think.** A light distillation pass takes a few minutes. A full one runs longer, mostly because I get pulled into reading old entries and lose the thread. The wrap adds a couple of minutes to the end of a session. Ten passes in four months is the actual rate, and letting them slide isn't free: the files get noisy, and the noise costs recall.
 
-**Rung 4.** Add `.self_model.md` and the three-artifact wrap ritual.
+🔀 **Parallel sessions overlap, and it's mostly a non-issue.** I run more than one at a time, so two sessions sometimes append to the same model file at once. My files carry a keep-both-sides merge rule for exactly this, and Claude handles the conflict well enough that it's never actually cost me anything. Once, a session swept another session's work into its commit. Everything still landed where it belonged.
 
-**Rung 5.** Add distillation. Put a `Last distillation:` line at the top of each model file, and have the session-start ritual surface it once it goes stale.
+🐢 **It's slow to pay off.** The first two weeks feel like bookkeeping. The compounding is real, and it arrives later than you want it to.
 
-**Rung 6.** Once the files are genuinely good, share the substrate: a partner's own models, a household agent reading the same repos.
+🪤 **It's easy to make the system the project.** Tending the files is satisfying in a way the actual work sometimes isn't, and I've burned an afternoon in there more than once. So the check I run is simple: did this pass make the next session faster? If I'm not re-explaining and re-deciding less than I was before, I was just procrastinating with extra steps. 😅
 
----
-
-## Trade-offs, honestly
-
-**There's real upkeep, though less than you'd think.** A light distillation pass takes a few minutes. A full one runs longer, mostly because I get pulled into reading old entries and lose the thread. The wrap adds a couple of minutes to the end of a session. Ten passes in four months is the actual rate, and letting them slide isn't free: the files get noisy, and the noise costs recall.
-
-**Parallel sessions overlap, and it's mostly a non-issue.** I run more than one at a time, so two sessions sometimes append to the same model file at once. My files carry a keep-both-sides merge rule for exactly this, and Claude handles the conflict well enough that it's never actually cost me anything. Once, a session swept another session's work into its commit. Everything still landed where it belonged.
-
-**It's slow to pay off.** The first two weeks feel like bookkeeping. The compounding is real, and it arrives later than you want it to.
-
-**It's easy to make the system the project.** Tending the files is satisfying in a way the actual work sometimes isn't, and I've burned an afternoon in there more than once. So the check I run is simple: did this pass make the next session faster? If I'm not re-explaining and re-deciding less than I was before, I was just procrastinating with extra steps. 😅
-
-**Local-first costs some convenience.** Everything runs in Claude Code on my machine, in my repos. Cloud sessions are frictionless to start, which is exactly the problem: a frictionless start makes for a frictionless abandon. When the work lives on the machine I'm sitting at, standing up from the desk closes it. I do use remote control to keep something moving while I'm out walking. That door swings toward toxicity if you let it. The anchor mostly holds.
+💻 **Local-first costs some convenience.** Everything runs in Claude Code on my machine, in my repos. Cloud sessions are frictionless to start, which is exactly the problem: a frictionless start makes for a frictionless abandon. When the work lives on the machine I'm sitting at, standing up from the desk closes it. I do use remote control to keep something moving while I'm out walking. That door swings toward toxicity if you let it. The anchor mostly holds.
 
 ---
 
