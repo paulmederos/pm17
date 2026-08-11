@@ -128,7 +128,7 @@ That's the build order. Here's what it costs to keep running, because none of it
 
 ## How I got here
 
-None of this was designed up front. Each layer showed up because the one before it broke in a specific way, which is also the order I'd recommend building it.
+OK, I wanna say I'm a genius here and planned all this out... but heck, of course it wasn't designed upfront! (To my credit, I did sketch a bit of it, but I didn't want to overengineer a system without putting it through its paces.) We layered it in bit by bit because we kept running into things we wanted to fix and improve. Turns out on review, this is exactly how I'd recommend building it.
 
 ### It started with one file 🌱
 
