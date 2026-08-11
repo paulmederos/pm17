@@ -34,6 +34,22 @@ layout: default
           <h1 class="font-600 mb-6">{{ page.title }}</h1>
           {{ content }}
         </div>
+
+        {% if page.coauthored %}
+          <div class="coauthored font-meta">
+            <p>
+              🤝 <strong>Written with {{ page.coauthored }}.</strong>
+              {% if page.coauthored_note %}
+                {{ page.coauthored_note }}
+              {% else %}
+                I sketched the outline and the direction, Claude explored a few
+                structures and drafted, then I edited nearly line by line with
+                Claude's input throughout.
+              {% endif %}
+              The <a href="https://github.com/paulmederos/pm17/commits/main/{{ page.path }}">full edit history</a> is public.
+            </p>
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

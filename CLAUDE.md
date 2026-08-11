@@ -18,12 +18,38 @@ title: "Post Title"
 permalink: "url-slug"
 date: YYYY-MM-DD
 categories: journal          # journal | essay | case_study | note | misc
+coauthored: "Claude Opus 5"  # see below
 teaser: "Short description for previews and social."
 ---
 ```
 
 - Use `categories: journal, wip` to mark a post as work-in-progress (shows a 🌱 banner)
-- Optional fields: `hero_image`, `subtitle`
+- Optional fields: `hero_image`, `subtitle`, `coauthored`, `coauthored_note`
+
+### Co-authorship disclosure
+
+Anything written together with an AI carries a `coauthored` note at the foot of the post. **The value is the model name and version, not just "Claude"** — a post is a snapshot of a moment, and behaviour differs enough between releases that the version is the honest detail. Read it from the session environment block; don't guess.
+
+```yaml
+coauthored: "Claude Opus 5"
+```
+
+That alone renders the box with the default process description, which is the one that fits nearly every post here:
+
+> I sketched the outline and the direction, Claude explored a few structures and drafted, then I edited nearly line by line with Claude's input throughout.
+
+**Edit `coauthored_note` whenever that isn't what actually happened.** The box makes a claim about process, so leaving the default on a post that went differently is a small lie that compounds across the archive. Add the override:
+
+```yaml
+coauthored_note: "Claude drafted from a voice memo; I rewrote the middle third and cut the close."
+```
+
+Rules of thumb:
+
+- If Paul wrote the prose and Claude only edited, say that. Don't let the default imply Claude drafted.
+- If the post spans multiple models (a swap mid-project), name both.
+- If Claude wasn't involved at all, omit `coauthored` entirely rather than writing a note that minimises it.
+- The box links to that post's commit history automatically, so the claim is checkable. Keep it truthful enough to survive someone clicking.
 
 ## Library
 

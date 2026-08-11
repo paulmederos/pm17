@@ -133,3 +133,30 @@ body.dark .Post__content {
   }
 
 }
+
+/* ---------- co-authorship note ---------- */
+
+/* Lives outside .Post__content so the closing ∎ on the last paragraph
+   still matches its `:last-child` selector. */
+.coauthored {
+  margin-top: 2.4rem;
+  padding: 1.6rem 1.8rem;
+  background-color: #F3EFE2;
+  border-radius: 6px;
+
+  p {
+    font-size: $font_size_xs;
+    line-height: 1.6;
+    color: $color_bark;
+    margin: 0;
+  }
+
+  strong { color: $color_wet_sand; }
+  a { color: $color_wet_sand; }
+}
+
+body.dark .coauthored {
+  background-color: #1D1C1A;
+  p { color: #B3ADA1; }
+  strong, a { color: $color_cream; }
+}

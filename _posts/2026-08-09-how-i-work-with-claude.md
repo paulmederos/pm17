@@ -6,6 +6,7 @@ date: 2026-08-09
 categories:
   - essay
   - wip
+coauthored: "Claude Opus 5"
 teaser: "I wanted a setup with Claude that got a little better every session instead of starting over each time. Four months and 135 session logs later, this is where I landed, and it's working better than I expected."
 ---
 
