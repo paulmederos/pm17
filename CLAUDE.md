@@ -28,28 +28,24 @@ teaser: "Short description for previews and social."
 
 ### Co-authorship disclosure
 
-Anything written together with an AI carries a `coauthored` note at the foot of the post. **The value is the model name and version, not just "Claude"** — a post is a snapshot of a moment, and behaviour differs enough between releases that the version is the honest detail. Read it from the session environment block; don't guess.
+Anything written together with an AI carries a note at the foot of the post. **Both keys are required, and there is no default** — if either is missing, no footer renders at all.
 
 ```yaml
 coauthored: "Claude Opus 5"
+coauthored_note: "I sketched the outline and the direction, Claude explored a few structures and drafted, then I edited nearly line by line with Claude's input throughout."
 ```
 
-That alone renders the box with the default process description, which is the one that fits nearly every post here:
+**`coauthored`** is the model name *and version*, not just "Claude". A post is a snapshot of a moment, and behaviour differs enough between releases that the version is the honest detail. Read it from the session environment block; don't guess. If a post spanned a model swap, name both.
 
-> I sketched the outline and the direction, Claude explored a few structures and drafted, then I edited nearly line by line with Claude's input throughout.
+**`coauthored_note`** is one sentence describing how *this* post actually got written. There is deliberately no fallback copy. The note asserts something specific about process, so a default would quietly be wrong on every post that went differently, and the box links to that post's real commit history — keep it truthful enough to survive someone clicking.
 
-**Edit `coauthored_note` whenever that isn't what actually happened.** The box makes a claim about process, so leaving the default on a post that went differently is a small lie that compounds across the archive. Add the override:
+Most posts here follow the shape in the example above. Write it out anyway rather than reaching for boilerplate, and change it when the truth changes:
 
-```yaml
-coauthored_note: "Claude drafted from a voice memo; I rewrote the middle third and cut the close."
-```
+- Paul wrote the prose and Claude only edited? Say that. Don't imply Claude drafted.
+- Claude drafted from a voice memo or a transcript? Say where the raw material came from.
+- Claude wasn't involved? Omit both keys. No footer is the correct output.
 
-Rules of thumb:
-
-- If Paul wrote the prose and Claude only edited, say that. Don't let the default imply Claude drafted.
-- If the post spans multiple models (a swap mid-project), name both.
-- If Claude wasn't involved at all, omit `coauthored` entirely rather than writing a note that minimises it.
-- The box links to that post's commit history automatically, so the claim is checkable. Keep it truthful enough to survive someone clicking.
+**Known trade-off:** because there's no default, forgetting `coauthored_note` silently drops the disclosure rather than showing a wrong one. That's the intended failure direction, but it means the keys need adding at publish time, not later.
 
 ## Library
 

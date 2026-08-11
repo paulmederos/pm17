@@ -35,17 +35,17 @@ layout: default
           {{ content }}
         </div>
 
-        {% if page.coauthored %}
+        {% comment %}
+          Both keys are required. There is deliberately no default process
+          copy: the note asserts something specific about how a post got
+          written, and a default would quietly be wrong on any post that
+          went differently.
+        {% endcomment %}
+        {% if page.coauthored and page.coauthored_note %}
           <div class="coauthored font-meta">
             <p>
               🤝 <strong>Written with {{ page.coauthored }}.</strong>
-              {% if page.coauthored_note %}
-                {{ page.coauthored_note }}
-              {% else %}
-                I sketched the outline and the direction, Claude explored a few
-                structures and drafted, then I edited nearly line by line with
-                Claude's input throughout.
-              {% endif %}
+              {{ page.coauthored_note }}
               The <a href="https://github.com/paulmederos/pm17/commits/main/{{ page.path }}">full edit history</a> is public.
             </p>
           </div>

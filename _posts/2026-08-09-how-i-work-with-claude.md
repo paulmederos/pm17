@@ -7,6 +7,7 @@ categories:
   - essay
   - wip
 coauthored: "Claude Opus 5"
+coauthored_note: "I sketched the outline and the direction, Claude explored a few structures and drafted, then I edited nearly line by line with Claude's input throughout."
 teaser: "I wanted a setup with Claude that got a little better every session instead of starting over each time. Four months and 135 session logs later, this is where I landed, and it's working better than I expected."
 ---
 
