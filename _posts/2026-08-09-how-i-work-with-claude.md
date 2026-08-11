@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How I Work with Claude, August 2026 Edition"
-permalink: "how-i-work-with-claude"
+permalink: "how-i-work-with-claude-in-august-2026"
 date: 2026-08-09
 categories:
   - essay
@@ -54,7 +54,7 @@ Below is the whole thing at a glance, a prompt that will build it for you, and a
 This is designed to be set up by the assistant that's going to use it. Paste this into a fresh Claude Code session:
 
 ```
-Read https://www.paulmederos.com/how-i-work-with-claude and set this system up
+Read https://www.paulmederos.com/how-i-work-with-claude-in-august-2026 and set this up
 for me in ~/my-context/.
 
 Build rungs 1 through 4: the repo, profile.md, voice.md, the thin global
