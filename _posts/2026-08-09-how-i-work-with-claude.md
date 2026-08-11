@@ -152,7 +152,7 @@ That file is past 500 lines now, and every line arrived the same way: something 
 > **Why:** he lives inside the systems he's governing. When my reading contradicts what he's observed across the community, the community wins.
 > **How to apply:** when he asks "is this real?", re-read the primary source verbatim before defending the draft, and quote the exact sentence back.
 
-That cost one mildly embarrassing exchange on a Sunday afternoon 😅. It now prevents a whole class of mistake, permanently, in every future session and every domain. That's a very good trade.
+The whole thing cost me one skeptical question on a Sunday afternoon. What it bought is permanent: that class of mistake doesn't recur, in any session, in any domain. Great trade.
 
 Multiply that by a few hundred wraps. The file isn't a preferences doc, it's a record of things that went wrong once—each one cheap to write down, expensive to relearn. Week after week it gets a little harder to make the same mistake twice.
 
