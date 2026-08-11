@@ -132,7 +132,7 @@ OK, I wanna say I'm a genius here and planned all this out... but heck, of cours
 
 ### It started with one file 🌱
 
-I read [Matt Greenfield](https://www.threads.com/@sobri909) posting about session milestones and partner models. He builds Arc, and he'd been keeping markdown scaffolding alongside his projects for months.
+I read [Matt Greenfield](https://www.threads.com/@sobri909), founder of [Arc](https://apps.apple.com/us/app/arc-timeline-4/id6740688708), posting about session milestones and partner models. He'd been keeping markdown scaffolding alongside his projects for months, and I was envious of the depth of conversations he was having with his agents.
 
 My very first session log is titled "Partner model bootstrapped." The note inside says I considered building the whole portable-context architecture at once and decided against it. Highest-leverage single piece, smallest commitment. That was the right call, and it's the same advice I'd give you.
 
