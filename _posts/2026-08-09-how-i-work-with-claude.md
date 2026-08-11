@@ -325,8 +325,6 @@ Every clause in that law was paid for with a real mistake. A rule you paid for i
 
 ---
 
-A few months in, this is working great for me. I sat down recently and typed "gm, let's pick up from last session." What came back: a summary of what we'd done, the threads still open, the state of the three repos I'd touched that week, and a question about where I wanted to focus. Nothing needed retelling. No settled decision got relitigated. Nobody had to be reminded that the two Pauls in the medical records are different people.
+A few months in, this is working great for me. I sat down recently and typed "gm, let's pick up from last session." What came back: a summary of what we'd done, the threads still open, the state of the three repos I'd touched that week, and a question about where I wanted to focus. Nothing needed retelling. No settled decision got relitigated. None of the lessons we'd already paid for had to be paid for twice.
 
-The models keep getting better on their own. The context is the part that only gets better if you tend it ❤️
-
-peace 🌿
+The models keep getting better on their own. The context is the part that only gets better if you tend it.
