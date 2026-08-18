@@ -72,9 +72,11 @@ layout: default
           </div>
         </div>
 
-        <div class="app-row">
-          <a href="https://coplayclub.com" target="_blank" rel="noopener" class="app-icon-link">
-            <img class="app-icon" src="/images/apps/coplay-icon.png" alt="Coplay Club app icon" width="72" height="72" loading="lazy" />
+        <div class="app-row app-row--rotating">
+          <a href="https://coplayclub.com" target="_blank" rel="noopener" class="app-icon-link app-icon-link--rotating">
+            {%- for n in (1..5) %}
+            <img class="app-icon app-icon-frame app-icon-frame--{{ n }}" src="/images/apps/coplay-icon-{{ n }}.png" {% if n == 1 %}alt="Coplay Club app icon"{% else %}alt="" aria-hidden="true"{% endif %} width="72" height="72" loading="lazy" />
+            {%- endfor %}
           </a>
           <div class="app-body">
             <p class="mb-1"><a href="https://coplayclub.com" target="_blank" rel="noopener" class="font-md font-500">Coplay Club</a></p>

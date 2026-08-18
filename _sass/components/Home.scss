@@ -68,3 +68,54 @@
 .wip-tag {
   color: darken($color_sunlight, 10%);
 }
+
+/* Coplay's icon is a set of five expressions rather than one. Hovering anywhere
+   on its row flips through them, then settles back on the first.
+
+   The frames stack, and each takes its turn at full opacity. Only frames 2-5
+   animate — frame 1 sits underneath as the resting state and the rest simply
+   cover it when their slice comes up, which they can do because these are
+   solid-backed tiles like every app icon here. */
+$coplay-frames: 5;
+$coplay-frame-duration: .3s;
+
+.app-icon-link--rotating {
+  position: relative;
+  width: 72px;
+  height: 72px;
+
+  .app-icon-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @for $i from 2 through $coplay-frames {
+    .app-icon-frame--#{$i} {
+      opacity: 0;
+    }
+  }
+}
+
+/* The whole row is the target — the icon alone is a small thing to ask someone
+   to find. Keyboard users get it off the icon link, which is what they focus. */
+@for $i from 2 through $coplay-frames {
+  .app-row--rotating:hover .app-icon-frame--#{$i},
+  .app-icon-link--rotating:focus-visible .app-icon-frame--#{$i} {
+    animation: coplay-frame-cycle ($coplay-frames * $coplay-frame-duration) steps(1, end) infinite;
+    animation-delay: ($i - 1) * $coplay-frame-duration;
+  }
+}
+
+@keyframes coplay-frame-cycle {
+  0% { opacity: 1; }
+  20% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-row--rotating:hover .app-icon-frame,
+  .app-icon-link--rotating:focus-visible .app-icon-frame {
+    animation: none;
+  }
+}
