@@ -41,6 +41,22 @@ Words like "quietly," "intentional," "shift," "corner," "landscape," "navigate,"
 - ✅ Count them before shipping. Most can just be stated positively. "Pruning is recall protection rather than tidiness" → "Pruning protects recall."
 - Inline contrast ("candor, not code") is fine and is genuinely part of the voice here. The banned shape is the two-sentence TED version and the every-paragraph habit.
 
+**Headings that don't name their content: "Why this matters" / "Worth noticing" / "The live demo" / "The one thing that can silently break this"**
+- The first three could sit above literally any section, so they carry no information. The fourth carries menace instead of information, which is worse, because manufactured stakes read as a sales pitch.
+- Headings describe content, never format and never drama. "The live demo" describes the format. "Worth noticing" describes nothing at all.
+- Practical test: cover the section and read only the heading. If you can't tell what's underneath, rewrite it.
+- ✅ Name the actual content. "When a family's two email addresses differ." "Dropping Spring Fling to two spots moves four families."
+
+**Stage directions to the reader: "This is the part worth doing on a screenshare" / "That's the useful thing to see" / "Read it top to bottom"**
+- The document telling the reader how to consume or perform it. It adds nothing a reader can't work out, and it ages badly, because the screenshare ends and the sentence stays.
+- Related tic: announcing significance instead of demonstrating it. "That's the useful thing to see: X" is just "X" with throat-clearing in front.
+- ✅ State the thing. If it's useful, the reader will notice.
+
+**Punchy claims that aren't literally true: "There is no algorithm here"**
+- The rhythm outruns the fact. There was an algorithm, and someone technical would have caught it. A line that sounds sharp but is false costs more credibility than a flat line ever saves.
+- The sibling failure is a quantitative claim nobody measured. "Watch the three counts, they move every time" was written about a demo where one count sits still in 94% of runs, which the first curious reader would have found in two clicks.
+- ✅ If a sentence asserts a fact about your own work, verify it before shipping. If it asserts a frequency, measure it and use the real number, which is usually more interesting than the guess.
+
 ### Rhythm targets (measured from this site's own posts)
 
 Useful when editing, and especially when an LLM drafted the first pass. Numbers are from the prose in `_posts/`, excluding code blocks, tables, and block quotes.
@@ -65,6 +81,10 @@ w=[len(x.split()) for x in s]
 print('mean %.1fw | short %d%% | spaced-emdash %d | rather-than %d'
       % (sum(w)/len(w), 100*len([x for x in w if x<=4])//len(w),
          p.count(' — '), p.lower().count('rather than')))
+VAGUE=('why this matters','worth noting','worth noticing','the live demo','the result',
+       'what nobody tells you','the hidden','silently','here is the thing',"here's the thing")
+bad=[h for h in re.findall(r'^#{1,4}\s*(.+)$',body,flags=re.M) if any(v in h.lower() for v in VAGUE)]
+if bad: print('contentless/dramatic headings:', bad)
 EOF
 ```
 
