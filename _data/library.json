@@ -1,5 +1,77 @@
 [
   {
+    "id": "2026092201",
+    "title": "On the Equality of All Things",
+    "author": "Carlo Rovelli",
+    "isbn": null,
+    "isbn13": "9781668092422",
+    "year": "2026",
+    "rating": null,
+    "pages": null,
+    "date_read": null,
+    "date_added": "2026/09/22"
+  },
+  {
+    "id": "2026080201",
+    "title": "A Parade of Horribles (Dungeon Crawler Carl, #8)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9798217190065",
+    "year": "2026",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/08/02",
+    "date_added": "2026/09/22"
+  },
+  {
+    "id": "2026072601",
+    "title": "This Inevitable Ruin (Dungeon Crawler Carl, #7)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9798217190041",
+    "year": "2024",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/07/26",
+    "date_added": "2026/09/22"
+  },
+  {
+    "id": "2026071901",
+    "title": "The Eye of the Bedlam Bride (Dungeon Crawler Carl, #6)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9780593956014",
+    "year": "2023",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/07/19",
+    "date_added": "2026/09/22"
+  },
+  {
+    "id": "2026071201",
+    "title": "The Butcher's Masquerade (Dungeon Crawler Carl, #5)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9780593955994",
+    "year": "2022",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/07/12",
+    "date_added": "2026/09/22"
+  },
+  {
+    "id": "2026070501",
+    "title": "The Gate of the Feral Gods (Dungeon Crawler Carl, #4)",
+    "author": "Matt Dinniman",
+    "isbn": null,
+    "isbn13": "9780593955970",
+    "year": "2021",
+    "rating": null,
+    "pages": null,
+    "date_read": "2026/07/05",
+    "date_added": "2026/09/22"
+  },
+  {
     "id": "2026062801",
     "title": "The Dungeon Anarchist's Cookbook (Dungeon Crawler Carl, #3)",
     "author": "Matt Dinniman",
