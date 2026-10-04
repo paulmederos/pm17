@@ -20,7 +20,7 @@ Use a local private working folder first, or propose changes in the user's exist
 
 Prepare START_HERE.md, approved direction/boundaries, the source inventory, access-plan.md, one team guide, one role profile, and projects/pilot/brief.md. Give every maintained document an owner, status, and review date. Show a concise diff or list of new files. Leave unavailable facts as explicit open questions.
 
-For a mid-size editorial organization, a useful pilot is internal source research for human writers. The organization may reserve all actual editorial writing for humans. Agents can retrieve prior coverage, collect primary sources, identify uncertainty, and prepare interview questions. Do not turn that into article drafting or publishing permission.
+For a mid-size content company, a useful pilot is internal source research for human writers. The organization may reserve all actual editorial writing for humans. Agents can retrieve prior coverage, collect primary sources, identify uncertainty, and prepare interview questions. Do not turn that into article drafting or publishing permission.
 
 ## 4. Connect and verify one agent
 
