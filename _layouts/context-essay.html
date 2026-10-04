@@ -18,22 +18,17 @@ layout: default
           {% endif %}
           <h1 class="font-600 mb-6">{{ page.title }}</h1>
           <div class="context-essay">
-            {% include context-essay-versions.html %}
             <nav class="essay-index" aria-label="Essay sections">
               <span class="index-heading">In this essay</span>
               <a href="#human-judgment"><span>01</span> Human judgment</a>
               <a href="#shared-context"><span>02</span> Shared context</a>
               <a href="#growing-orgs"><span>03</span> Growing organizations</a>
               <a href="#learning-loop"><span>04</span> The learning loop</a>
-              {% unless page.essay_version == 'short' %}
-              <a href="#agents-at-work"><span>05</span> Agents at work</a>
-              <a href="#start-small"><span>06</span> Start small</a>
-              {% endunless %}
-              <a href="#begin"><span>↳</span> {% if page.essay_version == 'short' %}Start here{% else %}The starter prompt{% endif %}</a>
+              <a href="#internal-home"><span>05</span> The internal site</a>
+              <a href="#begin"><span>↳</span> Start here</a>
             </nav>
             <div id="essay-body" class="essay-prose">
               {{ content }}
-              {% include context-essay-versions.html %}
               <footer class="essay-colophon">
                 <span class="colophon-mark" aria-hidden="true">✳</span>
                 <p><strong>Written with {{ page.coauthored }}.</strong> {{ page.coauthored_note }} <a href="https://github.com/paulmederos/pm17/commits/main/{{ page.path }}">Follow the edit history.</a></p>

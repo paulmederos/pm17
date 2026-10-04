@@ -1,5 +1,5 @@
-# Organization context entry point
+# Org context entry point
 
-When working in this organization workspace, read START_HERE.md explicitly first and follow its loading instructions. Do not assume references are expanded automatically. If it is missing or access is unavailable, report the gap.
+Read index.html explicitly first and follow its links to the relevant HTML pages. For a hosted site or native knowledge base, the owner must replace this path with its authorized internal start URL or connector reference and verify tool support. Do not assume links are expanded automatically. Report missing access; never bypass SSO or make internal content public to retrieve it.
 
-This file is a proposed adapter. The owner must verify that the intended tool loads it. It grants no additional access or action authority.
+This is a thin adapter, not a second handbook or a grant of authority. Human context and navigation live in HTML or native pages.
