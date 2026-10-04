@@ -64,4 +64,13 @@
       document.body.classList.toggle('menu-opened');
     }
   </script>
+  {% if page.layout == 'context-essay' %}
+<link rel="stylesheet" href="/css/context-essay.css">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.teaser | escape }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/images/posts/org-context-social.png' | absolute_url }}">
+<meta name="twitter:card" content="summary_large_image">
+  {% endif %}
 </head>

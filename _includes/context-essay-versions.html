@@ -1,0 +1,5 @@
+<nav class="essay-versions" aria-label="Compare essay versions">
+  <a href="/building-an-ai-brain-for-your-organization" {% unless page.essay_version == 'short' %}aria-current="page"{% endunless %}>Full essay</a>
+  <a href="/building-an-ai-brain-for-your-organization-short" {% if page.essay_version == 'short' %}aria-current="page"{% endif %}>Shorter cut</a>
+  <span>{% if page.essay_version == 'short' %}About a third the length{% else %}With examples &amp; setup details{% endif %}</span>
+</nav>
