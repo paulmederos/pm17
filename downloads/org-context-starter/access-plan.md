@@ -6,7 +6,7 @@ Sources: [links or document versions]
 
 # Access and action plan
 
-| Resource / action | Who or which agent can read | Who can propose edits | Who approves | Actual control | Verification result |
+| Resource / action | Who or which agent can read | Who can edit or propose within scope | Approval required when / by whom | Actual control | Verification result |
 | --- | --- | --- | --- | --- | --- |
 | [resource] | [scope] | [scope] | [owner] | [tool ACL, credential scope, branch rule, etc.] | [untested / evidence] |
 

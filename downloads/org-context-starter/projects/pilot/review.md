@@ -13,10 +13,17 @@ Sources: [links or document versions]
 - Boundary failures or untested controls: [evidence]
 - What surprised us: [observation]
 
+## What can travel
+- Finding and original evidence: [observation, interpretation, uncertainty, context, source links]
+- Independent evidence / repeated summaries: [trace to original sources]
+- Who else found and tried it: [team, permitted access, result, differences]
+- Competing interpretations: [evidence and unresolved disagreements]
+- Wider decision informed: [decision owner, response, rationale, changed direction or reason to retain it]
+
 ## Proposed changes
-| Change | Evidence | Context layer | Owner | Approved / rejected / pending |
+| Change | Evidence | Scope and authority | Decision owner | Status |
 | --- | --- | --- | --- | --- |
-| [proposal] | [link] | [company/team/project/role] | [name] | [status] |
+| [local improvement / cross-team test / policy proposal] | [link] | [existing decision right or coordination needed] | [name] | [recorded / testing / adopted locally / approved policy / rejected / pending] |
 
 ## Next decision
 Expand / repeat / simplify / stop: [human decision and reason].

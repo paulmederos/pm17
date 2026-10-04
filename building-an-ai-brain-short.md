@@ -6,65 +6,74 @@ date: 2026-10-04
 categories: [essay, wip]
 essay_version: short
 coauthored: "Astra (GPT-6) and Claude Opus 5.5"
-coauthored_note: "I supplied the direction, examples, and boundaries; Astra helped research, draft, and design the piece, and Opus 5.5 reviewed its structure, sentences, and voice with access to my personal context."
-teaser: "The shorter cut: how shared context lets people and agents work from the same direction, and learn together as an organization grows."
+coauthored_note: "I set the direction, examples, and boundaries, and we’ve revised the piece together over several rounds. Astra researched, drafted, and designed it; Opus 5.5 has worked with me on the concept and the writing, with access to my personal context."
+teaser: "The shorter cut: how people and agents can share direction, decide close to the work, and learn across an organization as it grows."
 ---
 
 I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost everyone I talk with who’s exploring how to use more AI at work is trying to figure this out, whether it’s for themselves or a whole team. How do we help agents understand our work and what’s going on around it?
 
-We’ve been building something like that at Enchant. My [August post about working with Claude](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026) covered personal context: remembering decisions, keeping session logs, and learning from corrections. Once other people and their agents join in, the question becomes organizational. Who owns the shared understanding, and how does it stay current?
+That sounds familiar. At Enchant, we’ve been building something like this across our company handbook, our project handbooks, and our personal context repos. My [August post](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026) covered the personal side. This one asks how it works when everyone has agents.
 
-We’re two people, so our version is small. But I think the pattern travels: people and agents set a direction, do the work, review what happened, and update the shared context.
+It’s tempting to picture one central brain that leadership fills and everyone’s agent reads. Some context belongs in the middle, but most of what an organization knows lives with the people doing the work. The version I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to another team or change where the company is going.
 
-## Decide what stays yours
+We’re two people, so a mid-size organization will need more explicit ownership than we do. But I think the underlying possibility travels well: **AI can help more people exercise informed judgment in their own work, while helping the organization learn across those experiences.**
+
+## Shared direction, room to act
 {: #human-judgment}
 
-At Enchant, product taste stays with us. Agents help throughout the work, but we have final say on the experience. We’ll nitpick until we’re happy with it. That judgment is part of what we’re selling.
+Leadership keeps the direction and guardrails clear: what we’re trying to accomplish, and what customers trust us for. Within that space, a researcher or support person can improve their own workflow without asking permission. They know things the founder doesn’t.
 
-Warm outreach is personal for me, too. An agent can help me prepare, but before anything goes out, I write or personally edit the message. Owning the relationship is my job.
+Guardrails answer two questions: where a decision belongs, and what stays with people even when an agent could do it. Each organization draws that second line around what its customers are actually trusting it for.
 
-Some friends at an editorial company draw the line around writing. Their writing is what readers come for, so people write every article, and agents help with strategy, research, and support. Wherever the line falls, leadership should make it explicit. “Prepare a source brief; don’t write the article” gives everyone something they can act on.
+At Enchant, product taste stays with us. Agents help throughout, but Brittany and I have the final say on the experience—we’ll nitpick until we’re happy with it. Warm outreach is personal for me, too. An agent can help me prepare, but I write or personally edit every message before it goes out.
 
-## Give context an owner and a home
+Some friends at an editorial company draw the line around writing, since it’s what readers come for. People write every article, and agents help with strategy, research, and support. An editor can still try a better research process without asking leadership to invent it.
+
+## How our context fits together
 {: #shared-context}
 
-Our context has three connected layers. The Enchant handbook holds studio direction. Coplay Club, Kasane, and consulting projects have their own decisions and constraints. Our separate personal repos hold the context for working with each of us.
+At Enchant, our context sits in three layers: the studio handbook, project context for Coplay Club, Kasane, and consulting, and a personal repo for each of us. A mid-size organization needs the same idea, with named owners for company, team, project, and role. These are scopes, not a ladder every idea has to climb. My friend Nicholas Tolson’s [work on organizational context](https://www.linkedin.com/pulse/stop-re-explaining-your-company-ai-build-context-profile-tolson-0qlve/) makes a similar distinction between company, department, project, and individual context.
 
-My friend Nicholas Tolson describes [company, department, project, and individual context](https://www.linkedin.com/pulse/stop-re-explaining-your-company-ai-build-context-profile-tolson-0qlve/). In a mid-size organization, separating those layers makes ownership clearer: leadership owns company direction, team leads own team standards, and project owners maintain the brief and decisions. People can propose corrections without every suggestion becoming policy.
+Most of what an organization learns should stay where it happened, with the people who can explain it. A shared index and the right access let a colleague’s agent find it and follow the evidence back. That opens synthesis up beyond leadership: a support lead can ask what other teams have learned about a reader group. Leadership still has a particular duty to connect signals across the company. It just isn’t the only one who can.
 
-Shared role profiles stay small, and private notes stay in personal repos. Each important document gets an owner and a review date, so agents load what’s current and people know whom to ask. An instruction file can say who may edit something, but only the tool’s permissions can enforce it.
+I’d separate three actions: **sharing a finding, trying it elsewhere, and changing company policy.** Anyone can record what they observed, with evidence, without declaring it true everywhere. Another team can test it within its own authority. A company-wide commitment goes to the person who owns it.
 
-## Growing organizations have always had this problem
+When agents divide the work, each needs a clear assignment and the relevant context. Their handoffs should carry findings, sources, open questions, and permitted actions. Shared understanding has to reach the agent doing the next part.
+
+Decision rights belong to people. Agents get permissions, which should fit the task, stay within what the person they’re helping may do, and be enforced in the tools—an instruction file alone doesn’t enforce anything.
+
+## The context problem grows with you
 {: #growing-orgs}
 
-At one person, you’re trying to remember your own decisions. At two, you need to distinguish shared commitments from personal preferences. Around ten, people stop hearing every conversation. Around fifty, teams can be working from different versions of the strategy.
+Agents inherit an old problem: keeping people working from the same understanding as an organization grows. They can also multiply it, since a stale decision can now feed several streams of work at once. These stages are illustrative, not headcount laws:
 
-Those are illustrative stages, not laws. Molly Graham’s [account of scaling startups](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/) puts a common version of this moment around 30–50 people, when informal communication stops being enough, and she’s clear it varies by company. Organizing context has always been part of growing a company. Now our agents need it too. 😅
+- **At one person, context mostly lives in your head.** The job is remembering your own decisions so tomorrow doesn’t start over.
+- **At two, you need a shared version of the story.** Which decisions belong to the company, and which are one person’s preferences? That’s where we are at Enchant.
+- **Around ten, people stop hearing every conversation.** Clear briefs and decision rights let them act, and shared discovery helps them learn from work they missed.
+- **Around fifty, teams develop their own context.** Local evidence needs a route to change shared direction without every lesson passing through leadership.
 
-They might also let smaller teams cover more ground. In a [P&G field experiment](https://www.library.hbs.edu/working-knowledge/when-ai-joins-the-team-better-ideas-surface), individuals using AI matched the idea quality of two-person teams without it. Teams with AI were especially likely to produce top-tier ideas. That was one product-innovation task. It supports experimenting with team design, but it doesn’t tell us how many people a company needs.
+In a [P&G field experiment](https://www.library.hbs.edu/working-knowledge/when-ai-joins-the-team-better-ideas-surface), individuals using AI produced ideas comparable in quality to two-person teams without it. That was one product-innovation task, not proof that a company can halve its staff. Still, my bet is that we’ll see smaller organizations with more capability per person. It’s a bet I want to test.
 
-Another [randomized workplace study](https://www.microsoft.com/en-us/research/publication/shifting-work-patterns-with-generative-ai/) followed knowledge workers for six months. AI changed how individuals handled email and documents, but meeting time didn’t change significantly. My bet is that agents allow more capability per person, while making explicit context useful earlier. Ten people running many agents can have a lot to coordinate.
-
-## Let the work improve the context
+## Strategy, work, reflection, repeat
 {: #learning-loop}
 
-The loop is familiar: define a strategy, act on it, reflect, and adjust. If you use quarterly planning or OKRs, you already have somewhere to start. Agents can help gather evidence, challenge assumptions, and prepare the review. People remain responsible for the decisions.
+If you already use OKRs or quarterly planning, you have most of this loop: set a direction, do the work, review what happened, and update the context where the next agent will read it.
 
-Suppose an editor wants to understand a reader group better. An agent retrieves past coverage and primary sources, then prepares a research brief. A human checks the important claims and writes the story.
+Here’s how I picture it at the editorial company. A support person notices repeated questions from a reader group the company hasn’t focused on, and their agent records the pattern with permitted evidence. An editor’s agent finds that note and connects it to gaps in past coverage, and the editor starts a small pilot within the team’s scope. An agent gathers sources; a person checks the claims and writes the story.
 
-If several agents split the research, each needs the question, the relevant context, and a clear assignment. A handoff carries the findings, sources, unresolved questions, and what the next agent is allowed to do. Shared context only helps if it reaches the agent doing the work.
+The editor catches a forecast presented as an observed result and fixes the team’s research guidance. Another desk tries the lesson on its own work. By the end, the support person and editor think this reader group may deserve a place in the company’s priorities, so they take their evidence straight to the leaders who own that decision. Leadership’s agent can compare it with findings from other projects, preserving sources and competing explanations.
 
-During review, the editor notices that a forecast was presented as an observed result. They correct the brief and improve the team’s research standards. The next assignment tests whether the correction helped. Nicholas also writes about [turning reflection into reusable systems](https://www.linkedin.com/pulse/what-ai-mindset-looks-like-turn-conversations-systems-tolson-4vdie); this is that habit applied across the organization.
+Those leaders owe them an answer: change course, run a test, or hold steady, with the reasoning written down. “Not yet, and here’s what would change my mind” is a perfectly good answer. Silence isn’t.
 
-A project finding belongs in the project. A reusable lesson may belong in team guidance. A change in company direction needs leadership’s decision. At Enchant, a lesson that applies to both of us belongs in the shared handbook, where Brittany’s agent can read it too. The work teaches the next attempt, provided someone updates the place the next agent will read.
+Agents add one risk of their own. If they all read the same summary, one mistake in it shows up everywhere, and their outputs agree for the wrong reason. Keep the shared layer small and well-sourced, and leave room for people to disagree. Keep experiments small enough that failures stay contained, and check whether each correction improves the next attempt.
 
-## Start with one useful workflow
+## For founders and teams: point your agent here
 {: #begin}
 
-Pick an owner, a few real tasks, and a review date. Write down the strategy, AI boundaries, and expected output. Connect one agent to that context and check, in a fresh session, that it can find the current decisions and explain what it may do.
+If you run an organization, you can give your agent this article and say, “I want to build this.” Start with the people doing the work. Together, agree on the current priority, what stays human, what people decide locally, how findings will travel, and who owns company commitments. Pick one recurring workflow, give it a small private home, and connect one agent. Check what it can actually read and do. After a couple of weeks, compare the results with similar work done the usual way. We haven’t run this at a larger company yet, but it’s how I’d begin.
 
-Run the work. Compare quality and total effort, including checking, corrections, and maintenance. Approve useful updates, then decide whether the next workflow has earned its place. You don’t need to reorganize the whole company to learn something.
+If you don’t run the company, you can still start inside your own work: build your own context, improve one workflow, and record what you learn where a colleague can find it.
 
-I’ve put the [step-by-step setup guide and templates on GitHub](https://github.com/paulmederos/pm17/tree/main/downloads/org-context-starter). Point your agent there and say, “I want to build this. Start by interviewing me.” It can guide you through the decisions and create a first draft from your answers. The [full essay](/building-an-ai-brain-for-your-organization#begin) includes a copyable prompt and founder walkthrough.
+Your agent can work through the [setup guide and templates on GitHub](https://github.com/paulmederos/pm17/tree/main/downloads/org-context-starter) with you, one step at a time. The [full essay](/building-an-ai-brain-for-your-organization#begin) has the starter prompt, the six-step walkthrough, and more on permissions.
 
-Through [Enchant](https://enchant.co/), we help organizations work out where AI belongs, organize the context, and get a useful first workflow running. We’re still learning with our own setup, and we’d love to help you build yours.
+Through [Enchant](https://enchant.co/), we help organizations build this: clarify direction and decision rights, connect the context, and help people learn together through real work. If you’re figuring it out, we’d love to help you get the first useful loop running.
