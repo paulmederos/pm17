@@ -10,7 +10,7 @@ essay_version: full
 teaser: "How we share context at Enchant, how it changes as an organization grows, and how people and agents can learn from the work together."
 ---
 
-I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost every leader I talk with about AI is trying to figure out some version of this: how do we help agents understand our organization and what’s happening inside it?
+I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost everyone I talk with who’s exploring how to use more AI at work is trying to figure this out, whether it’s for themselves or a whole team. How do we help agents understand our work and what’s going on around it?
 
 That sounds familiar. At Enchant, we’ve been building something like this across our company handbook, our project handbooks, and our personal context repos.
 
