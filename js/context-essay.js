@@ -1,25 +1,6 @@
 /* Progressive enhancement for the context essay. Reading never depends on JS. */
 (function () {
   'use strict';
-  var root = document.documentElement;
-  var themeButton = document.querySelector('.essay-theme');
-  var savedTheme;
-  try { savedTheme = localStorage.getItem('pm17-essay-theme'); } catch (_) {}
-  function setTheme(dark) {
-    root.dataset.theme = dark ? 'dark' : 'light';
-    themeButton.setAttribute('aria-label', dark ? 'Switch to light colors' : 'Switch to dark colors');
-    themeButton.setAttribute('aria-pressed', String(dark));
-  }
-  if (themeButton) {
-    setTheme(savedTheme ? savedTheme === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches);
-    themeButton.hidden = false;
-    themeButton.addEventListener('click', function () {
-      var dark = root.dataset.theme !== 'dark';
-      setTheme(dark);
-      try { localStorage.setItem('pm17-essay-theme', dark ? 'dark' : 'light'); } catch (_) {}
-    });
-  }
-
   var layerButtons = document.querySelectorAll('[data-layer-view]');
   var layerPanels = document.querySelectorAll('[data-layer-panel]');
   var layerSwitch = document.querySelector('.layer-switch');
@@ -48,16 +29,11 @@
     });
   });
 
-  var progress = document.querySelector('.reading-progress span');
   var article = document.querySelector('#essay-body');
   var links = Array.from(document.querySelectorAll('.essay-index a'));
   var sections = links.map(function (link) { return document.querySelector(link.getAttribute('href')); });
   var scheduled = false;
   function updateReading() {
-    var start = article.getBoundingClientRect().top + window.scrollY;
-    var distance = article.offsetHeight - window.innerHeight;
-    var ratio = distance > 0 ? Math.max(0, Math.min(1, (window.scrollY - start) / distance)) : 1;
-    progress.style.transform = 'scaleX(' + ratio + ')';
     var current = -1;
     sections.forEach(function (section, i) { if (section && section.getBoundingClientRect().top < window.innerHeight * .4) current = i; });
     links.forEach(function (link, i) { if (i === current) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current'); });
