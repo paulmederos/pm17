@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} · Paul Mederos</title>
+  <meta name="description" content="{{ page.teaser | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.teaser | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/images/posts/org-context-social.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preload" href="/webfonts/soehne-buch.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/context-essay.css">
+  <script defer src="/js/context-essay.js"></script>
+  <script defer src="/js/code-copy.js"></script>
+</head>
+<body class="context-essay">
+  <a class="skip-link" href="#essay-body">Skip to essay</a>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <header class="essay-masthead">
+    <a href="/" class="essay-home">Paul Mederos <span aria-hidden="true">↗</span></a>
+    <span class="essay-edition">Notes on working with AI</span>
+    <button class="essay-theme" type="button" aria-label="Switch to dark colors" hidden><span aria-hidden="true">◐</span></button>
+  </header>
+
+  <main id="top">
+    <header class="essay-cover">
+      <div class="cover-copy">
+        <div class="essay-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B %-d, %Y' }}</time><span class="wip-label"><i aria-hidden="true"></i> Work in progress</span></div>
+        <h1>Building an<br><em>AI brain</em> for your organization<span class="cover-period">.</span></h1>
+        <p class="cover-deck">Shared direction.<br>Room for human judgment.<br>A practice that learns.</p>
+        <a class="cover-continue" href="#essay-body">An essay &amp; a place to begin <span aria-hidden="true">↓</span></a>
+      </div>
+      {% include context-essay-cover.html %}
+      <p class="cover-footnote">From two people at Enchant<br>to a team of thirty.</p>
+    </header>
+
+    <div class="essay-reading-layout">
+      <nav class="essay-index" aria-label="Essay sections">
+        <span class="index-heading">In this essay</span>
+        <a href="#human-judgment"><span>01</span> Human judgment</a>
+        <a href="#shared-context"><span>02</span> Shared context</a>
+        <a href="#learning-loop"><span>03</span> The learning loop</a>
+        <a href="#agents-at-work"><span>04</span> Agents at work</a>
+        <a href="#start-small"><span>05</span> Start small</a>
+        <a href="#begin"><span>↳</span> The starter prompt</a>
+      </nav>
+      <article id="essay-body" class="Post__content essay-prose">
+        <p class="essay-draft-note"><span aria-hidden="true">✳</span> This is a work in progress. We’re learning as we go.</p>
+        {{ content }}
+        <footer class="essay-colophon">
+          <span class="colophon-mark" aria-hidden="true">✳</span>
+          <p><strong>Written by Paul Mederos, with {{ page.coauthored }}.</strong> {{ page.coauthored_note }} <a href="https://github.com/paulmederos/pm17/commits/main/{{ page.path }}">Follow the edit history.</a></p>
+          <p class="colophon-links"><a href="/how-i-work-with-claude-in-august-2026">Previously: how I work with Claude <span aria-hidden="true">↗</span></a><a href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></p>
+        </footer>
+      </article>
+    </div>
+  </main>
+</body>
+</html>
