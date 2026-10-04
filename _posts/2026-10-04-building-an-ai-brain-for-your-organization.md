@@ -37,7 +37,7 @@ At Enchant, product taste stays with us. Agents help throughout the work, but Br
 
 Warm outreach is personal for me, too. An agent can help me prepare, but before anything goes out, I write or personally edit the message. Owning the relationship is my job.
 
-Some friends at an editorial company draw the line around writing. It’s what readers come for, so people write every article. Agents help with strategy, research, and support. An editor can try a better research process within that boundary without asking leadership to invent it.
+Some friends at a content company draw the line around writing. They create and curate work for an audience, and their writing is what readers come for. People write every article. Agents help with strategy, research, and support. An editor can try a better research process within that boundary without asking leadership to invent it.
 
 These choices belong in the context at the right scope. The editorial promise applies across the company. My outreach preferences apply to my relationships. A useful guardrail makes the freedom around it clear: “Prepare and improve source briefs; people write the articles.”
 
@@ -187,7 +187,7 @@ A folder in a shared repo isn’t a private room, either. People who can read th
 ## How I’d start in a mid-size organization
 {: #start-small}
 
-Back to the editorial company. People want help with strategy, research, and support, and its writers will keep writing every article themselves.
+Back to the content company. People want help with strategy, research, and support, and its writers will keep writing every article themselves.
 
 I built my own context one file at a time, and I’d start at a company the same way: one editor and a few volunteers on one recurring research workflow, for about two weeks. We haven’t run this rollout. It’s how I’d begin.
 

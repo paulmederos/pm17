@@ -27,7 +27,7 @@ Guardrails answer two questions: where a decision belongs, and what stays with p
 
 At Enchant, product taste stays with us. Agents help throughout, but Brittany and I have the final say on the experience—we’ll nitpick until we’re happy with it. Warm outreach is personal for me, too. An agent can help me prepare, but I write or personally edit every message before it goes out.
 
-Some friends at an editorial company draw the line around writing, since it’s what readers come for. People write every article, and agents help with strategy, research, and support. An editor can still try a better research process without asking leadership to invent it.
+Some friends at a content company draw the line around writing. They create and curate work for an audience, and their writing is what readers come for. People write every article; agents help with strategy, research, and support. An editor can still try a better research process without asking leadership to invent it.
 
 ## How our context fits together
 {: #shared-context}
@@ -59,7 +59,7 @@ In a [P&G field experiment](https://www.library.hbs.edu/working-knowledge/when-a
 
 If you already use OKRs or quarterly planning, you have most of this loop: set a direction, do the work, review what happened, and update the context where the next agent will read it.
 
-Here’s how I picture it at the editorial company. A support person notices repeated questions from a reader group the company hasn’t focused on, and their agent records the pattern with permitted evidence. An editor’s agent finds that note and connects it to gaps in past coverage, and the editor starts a small pilot within the team’s scope. An agent gathers sources; a person checks the claims and writes the story.
+Here’s how I picture it at the content company. A support person notices repeated questions from a reader group the company hasn’t focused on, and their agent records the pattern with permitted evidence. An editor’s agent finds that note and connects it to gaps in past coverage, and the editor starts a small pilot within the team’s scope. An agent gathers sources; a person checks the claims and writes the story.
 
 The editor catches a forecast presented as an observed result and fixes the team’s research guidance. Another desk tries the lesson on its own work. By the end, the support person and editor think this reader group may deserve a place in the company’s priorities, so they take their evidence straight to the leaders who own that decision. Leadership’s agent can compare it with findings from other projects, preserving sources and competing explanations.
 
