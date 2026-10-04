@@ -1,11 +1,9 @@
-# Shared context starter kit
+# Org context minisite starter
 
-A small, tool-independent starting point for organizational context.
+Open [index.html](index.html) to browse, or [setup.html](setup.html) to build with your agent. [Live template](https://www.paulmederos.com/downloads/org-context-starter/index.html).
 
-Start with [SETUP.md](SETUP.md). It is the guide for the founder, pilot participants, and their agents implementing the system together. It covers shared direction, local decision rights, and how findings can travel between teams and inform company decisions. The other files are templates, not an approved company policy. Replace bracketed placeholders from real answers and evidence.
+The deliverable is an HTML minisite with its own navigation; no build step is required. The public starter contains placeholders only and has no authentication. Create your org’s copy in a private workspace, configure internal hosting/SSO or knowledge-base membership, and verify access before sharing real org information. See Access & hosting.
+
+AGENTS.md and CLAUDE.md are optional tool adapters to the HTML home. SETUP.md remains only as a pointer for older links. Org context lives in the HTML pages or your chosen native knowledge base.
 
 Companion essay: https://www.paulmederos.com/building-an-ai-brain-for-your-organization
-
-Published October 4, 2026. This kit is a work in progress. Source history in this repository records revisions. Review changes before adopting a newer version.
-
-No software installation is required. Copy only the files your pilot needs. No credentials or confidential material belong in this public template repository.

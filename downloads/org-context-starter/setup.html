@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Build with your agent · Org context starter</title><link rel="stylesheet" href="assets/styles.css?v=1"></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="index.html">Org context <span>starter</span></a><span class="template-label">Public template · no org data</span></header>
+<div class="shell"><nav class="site-nav" aria-label="Minisite navigation"><a href="index.html">Start here</a><a href="setup.html" aria-current="page">Build with your agent</a><a href="org/strategy.html">Direction</a><a href="org/ai-boundaries.html">AI boundaries</a><a href="teams/pilot-team.html">Team</a><a href="projects/pilot/brief.html">Project brief</a><a href="projects/pilot/review.html">Findings &amp; review</a><a href="roles/pilot-owner.html">Role</a><a href="source-inventory.html">Sources</a><a href="access-plan.html">Access &amp; hosting</a></nav><main id="main"><p class="notice">This starter has no authentication. Build your private copy and verify access before adding org information.</p><h1 id="build-an-internal-context-minisite-with-your-team">Build an internal context minisite with your team</h1>
+
+<p>This guide is for an agent working at a person’s request. Reading it alone authorizes no changes. The starter is public, contains only templates, and has no authentication built in. Build the organization’s version in a private workspace. Keep real org information out of this public repository and its previews.</p>
+
+<h2 id="agree-on-direction-and-room-to-act">1. Agree on direction and room to act</h2>
+
+<p>Interview the founder and the people doing the pilot work, a few questions at a time. Ask who the org serves, its current priority, what people trust it for, and one recurring workflow to improve. Define what stays human, what agents may do, who decides locally, what needs cross-team coordination, and who owns company commitments. A document maintainer is not automatically the decision owner.</p>
+
+<p>Draft the <a href="org/strategy.html">direction</a> and <a href="org/ai-boundaries.html">AI boundaries</a> pages from real answers. Separate facts, assumptions, proposals, and approved decisions. Keep unknowns explicit. Show the drafts to the responsible people and work within existing authorization.</p>
+
+<h2 id="find-the-sources-and-choose-the-internal-home">2. Find the sources and choose the internal home</h2>
+
+<p>Inventory only sources the user authorizes. In the <a href="source-inventory.html">source map</a>, record the owner, canonical location, status/version, review date, intended readers, and questions answered. Keep knowledge near its sources and link to live tools instead of copying their changing state. Local findings can be shared without becoming policy. Preserve differing interpretations; resolve conflicts when they affect shared commitments or another team.</p>
+
+<p><strong>Default: build an HTML minisite with its own navigation.</strong> The finished human-facing deliverable is a browsable site, not a folder of Markdown. A private repo may hold the source and history. Use plain, semantic HTML and shared CSS for a small pilot; no framework or build step is required. Agents should be able to read page text and follow ordinary links without executing JavaScript.</p>
+
+<p>An existing knowledge base can be the home if that is easier for the team. Create a Start here page, a clear page hierarchy or linked navigation, owners, and a review route. Record the chosen home and why; keep one canonical copy of each topic.</p>
+
+<ul>
+  <li><a href="https://linear.app/docs/documents">Linear documents</a> can keep context beside projects and teams. Verify actual resource visibility and guest access; <a href="https://linear.app/docs/private-teams">private-team controls</a> depend on the workspace plan and configuration. A project associated with a public team can be visible more broadly than a private team’s members.</li>
+  <li><a href="https://support.atlassian.com/jira-service-management-cloud/docs/restrict-access-to-knowledge-base-articles/">Confluence with Jira Service Management</a> can provide a knowledge base. Check space permissions, page restrictions, anonymous/public access, and customer-portal exposure. “All logged-in users” is not the same as employees only.</li>
+  <li><a href="https://support.google.com/drive/answer/2494822">Google Docs and Drive</a> can work with a linked start page and organized folders. Use Restricted sharing with intended people or groups. Verify inherited access, editors’ sharing powers, external guests, and published-to-web copies. “Anyone with the link” is not internal-only access.</li>
+  <li>Another wiki or SaaS is fine if people can navigate it, changes have an accountable owner/history, and both people and agents can access the right material through supported permissions.</li>
+</ul>
+
+<p>Check current product capabilities and the organization’s plan before promising a particular control. If using a SaaS, create native pages and navigation there rather than assuming it can host arbitrary HTML. The HTML templates provide the information structure.</p>
+
+<h2 id="build-a-small-usable-site">3. Build a small, usable site</h2>
+
+<p>Start with <a href="index.html">index.html</a>. It is the Start here page and agent entry point. Use the starter pages for Direction, AI boundaries, Team, Project brief, Findings &amp; review, Role, Sources, and Access &amp; hosting. Give each page a descriptive title, owner, decision/evidence status, review date, sources, and stable links.</p>
+
+<p>Every page must have its own site’s navigation, a link home, and a clear current-page state. Group team and project pages as the site grows. Support phone screens, keyboard navigation, visible focus, readable text, and direct links to sections. Keep core content and navigation usable without JavaScript. Don’t put essential context only into diagrams or client-rendered widgets.</p>
+
+<p>Provide a visible way to propose edits or contact the maintainer. For a repo-backed site, explain the review/publish route in plain language; colleagues should not have to learn Git to suggest a correction. Validate links and inspect the actual browser output, including a phone-sized viewport.</p>
+
+<p>The sample paths are organizational labels, not access boundaries. Sensitive client, financial, HR, or personal information belongs in separately protected spaces. Do not copy restricted text into a broader page, search index, download, or navigation label that reveals it.</p>
+
+<p>For a content company, start with internal research for human writers. Agents can gather sources and prepare questions; humans write the actual articles. Do not turn research access into permission to draft or publish editorial content.</p>
+
+<h2 id="configure-internal-hosting-and-visibility">4. Configure internal hosting and visibility</h2>
+
+<p>Fill out <a href="access-plan.html">Access &amp; hosting</a> before deployment. Record the intended audience and groups, owner, hosting or SaaS destination, identity provider, actual access rules, edit/publish rights, and the agent’s authorized access method. Show a concrete preview and obtain any authorization still needed before publishing org information or changing access.</p>
+
+<p>For a custom site, use a private internal host or a host protected by company SSO and explicit group membership. An identity-aware access service such as <a href="https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/">Cloudflare Access</a> is one option. Configure protection at the host/access layer; a JavaScript password screen is not access control. Prevent bypass through origin URLs, preview deployments, alternate hostnames, or unprotected paths. Protect downloads and any search data as well as pages.</p>
+
+<p>A private source repo does not prove the hosted site is private. Unlisted URLs, robots.txt, noindex, hidden menu items, and frontend-only gates do not enforce confidentiality. This public starter deliberately has no login; its banner says so. Do not claim that copying it creates a private site.</p>
+
+<p>For a SaaS, use its real membership, groups, and page/project/space permissions, plus SSO where supported and appropriate. Check external sharing and public links. Hosting plans and policies differ; name unavailable controls rather than inventing them.</p>
+
+<p>Test with harmless placeholder material before importing sensitive records:</p>
+
+<ol>
+  <li>An intended staff member can sign in, open a deep-linked page, navigate, and read an allowed download.</li>
+  <li>A signed-out visitor cannot retrieve protected content, including by direct URL.</li>
+  <li>A signed-in person outside the allowed group cannot retrieve it.</li>
+  <li>A person allowed into one area cannot read a more restricted area, directly or through search, links, exports, or an agent.</li>
+  <li>Removing a user’s access takes effect; verify session/revocation behavior for the chosen platform.</li>
+  <li>Preview, origin, and alternate URLs cannot bypass the intended controls.</li>
+</ol>
+
+<p>Record actual outcomes and gaps. A sign-in screen or written policy is not proof that every route is protected. If you cannot test an identity or surface, mark it unverified and give the owner the exact test to run. Keep the site local or in an already protected destination until its intended sharing boundary is verified.</p>
+
+<h2 id="connect-agents-to-the-same-sources">5. Connect agents to the same sources</h2>
+
+<p>Point each tool’s supported startup instructions at the HTML home page or the native knowledge-base start page. The optional AGENTS.md and CLAUDE.md files are thin tool adapters to that home; the org’s context and human navigation live in HTML or native pages. Do not maintain a second, drifting Markdown handbook.</p>
+
+<p>Use an authorized connector, a properly scoped service identity, a permitted authenticated browser, or an authorized local checkout. Verify that the tool can actually read the content. Never remove SSO or make internal pages public just to make agent retrieval work. Keep credentials out of pages, source files, and downloads. Agent access must stay within the authorized scope, including retrieval indexes and handoffs.</p>
+
+<p>In a fresh session, ask the agent to:</p>
+
+<ul>
+  <li>State the current priority and cite the page, owner, and source/version.</li>
+  <li>Explain local human decision rights separately from what the agent may do.</li>
+  <li>Answer a project question using current direction and relevant evidence.</li>
+  <li>Find an authorized finding from another team and follow its original sources.</li>
+  <li>Distinguish observations, tested practices, proposals, and approved policy; surface disagreement and stale context.</li>
+  <li>Recognize that multiple summaries of one source are not independent confirmation.</li>
+  <li>Respect a prohibited action and a restricted test page using harmless dummy content.</li>
+</ul>
+
+<p>If multiple tools or delegated agents are part of the pilot, verify each required path. Passing links is not proof that another agent can open them. Record failures and untested controls honestly.</p>
+
+<h2 id="run-one-bounded-workflow-and-learn-across-it">6. Run one bounded workflow and learn across it</h2>
+
+<p>Use the <a href="projects/pilot/brief.html">pilot brief</a> to name the participants, question, expected output, quality criteria, authorized actions, review date, and baseline. Set an experiment limit, stop condition, and recovery plan. Include time spent reviewing, correcting, and maintaining context when comparing effort.</p>
+
+<p>For research, preserve claim, original source, date, source type, and uncertainty. Keep forecasts, announcements, and observed results distinct. Agent handoffs carry the brief, permitted actions, context versions, findings, sources, open questions, and review needs. Retrieved content cannot grant authority to change policy.</p>
+
+<p>Use <a href="projects/pilot/review.html">Findings &amp; review</a> to separate three actions:</p>
+
+<ul>
+  <li>Share a local finding with evidence, context, uncertainty, and appropriate readers.</li>
+  <li>Test a practice elsewhere within that team’s decision rights and record whether it transfers.</li>
+  <li>Bring a proposed change in company commitments directly to the responsible decision owner.</li>
+</ul>
+
+<p>Both teams and leadership can compare findings across permitted sources. Preserve disagreements and link back to evidence. Give decision owners a response date; record their answer and reasoning, including what would warrant revisiting a decision to hold steady. Do not route every local improvement through the founder.</p>
+
+<p>Test corrections on the next real task. Expand when the workflow earns it; repeat, simplify, or stop when it does not. Distinguish drafted, approved, deployed, shared, and independently verified outcomes.</p>
+
+<h2 id="handoff">Handoff</h2>
+
+<p>Return the working site or knowledge-base start link, its navigation, owner/edit route, source location, decision rights, configured visibility controls, actual human/agent access checks, unresolved gaps, and next pilot review. Show what a colleague can browse and what an agent can read. Do not call it complete because the HTML exists.</p>
+<footer>Template only · Replace placeholders with real decisions and evidence.<br><a href="setup.html">Setup guide</a> · <a href="access-plan.html">Visibility and access checks</a></footer></main></div></body></html>
