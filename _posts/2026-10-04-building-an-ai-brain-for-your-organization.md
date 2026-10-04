@@ -10,9 +10,9 @@ essay_version: full
 teaser: "How we share context at Enchant, how it changes as an organization grows, and how people and agents can learn from the work together."
 ---
 
-Some friends at an editorial company recently told me they wanted to build an “AI brain.” They wanted somewhere their agents could learn what’s going on, understand the business, and help without needing the whole backstory every time.
+I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost every leader I talk with about AI is trying to figure out some version of this: how do we help agents understand our organization and what’s happening inside it?
 
-That sounded familiar. At Enchant, we’ve been building something like this across our company handbook, our project handbooks, and our personal context repos.
+That sounds familiar. At Enchant, we’ve been building something like this across our company handbook, our project handbooks, and our personal context repos.
 
 In August, I wrote about [how I work with Claude](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026): persistent context, session logs, and learning from corrections. That post touched on sharing context with Brittany. This one picks up the bigger question: how does it work when everyone has agents?
 
@@ -33,7 +33,7 @@ At Enchant, product taste stays with us. We use agents throughout the work, but 
 
 Warm outreach is personal for me, too. An agent can help me understand someone’s work or remember where our last conversation left off. Before anything goes out, I write or personally edit the message. Owning the relationship is my job.
 
-For an editorial company like my friends’, the choice looks different. Its writing is what readers come for, so people write every article. Agents help with strategy, research, and support. That still leaves plenty of room for AI.
+Some friends at an editorial company draw the line around writing. It’s what readers come for, so people write every article. Agents help with strategy, research, and support. That still leaves plenty of room for AI.
 
 These choices belong in the company context, with examples of what they mean. “Use AI thoughtfully” leaves everyone guessing. “Prepare a source brief for our writers; don’t draft the article” gives people and agents something they can act on.
 

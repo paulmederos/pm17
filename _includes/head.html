@@ -65,7 +65,7 @@
     }
   </script>
   {% if page.layout == 'context-essay' %}
-<link rel="stylesheet" href="/css/context-essay.css">
+<link rel="stylesheet" href="/css/context-essay.css?v={{ site.time | date: '%s' }}">
 <meta property="og:type" content="article">
 <meta property="og:title" content="{{ page.title | escape }}">
 <meta property="og:description" content="{{ page.teaser | escape }}">

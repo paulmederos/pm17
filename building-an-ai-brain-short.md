@@ -10,7 +10,7 @@ coauthored_note: "I supplied the direction, examples, and boundaries; Astra help
 teaser: "The shorter cut: how shared context lets people and agents work from the same direction, and learn together as an organization grows."
 ---
 
-Some friends at an editorial company want to build an “AI brain.” They want their agents to know what’s going on without someone retelling the whole backstory every time.
+I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost every leader I talk with about AI is trying to figure out some version of this: how do we help agents understand our organization and what’s happening inside it?
 
 We’ve been building something like that at Enchant. My [August post about working with Claude](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026) covered personal context: remembering decisions, keeping session logs, and learning from corrections. Once other people and their agents join in, the question becomes organizational. Who owns the shared understanding, and how does it stay current?
 
@@ -23,7 +23,7 @@ At Enchant, product taste stays with us. Agents help throughout the work, but we
 
 Warm outreach is personal for me, too. An agent can help me prepare, but before anything goes out, I write or personally edit the message. Owning the relationship is my job.
 
-My friends draw the line somewhere else. Their writing is what readers come for, so people write every article, and agents help with strategy, research, and support. Wherever the line falls, leadership should make it explicit. “Prepare a source brief; don’t write the article” gives everyone something they can act on.
+Some friends at an editorial company draw the line around writing. Their writing is what readers come for, so people write every article, and agents help with strategy, research, and support. Wherever the line falls, leadership should make it explicit. “Prepare a source brief; don’t write the article” gives everyone something they can act on.
 
 ## Give context an owner and a home
 {: #shared-context}
