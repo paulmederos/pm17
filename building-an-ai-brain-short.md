@@ -10,7 +10,7 @@ coauthored_note: "I supplied the direction, examples, and boundaries; Astra help
 teaser: "The shorter cut: how shared context lets people and agents work from the same direction, and learn together as an organization grows."
 ---
 
-I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost every leader I talk with about AI is trying to figure out some version of this: how do we help agents understand our organization and what’s happening inside it?
+I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost everyone I talk with who’s exploring how to use more AI at work is trying to figure this out, whether it’s for themselves or a whole team. How do we help agents understand our work and what’s going on around it?
 
 We’ve been building something like that at Enchant. My [August post about working with Claude](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026) covered personal context: remembering decisions, keeping session logs, and learning from corrections. Once other people and their agents join in, the question becomes organizational. Who owns the shared understanding, and how does it stay current?
 
