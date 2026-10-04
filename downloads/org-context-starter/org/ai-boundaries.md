@@ -16,5 +16,8 @@ Sources: [links or document versions]
 ## Enforcement
 See access-plan.md for configured controls and unverified gaps. These instructions alone do not enforce permissions.
 
+## Room to experiment
+[Specify which people/teams may improve workflows locally, the limits of an experiment, and what requires coordination. Keep human authority distinct from agent execution permissions. Share findings with evidence and uncertainty without declaring them policy.]
+
 ## Approval and changes
 Approver: [name and date, or pending]. Anyone may propose a correction within their authorized scope; [owner] approves policy changes.

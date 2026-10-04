@@ -13,10 +13,10 @@
   });
 
   var examples = [
-    'Leadership and an editor choose a reader group to understand better. An agent helps gather evidence and challenge assumptions. A person approves the direction.',
-    'An agent retrieves past coverage, gathers primary sources, and prepares an internal research brief. A human checks the important claims and writes the story.',
-    'The editor spots a forecast presented as an observed result. Together, they correct the brief and identify the missing distinction in the research standards.',
-    'The editor approves a clearer standard: distinguish forecasts, claims, and measured outcomes. The next assignment tests whether the correction actually helped.'
+    'Support notices repeated questions from a reader group. Within the company’s direction and human-writing boundary, the editorial team can explore them as part of its agreed scope.',
+    'The support person’s agent records the pattern with permitted evidence. An editor’s agent finds it, checks past coverage, and prepares a source brief. A person writes the story.',
+    'The editor checks the brief, catches a forecast presented as an observed result, and records the correction. Another team can find the evidence and test the improved practice.',
+    'The team checks its correction, then support and the editor bring the wider evidence to the decision owner. That owner considers findings across projects and records whether company priorities should change, with the reasoning.'
   ];
   document.querySelectorAll('[data-loop-step]').forEach(function (button) {
     button.disabled = false;
