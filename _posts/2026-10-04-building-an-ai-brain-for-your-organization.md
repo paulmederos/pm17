@@ -16,9 +16,9 @@ That sounds familiar. At Enchant, we’ve been building something like this acro
 
 In August, I wrote about [how I work with Claude](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026): persistent context, session logs, and learning from corrections. That post touched on sharing context with Brittany. This one picks up the bigger question: how does it work when everyone has agents?
 
-It’s tempting to picture one central brain that leadership fills and everyone’s agent reads. Some context does belong in the middle. Most of what an organization knows, though, lives with the people doing the work, and the people there can explain its context. The version I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to a neighboring team or change where the company is going.
+It’s tempting to picture one central brain that leadership fills and everyone’s agent reads. Some context does belong in the middle. Most of what an organization knows, though, lives with the people doing the work, and the people there can explain its context. The setup I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to a neighboring team or change where the company is going.
 
-We’re two people, so a mid-size organization will need more explicit ownership than we do. But I think the underlying possibility travels well: **AI can help more people exercise informed judgment in their own work, while helping the organization learn across those experiences.**
+We’re two people, so a mid-size organization will need more explicit ownership than we do. But I think the basic idea holds up: **AI can help more people make informed calls in their own work, while helping the org learn from what they find.**
 
 {% include context-essay-cover.html %}
 
@@ -54,11 +54,11 @@ At Enchant, our context sits in three connected layers:
 - **Team and project:** Coplay Club, Kasane, and our consulting work each have their own context, decisions, and constraints.
 - **Personal:** `paul-context` and `brittany-context` hold the context for working with each of us.
 
-An agent working on Kasane needs the relevant studio direction, the project’s current decisions, and the personal context appropriate to whoever it’s helping. It doesn’t need every document we’ve ever written.
+An agent working on Kasane needs the relevant studio direction, the project’s current decisions, and the personal context appropriate to whoever it’s helping. It doesn’t need every doc we’ve ever written.
 
 We give each source a job. The handbook explains why we’re doing something. Linear holds what’s next. The project repos hold what exists and how it works. Personal context stays in our own repos. That way the handbook never has to keep a copy of every task’s status.
 
-My friend Nicholas Tolson has written about [four layers of organizational context](https://www.linkedin.com/pulse/stop-re-explaining-your-company-ai-build-context-profile-tolson-0qlve/): company, department, project, and individual. His [workshop with Amir Feizpour](https://maven.com/p/c7e995/the-killer-app-of-ai-is-context) covers implementation and upkeep. His split is a useful way to separate what we currently group together as team and project context.
+My friend Nicholas Tolson has written about [four layers of organizational context](https://www.linkedin.com/pulse/stop-re-explaining-your-company-ai-build-context-profile-tolson-0qlve/): company, department, project, and individual. His [workshop with Amir Feizpour](https://maven.com/p/c7e995/the-killer-app-of-ai-is-context) covers getting it set up and keeping it useful. His split is a useful way to separate what we currently group together as team and project context.
 
 {% include context-essay-layers.html %}
 
@@ -78,9 +78,9 @@ These are scopes of context, not a chain every idea has to climb. A maintainer k
 
 ### Keep knowledge near its source, and make it findable
 
-Most of what an organization learns should stay where it happened, with the people who can explain it. A shared index and appropriate retrieval access let another team’s agent find it, follow the evidence, and see where it applies. Copying everything into one central place mostly creates a second version to keep in sync.
+Most of what an organization learns should stay where it happened, with the people who can explain it. A shared index and the right access let another team’s agent find it, follow the evidence, and see where it applies. Copying everything into one central place mostly creates a second version to keep in sync.
 
-That makes synthesis available beyond leadership, to anyone with the right access. A support lead can ask what other teams have learned about a reader group. An editor can check whether anyone has already tried a research method. Leadership has a particular responsibility to connect signals across the company, because it’s accountable for shared direction and usually has access to more of the work. That’s a responsibility, not a monopoly. People see different slices, so any synthesis should say what it drew from and what it couldn’t see.
+That lets people beyond leadership connect the dots, as long as they have the right access. A support lead can ask what other teams have learned about a reader group. An editor can check whether anyone has already tried a research method. Leadership’s job includes connecting signals across the company, because it’s accountable for shared direction and usually has access to more of the work. That’s a responsibility, not a monopoly. People see different slices, so any summary should say what it drew from and what it couldn’t see.
 
 I’d separate three actions: **sharing a finding, trying it elsewhere, and changing company policy.** Anyone can record what they observed, with evidence, without declaring it true everywhere. Another team can test it within its own authority. A company-wide commitment goes to the responsible decision owner.
 
@@ -90,7 +90,7 @@ Two teams can also reach different conclusions and both be right for their own w
 
 There’s a useful natural analogy in [Thomas Seeley’s research on honeybee nest-site selection](https://news.cornell.edu/stories/2006/04/honeybee-decision-making-ability-rivals-any-department-committee). Scouts explore different locations and communicate promising finds through dance. Other scouts go inspect those sites for themselves, and support builds through those visits until the swarm chooses a home.
 
-What interests me is the combination: independent exploration, communication, and checking by others before a discovery shapes the whole.
+I’m interested in the combo: independent exploration, communication, and checking by others before a discovery shapes the whole.
 
 I wouldn’t turn that into an org chart. Deborah Gordon [warns against stretching analogies between biological systems](https://web.stanford.edu/~dmgordon/old2/Gordon2007_Nature_Essay.pdf); understanding the actual interactions matters. For us, the question is concrete: how does something one person learns become available for someone else to question, test, or use?
 
@@ -110,7 +110,7 @@ I think about the familiar startup transitions roughly like this. These are illu
 
 Molly Graham describes a similar transition in her [account of scaling startups](https://review.firstround.com/give-away-your-legos-and-other-commandments-for-scaling-startups/): around 30–50 people, communication that used to happen naturally starts needing deliberate work. That’s an operator’s experience, not a universal threshold.
 
-The broader idea is older still. Jay Galbraith’s [information-processing view of organization design](https://pubsonline.informs.org/doi/10.1287/inte.4.3.28) connects organizational structure to uncertainty and the limits of what people can process. Agents could make it easier for people to solve problems directly across teams, as long as the knowledge is findable and people have the authority to act. That’s a possibility I want to test.
+The broader idea is older still. Jay Galbraith’s [information-processing view of organization design](https://pubsonline.informs.org/doi/10.1287/inte.4.3.28) connects organizational structure to uncertainty and the limits of what people can process. Agents could make it easier for people to solve problems directly across teams, as long as the knowledge is findable and people have the authority to act. That’s something I want to try.
 
 That makes the “AI brain” idea feel a little less exotic, hah. We’re organizing what the organization knows, who decides, and how everybody finds out when something changes.
 
@@ -118,7 +118,7 @@ Agents may also change how much a small team can take on. In the [P&G field expe
 
 There’s a useful counterweight, too. A [six-month randomized study of knowledge workers](https://www.microsoft.com/en-us/research/publication/shifting-work-patterns-with-generative-ai/) found that AI changed how individuals handled email and documents, without significantly changing time spent in meetings.
 
-My bet is that we’ll see smaller organizations with more capability per person, and different combinations of specialists and generalists. That’s a design possibility to test. A team of ten running many agents may already need the explicit context and decision ownership we’d associate with a larger company. Headcount alone stops telling us how much coordination the work needs.
+My bet is that we’ll see smaller organizations with more capability per person, and different mixes of specialists and generalists. We’ll have to try it and see. A team of ten running many agents may already need the explicit context and decision ownership we’d associate with a larger company. Headcount alone stops telling us how much coordination the work needs.
 
 <div class="chapter-marker" aria-hidden="true">04 / The learning loop</div>
 
@@ -151,7 +151,7 @@ A summary should preserve links to the sources and disagreements worth investiga
 
 ### Learning from small failures
 
-Nassim Taleb uses [*antifragile*](https://www.fooledbyrandomness.com/Antifragile.htm) for systems that benefit from disorder and stressors. That’s the property I want, and decentralization doesn’t produce it automatically. A decentralized organization can just as easily fail in more places at once.
+Nassim Taleb uses [*antifragile*](https://www.fooledbyrandomness.com/Antifragile.htm) for systems that benefit from disorder and stressors. That’s what I’m after, and decentralization doesn’t make it happen on its own. A decentralized organization can just as easily fail in more places at once.
 
 Three conditions seem to matter. Failures need to stay small, so an experiment can go wrong without taking a customer relationship or a company commitment with it. Perspectives need to stay independent, so a pattern seen by three teams reflects three real looks at the evidence. And corrections need testing, so we know whether the next attempt actually improved.
 
@@ -162,7 +162,7 @@ Agents add a specific risk. If every agent reads the same summary, one mistake i
 ## Give every agent a reliable starting point
 {: #agents-at-work}
 
-Brittany’s agents and mine already share a starting point. Each knows its own person, and both read the same handbook. For a larger company, I’d make that a short front door: current priorities, firm boundaries, and an index pointing to the right team and project documents.
+Brittany’s agents and mine already share a starting point. Each knows its own person, and both read the same handbook. For a larger company, I’d make that a short front door: current priorities, firm boundaries, and an index pointing to the right team and project docs.
 
 The technical guidance points the same way. Anthropic’s [context engineering guide](https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents) emphasizes selecting useful information within a limited context budget. OpenAI’s [practical agent guide](https://openai.com/business/guides-and-resources/a-practical-guide-to-building-ai-agents/) recommends starting with a simple system and adding complexity when it’s needed. Load what the task needs, and fetch detailed sources when a question calls for them.
 
@@ -170,7 +170,7 @@ A research agent’s starting instructions might read:
 
 > Read the current strategy, AI boundaries, research standards, and project brief. Find relevant findings from other teams that you’re permitted to access. Identify sources, versions, and disagreements. Prepare a source brief for a human writer; don’t write editorial copy. Record what we learn where colleagues can find it, and mark whether it’s a local finding, a tested practice, or approved policy.
 
-Wire that front door into each tool people actually use. An `AGENTS.md` or `CLAUDE.md` file works for tools that support it; others need project instructions or a connector. Then check that the documents actually loaded. A file sitting in a repo doesn’t make every agent aware of it.
+Wire that front door into each tool people actually use. An `AGENTS.md` or `CLAUDE.md` file works for tools that support it; others need project instructions or a connector. Then check that the docs actually loaded. A file sitting in a repo doesn’t make every agent aware of it.
 
 When several agents work together, give each a bounded assignment and a handoff the next one can inspect: the question, sources, findings, open issues, and what it’s allowed to do. Anthropic’s account of its [multi-agent research system](https://www.anthropic.com/engineering/multi-agent-research-system) is useful here: delegation needs clear tasks and output expectations, and separate research questions can benefit from parallel work. You don’t need a swarm to maintain a handbook.
 
@@ -180,7 +180,7 @@ YC’s [“Multiplayer AI” request for startups](https://www.ycombinator.com/r
 
 Configure permissions to match the decision rights you agreed on. Recording a finding should be easy for anyone within their scope; a review gate there just rebuilds the bottleneck. Changing company commitments has a different approval path. Writing “only leadership may edit this” in an instruction file states a rule, but it doesn’t enforce one. In a Git setup, GitHub’s [code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners) route review by folder, and protected branches or rulesets with required reviews make the approval stick.
 
-A folder in a shared repository isn’t a private room, either. People who can read the repo can generally read its contents. Keep restricted client, financial, or personal material in separately permissioned locations, and give agents only the access their task requires, including through search indexes and handoffs. The [setup guide](https://github.com/paulmederos/pm17/blob/main/downloads/org-context-starter/SETUP.md) covers the rest: document owners, conflicts, and concurrent changes.
+A folder in a shared repo isn’t a private room, either. People who can read the repo can generally read its contents. Keep restricted client, financial, or personal material in separately permissioned locations, and give agents only the access their task requires, including through search indexes and handoffs. The [setup guide](https://github.com/paulmederos/pm17/blob/main/downloads/org-context-starter/SETUP.md) covers the rest: document owners, conflicts, and concurrent changes.
 
 <div class="chapter-marker" aria-hidden="true">06 / Start small</div>
 
@@ -207,7 +207,7 @@ projects/research-pilot/review.md
 roles/editor.md
 ```
 
-Link to existing authoritative documents wherever you can. Copying everything into the new folder creates another maintenance job.
+Link to the docs that are already the source of truth wherever you can. Copying everything into the new folder creates another maintenance job.
 
 **Then follow a question across teams.** A support person notices repeated questions from a reader group the company hasn’t focused on. Their agent helps record the pattern with links to permitted evidence, what’s uncertain, and who can discuss it. Personal reader information stays protected.
 
@@ -215,7 +215,7 @@ An editor’s agent finds that observation and connects it to gaps in past cover
 
 **Review locally, then share sideways.** Perhaps the editor catches a forecast presented as an observed result. They correct the brief, update the team’s research guidance, and check whether the next assignment improves. Another desk finds that lesson and tries it on its own assignments.
 
-**Bring the bigger question to its owner.** By the end of the pilot, the support person and the editor think this reader group may deserve a place in the company’s priorities. They bring their evidence to the leaders who own that decision. Leadership’s agent adds what other projects have seen and prepares a comparison with sources, uncertainties, and competing explanations. Leadership decides with the relevant teams, and the decision goes back into shared context with its rationale, whichever way it goes.
+**Bring the bigger question to its owner.** By the end of the pilot, the support person and the editor think this reader group may deserve a place in the company’s priorities. They bring their evidence to the leaders who own that decision. Leadership’s agent adds what other projects have seen and prepares a comparison with sources, uncertainties, and competing explanations. Leadership decides with the relevant teams, and the decision goes back into shared context with the reasoning, whichever way it goes.
 
 That’s the loop I want: people improve the work near them, learn from one another, and have a real route to change the direction of the company.
 

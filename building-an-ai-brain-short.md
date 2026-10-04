@@ -14,9 +14,9 @@ I’ve been talking with more and more companies interested in setting up their 
 
 That sounds familiar. At Enchant, we’ve been building something like this across our company handbook, our project handbooks, and our personal context repos. My [August post](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026) covered the personal side. This one asks how it works when everyone has agents.
 
-It’s tempting to picture one central brain that leadership fills and everyone’s agent reads. Some context belongs in the middle, but most of what an organization knows lives with the people doing the work. The version I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to another team or change where the company is going.
+It’s tempting to picture one central brain that leadership fills and everyone’s agent reads. Some context belongs in the middle, but most of what an organization knows lives with the people doing the work. The setup I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to another team or change where the company is going.
 
-We’re two people, so a mid-size organization will need more explicit ownership than we do. But I think the underlying possibility travels well: **AI can help more people exercise informed judgment in their own work, while helping the organization learn across those experiences.**
+We’re two people, so a mid-size organization will need more explicit ownership than we do. But I think the basic idea holds up: **AI can help more people make informed calls in their own work, while helping the org learn from what they find.**
 
 ## Shared direction, room to act
 {: #human-judgment}
@@ -34,7 +34,7 @@ Some friends at an editorial company draw the line around writing, since it’s 
 
 At Enchant, our context sits in three layers: the studio handbook, project context for Coplay Club, Kasane, and consulting, and a personal repo for each of us. A mid-size organization needs the same idea, with named owners for company, team, project, and role. These are scopes, not a ladder every idea has to climb. My friend Nicholas Tolson’s [work on organizational context](https://www.linkedin.com/pulse/stop-re-explaining-your-company-ai-build-context-profile-tolson-0qlve/) makes a similar distinction between company, department, project, and individual context.
 
-Most of what an organization learns should stay where it happened, with the people who can explain it. A shared index and the right access let a colleague’s agent find it and follow the evidence back. That opens synthesis up beyond leadership: a support lead can ask what other teams have learned about a reader group. Leadership still has a particular duty to connect signals across the company. It just isn’t the only one who can.
+Most of what an organization learns should stay where it happened, with the people who can explain it. A shared index and the right access let a colleague’s agent find it and follow the evidence back. That lets people beyond leadership connect the dots: a support lead can ask what other teams have learned about a reader group. Leadership is still responsible for connecting signals across the company. It just isn’t the only one who can.
 
 I’d separate three actions: **sharing a finding, trying it elsewhere, and changing company policy.** Anyone can record what they observed, with evidence, without declaring it true everywhere. Another team can test it within its own authority. A company-wide commitment goes to the person who owns it.
 
@@ -52,7 +52,7 @@ Agents inherit an old problem: keeping people working from the same understandin
 - **Around ten, people stop hearing every conversation.** Clear briefs and decision rights let them act, and shared discovery helps them learn from work they missed.
 - **Around fifty, teams develop their own context.** Local evidence needs a route to change shared direction without every lesson passing through leadership.
 
-In a [P&G field experiment](https://www.library.hbs.edu/working-knowledge/when-ai-joins-the-team-better-ideas-surface), individuals using AI produced ideas comparable in quality to two-person teams without it. That was one product-innovation task, not proof that a company can halve its staff. Still, my bet is that we’ll see smaller organizations with more capability per person. It’s a bet I want to test.
+In a [P&G field experiment](https://www.library.hbs.edu/working-knowledge/when-ai-joins-the-team-better-ideas-surface), individuals using AI produced ideas comparable in quality to two-person teams without it. That was one product-innovation task, not proof that a company can halve its staff. Still, my bet is that we’ll see smaller organizations with more capability per person. We’ll have to try it and see.
 
 ## Strategy, work, reflection, repeat
 {: #learning-loop}
@@ -70,7 +70,7 @@ Agents add one risk of their own. If they all read the same summary, one mistake
 ## For founders and teams: point your agent here
 {: #begin}
 
-If you run an organization, you can give your agent this article and say, “I want to build this.” Start with the people doing the work. Together, agree on the current priority, what stays human, what people decide locally, how findings will travel, and who owns company commitments. Pick one recurring workflow, give it a small private home, and connect one agent. Check what it can actually read and do. After a couple of weeks, compare the results with similar work done the usual way. We haven’t run this at a larger company yet, but it’s how I’d begin.
+If you run an org, you can give your agent this article and say, “I want to build this.” Start with the people doing the work. Together, agree on the current priority, what stays human, what people decide locally, how findings will travel, and who owns company commitments. Pick one recurring workflow, give it a small private home, and connect one agent. Check what it can actually read and do. After a couple of weeks, compare the results with similar work done the usual way. We haven’t run this at a larger company yet, but it’s how I’d begin.
 
 If you don’t run the company, you can still start inside your own work: build your own context, improve one workflow, and record what you learn where a colleague can find it.
 
