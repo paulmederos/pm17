@@ -1,0 +1,17 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for post in site.posts %}{% unless post.sitemap == false or post.robots contains 'noindex' %}
+  <url>
+    <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+    {% if post.last_modified_at %}<lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
+  </url>
+  {% endunless %}{% endfor %}
+  {% for entry in site.pages %}{% if entry.layout and entry.sitemap != false %}{% unless entry.robots contains 'noindex' %}{% if entry.url contains '.xml' %}{% else %}
+  <url><loc>{{ entry.url | replace: 'index.html', '' | absolute_url | xml_escape }}</loc>{% if entry.last_modified_at %}<lastmod>{{ entry.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}</url>
+  {% endif %}{% endunless %}{% endif %}{% endfor %}
+</urlset>
