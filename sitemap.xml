@@ -11,7 +11,8 @@ sitemap: false
     {% if post.last_modified_at %}<lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}
   </url>
   {% endunless %}{% endfor %}
-  {% for entry in site.pages %}{% if entry.layout and entry.sitemap != false %}{% unless entry.robots contains 'noindex' %}{% if entry.url contains '.xml' %}{% else %}
+  {% comment %}Pages opt in with sitemap: true. GitHub Pages can generate extra pages from repository Markdown; those do not belong in search discovery.{% endcomment %}
+  {% for entry in site.pages %}{% if entry.layout and entry.sitemap == true %}{% unless entry.robots contains 'noindex' %}{% if entry.url contains '.xml' %}{% else %}
   <url><loc>{{ entry.url | replace: 'index.html', '' | absolute_url | xml_escape }}</loc>{% if entry.last_modified_at %}<lastmod>{{ entry.last_modified_at | date_to_xmlschema }}</lastmod>{% endif %}</url>
   {% endif %}{% endunless %}{% endif %}{% endfor %}
 </urlset>
