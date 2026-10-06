@@ -1,4 +1,5 @@
 ---
+sitemap: false
 layout: null
 permalink: "building-an-ai-brain-for-your-organization-short"
 ---

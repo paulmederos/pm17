@@ -1,19 +1,22 @@
 ---
 layout: context-essay
 title: "Building an AI Brain for Your Organization"
+seo_title: "Building an AI Brain for Your Organization | Paul Mederos"
+description: "How to build an AI brain for your organization: shared context, clear decision rights, and an HTML starter kit. Here’s how we’re doing it at Enchant."
+last_modified_at: 2026-10-06
 permalink: "building-an-ai-brain-for-your-organization"
 date: 2026-10-04
 categories: [essay, wip]
 coauthored: "Astra (GPT-6) and Claude Opus 5.5"
-coauthored_note: "I set the direction, examples, and boundaries, and we’ve revised the piece together over several rounds. Astra researched, drafted, and designed it; Opus 5.5 has worked with me on the concept and the writing, with access to my personal context."
+coauthored_note: "I set the direction, examples, and boundaries, and we’ve revised the piece together over several rounds. Astra researched, drafted, and designed it; Opus 5.5 has worked with me on the concept and the writing, with access to my personal context, and helped with a light SEO pass."
 teaser: "How people and agents can share direction, decide close to the work, and learn across an organization as it grows."
 ---
 
-I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost everyone I talk with who’s exploring how to use more AI at work is trying to figure this out, whether it’s for themselves or a whole team. How do we help agents understand our work and what’s going on around it?
+I’ve been talking with more and more companies interested in setting up their “AI brain.” Almost everyone I talk with who’s exploring how to use more AI at work is trying to figure this out, whether it’s for themselves or a whole team. How do we give agents the context to understand our work and what’s going on around it?
 
 That sounds familiar. At Enchant, we’ve been building something like this across our company handbook, our project handbooks, and our personal context repos. My [August post](https://www.paulmederos.com/how-i-work-with-claude-in-august-2026) covered the personal side. This one asks how it works when everyone has agents.
 
-It’s tempting to picture one central brain that leadership fills and everyone’s agent reads. Some context belongs in the middle, but most of what an organization knows lives with the people doing the work. The setup I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to another team or change where the company is going.
+It’s tempting to picture a “company brain”: one central store that leadership fills and everyone’s agent reads. Some context belongs in the middle, but most of what an organization knows lives with the people doing the work. The setup I’m excited about looks more like a healthy organization: leadership keeps the direction and guardrails clear, people experiment and decide within their own work, and what they learn can travel to another team or change where the company is going.
 
 We’re two people, so a mid-size organization will need more explicit ownership than we do. But I think the basic idea holds up: **AI can help more people make informed calls in their own work, while helping the org learn from what they find.**
 
@@ -28,7 +31,7 @@ At Enchant, product taste stays with us. Agents help throughout, but Brittany an
 
 Some friends at a content company draw the line around writing. They create and curate work for an audience, and their writing is what readers come for. People write every article; agents help with strategy, research, and support. An editor can still try a better research process without asking leadership to invent it.
 
-## How our context fits together
+## How org context fits together
 {: #shared-context}
 
 At Enchant, our context sits in three layers: the studio handbook, project context for Coplay Club, Kasane, and consulting, and a personal repo for each of us. A mid-size organization needs the same idea, with named owners for company, team, project, and role. These are scopes, not a ladder every idea has to climb. My friend Nicholas Tolson’s [work on organizational context](https://www.linkedin.com/pulse/stop-re-explaining-your-company-ai-build-context-profile-tolson-0qlve/) makes a similar distinction between company, department, project, and individual context.
@@ -100,4 +103,4 @@ company information without the responsible person's authorization.
 
 </details>
 
-Through [Enchant](https://enchant.co/), we help organizations build this: clarify direction and decision rights, connect the context, and help people learn together through real work. If you’re figuring it out, we’d love to help you get the first useful loop running.
+Through [Enchant](https://enchant.co/), we help organizations build this kind of AI brain: clarify direction and decision rights, connect the context, and help people learn together through real work. If you’re figuring it out, we’d love to help you get the first useful loop running.
