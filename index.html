@@ -63,17 +63,19 @@ layout: default
     <div class="row Home__Apps">
       <div class="col-xs-12 col-md-8 col-md-offset-2">
 
-        <div class="app-row">
-          <a href="https://kasanelife.com" target="_blank" rel="noopener" class="app-icon-link">
-            <img class="app-icon" src="/images/apps/kasane-icon.png" alt="Kasane app icon" width="72" height="72" loading="lazy" />
+        <div class="app-row app-row--rotating app-row--kasane">
+          <a href="https://kasanelife.com" target="_blank" rel="noopener" class="app-icon-link app-icon-link--rotating">
+            {%- for n in (1..4) %}
+            <img class="app-icon app-icon-frame app-icon-frame--{{ n }}" src="/images/apps/kasane-icon-{{ n }}.png" {% if n == 1 %}alt="Kasane app icon"{% else %}alt="" aria-hidden="true"{% endif %} width="72" height="72" loading="lazy" />
+            {%- endfor %}
           </a>
           <div class="app-body">
             <p class="mb-1"><a href="https://kasanelife.com" target="_blank" rel="noopener" class="font-md font-500">Kasane</a></p>
-            <p class="font-md app-tagline">Turn your lab results into a daily health practice, three habits at a time.</p>
+            <p class="font-md app-tagline">The health journal for your family. Keep everything in one place, write it together with the people who help, and find what makes you feel better.</p>
           </div>
         </div>
 
-        <div class="app-row app-row--rotating">
+        <div class="app-row app-row--rotating app-row--coplay">
           <a href="https://coplayclub.com" target="_blank" rel="noopener" class="app-icon-link app-icon-link--rotating">
             {%- for n in (1..5) %}
             <img class="app-icon app-icon-frame app-icon-frame--{{ n }}" src="/images/apps/coplay-icon-{{ n }}.png" {% if n == 1 %}alt="Coplay Club app icon"{% else %}alt="" aria-hidden="true"{% endif %} width="72" height="72" loading="lazy" />
@@ -85,9 +87,11 @@ layout: default
           </div>
         </div>
 
-        <div class="app-row">
-          <a href="https://lodestone.paulmederos.com" target="_blank" rel="noopener" class="app-icon-link">
-            <img class="app-icon" src="/images/apps/lodestone-icon.png" alt="Lodestone app icon" width="72" height="72" loading="lazy" />
+        <div class="app-row app-row--rotating app-row--lodestone">
+          <a href="https://lodestone.paulmederos.com" target="_blank" rel="noopener" class="app-icon-link app-icon-link--rotating">
+            {%- for n in (1..7) %}
+            <img class="app-icon app-icon-frame app-icon-frame--{{ n }}" src="/images/apps/lodestone-icon-{{ n }}.png" {% if n == 1 %}alt="Lodestone app icon"{% else %}alt="" aria-hidden="true"{% endif %} width="72" height="72" loading="lazy" />
+            {%- endfor %}
           </a>
           <div class="app-body">
             <p class="mb-1"><a href="https://lodestone.paulmederos.com" target="_blank" rel="noopener" class="font-md font-500">Lodestone</a></p>

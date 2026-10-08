@@ -69,6 +69,16 @@ The reading library at `/library` is generated from `_data/library.json` — one
 - A manga/series read as a whole gets **one** entry titled `Series (Vols. 1–N)`, using volume 1's ISBN for the cover.
 - A long serialized manga can be logged **per arc** (e.g. One Piece) — one entry per major arc, titled `Series: Arc`, with `date_read` set to that arc's start date so the arcs scatter through the timeline by date.
 
+## Work section app icons
+
+Each app row on the home page shows its icon family, and hovering the row flips through it (`icon-family` mixin in `_sass/components/Home.scss`; the row carries `app-row--rotating app-row--{name}` and a Liquid loop over its frames). Frame 1 is the resting icon.
+
+- **Kasane** (4): `kasane-icon-1..4.png` = the lettered k (primary, Ocean on white, black on white, white on black), from `kasane-ios` `Kasane/AppIcons/*.icon`.
+- **Coplay Club** (5): `coplay-icon-1..5.png`, the five expressions.
+- **Lodestone** (7): `lodestone-icon-1..7.png` = the Settled Ring in C♯, D, E, F, A, B, Ink, from `lodestone-ios` `Lodestone/AppIcons/*.icon`.
+
+Render `.icon` documents at 240 px with Icon Composer's `ictool` (`--export-image --platform iOS --rendition Default --width 240 --height 240 --scale 1`; the tool lives in `Icon Composer.app/Contents/Executables/`). To add or resize a family, save the numbered PNGs, loop over them in `index.html`, and add one `@include icon-family(name, count);`.
+
 ## Writing
 
 All copy and written content should follow the writing guide in `writing-guide.md` at the repo root. Review it before drafting or editing any text.
