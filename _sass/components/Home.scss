@@ -1,5 +1,3 @@
-@use "sass:math";
-
 .Home__Intro {
   padding: 0 0 14.4rem;
 
@@ -110,7 +108,7 @@ $icon-frame-duration: .3s;
 
   @keyframes #{$name}-frame-cycle {
     0% { opacity: 1; }
-    #{math.percentage(math.div(1, $frames))} { opacity: 0; }
+    #{percentage(1 / $frames)} { opacity: 0; }
     100% { opacity: 0; }
   }
 }

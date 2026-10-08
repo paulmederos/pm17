@@ -79,6 +79,8 @@ Each app row on the home page shows its icon family, and hovering the row flips 
 
 Render `.icon` documents at 240 px with Icon Composer's `ictool` (`--export-image --platform iOS --rendition Default --width 240 --height 240 --scale 1`; the tool lives in `Icon Composer.app/Contents/Executables/`). To add or resize a family, save the numbered PNGs, loop over them in `index.html`, and add one `@include icon-family(name, count);`.
 
+**Sass runs twice, differently.** Local `bundle exec jekyll serve` compiles with Dart Sass (Jekyll 4.4), but the GitHub Pages deploy uses the `github-pages` gem (Jekyll 3.10, Ruby Sass 3.7). Stick to syntax Ruby Sass knows: no `@use` / `sass:math`, plain `/` division. A clean local build doesn't prove the deploy; check the Actions run after pushing.
+
 ## Writing
 
 All copy and written content should follow the writing guide in `writing-guide.md` at the repo root. Review it before drafting or editing any text.
