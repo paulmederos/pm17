@@ -108,7 +108,7 @@ Kasane isn't only for SIBO. It's for anybody dealing with gut issues, and anybod
 
 I don't have proof that families will keep a journal like this, or pay for one. I have my own story, a room's response, and search data. That's a reason to test, and it's a long way from an answer.
 
-So we're testing it by hand. We're bringing in a first small group of families, half of them parents with their own gut issues and half with a kid's, and I'm onboarding each one myself. If that's your family, [I'd love to hear from you](https://www.kasanelife.com/first-families/). The number we're watching is good days: how many a family gets back while they try a change.
+So we're testing it by hand. We're bringing in a first small group of families, half of them parents with their own gut issues and half with a kid's, and I'm onboarding each one myself. The number we're watching is good days: how many a family gets back while they try a change.
 
 We're also not raising venture money for it. If families keep it and pay for it, a small, well-made journal is a real business. That's the bet.
 
